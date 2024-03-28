@@ -1,5 +1,9 @@
 # Quarto-for-reproducible-reporting-demo 
 
+## Access the outputs
+
+
+
 ## Resources 
 
 - Posit-webinar-series: <https://github.com/jeremy-allen/posit-webinar-series> 
@@ -10,6 +14,8 @@
 - Quarto manuscripts: <https://github.com/jeremy-allen/quarto-manuscripts> 
 - Public sector cheat sheet: <https://github.com/rstudio/Posit-Public-Sector-Cheatsheet> 
 - renv example from the VA Dept. Environmental Quality: <https://github.com/JosiahParry/renv-example>
+Scripts in projects: <https://quarto.org/docs/computations/render-scripts.html#scripts-in-projects> 
+- Reproduceable presentations in quarto: <https://info5940.infosci.cornell.edu/slides/publishing-reproducible-documents/#/title-slide> 
 
 
 
