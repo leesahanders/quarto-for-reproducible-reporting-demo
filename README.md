@@ -21,9 +21,13 @@ Scripts in projects: <https://quarto.org/docs/computations/render-scripts.html#s
 
 ## Structure 
 
+- "Link! Take this"
 - razzle and dazzle
 - what is reproduceable data science? 
 - what is quarto? 
 - let's explore the top 2 content types that interests the audience
 - where to go from here
 - leave on a cheat sheet (renv, quarto, version control, content types)
+
+
+
