@@ -1,6 +1,9 @@
 # Quarto-for-reproducible-reporting-demo 
 
-## Access the outputs
+> **Warning**
+> This is part of a repository that is prone to  Changes and overhauls will happen without notice, but feel free to reach out with any questions/corrections/or help needs at lisamaeanders@gmail.com
+
+**Access the presentation slides at: <https://colorado.rstudio.com/rsc/reproduceable_workflows/> or at <https://questionable.quarto.pub/reproduceable-workflows/>.**
 
 
 
@@ -16,8 +19,16 @@
 - renv example from the VA Dept. Environmental Quality: <https://github.com/JosiahParry/renv-example>
 Scripts in projects: <https://quarto.org/docs/computations/render-scripts.html#scripts-in-projects> 
 - Reproduceable presentations in quarto: <https://info5940.infosci.cornell.edu/slides/publishing-reproducible-documents/#/title-slide> 
+- Quarto awesome list: <https://github.com/mcanouil/awesome-quarto> 
+- Quarto the definitive guide: <https://quarto-tdg.org/presentations> 
+- R without statistics, reproduceable reporting with quarto: <https://book.rwithoutstatistics.com/quarto-chapter> 
+- Quarto tip a day: <https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/posts/17-dark-mode/> 
+- Quarto callouts: <https://www.andreashandel.com/posts/2023-06-13-custom-callouts-quarto/> 
+- Thomas Mock's presentation to Austin Python meetup in 2024: <https://thomasmock.quarto.pub/python-austin/#/> 
 
+Websites: 
 
+- Building a quarto website: <https://ucsb-meds.github.io/creating-quarto-websites/> 
 
 ## Structure 
 
