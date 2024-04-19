@@ -28,6 +28,11 @@
 - [Parameterized Reports with Quarto: R-Ladies DC Workshop](https://jadeyryan.com/talks/2024-01-18_rladies-dc_quarto-params/)
 - [Extending quarto](https://www.youtube.com/watch?v=EihuM4oyOvs)
 - [Quarto job scheduling](https://github.com/ryjohnson09/quarto-job-scheduling?tab=readme-ov-file) 
+- [Some Quarto Tips for Academic Presentation](https://kazuyanagimoto.com/blog/2022/12/27/quarto_tips/)
+
+From Posit conf: 
+
+- ["Reproducible Manuscripts with Quarto" talk at posit::conf(2023)](https://github.com/mine-cetinkaya-rundel/quarto-manuscripts)
 
 Websites: 
 
@@ -50,6 +55,10 @@ Websites:
 - parameterization 
 - languages 
 - including code 
+
+workshop outline: https://github.com/jeremy-allen/quarto-workshop/blob/main/workshop-guide
+
+
 
 # Publishing
 
