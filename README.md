@@ -27,6 +27,7 @@
 - Thomas Mock's presentation to Austin Python meetup in 2024: <https://thomasmock.quarto.pub/python-austin/#/> 
 - [Parameterized Reports with Quarto: R-Ladies DC Workshop](https://jadeyryan.com/talks/2024-01-18_rladies-dc_quarto-params/)
 - [Extending quarto](https://www.youtube.com/watch?v=EihuM4oyOvs)
+- [Quarto job scheduling](https://github.com/ryjohnson09/quarto-job-scheduling?tab=readme-ov-file) 
 
 Websites: 
 
@@ -49,8 +50,6 @@ Websites:
 - parameterization 
 - languages 
 - including code 
-
-
 
 # Publishing
 

@@ -110,7 +110,23 @@ Quarto gives you options for the actual tool being used to render your project i
 
 ## On to the bells and whistles!
 
-## Viewer comments 
+
+
+## So you've got a finished product, now what? Publish to Connect {.smaller}
+
+
+
+## So you've got a finished product, now what? Job scheduling  {.smaller}
+
+<center>
+
+![](https://github.com/ryjohnson09/quarto-job-scheduling/blob/main/images/workflow.jpg?raw=true){#fig-image fig-align="center" width="50%"}
+
+::: {.citation style="font-size: 16px"}
+Image from Ryan Johnson's [companion GitHub repository for the June 2023 Posit Team Community demo](https://github.com/ryjohnson09/quarto-job-scheduling?tab=readme-ov-file)
+:::
+
+</center>
 
 ## Misc best practices 
 
