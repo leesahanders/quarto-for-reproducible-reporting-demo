@@ -1,0 +1,48 @@
+---
+title: "Installation Guide"
+format:
+  html:
+    embed-resources: true
+    anchor-sections: true
+    toc: true
+    toc-location: left
+    toc-title: "Contents"
+    link-external-icon: true
+    link-external-newwindow: true
+    other-links:
+      - text: Need help?
+        href: https://docs.posit.co/support/
+    theme:
+      light: [cosmo, theme-light.scss]
+      dark: [darkly, theme-dark.scss]
+title-block-banner: true
+title-block-style: plain
+date: today
+jupyter: python3
+css: styles.css
+---
+
+Posit professional products are provided as system packages that can be manually installed to servers or virtual machines in your on-premises or cloud-based environment. This generated document will walk an admin through the process of configuring the selected Posit products, based on the choices unique to their environment.
+
+{% include '_before_installation.qmd.j2' %}
+
+## Installation and configuration
+
+{% if "Package Manager" in products %}
+{% include '_package_manager_install.qmd.j2' %}
+{% endif %}
+
+{% if "Connect" in products %}
+{% include '_connect_install.qmd.j2' %}
+{% endif %}
+
+{% if "Workbench" in products %}
+{% include '_workbench_install.qmd.j2' %}
+{% endif %}
+
+## After installation
+
+{% include '_after_installation.qmd.j2' %}
+
+
+Copyright © 2024 Posit Software, PBC. All Rights Reserved.

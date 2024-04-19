@@ -1,8 +1,8 @@
 ---
-title: "Git demo"
+title: "Quarto for Reproduceable Reporting"
 subtitle: ""
 date: "2024-04-18"
-author: "Lisa Anders"
+author: "Lisa Anders, Posit Solutions Engineer"
 title-slide-attributes: 
   data-background-color: white
   data-background-image: _extensions/positslides/assets/backgrounds/title-slide-option-1.png
@@ -15,9 +15,68 @@ format:
       - positslides
 ---
 
-## What is git? 
+## Intro {.smaller}
+
+<center>
+
+![](https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/data_cowboy.png){width="50%"}
+
+</center>
+
+::: {layout="[2, 10]"}
+![](img/lisa-profile-2.png)
+
+**Lisa Anders** - Posit Solutions Engineer and self-professed R nerd learning to love Python. Engineer turned data scientist turned Posit admin and excited to share lessons learned the hard way to make things easier for others. Also awkward at writing intros in the third person!
+:::
+
+::: {.citation style="font-size: 16px"}
+"Illustration from Hadley Wickham's talk"The Joy of Functional Programming (for Data Science)." by [Allison Horst](https://github.com/allisonhorst/stats-illustrations)
+:::
 
 
+## Quarto {.smaller}
+
+<center>
+
+:::: {.columns}
+
+::: {.column width="20%"}
+
+- Code chunks
+- Custom formatting
+- Hybrid code projects 
+- Content types (dashboards, websites, documents, and more)
+- Essentials of extensions (lightbox)
+- Comments 
+- Scheduling 
+- Hosting on Connect 
+
+:::
+
+::: {.column width="60%"}
+
+![](img/these-are-a-few-of-my-favorite-things.jpeg){width="50%"}
+
+:::
+
+::: {.column width="20%"}
+
+- Environment management 
+- Version control
+- Storing secrets in env variables 
+- Parameterization 
+- Conditionals
+- Including code / nested qmd's 
+
+:::
+
+::::
+
+::: {.citation style="font-size: 16px"}
+Image a meme of [The Sound of Music](https://www.imdb.com/title/tt0059742/)
+:::
+
+</center>
 
 ## Backup
 
@@ -51,7 +110,7 @@ Bullet points
 ::: {.column width="50%"}
 **Column 2**
 
-- ![But what about an image?](image.jpg){#fig-image fig-align="center" width="750"}
+![But what about an image?](image.jpg){#fig-image fig-align="center" width="750"}
 :::
 
 ::::
