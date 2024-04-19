@@ -17,7 +17,7 @@
 - Quarto manuscripts: <https://github.com/jeremy-allen/quarto-manuscripts> 
 - Public sector cheat sheet: <https://github.com/rstudio/Posit-Public-Sector-Cheatsheet> 
 - renv example from the VA Dept. Environmental Quality: <https://github.com/JosiahParry/renv-example>
-Scripts in projects: <https://quarto.org/docs/computations/render-scripts.html#scripts-in-projects> 
+- Scripts in projects: <https://quarto.org/docs/computations/render-scripts.html#scripts-in-projects> 
 - Reproduceable presentations in quarto: <https://info5940.infosci.cornell.edu/slides/publishing-reproducible-documents/#/title-slide> 
 - Quarto awesome list: <https://github.com/mcanouil/awesome-quarto> 
 - Quarto the definitive guide: <https://quarto-tdg.org/presentations> 
@@ -25,6 +25,8 @@ Scripts in projects: <https://quarto.org/docs/computations/render-scripts.html#s
 - Quarto tip a day: <https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/posts/17-dark-mode/> 
 - Quarto callouts: <https://www.andreashandel.com/posts/2023-06-13-custom-callouts-quarto/> 
 - Thomas Mock's presentation to Austin Python meetup in 2024: <https://thomasmock.quarto.pub/python-austin/#/> 
+- [Parameterized Reports with Quarto: R-Ladies DC Workshop](https://jadeyryan.com/talks/2024-01-18_rladies-dc_quarto-params/)
+- [Extending quarto](https://www.youtube.com/watch?v=EihuM4oyOvs)
 
 Websites: 
 
