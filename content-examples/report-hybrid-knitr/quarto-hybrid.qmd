@@ -149,4 +149,4 @@ install_python("3.9:latest") # install latest patch available at python.org
 virtualenv_create("my-environment", version = "3.9:latest")
 ```
 
-> ! 'CreateProcess' failed to run 'C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\python.exe -c "import sys; print(sys.platform)"'
+> For example to resolve this error: ! 'CreateProcess' failed to run 'C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\python.exe -c "import sys; print(sys.platform)"'
