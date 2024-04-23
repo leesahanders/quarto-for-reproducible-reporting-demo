@@ -108,6 +108,15 @@ sp500_mini = sp500[(sp500["date"] >= start_date) & (sp500["date"] <= end_date)]
 
 ```
 
+## base R plot! 
+
+```{r}
+x = sample(1:100, size = 1000, replace = TRUE)
+y = rnorm(1000, mean = 40, sd = 2)
+
+plot(x, y)
+```
+
 
 ## ggplot2! 
 
@@ -147,4 +156,4 @@ virtualenv_create("my-environment", version = "3.11:latest")
 use_virtualenv("my-environment")
 ```
 
-> ! 'CreateProcess' failed to run 'C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\python.exe -c "import sys; print(sys.platform)"'
+> For example to resolve this error: ! 'CreateProcess' failed to run 'C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\python.exe -c "import sys; print(sys.platform)"'
