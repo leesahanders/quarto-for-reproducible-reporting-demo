@@ -1,5 +1,5 @@
 ---
-title: "Installation Guide"
+title: "Installation Guide for Sample Customer"
 format:
   html:
     embed-resources: true
@@ -18,7 +18,6 @@ format:
 title-block-banner: true
 title-block-style: plain
 date: today
-jupyter: python3
 css: styles.css
 ---
 
@@ -43,9 +42,9 @@ Gather required information about your authentication system. Depending on your 
 
 ### Verify connectivity
 
-- `ping` each server from other servers to make sure network connectivity is enabled
-- Verify `nslookup` returns the correct IP address for each server
-- Ensure the default ports for each service in the tables below are open
+- [ ] `ping` each server from other servers to make sure network connectivity is enabled
+- [ ] Verify `nslookup` returns the correct IP address for each server
+- [ ] Ensure the default ports for each service in the tables below are open
 
 #### Ports
 
@@ -114,15 +113,7 @@ Gather required information about your authentication system. Depending on your 
 
 Now that the product is installed, follow the remaining steps to configure the product.
 
-[Click here](https://pharos-testing.s3.amazonaws.com/Posit-Package_Manager-Configuration_2024-04-16_e963b130b609492aa22a263131d3314d.tar.gz?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAZI3I5KIFI5OBTXOV%2F20240416%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20240416T225217Z&X-Amz-Expires=604799&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMiJHMEUCIF4iXOz08Yu%2FpfDZbg7L0%2Ba%2FYpqM40fGjCM7AJHlkZ%2B0AiEAuqDM6Ec920%2B1L8z3vRHrCykxprtsKimeTvT1LIVJFkEqmwMIxP%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw2Mzc0ODU3OTc4OTgiDCrVnaUzCGrA780ICCrvAk%2BUE4mH4lNnLPkoGHyhPAGflvKpyGSedLcB8x8jOCLRMjXA2zNfLPbpsQWoWfHvr%2Bgv9WcQeGoEQoKvvDoDL%2FyICk49fHjbh1guHgurZGWS6%2BsAFff%2BLzt%2Bn3r7WC4NMBmWXVVLjgLjxGLeY9vQ867bgoZW5tdAs3kkl1JteovNBQ8eoHC6juPsdJOSUU0pHwGHao%2BMv8NR8g6%2B8AZSATblnUtl4jjIuS3ZWUhxRZZf2p7Uxf1zBp%2BBUCKALGSNl%2FFnfaRZgA2Z3p7pXF75VdaFWrGBGkS%2FuPmuORW%2Bm5dknOX%2BtVjzP5YUmUS9FUrJZnHy%2BiXRn2Fz9wk99VVW9DQyMvTXAgYAxdFZvCtNEuYcA86O1G%2FZ7AI35yCBky6DsJsz8oaWCrgm5rKPqs7i8Hhtjt%2FqLwPlQ33kLPHGcIJdSPj1kKtVZqBT3BmyJUdmxxrgZz1qwcWeF0bchZuOkj3RD2ARK%2Fe8lzvoRgSZG6swypf7sAY6pgGZjB97XfwH1Jm2JmufW1gu1VFd0Ct%2Bt%2Bo0ul1xPNfB0HYkhPjVjI84C4xZpMJfX0z3cSZCZ37uLpCkR4KzYqwVWUpQYZANJZboXUrwGKp2MoOeQ5hxz76fGtCcHKaFCQtAt1nyPoVb2jA%2BNE2NkKp7RC4QsJ6%2BN7Wgfz4OThenFK%2BqR3pGkUAJPcOVDnIcIRVTY73ks1fHF0QkutfhDvHI5EXr9H1y&X-Amz-Signature=b54c855a5649679d726cc08c0a21706b35e0597ab4f695bd288803c0064fd768) to download customized sample configuration files.
-
-You can also use the command below to download these configuration file on your server after you have installed the product. We recommend you back up the original files, rename these new sample files, and then customize the contents.
-```bash
-wget -q --show-progress -O "Posit-Package_Manager-Configuration_2024-04-16_e963b130b609492aa22a263131d3314d.tar.gz" "https://pharos-testing.s3.amazonaws.com/Posit-Package_Manager-Configuration_2024-04-16_e963b130b609492aa22a263131d3314d.tar.gz?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAZI3I5KIFI5OBTXOV%2F20240416%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20240416T225217Z&X-Amz-Expires=604799&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMiJHMEUCIF4iXOz08Yu%2FpfDZbg7L0%2Ba%2FYpqM40fGjCM7AJHlkZ%2B0AiEAuqDM6Ec920%2B1L8z3vRHrCykxprtsKimeTvT1LIVJFkEqmwMIxP%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw2Mzc0ODU3OTc4OTgiDCrVnaUzCGrA780ICCrvAk%2BUE4mH4lNnLPkoGHyhPAGflvKpyGSedLcB8x8jOCLRMjXA2zNfLPbpsQWoWfHvr%2Bgv9WcQeGoEQoKvvDoDL%2FyICk49fHjbh1guHgurZGWS6%2BsAFff%2BLzt%2Bn3r7WC4NMBmWXVVLjgLjxGLeY9vQ867bgoZW5tdAs3kkl1JteovNBQ8eoHC6juPsdJOSUU0pHwGHao%2BMv8NR8g6%2B8AZSATblnUtl4jjIuS3ZWUhxRZZf2p7Uxf1zBp%2BBUCKALGSNl%2FFnfaRZgA2Z3p7pXF75VdaFWrGBGkS%2FuPmuORW%2Bm5dknOX%2BtVjzP5YUmUS9FUrJZnHy%2BiXRn2Fz9wk99VVW9DQyMvTXAgYAxdFZvCtNEuYcA86O1G%2FZ7AI35yCBky6DsJsz8oaWCrgm5rKPqs7i8Hhtjt%2FqLwPlQ33kLPHGcIJdSPj1kKtVZqBT3BmyJUdmxxrgZz1qwcWeF0bchZuOkj3RD2ARK%2Fe8lzvoRgSZG6swypf7sAY6pgGZjB97XfwH1Jm2JmufW1gu1VFd0Ct%2Bt%2Bo0ul1xPNfB0HYkhPjVjI84C4xZpMJfX0z3cSZCZ37uLpCkR4KzYqwVWUpQYZANJZboXUrwGKp2MoOeQ5hxz76fGtCcHKaFCQtAt1nyPoVb2jA%2BNE2NkKp7RC4QsJ6%2BN7Wgfz4OThenFK%2BqR3pGkUAJPcOVDnIcIRVTY73ks1fHF0QkutfhDvHI5EXr9H1y&X-Amz-Signature=b54c855a5649679d726cc08c0a21706b35e0597ab4f695bd288803c0064fd768"
-sudo tar -xvzf "Posit-Package_Manager-Configuration_2024-04-16_e963b130b609492aa22a263131d3314d.tar.gz" -C /etc/rstudio-pm/
-```
-
-We recommend addressing each of the `# TODO` comments throughout the files to ensure your information is entered in the right location. Refer to the documentation links below and in each configuration file.
+Refer to the documentation links below and in each configuration file.
 
 - [Configure HTTPS](https://docs.posit.co/rspm/admin/networking/#configuring-ssl-certificates)
 - R repositories:
@@ -181,15 +172,7 @@ We recommend addressing each of the `# TODO` comments throughout the files to en
 
 Now that the product is installed, follow the remaining steps to configure the product.
 
-[Click here](https://pharos-testing.s3.amazonaws.com/Posit-Connect-Configuration_2024-04-16_e963b130b609492aa22a263131d3314d.tar.gz?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAZI3I5KIFI5OBTXOV%2F20240416%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20240416T225216Z&X-Amz-Expires=604799&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMiJHMEUCIF4iXOz08Yu%2FpfDZbg7L0%2Ba%2FYpqM40fGjCM7AJHlkZ%2B0AiEAuqDM6Ec920%2B1L8z3vRHrCykxprtsKimeTvT1LIVJFkEqmwMIxP%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw2Mzc0ODU3OTc4OTgiDCrVnaUzCGrA780ICCrvAk%2BUE4mH4lNnLPkoGHyhPAGflvKpyGSedLcB8x8jOCLRMjXA2zNfLPbpsQWoWfHvr%2Bgv9WcQeGoEQoKvvDoDL%2FyICk49fHjbh1guHgurZGWS6%2BsAFff%2BLzt%2Bn3r7WC4NMBmWXVVLjgLjxGLeY9vQ867bgoZW5tdAs3kkl1JteovNBQ8eoHC6juPsdJOSUU0pHwGHao%2BMv8NR8g6%2B8AZSATblnUtl4jjIuS3ZWUhxRZZf2p7Uxf1zBp%2BBUCKALGSNl%2FFnfaRZgA2Z3p7pXF75VdaFWrGBGkS%2FuPmuORW%2Bm5dknOX%2BtVjzP5YUmUS9FUrJZnHy%2BiXRn2Fz9wk99VVW9DQyMvTXAgYAxdFZvCtNEuYcA86O1G%2FZ7AI35yCBky6DsJsz8oaWCrgm5rKPqs7i8Hhtjt%2FqLwPlQ33kLPHGcIJdSPj1kKtVZqBT3BmyJUdmxxrgZz1qwcWeF0bchZuOkj3RD2ARK%2Fe8lzvoRgSZG6swypf7sAY6pgGZjB97XfwH1Jm2JmufW1gu1VFd0Ct%2Bt%2Bo0ul1xPNfB0HYkhPjVjI84C4xZpMJfX0z3cSZCZ37uLpCkR4KzYqwVWUpQYZANJZboXUrwGKp2MoOeQ5hxz76fGtCcHKaFCQtAt1nyPoVb2jA%2BNE2NkKp7RC4QsJ6%2BN7Wgfz4OThenFK%2BqR3pGkUAJPcOVDnIcIRVTY73ks1fHF0QkutfhDvHI5EXr9H1y&X-Amz-Signature=2b6a2fcb3a117a07501f44ab654808488ee2f6a3580d2d0bd1408ecbdd975393) to download customized sample configuration files.
-
-You can also use the command below to download these configuration file on your server after you have installed the product. We recommend you back up the original files, rename these new sample files, and then customize the contents.
-```bash
-wget -q --show-progress -O "Posit-Connect-Configuration_2024-04-16_e963b130b609492aa22a263131d3314d.tar.gz" "https://pharos-testing.s3.amazonaws.com/Posit-Connect-Configuration_2024-04-16_e963b130b609492aa22a263131d3314d.tar.gz?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAZI3I5KIFI5OBTXOV%2F20240416%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20240416T225216Z&X-Amz-Expires=604799&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMiJHMEUCIF4iXOz08Yu%2FpfDZbg7L0%2Ba%2FYpqM40fGjCM7AJHlkZ%2B0AiEAuqDM6Ec920%2B1L8z3vRHrCykxprtsKimeTvT1LIVJFkEqmwMIxP%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw2Mzc0ODU3OTc4OTgiDCrVnaUzCGrA780ICCrvAk%2BUE4mH4lNnLPkoGHyhPAGflvKpyGSedLcB8x8jOCLRMjXA2zNfLPbpsQWoWfHvr%2Bgv9WcQeGoEQoKvvDoDL%2FyICk49fHjbh1guHgurZGWS6%2BsAFff%2BLzt%2Bn3r7WC4NMBmWXVVLjgLjxGLeY9vQ867bgoZW5tdAs3kkl1JteovNBQ8eoHC6juPsdJOSUU0pHwGHao%2BMv8NR8g6%2B8AZSATblnUtl4jjIuS3ZWUhxRZZf2p7Uxf1zBp%2BBUCKALGSNl%2FFnfaRZgA2Z3p7pXF75VdaFWrGBGkS%2FuPmuORW%2Bm5dknOX%2BtVjzP5YUmUS9FUrJZnHy%2BiXRn2Fz9wk99VVW9DQyMvTXAgYAxdFZvCtNEuYcA86O1G%2FZ7AI35yCBky6DsJsz8oaWCrgm5rKPqs7i8Hhtjt%2FqLwPlQ33kLPHGcIJdSPj1kKtVZqBT3BmyJUdmxxrgZz1qwcWeF0bchZuOkj3RD2ARK%2Fe8lzvoRgSZG6swypf7sAY6pgGZjB97XfwH1Jm2JmufW1gu1VFd0Ct%2Bt%2Bo0ul1xPNfB0HYkhPjVjI84C4xZpMJfX0z3cSZCZ37uLpCkR4KzYqwVWUpQYZANJZboXUrwGKp2MoOeQ5hxz76fGtCcHKaFCQtAt1nyPoVb2jA%2BNE2NkKp7RC4QsJ6%2BN7Wgfz4OThenFK%2BqR3pGkUAJPcOVDnIcIRVTY73ks1fHF0QkutfhDvHI5EXr9H1y&X-Amz-Signature=2b6a2fcb3a117a07501f44ab654808488ee2f6a3580d2d0bd1408ecbdd975393"
-sudo tar -xvzf "Posit-Connect-Configuration_2024-04-16_e963b130b609492aa22a263131d3314d.tar.gz" -C /etc/rstudio-connect/
-```
-
-We recommend addressing each of the `# TODO` comments throughout the files to ensure your information is entered in the right location. Refer to the documentation links below and in each configuration file.
+Refer to the documentation links below and in each configuration file.
 
 - [Configure HTTPS](https://docs.posit.co/connect/admin/getting-started/local-install/initial-configuration/ssl-certificates/index.html)
 - [Enable Python functionality](https://docs.posit.co/connect/admin/python/#enabling-python-support)
@@ -259,15 +242,7 @@ We recommend addressing each of the `# TODO` comments throughout the files to en
 
 Now that the product is installed, follow the remaining steps to configure the product.
 
-[Click here](https://pharos-testing.s3.amazonaws.com/Posit-Workbench-Configuration_2024-04-16_e963b130b609492aa22a263131d3314d.tar.gz?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAZI3I5KIFI5OBTXOV%2F20240416%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20240416T225216Z&X-Amz-Expires=604799&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMiJHMEUCIF4iXOz08Yu%2FpfDZbg7L0%2Ba%2FYpqM40fGjCM7AJHlkZ%2B0AiEAuqDM6Ec920%2B1L8z3vRHrCykxprtsKimeTvT1LIVJFkEqmwMIxP%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw2Mzc0ODU3OTc4OTgiDCrVnaUzCGrA780ICCrvAk%2BUE4mH4lNnLPkoGHyhPAGflvKpyGSedLcB8x8jOCLRMjXA2zNfLPbpsQWoWfHvr%2Bgv9WcQeGoEQoKvvDoDL%2FyICk49fHjbh1guHgurZGWS6%2BsAFff%2BLzt%2Bn3r7WC4NMBmWXVVLjgLjxGLeY9vQ867bgoZW5tdAs3kkl1JteovNBQ8eoHC6juPsdJOSUU0pHwGHao%2BMv8NR8g6%2B8AZSATblnUtl4jjIuS3ZWUhxRZZf2p7Uxf1zBp%2BBUCKALGSNl%2FFnfaRZgA2Z3p7pXF75VdaFWrGBGkS%2FuPmuORW%2Bm5dknOX%2BtVjzP5YUmUS9FUrJZnHy%2BiXRn2Fz9wk99VVW9DQyMvTXAgYAxdFZvCtNEuYcA86O1G%2FZ7AI35yCBky6DsJsz8oaWCrgm5rKPqs7i8Hhtjt%2FqLwPlQ33kLPHGcIJdSPj1kKtVZqBT3BmyJUdmxxrgZz1qwcWeF0bchZuOkj3RD2ARK%2Fe8lzvoRgSZG6swypf7sAY6pgGZjB97XfwH1Jm2JmufW1gu1VFd0Ct%2Bt%2Bo0ul1xPNfB0HYkhPjVjI84C4xZpMJfX0z3cSZCZ37uLpCkR4KzYqwVWUpQYZANJZboXUrwGKp2MoOeQ5hxz76fGtCcHKaFCQtAt1nyPoVb2jA%2BNE2NkKp7RC4QsJ6%2BN7Wgfz4OThenFK%2BqR3pGkUAJPcOVDnIcIRVTY73ks1fHF0QkutfhDvHI5EXr9H1y&X-Amz-Signature=95163140552bee385a596e7eb4d4e43987aa4d25291cd70da34d765696c53334) to download customized sample configuration files.
-
-You can also use the command below to download these configuration file on your server after you have installed the product. We recommend you back up the original files, rename these new sample files, and then customize the contents.
-```bash
-wget -q --show-progress -O "Posit-Workbench-Configuration_2024-04-16_e963b130b609492aa22a263131d3314d.tar.gz" "https://pharos-testing.s3.amazonaws.com/Posit-Workbench-Configuration_2024-04-16_e963b130b609492aa22a263131d3314d.tar.gz?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAZI3I5KIFI5OBTXOV%2F20240416%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20240416T225216Z&X-Amz-Expires=604799&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMiJHMEUCIF4iXOz08Yu%2FpfDZbg7L0%2Ba%2FYpqM40fGjCM7AJHlkZ%2B0AiEAuqDM6Ec920%2B1L8z3vRHrCykxprtsKimeTvT1LIVJFkEqmwMIxP%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw2Mzc0ODU3OTc4OTgiDCrVnaUzCGrA780ICCrvAk%2BUE4mH4lNnLPkoGHyhPAGflvKpyGSedLcB8x8jOCLRMjXA2zNfLPbpsQWoWfHvr%2Bgv9WcQeGoEQoKvvDoDL%2FyICk49fHjbh1guHgurZGWS6%2BsAFff%2BLzt%2Bn3r7WC4NMBmWXVVLjgLjxGLeY9vQ867bgoZW5tdAs3kkl1JteovNBQ8eoHC6juPsdJOSUU0pHwGHao%2BMv8NR8g6%2B8AZSATblnUtl4jjIuS3ZWUhxRZZf2p7Uxf1zBp%2BBUCKALGSNl%2FFnfaRZgA2Z3p7pXF75VdaFWrGBGkS%2FuPmuORW%2Bm5dknOX%2BtVjzP5YUmUS9FUrJZnHy%2BiXRn2Fz9wk99VVW9DQyMvTXAgYAxdFZvCtNEuYcA86O1G%2FZ7AI35yCBky6DsJsz8oaWCrgm5rKPqs7i8Hhtjt%2FqLwPlQ33kLPHGcIJdSPj1kKtVZqBT3BmyJUdmxxrgZz1qwcWeF0bchZuOkj3RD2ARK%2Fe8lzvoRgSZG6swypf7sAY6pgGZjB97XfwH1Jm2JmufW1gu1VFd0Ct%2Bt%2Bo0ul1xPNfB0HYkhPjVjI84C4xZpMJfX0z3cSZCZ37uLpCkR4KzYqwVWUpQYZANJZboXUrwGKp2MoOeQ5hxz76fGtCcHKaFCQtAt1nyPoVb2jA%2BNE2NkKp7RC4QsJ6%2BN7Wgfz4OThenFK%2BqR3pGkUAJPcOVDnIcIRVTY73ks1fHF0QkutfhDvHI5EXr9H1y&X-Amz-Signature=95163140552bee385a596e7eb4d4e43987aa4d25291cd70da34d765696c53334"
-sudo tar -xvzf "Posit-Workbench-Configuration_2024-04-16_e963b130b609492aa22a263131d3314d.tar.gz" -C /etc/rstudio/
-```
-
-We recommend addressing each of the `# TODO` comments throughout the files to ensure your information is entered in the right location. Refer to the documentation links below and in each configuration file.
+Refer to the documentation links below and in each configuration file.
 
 - Configure [HTTPS](https://docs.posit.co/ide/server-pro/hardening/set_up_ssl.html)
 - Setup [JupyterLab and Jupyter Notebook](https://docs.posit.co/ide/server-pro/integration/jupyter-standalone.html)
@@ -301,7 +276,7 @@ Confirm the installation and configuration for all installed products. You may w
 - Test that Shiny content can be rendered in Workbench (verifies Websockets).
 - Test that a Streamlit or Dash app can be rendered in a VS Code session on Workbench (verifies web proxying).
 - Publish R content to Connect. Verify deployment.
-- Publish Python content to Connect using the [`rsconnect-python` CLI](https://docs.posit.co/rsconnect-python/). Verify deployment.
+- Publish Python content to Connect using the [`rsconnect-python` CLI](https://docs.posit.co/rsconnect-python/). Verify deployment.
 - Install an R package in a RStudio Pro session on Workbench. Verify package is installed using binaries from Posit Package Manager.
 - Install a Python package in a VS Code or Jupyter session on Workbench. Verify package is installed using binaries from Package Manager.
 
