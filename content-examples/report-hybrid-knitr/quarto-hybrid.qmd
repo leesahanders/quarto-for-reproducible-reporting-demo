@@ -1,5 +1,6 @@
 ---
 title: "New Quarto document"
+author: "Lisa Anders" 
 format:
   html: 
     theme: 

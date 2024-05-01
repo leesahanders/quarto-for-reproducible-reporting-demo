@@ -1,13 +1,11 @@
 ---
-title: "Quarto Document with Comments"
+title: "Quarto Document with pop out images"
+author: "Lisa Anders" 
 format: html
 editor: source
 filters:
    - lightbox
 lightbox: auto
-comments:
-  utterances:
-    repo: leesahanders/quarto_with_comments
 resource_files:
 - "_extensions/quarto-ext/lightbox/lightbox.lua"
 - "_extensions/quarto-ext/lightbox/lightbox.css"
@@ -15,29 +13,6 @@ resource_files:
 - "_extensions/quarto-ext/lightbox/resources/css/glightbox.min.css"
 - "_extensions/quarto-ext/lightbox/resources/js/glightbox.min.js"
 ---
-
-# Could not find executable /usr/home/lisa.anders/Demo/code_sandbox/R/quarto-lightbox--comments-utterances/lightbox
-
-## Quarto
-
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
-
-## Running Code
-
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
-
-```{r}
-1 + 1
-```
-
-You can add options to executable code like this
-
-```{r}
-#| echo: false
-2 * 2
-```
-
-The `echo: false` option disables the printing of code (only output is displayed).
 
 
 ## lightbox
@@ -59,7 +34,7 @@ These images are interactive, try clicking on one!
 :::
 
 
-Images are from Wikipedia and in the public domain:
+Images are from Wikipedia and in the public domain
 
 ```{r}
 # library(tidyverse)

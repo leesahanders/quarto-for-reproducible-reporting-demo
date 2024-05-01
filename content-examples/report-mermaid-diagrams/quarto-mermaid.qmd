@@ -1,0 +1,89 @@
+---
+title: "Quarto mermaid sandbox"
+author: "Lisa Anders" 
+format: 
+  html:
+    mermaid:
+      theme: forest
+editor: visual
+---
+
+
+# Complex mermaid diagram, from inside the document
+
+```{mermaid}
+%%| fig-width: 6.5
+graph TD
+  A[Start] --> B[Step 1: Define a library reference libref named 'vitra']
+  B --> C[Step 2: Connect to an Oracle database using the libref]
+  C --> D{Connection Details}
+  D --> E[User: admin]
+  D --> F[Password: fancy51$]
+  D --> G[Path: //245.23.45.22:1521/dbservice]
+  G --> H
+  H[End]
+```
+
+
+# We aren't just constrained to mermaid - Succesful dot file from file: 
+
+```{dot}
+//| label: fig-linux-kernel
+//| fig-cap: "A diagram of the Linux kernel."
+//| file: linux-kernel-diagram.dot
+```
+
+
+# We can also access a mermaid diagram from file: 
+
+```{mermaid}
+%%| label: fig-mermaid
+%%| fig-cap: "A diagram."
+%%| file: mermaid.mmd
+```
+
+
+
+# Unfortunately from inside a tabset there is an error where the later tabsets don't display: 
+
+::: {.panel-tabset}
+
+## first mermaid
+
+```{mermaid}
+flowchart TD
+one---two
+```
+
+## second mermaid
+
+```{mermaid}
+flowchart TD
+three---four
+```
+
+## third mermaid
+
+```{mermaid}
+flowchart TD
+five---six
+```
+
+:::
+
+
+References: 
+
+- <https://github.com/quarto-dev/quarto-cli/issues/5145> 
+- <https://github.com/quarto-dev/quarto-cli/issues/9031> 
+- <https://quarto.org/docs/authoring/diagrams.html> 
+- <https://quarto.org/docs/authoring/diagrams.html#file-include> 
+- <https://stackoverflow.com/questions/50762662/how-to-install-mermaid-to-render-flowcharts-in-markdown> 
+- <https://mermaid.js.org/intro/getting-started.html?#%E2%80%A2-loading-from-gists> 
+- <https://github.com/quarto-dev/quarto-cli/issues/3665> 
+- <https://github.com/quarto-dev/quarto-cli/discussions/5219> 
+- <https://github.com/quarto-dev/quarto-cli/discussions/1054> 
+
+
+
+

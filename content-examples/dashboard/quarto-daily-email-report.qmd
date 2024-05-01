@@ -1,5 +1,6 @@
 ---
 title: "Quarto Daily Email Report"
+author: "Lisa Anders" 
 format: email
 editor: source
 theme:

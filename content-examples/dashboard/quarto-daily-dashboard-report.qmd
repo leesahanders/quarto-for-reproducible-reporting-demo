@@ -1,5 +1,6 @@
 ---
 title: "Lisa's Daily Quarto Dashboard Report"
+author: "Lisa Anders" 
 format:
   dashboard:
     logo: images/Leafey.PNG
