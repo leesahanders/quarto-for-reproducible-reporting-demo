@@ -51,6 +51,10 @@ Generate contents: Package Manager metrics
 
 > Please note that most of the above mentioned API Endpoints are not officially documented and not fully supported and hence can be subject to change in future versions of PPM. Any of those Endpoints however are visible via using Developer Tools in the web browser.
 
+Reference the documentation on the server API either on your URL, or using the publicly available instance: <https://packagemanager.posit.co/__api__/swagger/index.html> 
+
+For the hidden endpoints I'm referencing the proprietary source code: <https://github.com/rstudio/package-manager/tree/main/docs/api> and <https://github.com/rstudio/package-manager/tree/main/src/api> 
+
 ```{r echo = FALSE, results = 'hide', message=FALSE, warning=FALSE}
 library(httr)
 library(tidyr)
@@ -67,6 +71,7 @@ var_version_bioconductor = 3.16
 lookback = 450 #days
 
 ```
+
 Server Status
 
 ```{r}
@@ -93,8 +98,8 @@ Total  sourceType r package downloads:
 
 ```{r}
 resp <- GET(paste0(var_url,"__api__/metrics/packages?_sourceType=r&_days=",lookback,"&_sort=count&_order=desc"), format="json")
-metricsPackages <- content(resp, type="application/json")
-metricsPackages <- unnest_wider(tibble::tibble(metricsPackages = metricsPackages), metricsPackages) 
+metricsPackagesR <- content(resp, type="application/json")
+metricsPackagesR <- unnest_wider(tibble::tibble(metricsPackagesR = metricsPackagesR), metricsPackagesR) 
 
 metricsPackages %>% 
   summarize(count = sum(count))
@@ -110,6 +115,34 @@ metricsPackagesPython <- unnest_wider(tibble::tibble(metricsPackagesPython = met
 metricsPackagesPython %>%
   summarize(count = sum(count))
 ```
+
+By day sourceType r package downloads: 
+
+```{r}
+resp <- GET(paste0(var_url,"__api__/metrics/packages?_sourceType=r&_days=",lookback,"&_sort=count&_order=desc"), format="json")
+metricsPackagesR <- content(resp, type="application/json")
+metricsPackagesR <- unnest_wider(tibble::tibble(metricsPackagesR = metricsPackagesR), metricsPackagesR) 
+
+metricsPackages %>% 
+  summarize(count = sum(count))
+```
+
+By day sourceType python package downloads:
+
+```{r}
+resp <- GET(paste0(var_url,"__api__/metrics/packages?_sourceType=python&_days=",lookback,"&_sort=count&_order=desc"), format="json")
+metricsPackagesPython <- content(resp, type="application/json")
+metricsPackagesPython <- unnest_wider(tibble::tibble(metricsPackagesPython = metricsPackagesPython), metricsPackagesPython)
+
+metricsPackagesPython %>%
+  summarize(count = sum(count))
+```
+
+
+Packages with currently detected vulnerabilities
+
+
+
 
 
 

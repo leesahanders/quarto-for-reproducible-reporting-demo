@@ -29,6 +29,7 @@
 - [Extending quarto](https://www.youtube.com/watch?v=EihuM4oyOvs)
 - [Quarto job scheduling](https://github.com/ryjohnson09/quarto-job-scheduling?tab=readme-ov-file) 
 - [Some Quarto Tips for Academic Presentation](https://kazuyanagimoto.com/blog/2022/12/27/quarto_tips/)
+- [Posit blog, building a reporting infrastructure with quarto](https://posit.co/blog/building-a-reporting-infrastructure-with-quarto/) 
 
 From Posit conf: 
 
