@@ -1,0 +1,165 @@
+---
+title: "Quarto Emails (with Connect): Including plots"
+author: "Lisa Anders"
+format: email
+---
+
+Make the magic happen: <https://docs.posit.co/connect/user/quarto/#email-customization> 
+
+## Email notifications: Add plots n stuff
+
+### Generate contents: a map
+
+```{r}
+# install.packages("ggplot2")
+library(ggplot2)
+
+# install.packages("maps")
+library(maps)
+
+df <- data.frame(x = state.center$x, y = state.center$y,
+                 state = state.name)
+
+map_plot <- ggplot(df, aes(x = x, y = y)) + 
+       geom_polygon(data = map_data("state"),
+                    color = "white",
+                    aes(x = long, y = lat,
+                        fill = map_data("state")$region,
+                        group = group)) +
+       guides(fill = FALSE) + 
+        geom_text(aes(x = -115, y = 25, label = "Map of the United States"),
+                    stat = "unique") +
+        geom_label(aes(label = state))
+
+map_plot
+```
+
+### Generate contents: Good ol mtcars
+
+```{r echo = FALSE}
+library(ggplot2)
+library(ggiraph)
+
+# Create a ggplot object
+mtcars_plot <- ggplot(mtcars, aes(x = wt, y = mpg, tooltip = paste("Weight:", wt, "MPG:", mpg), data_id = row.names(mtcars))) +
+  geom_point_interactive()
+
+mtcars_plot
+```
+
+Generate contents: Package Manager metrics 
+
+> Please note that most of the above mentioned API Endpoints are not officially documented and not fully supported and hence can be subject to change in future versions of PPM. Any of those Endpoints however are visible via using Developer Tools in the web browser.
+
+```{r echo = FALSE, results = 'hide', message=FALSE, warning=FALSE}
+library(httr)
+library(tidyr)
+library(dplyr)
+library(reactable)
+library(DT)
+library(stringr)
+
+var_url = "https://packagemanager.posit.co/"
+var_sources_internal_packages = c(161,9,5) # source id's for transaction information c(8,9,15,161,177)
+var_repos_internal_packages = 8 # source id's for transaction information c(8,9,15,161,177)
+var_repos_bioconductor = 4 # repository id for bioconductor #13
+var_version_bioconductor = 3.16
+lookback = 450 #days
+
+```
+Server Status
+
+```{r}
+#Server status 
+resp <- GET(paste0(var_url, "__api__/status"), format="json")
+status <- content(resp, type="application/json")
+
+rspm_version <- status$version
+```
+
+Package Downloads 
+
+PPM has an endpoint metrics/packages that allows you to get the download count of a given package for the last x days which should make it simple to expand this to date ranges. A sample call for package clustermq ’s download stats for the last 112 days would look like
+
+`curl "https://packagemanager.posit.co/__api__/metrics/packages?_sort=count&_order=desc&_days=112&_sourceType=r&name_like=clustermq"`
+
+Even better would be to get the download stats for all R packages on PPM via
+
+`curl "https://colorado.posit.co/rspm/__api__/metrics/packages?_sourceType=r&_days=112&_sort=count&_order=desc"`
+
+If you want to extract the metrics between x and y days prior to today, you run the API call above twice and then simply subtract the numbers.
+
+Total  sourceType r package downloads: 
+
+```{r}
+resp <- GET(paste0(var_url,"__api__/metrics/packages?_sourceType=r&_days=",lookback,"&_sort=count&_order=desc"), format="json")
+metricsPackages <- content(resp, type="application/json")
+metricsPackages <- unnest_wider(tibble::tibble(metricsPackages = metricsPackages), metricsPackages) 
+
+metricsPackages %>% 
+  summarize(count = sum(count))
+```
+
+Total  sourceType python package downloads:
+
+```{r}
+resp <- GET(paste0(var_url,"__api__/metrics/packages?_sourceType=python&_days=",lookback,"&_sort=count&_order=desc"), format="json")
+metricsPackagesPython <- content(resp, type="application/json")
+metricsPackagesPython <- unnest_wider(tibble::tibble(metricsPackagesPython = metricsPackagesPython), metricsPackagesPython)
+
+metricsPackagesPython %>%
+  summarize(count = sum(count))
+```
+
+
+
+Send an email. 
+
+::: {.email}
+
+::: {.subject}
+Here's some curated content for you
+:::
+
+
+Here's a map
+
+```{r}
+#| echo: false
+
+map_plot
+```
+
+Here's good ol mtcars
+
+```{r}
+#| echo: false
+
+mtcars_plot
+```
+
+:::
+
+
+
+## Implementation notes
+
+References: 
+
+- <https://docs.posit.co/connect/user/quarto/index.html#email-customization> 
+- <https://quarto.org/docs/authoring/conditional.html> 
+- <https://github.com/rich-iannone/quarto-email/issues/9> 
+
+### RSS feed details
+
+Goal: Using the RSS feed from [the published sample blog](https://colorado.posit.co/rsc/connect/#/apps/1561d39e-977a-4e5c-9e73-857860b3d076/access) this quarto document will send an email when a new blog has been published. 
+
+The [quarto RSS feed option](https://quarto.org/docs/websites/website-blog.html#rss-feed) will need to be enabled on the site that will be tracked. We can then use [tidyrss](https://robertmyles.github.io/tidyRSS/) to read the rss file back. 
+
+This is using an example that was [deployed to Posit Connect](https://quarto.org/docs/publishing/rstudio-connect.html#publish-command) for the email generation with the [Connect Email Generation feature](https://quarto.org/docs/prerelease/1.4/email.html). 
+
+Limitations: 
+
+- This implementation currently doesn't have handling for authentication and only works with quarto blogs that have been published **anyone, no login required**. 
+- What happens if the scheduling service is interrupted for some reason? Right now the lookback is still just for the last 1 day. Other options could be to `pin` the xml and use that to compare to what was available the last time it ran, or use `connectapi` to check when last it successfully ran and use that to generate a timeframe. 
+- Email customization requires Quarto 1.4.
