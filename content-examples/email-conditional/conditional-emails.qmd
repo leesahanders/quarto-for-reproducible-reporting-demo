@@ -1,11 +1,11 @@
 ---
-title: "Conditional: Quarto Emails (with Connect)"
+title: "Quarto Conditional Emails (with Connect)"
 author: "Lisa Anders"
 format: email
 ---
 
 
-## Email notifications: Alert when a new blog post has been released!
+## Email notifications: Alert when a new blog post has been released
 
 ```{r}
 library(tidyRSS)
@@ -13,18 +13,16 @@ library(dplyr)
 library(lubridate)
 
 # Test your rss generator using this URL for the contents of the R Journal
-rss_url <- "http://journal.r-project.org/rss.atom"
+rss_url <- "https://posit.co/feed/"
 ```
 
 ```{r}
 rss <- tidyfeed(rss_url)
 ```
 
-Check if the date for a published blog post happened since the last time we checked for an update. This will depend on what scheduling options are chosen when published to Connect. This example assumes that this document is deployed to run **daily** at **8am**. 
+Check if the date for a published blog post happened in the last 24 hours. This can be changed with using different scheduling options when published to Connect and changing the lookback time. 
 
 ```{r}
-# rss_new <- rss %>% select(-feed_category, -item_category) %>% filter(feed_description == "A great sample blog")
-
 rss_new <- rss %>% select(-feed_category, -item_category) %>% filter(item_pub_date >= (now() - days(1)))
 ```
 
@@ -46,7 +44,7 @@ Send an email.
 ::: {.email}
 
 ::: {.subject}
-New blog post!
+Alert: There is a new Posit blog post!
 :::
 
 Check out the new blog post, **`{r} paste(rss_new$item_title, sep = ", ")`**, [here](`{r} paste(rss_new$item_link, sep = ", ")`)
@@ -72,6 +70,6 @@ This is using an example that was [deployed to Posit Connect](https://quarto.org
 
 Limitations: 
 
-- This implementation currently doesn't have handling for authentication and only works with quarto blogs that have been published **anyone, no login required**. 
+- This implementation currently doesn't have handling for authentication and only works with RSS feeds for public blogs or blogs posted to Connect that have been published **anyone, no login required**. 
 - What happens if the scheduling service is interrupted for some reason? Right now the lookback is still just for the last 1 day. Other options could be to `pin` the xml and use that to compare to what was available the last time it ran, or use `connectapi` to check when last it successfully ran and use that to generate a timeframe. 
 - Email customization requires Quarto 1.4.

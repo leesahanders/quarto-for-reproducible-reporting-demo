@@ -1,6 +1,12 @@
-# Conditional Emails with Quarto
+# Quarto Conditional Emails (with Connect)
 
-## Send an email conditionally
+## Send an email only when certain conditions are met
+
+Make the magic happen: <https://docs.posit.co/connect/user/quarto/#email-customization> 
+
+> Email customization requires Quarto 1.4.
+
+Also useful: 
 
 - <https://docs.posit.co/connect/user/quarto/index.html#email-customization> 
 - <https://quarto.org/docs/authoring/conditional.html> 
@@ -12,125 +18,26 @@ Modify the yaml to change the output format (note that a specific quarto version
 format: email
 ```
 
-Add a section to define the email content. Files can be attached, calculation outputs can be included, and this can even be wrapped in a conditional statement to only send on certain conditions: 
+Add a section to define the email content. Files can be attached, calculation outputs can be included, and this can even be wrapped in a conditional statement to only send on certain conditions. 
 
-Randomly select a condition to demonstrate different conditions: 
+## Implementation notes
 
-```r
-variant <- sample(1:3, 1)
-```
+References: 
 
-```r
-#| output: asis
-cat(
-  "---",
-  paste0("is_email_variant_",variant,": true"),
-  "---",
-  sep = "\n"
-)
-```
+- <https://docs.posit.co/connect/user/quarto/index.html#email-customization> 
+- <https://quarto.org/docs/authoring/conditional.html> 
+- <https://github.com/rich-iannone/quarto-email/issues/9> 
 
-```
-::: {.email}
+### RSS feed details
 
-This email was sent from Quarto! With conditional output for condition `r variant`
+Goal: Using the RSS feed from [the published sample blog](https://colorado.posit.co/rsc/connect/#/apps/1561d39e-977a-4e5c-9e73-857860b3d076/access) this quarto document will send an email when a new blog has been published. 
 
-::: {.content-visible when-meta="is_email_variant_1"}
+The [quarto RSS feed option](https://quarto.org/docs/websites/website-blog.html#rss-feed) will need to be enabled on the site that will be tracked. We can then use [tidyrss](https://robertmyles.github.io/tidyRSS/) to read the rss file back. 
 
-email body 1
+This is using an example that was [deployed to Posit Connect](https://quarto.org/docs/publishing/rstudio-connect.html#publish-command) for the email generation with the [Connect Email Generation feature](https://quarto.org/docs/prerelease/1.4/email.html). 
 
-```r
-print('case 1')
-```
+### Limitations
 
-Remember to pick up groceries on you way home. Tonight is "breakfast
-for dinner" and we're having French Toast!
-
-* Bread
-* Eggs
-* Butter
-* Milk
-
-::: {.subject}
-subject 1
-:::
-
-:::
-
-::: {.content-visible when-meta="is_email_variant_2"}
-
-email body 2
-
-```r
-print('case 2')
-```
-
-Remember to pick up groceries on you way home. Tonight is "Tex-mex" and we're having tacos!
-
-* Onions
-* Bell peppers
-* Fajita
-* Tortillas
-* Lime
-* Avocado
-
-::: {.subject}
-subject 2
-:::
-
-
-:::
-
-::: {.content-visible when-meta="is_email_variant_3"}
-
-email body 3
-
-```r
-print('case3')
-```
-
-Remember to pick up groceries on you way home. Tonight we're having stir fry!
-
-* Snap peas
-* Noodles
-* Tofu
-* Soy Sauce
-* Rice
-
-::: {.subject}
-subject 3
-:::
-
-:::
-
-::: {.email-scheduled}
-TRUE
-:::
-
-:::
-
-## Logging
-
-Case: `r variant`
-
-Report run: `r Sys.time()`
-```
-
-```
-
-::: {.email}
-
-::: {.subject}
-Buy groceries
-:::
-
-Remember to pick up groceries on you way home. Tonight is "breakfast
-for dinner" and we're having French Toast!
-
-* Bread
-* Eggs
-* Butter
-* Milk
-
-:::
-```
+- This implementation currently doesn't have handling for authentication and only works with RSS feeds for public blogs or blogs posted to Connect that have been published **anyone, no login required**. 
+- What happens if the scheduling service is interrupted for some reason? Right now the lookback is still just for the last 1 day. Other options could be to `pin` the xml and use that to compare to what was available the last time it ran, or use `connectapi` to check when last it successfully ran and use that to generate a timeframe. 
+- Email customization requires Quarto 1.4.

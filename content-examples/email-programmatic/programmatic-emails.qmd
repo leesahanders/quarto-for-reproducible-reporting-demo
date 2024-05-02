@@ -17,7 +17,7 @@ Make the magic happen: <https://docs.posit.co/connect/user/quarto/#email-customi
 3. Because the variant is randomly selected, the same variant might be used. I'm okay with repeat meals! 
 
 
-## Email notifications: Send an email 
+## Email notifications: Generate email contents
 
 Modify the yaml to change the output format (note that a specific quarto version or most recent is required): 
 
