@@ -11,10 +11,7 @@ Make the magic happen: <https://docs.posit.co/connect/user/quarto/#email-customi
 ### Generate contents: a map
 
 ```{r}
-# install.packages("ggplot2")
 library(ggplot2)
-
-# install.packages("maps")
 library(maps)
 
 df <- data.frame(x = state.center$x, y = state.center$y,
@@ -68,7 +65,7 @@ var_sources_internal_packages = c(161,9,5) # source id's for transaction informa
 var_repos_internal_packages = 8 # source id's for transaction information c(8,9,15,161,177)
 var_repos_bioconductor = 4 # repository id for bioconductor #13
 var_version_bioconductor = 3.16
-lookback = 450 #days
+lookback = 30 #days
 
 ```
 
@@ -116,26 +113,158 @@ metricsPackagesPython %>%
   summarize(count = sum(count))
 ```
 
-By day sourceType r package downloads: 
+By day cumulative sourceType r package downloads: 
+
+Reference: 
+
+- <https://r-charts.com/evolution/time-series-ggplot2/> 
+- <https://stackoverflow.com/questions/61546244/reverse-engineering-cumulative-to-daily-data> 
+- Color selection: <https://r-graph-gallery.com/ggplot2-color.html> 
+- TODO: peaks and valleys <https://r-charts.com/evolution/time-series-ggplot2/> 
 
 ```{r}
-resp <- GET(paste0(var_url,"__api__/metrics/packages?_sourceType=r&_days=",lookback,"&_sort=count&_order=desc"), format="json")
-metricsPackagesR <- content(resp, type="application/json")
-metricsPackagesR <- unnest_wider(tibble::tibble(metricsPackagesR = metricsPackagesR), metricsPackagesR) 
+library(plotly)
+library(ggrepel)
+#library(ggpmisc)
 
-metricsPackages %>% 
-  summarize(count = sum(count))
+# Raw package data, cumulative from date
+metricsPackagesR_daily_raw <- data.frame()
+for(i in 1:lookback){
+  resp <- GET(paste0(var_url,"__api__/metrics/packages?_sourceType=r&_days=",i,"&_sort=count&_order=desc"), format="json")
+  
+  metricsPackagesR_daily_tmp <- content(resp, type="application/json")
+  metricsPackagesR_daily_tmp <- unnest_wider(tibble::tibble(metricsPackagesR_daily_tmp = metricsPackagesR_daily_tmp), metricsPackagesR_daily_tmp) %>% 
+    mutate(lookback = i, date = Sys.Date()-lookback) %>%
+    mutate(language ="R")
+  
+metricsPackagesR_daily_raw <- rbind(metricsPackagesR_daily_raw, metricsPackagesR_daily_tmp)
+}
+
+# Reverse engineer dailies from reverse cumulative 
+metricsPackagesR_daily_raw <- metricsPackagesR_daily_raw %>% 
+  group_by(name) %>%
+  mutate(daily_count = c(count[1],diff(count)))
+
+# Summary
+metricsPackagesR_daily <- metricsPackagesR_daily_raw %>% group_by(lookback, date, language) %>%
+  summarize(downloads = sum(daily_count)) %>%
+  group_by(language) %>%
+  arrange(date) %>% 
+  mutate(cumulative_sum = cumsum(downloads))
+
+# Area chart
+plot_r_package_downloads <- ggplot(metricsPackagesR_daily) + 
+  scale_x_date(date_labels = "%Y-%m-%d", date_breaks = "1 day") + 
+  # Daily line
+  geom_line(aes(x = date, y = downloads), 
+            color = 4,      # Line color
+            lwd = 0.5,      # Line width
+            linetype = 1) + # Line type 
+  geom_point(aes(x = date, y = downloads)) + 
+  # Labels defined here
+  geom_label_repel(
+    data = metricsPackagesR_daily %>% filter(date == max(date)), 
+    aes(date, downloads, label = "daily downloads"),
+    box.padding = unit(0.35, "lines"),
+    point.padding = unit(0.4, "lines"),
+    color = "black",
+    fill = "white") + 
+  # Cumulative line 
+  geom_line(aes(x = date, y = cumulative_sum), 
+            color = 2,
+            lwd = 1,  
+            linetype = "dashed") +
+  geom_point(aes(x = date, y = cumulative_sum)) + 
+  ggtitle("Public Package Manager: R Downloads") + 
+          #subtitle = "R Downloads") +  
+  # Labels defined here
+  geom_label_repel(
+    data = metricsPackagesR_daily %>% filter(date == max(date)), 
+    aes(date, cumulative_sum, label = "cumulative downloads"),
+    box.padding = unit(0.35, "lines"),
+    point.padding = unit(0.4, "lines"),
+    color = "black",
+    fill = "white") + 
+  theme_bw() + 
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1),
+        plot.margin = margin(t = 20,  # Top margin
+                             r = 50,  # Right margin
+                             b = 40,  # Bottom margin
+                             l = 10)) # Left margin
+  
+plot_r_package_downloads
 ```
 
-By day sourceType python package downloads:
+By day cumulative sourceType python package downloads:
 
 ```{r}
-resp <- GET(paste0(var_url,"__api__/metrics/packages?_sourceType=python&_days=",lookback,"&_sort=count&_order=desc"), format="json")
-metricsPackagesPython <- content(resp, type="application/json")
-metricsPackagesPython <- unnest_wider(tibble::tibble(metricsPackagesPython = metricsPackagesPython), metricsPackagesPython)
+# Raw package data, cumulative from date
+metricsPackagesPython_daily_raw <- data.frame()
+for(i in 1:lookback){
+  resp <- GET(paste0(var_url,"__api__/metrics/packages?_sourceType=python&_days=",i,"&_sort=count&_order=desc"), format="json")
+  
+  metricsPackagesPython_daily_tmp <- content(resp, type="application/json")
+  metricsPackagesPython_daily_tmp <- unnest_wider(tibble::tibble(metricsPackagesPython_daily_tmp = metricsPackagesPython_daily_tmp), metricsPackagesPython_daily_tmp) %>% 
+    mutate(lookback = i, date = Sys.Date()-lookback) %>%
+    mutate(language ="Python")
+  
+metricsPackagesPython_daily_raw <- rbind(metricsPackagesPython_daily_raw, metricsPackagesPython_daily_tmp)
+}
 
-metricsPackagesPython %>%
-  summarize(count = sum(count))
+# Reverse engineer dailies from reverse cumulative 
+metricsPackagesPython_daily_raw <- metricsPackagesPython_daily_raw %>% 
+  group_by(name) %>%
+  mutate(daily_count = c(count[1],diff(count)))
+
+# Summary
+metricsPackagesPython_daily <- metricsPackagesPython_daily_raw %>% group_by(lookback, date, language) %>%
+  summarize(downloads = sum(daily_count)) %>%
+  group_by(language) %>%
+  arrange(date) %>% 
+  mutate(cumulative_sum = cumsum(downloads))
+
+# Area chart
+plot_Python_package_downloads <- ggplot(metricsPackagesPython_daily) + 
+  scale_x_date(date_labels = "%Y-%m-%d", date_breaks = "1 day") + 
+  # Daily line
+  geom_line(aes(x = date, y = downloads), 
+            color = 4,      # Line color
+            lwd = 0.5,      # Line width
+            linetype = 1) + # Line type 
+  geom_point(aes(x = date, y = downloads)) + 
+  # Labels defined here
+  geom_label_repel(
+    data = metricsPackagesPython_daily %>% filter(date == max(date)), 
+    aes(date, downloads, label = "daily downloads"),
+    box.padding = unit(0.35, "lines"),
+    point.padding = unit(0.4, "lines"),
+    color = "black",
+    fill = "white") + 
+  # Cumulative line 
+  geom_line(aes(x = date, y = cumulative_sum), 
+            color = 2,
+            lwd = 1,  
+            linetype = "dashed") +
+  geom_point(aes(x = date, y = cumulative_sum)) + 
+  # Labels defined here
+  geom_label_repel(
+    data = metricsPackagesPython_daily %>% filter(date == max(date)), 
+    aes(date, cumulative_sum, label = "cumulative downloads"),
+    box.padding = unit(0.35, "lines"),
+    point.padding = unit(0.4, "lines"),
+    color = "black",
+    fill = "white") + 
+  ggtitle("Public Package Manager: Python Downloads") + 
+          #subtitle = "Python Downloads") +  
+  theme_bw() + 
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1),
+        plot.margin = margin(t = 20,  # Top margin
+                             r = 50,  # Right margin
+                             b = 40,  # Bottom margin
+                             l = 10)) # Left margin
+
+#plot_Python_package_downloads_plotly <- ggplotly(plot_Python_package_downloads) 
+plot_Python_package_downloads
 ```
 
 
