@@ -16,7 +16,7 @@
   "packages": null,
   "files": {
     ".Rprofile": {
-      "checksum": "7869032690bdbaa834b61e03da9abcc5"
+      "checksum": "1c8b14cf5570bca1ee6c3af0a61828b6"
     },
     "_extensions/positslides/_extension.yml": {
       "checksum": "16d2179feb0d86054b7dc1891ae9d857"
@@ -72,20 +72,14 @@
     "_quarto.yml": {
       "checksum": "b77bfdef52769732ca30d978a0deb51c"
     },
-    "img/lisa-profile-2.png": {
-      "checksum": "71bdf026b771838df36f56e9a05f21a9"
-    },
-    "img/lisa-profile.png": {
-      "checksum": "00d4ecdd3794da18cd1568a6bc7a2258"
-    },
-    "img/these-are-a-few-of-my-favorite-things.jpeg": {
-      "checksum": "8f1e0516984da75a2a314906bd1137c4"
+    "img/Leafey.PNG": {
+      "checksum": "8f97483155532e33621d134b4dd2a761"
     },
     "presentation.html": {
-      "checksum": "0f67b9064f0003e7e0e75d65425eab9b"
+      "checksum": "3244b4d6ed9f4be33a4d832f14787c13"
     },
     "presentation.qmd": {
-      "checksum": "4e2cd49e7f7a7e872f297cec18a1efc8"
+      "checksum": "87049db9c74884f8a3222a6d0e39f938"
     },
     "presentation_files/libs/clipboard/clipboard.min.js": {
       "checksum": "15f52a1ee547f2bdd46e56747332ca2d"
