@@ -1,18 +1,19 @@
 ---
 title: "Lisa's Daily Quarto Dashboard Report"
-author: "Lisa Anders" 
+date: last-modified
+date-format: YYYY-MM-DD HH:mm
 format:
   dashboard:
     logo: images/Leafey.PNG
     nav-buttons:
       - icon: github
-        href: https://github.com/leesahanders/quarto-daily-report
+        href: https://github.com/leesahanders/quarto-for-reproducible-reporting-demo
 editor: source
+expandable: true
 theme:
   light: [minty, custom.scss]
   dark: [vapor, custom.scss]
 ---
-
 
 # DATE `r Sys.Date()`
 

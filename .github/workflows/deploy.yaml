@@ -33,7 +33,7 @@ jobs:
           force: TRUE
           dir: ./content-examples/report-mermaid-diagrams/:report-mermaid-diagrams 
   connect-publish-website:
-    name: connect-publish
+    name: connect-publish-website
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -52,7 +52,7 @@ jobs:
           force: TRUE
           dir: ./content-examples/website/:website 
   connect-publish-report-lightbox:
-    name: connect-publish
+    name: connect-publish-report-lightbox
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -71,7 +71,7 @@ jobs:
           force: TRUE
           dir: ./content-examples/report-lightbox/:report-lightbox 
   connect-publish-report-hybrid-knitr:
-    name: connect-publish
+    name: connect-publish-report-hybrid-knitr
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -90,7 +90,7 @@ jobs:
           force: TRUE
           dir: ./content-examples/report-hybrid-knitr/:report-hybrid-knitr
   connect-publish-report-hybrid-jupyter:
-    name: connect-publish
+    name: connect-publish-report-hybrid-jupyter
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -102,7 +102,7 @@ jobs:
           access-type: logged_in
           dir: ./content-examples/report-hybrid-jupyter/:report-hybrid-jupyter
   connect-publish-report-commentable:
-    name: connect-publish
+    name: connect-publish-report-commentable
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -121,7 +121,7 @@ jobs:
           force: TRUE
           dir: ./content-examples/report-commentable/:report-commentable
   connect-publish-report-branded:
-    name: connect-publish
+    name: connect-publish-report-branded
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -140,7 +140,7 @@ jobs:
           force: TRUE
           dir: ./content-examples/report-branded/:report-branded
   connect-publish-presentation:
-    name: connect-publish
+    name: connect-publish-presentation
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -159,7 +159,7 @@ jobs:
           force: TRUE
           dir: ./content-examples/presentation/:presentation
   connect-publish-email-programmatic:
-    name: connect-publish
+    name: connect-publish-email-programmatic
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -178,7 +178,7 @@ jobs:
           force: TRUE
           dir: ./content-examples/email-programmatic/:email-programmatic
   connect-publish-email-plots:
-    name: connect-publish
+    name: connect-publish-email-plots
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -197,7 +197,7 @@ jobs:
           force: TRUE
           dir: ./content-examples/email-plots/:email-plots
   connect-publish-email-conditional:
-    name: connect-publish
+    name: connect-publish-email-conditional
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
