@@ -9,11 +9,8 @@ format:
         href: https://github.com/leesahanders/quarto-daily-report
 editor: source
 theme:
-  light: 
-    - minty
-    - custom.scss
-  dark: 
-    - custom.scss
+  light: [minty, custom.scss]
+  dark: [vapor, custom.scss]
 ---
 
 
@@ -36,6 +33,7 @@ library(rvest)
 library(tibble)
 library(knitr)
 library(kableExtra)
+library(stringr)
 
 url <- "https://www.rstudio.com/wp-content/downloads.json"
 
@@ -524,6 +522,10 @@ rss_url <- "https://rweekly.org/atom.xml"
 
 rss_r_weekly <- tidyfeed(rss_url) %>% slice_head(n=5) %>% select(entry_title, entry_last_updated)
 rss_r_weekly_url <- tidyfeed(rss_url) %>% slice_head(n=5) %>% select(entry_link)
+
+# Workaround, handling if a invalid character, &, is in the xml making it invalid
+rss_r_weekly <- rss_r_weekly %>% 
+  mutate(entry_title = str_replace_all(entry_title, "&", "and"))
 
 rss_r_weekly %>%
   kbl(booktabs = T, align = "c", caption = "RSS Feed for R-weekly") %>%

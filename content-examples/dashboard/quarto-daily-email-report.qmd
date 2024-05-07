@@ -1,11 +1,12 @@
 ---
-title: "Quarto Daily Email Report"
+title: "Quarto Daily Dashboard"
 author: "Lisa Anders" 
 format: email
 editor: source
 theme:
-  light: minty
-  dark: vapor
+  light: [custom, custom.scss]
+  dark: [vapor, custom.scss]
+css: styles.css
 ---
 
 <!-- ## Today's date  -->
@@ -120,6 +121,7 @@ library(tibble)
 library(knitr)
 library(kableExtra)
 library(dplyr)
+library(stringr)
 
 # Find the grid forecast endpoint with this url: https://api.weather.gov/points/{latitude},{longitude}
 # https://api.weather.gov/points/40.04,-105.23
@@ -411,6 +413,10 @@ rss_url <- "https://rweekly.org/atom.xml"
 rss_r_weekly <- tidyfeed(rss_url) %>% slice_head(n=5) %>% select(entry_title, entry_last_updated)
 rss_r_weekly_url <- tidyfeed(rss_url) %>% slice_head(n=5) %>% select(entry_link)
 
+# Workaround, handling if a invalid character, &, is in the xml making it invalid
+rss_r_weekly <- rss_r_weekly %>% 
+  mutate(entry_title = str_replace_all(entry_title, "&", "and"))
+
 rss_r_weekly %>%
   kbl(booktabs = T, align = "c", caption = "RSS Feed for r-weekly") %>%
   kable_styling() %>%
@@ -472,10 +478,6 @@ car_recalls_results %>%
 `r paste(car_recalls_results$ModelYear[1], car_recalls_results$Make[1], car_recalls_results$Model[1])` 
 
 :::
-
-
-{{< include README.md >}}
-
 
 
 <!-- Add conditionality -->
