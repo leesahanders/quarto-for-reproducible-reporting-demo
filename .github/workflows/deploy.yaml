@@ -1,0 +1,93 @@
+name: connect-publish
+run-name: ${{ github.actor }} is testing out GitHub Actions
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: string
+        default: DEV
+        required: true
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+jobs:
+  connect-publish-shiny-r:
+    name: connect-publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: r-lib/actions/setup-pandoc@v2
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: 4.2.0
+          use-public-rspm: true
+      - name: Publish the app to Connect
+        uses: rstudio/actions/connect-publish@main
+        with:
+          url: ${{ secrets.CONNECT_URL }}
+          api-key: ${{ secrets.CONNECT_API_KEY }}
+          access-type: logged_in
+          show-logs: TRUE
+          force: TRUE
+          dir: ./shiny-r/:connect-admin-example-shiny-r
+
+  connect-publish-shiny-python:
+    name: connect-publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Publish the app to Connect
+        uses: rstudio/actions/connect-publish@main
+        with:
+          url: ${{ secrets.CONNECT_URL }}
+          api-key: ${{ secrets.CONNECT_API_KEY }}
+          access-type: logged_in
+          dir: ./shiny-python/:connect-admin-example-shiny-python
+
+  connect-publish-streamlit:
+    name: connect-publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Publish the app to Connect
+        uses: rstudio/actions/connect-publish@main
+        with:
+          url: ${{ secrets.CONNECT_URL }}
+          api-key: ${{ secrets.CONNECT_API_KEY }}
+          access-type: logged_in
+          dir: ./streamlit/:connect-admin-example-streamlit
+
+  connect-publish-dash-app:
+    name: connect-publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Publish the app to Connect
+        uses: rstudio/actions/connect-publish@main
+        with:
+          url: ${{ secrets.CONNECT_URL }}
+          api-key: ${{ secrets.CONNECT_API_KEY }}
+          access-type: logged_in
+          dir: ./dash-app/:connect-admin-example-dash-app
+          
+  connect-publish-connectwidgets-success-dashboard:
+    name: connect-publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: r-lib/actions/setup-pandoc@v2
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: 4.2.0
+          use-public-rspm: true
+      - name: Publish the app to Connect
+        uses: rstudio/actions/connect-publish@main
+        with:
+          url: ${{ secrets.CONNECT_URL }}
+          api-key: ${{ secrets.CONNECT_API_KEY }}
+          access-type: logged_in
+          show-logs: TRUE
+          force: TRUE
+          dir: ./connectwidgets-success-dashboard/:connect-admin-example-connectwidgets-success-dashboard  

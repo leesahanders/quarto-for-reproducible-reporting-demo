@@ -1,0 +1,14 @@
+name: emails-plots
+title: emails-plots
+username: lisa.anders
+account: lisa.anders
+server: pub.palm.ptd.posit.it
+hostUrl: https://pub.palm.ptd.posit.it/__api__
+appId: 81
+bundleId: 181
+url: https://pub.palm.ptd.posit.it/content/76517d42-7fc2-4f64-afd5-8dbc52cfa812/
+version: 1
+quarto_version: 1.4.550
+quarto_engines: knitr
+asMultiple: FALSE
+asStatic: FALSE

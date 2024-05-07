@@ -5,7 +5,7 @@
 
 **Access the presentation slides at: <>**
 
-
+**Access the deployed content at: <>**
 
 ## Resources 
 
@@ -72,3 +72,63 @@ It is also published to my quarto pub space. I run quarto publish quarto-pub fro
 Preview with: `quarto preview quarto-for-reproducible-reporting-demo.qmd --to positslides-revealjs --no-watch-inputs --no-browse`
 
 I can access my account and see my deployments at https://questionable.quarto.pub/.
+
+Each piece of content, in order to be published, needs: 
+
+- `_quarto.yml`
+- `manifest.json`
+
+```r
+
+library(rsconnect)
+
+setwd("C:/Users/LisaAnders/Documents/git/quarto-for-reproducible-reporting-demo/content-examples/report-mermaid-diagrams")
+rsconnect::writeManifest()
+
+setwd("C:/Users/LisaAnders/Documents/git/quarto-for-reproducible-reporting-demo/content-examples/website")
+rsconnect::writeManifest()
+
+setwd("C:/Users/LisaAnders/Documents/git/quarto-for-reproducible-reporting-demo/content-examples/report-lightbox")
+rsconnect::writeManifest()
+
+setwd("C:/Users/LisaAnders/Documents/git/quarto-for-reproducible-reporting-demo/content-examples/report-hybrid-knitr")
+rsconnect::writeManifest()
+
+setwd("C:/Users/LisaAnders/Documents/git/quarto-for-reproducible-reporting-demo/content-examples/report-hybrid-jupyter")
+rsconnect::writeManifest()
+
+setwd("C:/Users/LisaAnders/Documents/git/quarto-for-reproducible-reporting-demo/content-examples/report-commentable")
+rsconnect::writeManifest()
+
+setwd("C:/Users/LisaAnders/Documents/git/quarto-for-reproducible-reporting-demo/content-examples/report-branded")
+rsconnect::writeManifest()
+
+setwd("C:/Users/LisaAnders/Documents/git/quarto-for-reproducible-reporting-demo/content-examples/presentation")
+rsconnect::writeManifest()
+
+setwd("C:/Users/LisaAnders/Documents/git/quarto-for-reproducible-reporting-demo/content-examples/landing-page")
+rsconnect::writeManifest()
+
+setwd("C:/Users/LisaAnders/Documents/git/quarto-for-reproducible-reporting-demo/content-examples/email-programmatic")
+rsconnect::writeManifest()
+
+setwd("C:/Users/LisaAnders/Documents/git/quarto-for-reproducible-reporting-demo/content-examples/email-plots")
+rsconnect::writeManifest()
+
+setwd("C:/Users/LisaAnders/Documents/git/quarto-for-reproducible-reporting-demo/content-examples/email-conditional")
+rsconnect::writeManifest()
+
+setwd("C:/Users/LisaAnders/Documents/git/quarto-for-reproducible-reporting-demo/content-examples/dashboard")
+rsconnect::writeManifest()
+
+# Return to the root directory
+setwd("C:/Users/LisaAnders/Documents/git/quarto-for-reproducible-reporting-demo")
+getwd()
+```
+
+The content examples included here are published using a manual trigger with github actions. For more on setting that up see: <https://solutions.posit.co/operations/deploy-methods/ci-cd/github-actions/index.html#github-actions-example> 
+
+These items need to be added to the git repository to make that possible: 
+
+- url: ${{ secrets.CONNECT_URL }}
+- api-key: ${{ secrets.CONNECT_API_KEY }}

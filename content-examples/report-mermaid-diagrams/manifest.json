@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "locale": "en_US",
+  "platform": "4.3.1",
+  "metadata": {
+    "appmode": "quarto-static",
+    "primary_rmd": "quarto-mermaid.qmd",
+    "primary_html": null,
+    "content_category": null,
+    "has_parameters": false
+  },
+  "quarto": {
+    "version": "1.4.550",
+    "engines": ["markdown"]
+  },
+  "packages": null,
+  "files": {
+    "_quarto.yml": {
+      "checksum": "b77bfdef52769732ca30d978a0deb51c"
+    },
+    "config.json": {
+      "checksum": "0b98c4a4ebe543b1dd8894e5b4717627"
+    },
+    "linux-kernel-diagram.dot": {
+      "checksum": "e6232a24b297863812cf485fc7c7b804"
+    },
+    "mermaid.mmd": {
+      "checksum": "219d36e53aabc9ffdc5c42a364ef8f68"
+    },
+    "quarto-mermaid.html": {
+      "checksum": "28e9300684cf9c5e24dcfc8f206967f6"
+    },
+    "quarto-mermaid.qmd": {
+      "checksum": "466e6458f78e7614a2fe0719c609c341"
+    },
+    "quarto-mermaid_files/libs/bootstrap/bootstrap-icons.css": {
+      "checksum": "2318f137d201fbf51601fa0faba6bef7"
+    },
+    "quarto-mermaid_files/libs/bootstrap/bootstrap-icons.woff": {
+      "checksum": "1a51dfbe5467607389d603c02a77cd10"
+    },
+    "quarto-mermaid_files/libs/bootstrap/bootstrap.min.css": {
+      "checksum": "6af7fe331e124e9a3628ff5072715d11"
+    },
+    "quarto-mermaid_files/libs/bootstrap/bootstrap.min.js": {
+      "checksum": "e2b09c06f0e714b6144a6788a28e3950"
+    },
+    "quarto-mermaid_files/libs/clipboard/clipboard.min.js": {
+      "checksum": "15f52a1ee547f2bdd46e56747332ca2d"
+    },
+    "quarto-mermaid_files/libs/quarto-diagram/mermaid-init.js": {
+      "checksum": "0eb10962181f40af4621777eeb053309"
+    },
+    "quarto-mermaid_files/libs/quarto-diagram/mermaid.css": {
+      "checksum": "0aeecd8a816e25e43a41943c6146c2b7"
+    },
+    "quarto-mermaid_files/libs/quarto-diagram/mermaid.min.js": {
+      "checksum": "2c3bab09d559ac845c4815907005ddea"
+    },
+    "quarto-mermaid_files/libs/quarto-html/anchor.min.js": {
+      "checksum": "91bcf6cd1fd88fec3f109811e5fc3546"
+    },
+    "quarto-mermaid_files/libs/quarto-html/popper.min.js": {
+      "checksum": "3a4a291ccf3f1ea0f82b641542fd3827"
+    },
+    "quarto-mermaid_files/libs/quarto-html/quarto-syntax-highlighting.css": {
+      "checksum": "49bff82b9355f257417faaaa77dd1607"
+    },
+    "quarto-mermaid_files/libs/quarto-html/quarto.js": {
+      "checksum": "2ca82ae8ee1e5762d249c6b6c0802e30"
+    },
+    "quarto-mermaid_files/libs/quarto-html/tippy.css": {
+      "checksum": "ebd6f8ce46a677e1a4f5f8a8317109a9"
+    },
+    "quarto-mermaid_files/libs/quarto-html/tippy.umd.min.js": {
+      "checksum": "d828775275749701b48bd9d958814111"
+    }
+  },
+  "users": null
+}
