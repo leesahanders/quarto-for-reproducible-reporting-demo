@@ -1,18 +1,25 @@
 ---
 title: "Lisa's Daily Quarto Dashboard Report"
-date: last-modified
-date-format: YYYY-MM-DD HH:mm
+date: "last-modified"
+date-format: "YYYY-MM-DD HH:mm"
 format:
   dashboard:
     logo: images/Leafey.PNG
     nav-buttons:
-      - icon: github
-        href: https://github.com/leesahanders/quarto-for-reproducible-reporting-demo
+    - icon: github
+      href: "https://github.com/leesahanders/quarto-for-reproducible-reporting-demo"
 editor: source
 expandable: true
 theme:
-  light: [minty, custom.scss]
-  dark: [vapor, custom.scss]
+  light:
+  - minty
+  - custom.scss
+  dark:
+  - vapor
+  - custom.scss
+resource_files:
+- custom.scss
+- images/Leafey.PNG
 ---
 
 # DATE `r Sys.Date()`
