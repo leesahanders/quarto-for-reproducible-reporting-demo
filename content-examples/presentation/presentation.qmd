@@ -51,10 +51,16 @@ Bullet points
 
 ::::
 
-::: {layout="[2, 10]"}
-![](img/lisa-profile-2.png)
 
-**Lisa Anders** - Write some intro text about yourself
+
+::: {layout="[2, 10]"}
+![](img/Leafey.PNG)
+
+
+<br>
+**Leafey the plant** - Write some intro text about yourself
+:::
+
 :::
 
 :::
