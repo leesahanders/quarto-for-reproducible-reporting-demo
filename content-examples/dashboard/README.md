@@ -48,6 +48,12 @@ renv::snapshot()
 renv::restore()
 ```
 
+## Preview
+
+```
+quarto preview quarto-daily-dashboard-report.qmd --to dashboard --no-watch-inputs --no-browse
+```
+
 ## Publish
 
 In order to deploy it needs to be a project: 

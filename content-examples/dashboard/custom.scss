@@ -188,7 +188,7 @@ legend {
 // trying to fix font size in value boxes, value-box-value per https://stackoverflow.com/questions/77880573/change-size-of-value-valuebox-in-dashboard-quarto
 
 .quarto-dashboard .bslib-value-box .value-box-value {
-    font-size: clamp(.1em, 10cqw, 5em) !important;
+    font-size: clamp(.1em, 6cqw, 5em) !important;
 }
 
 //.quarto-dashboard .bslib-value-box .value-box-value {

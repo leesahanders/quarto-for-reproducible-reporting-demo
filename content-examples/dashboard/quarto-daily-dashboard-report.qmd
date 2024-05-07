@@ -19,13 +19,16 @@ theme:
 
 ## Row {height=20%}
 
-<!-- ## Current product releases  -->
+<!-- ## US Company Holidays -->
 
 ```{r}
 #| echo: false
 #| warning: false
 #| message: false
+#| content: valuebox
+#| title: "Holiday"
 
+library(lubridate)
 library(httr)
 library(httr2)
 library(png)
@@ -35,80 +38,6 @@ library(tibble)
 library(knitr)
 library(kableExtra)
 library(stringr)
-
-url <- "https://www.rstudio.com/wp-content/downloads.json"
-
-posit_products <- request(url) |> 
-  req_perform() |> 
-  resp_body_json()
-
-# resp_l <- resp |> 
-#   as_list() |> 
-#   unlist(recursive = FALSE)
-
-posit_products_workbench <- posit_products$rstudio$pro$stable$version
-posit_products_connect <- posit_products$connect$installer$jammy$version
-posit_products_rspm <- posit_products$rspm$installer$jammy$version
-
-# Test output
-# cat(paste0("Workbench: ", posit_products_workbench, "\nConnect: ", posit_products_connect, " \nPackage Manager: ", posit_products_rspm))
-
-posit_products_rn <- data.frame("Product" = c("Workbench", "Connect", "Package Manager"), "Version" = c(posit_products_workbench, posit_products_connect, posit_products_rspm), "Release notes" = c("Release notes", "Release notes", "Release notes"))
-posit_products_rn_url <- c("https://docs.posit.co/ide/news/", "https://docs.posit.co/connect/news/", "https://docs.posit.co/rspm/news/package-manager/")
-
-# posit_products_rn %>%
-#   kbl(booktabs = T, align = "c", caption = "Current Posit product releases") %>%
-#   kable_styling() %>%
-#   kable_paper(full_width = T) %>%
-#   column_spec(3, link = posit_products_rn_url)
-
-# Themeing: https://quarto.org/docs/dashboards/theming.html 
-# Bootstrap themes: https://github.com/quarto-dev/quarto-cli/tree/main/src/resources/formats/html/bootstrap/themes 
-# I like minty and vapor
-```
-
-```{r}
-#| content: valuebox
-#| title: "Workbench"
-list(
-  icon = "cart-check",
-  color = "success",
-  value = posit_products_workbench
-)
-```
-
-```{r}
-#| content: valuebox
-#| title: "Connect"
-list(
-  icon = "cart-check",
-  color = "success",
-  value = posit_products_connect
-)
-```
-
-```{r}
-#| content: valuebox
-#| title: "Package Manager"
-list(
-  icon = "cart-check",
-  color = "success",
-  value = posit_products_rspm
-)
-```
-
-<!-- ## Holiday -->
-
-```{r}
-#| echo: false
-#| warning: false
-#| message: false
-#| content: valuebox
-#| title: "Holiday"
-
-# US Company Holidays
-
-library(lubridate)
 
 # Function to check if a date is a holiday
 is_us_holiday <- function(date) {
@@ -321,7 +250,7 @@ Weather: `r period_1_detailedForecast`
 
 
 
-## Row {height=40%}
+## Row {height=80%}
 
 <!-- ## Car Recalls -->
 
@@ -436,9 +365,138 @@ weather_periods %>%
 # https://r-graph-gallery.com/363-add-images-and-links-in-kableExtra.html
 ```
 
+# Work
+
+## Row {height=20%}
+
+<!-- ## Current product releases  -->
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(httr)
+library(httr2)
+library(png)
+library(xml2)
+library(rvest)
+library(tibble)
+library(knitr)
+library(kableExtra)
+library(stringr)
+
+url <- "https://www.rstudio.com/wp-content/downloads.json"
+
+posit_products <- request(url) |> 
+  req_perform() |> 
+  resp_body_json()
+
+# resp_l <- resp |> 
+#   as_list() |> 
+#   unlist(recursive = FALSE)
+
+posit_products_workbench <- posit_products$rstudio$pro$stable$version
+posit_products_connect <- posit_products$connect$installer$jammy$version
+posit_products_rspm <- posit_products$rspm$installer$jammy$version
+
+# Test output
+# cat(paste0("Workbench: ", posit_products_workbench, "\nConnect: ", posit_products_connect, " \nPackage Manager: ", posit_products_rspm))
+
+posit_products_rn <- data.frame("Product" = c("Workbench", "Connect", "Package Manager"), "Version" = c(posit_products_workbench, posit_products_connect, posit_products_rspm), "Release notes" = c("Release notes", "Release notes", "Release notes"))
+posit_products_rn_url <- c("https://docs.posit.co/ide/news/", "https://docs.posit.co/connect/news/", "https://docs.posit.co/rspm/news/package-manager/")
+
+# posit_products_rn %>%
+#   kbl(booktabs = T, align = "c", caption = "Current Posit product releases") %>%
+#   kable_styling() %>%
+#   kable_paper(full_width = T) %>%
+#   column_spec(3, link = posit_products_rn_url)
+
+# Themeing: https://quarto.org/docs/dashboards/theming.html 
+# Bootstrap themes: https://github.com/quarto-dev/quarto-cli/tree/main/src/resources/formats/html/bootstrap/themes 
+# I like minty and vapor
+```
+
+```{r}
+#| content: valuebox
+#| title: "Workbench"
+list(
+  icon = "cart-check",
+  color = "success",
+  value = posit_products_workbench
+)
+```
+
+```{r}
+#| content: valuebox
+#| title: "Connect"
+list(
+  icon = "cart-check",
+  color = "success",
+  value = posit_products_connect
+)
+```
+
+```{r}
+#| content: valuebox
+#| title: "Package Manager"
+list(
+  icon = "cart-check",
+  color = "success",
+  value = posit_products_rspm
+)
+```
+
+## Row {height=20%}
+
+<!-- ## Quick links  -->
+
+<!-- Workbench -->
+
+::: {.card}
+<center> 
+
+Release Notes: [link](https://docs.posit.co/ide/news/)
+
+Admin Guide: [link](https://docs.posit.co/ide/server-pro/)
+
+User Guide: [link](https://docs.posit.co/ide/server-pro/user/)
+
+</center>
+:::
+
+<!-- Connect -->
+
+::: {.card}
+<center> 
+
+Release Notes: [link](https://docs.posit.co/connect/news/)
+
+Admin Guide: [link](https://docs.posit.co/connect/admin/)
+
+User Guide: [link](https://docs.posit.co/connect/user)
+
+</center>
+:::
+
+<!-- Package Manager -->
+
+::: {.card}
+<center> 
+
+Release Notes: [link](https://docs.posit.co/rspm/news/package-manager/)
+
+Admin Guide: [link](https://docs.posit.co/rspm/admin/)
+
+User Guide: [link](https://docs.posit.co/rspm/admin/getting-started/user-guide/)
+
+</center>
+:::
 
 
-## Row {height=30%}
+
+
+## Row {height=60%}
 
 <!-- ## RSS Feed for Posit Blog posts  -->
 
@@ -449,7 +507,6 @@ weather_periods %>%
 #| tbl-cap-location: top
 #| label: tbl-rss-posit
 #| tbl-cap: "RSS Feed for Posit Blog posts"
-#| cap: "RSS Feed for Posit Blog posts"
 
 library(tidyRSS)
 library(dplyr)
@@ -457,11 +514,11 @@ library(lubridate)
 
 rss_url <- "https://posit.co/feed/"
 
-rss_posit_blog <- tidyfeed(rss_url) %>% slice_head(n=5) %>% select(item_title, item_pub_date)
+rss_posit_blog <- tidyfeed(rss_url) %>% slice_head(n=5) %>% select(item_title, item_pub_date) %>% mutate(item_pub_date = as.Date(item_pub_date))
 rss_posit_blog_url <- tidyfeed(rss_url) %>% slice_head(n=5) %>% select(item_link)
 
 rss_posit_blog %>%
-  kbl(booktabs = T, align = "c", caption = "RSS Feed for Posit Blog posts") %>%
+  kbl(booktabs = T, align = "lc") %>% #, caption = "RSS Feed for Posit Blog posts") %>%
   kable_styling() %>%
   kable_paper(full_width = T) %>%
   column_spec(1, link = rss_posit_blog_url$item_link)
@@ -480,7 +537,6 @@ rss_posit_blog %>%
 #| tbl-cap-location: top
 #| label: tbl-rss-r-journal
 #| tbl-cap: "RSS Feed for R Journal"
-#| cap: "RSS Feed for R Journal"
 
 library(tidyRSS)
 library(dplyr)
@@ -490,11 +546,12 @@ library(kableExtra)
 # Test your rss generator using this URL for the contents of the R Journal
 rss_url <- "http://journal.r-project.org/rss.atom"
 
-rss_r_journal <- tidyfeed(rss_url) %>% slice_head(n=5) %>% select(entry_title, entry_last_updated)
+rss_r_journal <- tidyfeed(rss_url) %>% slice_head(n=5) %>% select(entry_title, entry_last_updated) %>% mutate(entry_last_updated = as.Date(entry_last_updated))
+
 rss_r_journal_url <- tidyfeed(rss_url) %>% slice_head(n=5) %>% select(entry_link)
 
 rss_r_journal %>%
-  kbl(booktabs = T, align = "c", caption = "RSS Feed for R Journal") %>%
+  kbl(booktabs = T, align = "lc") %>% #, caption = "RSS Feed for R Journal") %>%
   kable_styling() %>%
   kable_paper(full_width = T) %>%
   column_spec(1, link = rss_r_journal_url$entry_link)
@@ -512,7 +569,6 @@ rss_r_journal %>%
 #| tbl-cap-location: top
 #| label: tbl-rss-r-weekly
 #| tbl-cap: "RSS Feed for R-weekly"
-#| cap: "RSS Feed for R-weekly"
 
 library(tidyRSS)
 library(dplyr)
@@ -529,7 +585,7 @@ rss_r_weekly <- rss_r_weekly %>%
   mutate(entry_title = str_replace_all(entry_title, "&", "and"))
 
 rss_r_weekly %>%
-  kbl(booktabs = T, align = "c", caption = "RSS Feed for R-weekly") %>%
+  kbl(booktabs = T, align = "lc") %>% #, caption = "RSS Feed for R-weekly") %>%
   kable_styling() %>%
   kable_paper(full_width = T) %>%
   column_spec(1, link = rss_r_weekly_url$entry_link)
