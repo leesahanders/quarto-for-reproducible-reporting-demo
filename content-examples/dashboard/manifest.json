@@ -1994,20 +1994,89 @@
     }
   },
   "files": {
-    "- custom.scss": {
-      "checksum": "99f5b111b6209285056c6d5ec78a2802"
-    },
     "_quarto.yml": {
       "checksum": "b77bfdef52769732ca30d978a0deb51c"
+    },
+    "custom.scss": {
+      "checksum": "988916a650a9d6185656c512c3f3ef3c"
     },
     "images/Leafey.PNG": {
       "checksum": "8f97483155532e33621d134b4dd2a761"
     },
-    "quarto-daily-dashboard-report.qmd": {
-      "checksum": "9daee69defe2d609a7ebb8ef9d5530eb"
+    "quarto-daily-dashboard-report.html": {
+      "checksum": "7c392b96af09056c73ee552cc865d6ae"
     },
-    "quarto-daily-email-report.qmd": {
-      "checksum": "066c8d75e0a32c9a4a62cb15d77f1e39"
+    "quarto-daily-dashboard-report.qmd": {
+      "checksum": "6eeb89502e8854fecb543a3e2913e845"
+    },
+    "quarto-daily-dashboard-report_files/libs/bootstrap/bootstrap-dark.min.css": {
+      "checksum": "dda501d240b7243413b19d54ff228c16"
+    },
+    "quarto-daily-dashboard-report_files/libs/bootstrap/bootstrap-icons.css": {
+      "checksum": "2318f137d201fbf51601fa0faba6bef7"
+    },
+    "quarto-daily-dashboard-report_files/libs/bootstrap/bootstrap-icons.woff": {
+      "checksum": "1a51dfbe5467607389d603c02a77cd10"
+    },
+    "quarto-daily-dashboard-report_files/libs/bootstrap/bootstrap.min.css": {
+      "checksum": "0680d4278b3f8c819812ac218c139b0a"
+    },
+    "quarto-daily-dashboard-report_files/libs/bootstrap/bootstrap.min.js": {
+      "checksum": "e2b09c06f0e714b6144a6788a28e3950"
+    },
+    "quarto-daily-dashboard-report_files/libs/clipboard/clipboard.min.js": {
+      "checksum": "15f52a1ee547f2bdd46e56747332ca2d"
+    },
+    "quarto-daily-dashboard-report_files/libs/kePrint-0.0.1/kePrint.js": {
+      "checksum": "03b791fcaee0a40c261c3c14f3d85d27"
+    },
+    "quarto-daily-dashboard-report_files/libs/lightable-0.0.1/lightable.css": {
+      "checksum": "25547ce4d44910ea8f377212d34397fa"
+    },
+    "quarto-daily-dashboard-report_files/libs/quarto-dashboard/components.js": {
+      "checksum": "ac49ebff39666f27f4631a3914841683"
+    },
+    "quarto-daily-dashboard-report_files/libs/quarto-dashboard/datatables.min.css": {
+      "checksum": "7b2279175549cd49b758a7d5b4da6cd6"
+    },
+    "quarto-daily-dashboard-report_files/libs/quarto-dashboard/datatables.min.js": {
+      "checksum": "80521430bee6a8d1a1ba48987ff870c1"
+    },
+    "quarto-daily-dashboard-report_files/libs/quarto-dashboard/pdfmake.min.js": {
+      "checksum": "95caca411bcbd3095c0f8db152de05dd"
+    },
+    "quarto-daily-dashboard-report_files/libs/quarto-dashboard/quarto-dashboard.js": {
+      "checksum": "bd2bba0a7c7d9aa8840eb5a9c73c2c28"
+    },
+    "quarto-daily-dashboard-report_files/libs/quarto-dashboard/stickythead.js": {
+      "checksum": "5b27aeec9a60192899f23015fd741564"
+    },
+    "quarto-daily-dashboard-report_files/libs/quarto-dashboard/vfs_fonts.js": {
+      "checksum": "8a026906153f3e29bc684f6b392e8654"
+    },
+    "quarto-daily-dashboard-report_files/libs/quarto-dashboard/web-components.js": {
+      "checksum": "c91de9b5866fb45c694bbeafa119d6b9"
+    },
+    "quarto-daily-dashboard-report_files/libs/quarto-html/anchor.min.js": {
+      "checksum": "91bcf6cd1fd88fec3f109811e5fc3546"
+    },
+    "quarto-daily-dashboard-report_files/libs/quarto-html/popper.min.js": {
+      "checksum": "3a4a291ccf3f1ea0f82b641542fd3827"
+    },
+    "quarto-daily-dashboard-report_files/libs/quarto-html/quarto-syntax-highlighting-dark.css": {
+      "checksum": "4dca331c0806f351d3f630ba7f039574"
+    },
+    "quarto-daily-dashboard-report_files/libs/quarto-html/quarto-syntax-highlighting.css": {
+      "checksum": "49bff82b9355f257417faaaa77dd1607"
+    },
+    "quarto-daily-dashboard-report_files/libs/quarto-html/quarto.js": {
+      "checksum": "2ca82ae8ee1e5762d249c6b6c0802e30"
+    },
+    "quarto-daily-dashboard-report_files/libs/quarto-html/tippy.css": {
+      "checksum": "ebd6f8ce46a677e1a4f5f8a8317109a9"
+    },
+    "quarto-daily-dashboard-report_files/libs/quarto-html/tippy.umd.min.js": {
+      "checksum": "d828775275749701b48bd9d958814111"
     },
     "README.md": {
       "checksum": "18b4516b77ad660cc66e58b6adfbed2b"
