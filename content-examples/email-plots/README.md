@@ -47,5 +47,11 @@ Reference:
 - <https://r-charts.com/evolution/time-series-ggplot2/> 
 - <https://stackoverflow.com/questions/61546244/reverse-engineering-cumulative-to-daily-data> 
 - Color selection: <https://r-graph-gallery.com/ggplot2-color.html> 
+- Color blind selection: <https://stackoverflow.com/questions/57153428/r-plot-color-combinations-that-are-colorblind-accessible> and <http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/> 
 - TODO: peaks and valleys <https://r-charts.com/evolution/time-series-ggplot2/> 
+
+Here's a couple palettes I'd like to use more: 
+
+- paletteer_d("ggsci::planetexpress_futurama")
+- paletteer_d("vapoRwave::vapoRwave")
 

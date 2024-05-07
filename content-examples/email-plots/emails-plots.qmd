@@ -66,7 +66,6 @@ var_repos_internal_packages = 8 # source id's for transaction information c(8,9,
 var_repos_bioconductor = 4 # repository id for bioconductor #13
 var_version_bioconductor = 3.16
 lookback = 30 #days
-
 ```
 
 Server Status
@@ -77,6 +76,7 @@ resp <- GET(paste0(var_url, "__api__/status"), format="json")
 status <- content(resp, type="application/json")
 
 rspm_version <- status$version
+rspm_version
 ```
 
 Package Downloads 
@@ -98,8 +98,9 @@ resp <- GET(paste0(var_url,"__api__/metrics/packages?_sourceType=r&_days=",lookb
 metricsPackagesR <- content(resp, type="application/json")
 metricsPackagesR <- unnest_wider(tibble::tibble(metricsPackagesR = metricsPackagesR), metricsPackagesR) 
 
-metricsPackages %>% 
-  summarize(count = sum(count))
+metricsPackagesR_sum <- metricsPackagesR %>% 
+  summarize(total = sum(count)) %>% 
+  mutate(language = "R")
 ```
 
 Total  sourceType python package downloads:
@@ -109,8 +110,34 @@ resp <- GET(paste0(var_url,"__api__/metrics/packages?_sourceType=python&_days=",
 metricsPackagesPython <- content(resp, type="application/json")
 metricsPackagesPython <- unnest_wider(tibble::tibble(metricsPackagesPython = metricsPackagesPython), metricsPackagesPython)
 
-metricsPackagesPython %>%
-  summarize(count = sum(count))
+metricsPackagesPython_sum <- metricsPackagesPython %>%
+  summarize(total = sum(count)) %>% 
+  mutate(language = "Python")
+```
+
+Comparing R to Python downloads: 
+
+```{r}
+library(ggrepel)
+
+metricsPackages <- metricsPackagesPython_sum %>% 
+  rbind(metricsPackagesR_sum)
+  
+metricsPackages_plot <- ggplot(metricsPackages, aes(x=total, y=language, label = total)) +
+  geom_bar(stat = "identity", color="blue", fill="skyblue", alpha=0.7) +
+  coord_flip() + 
+  geom_text(aes(label = language), position = position_stack(vjust = 0.5)) +
+  geom_text(aes(label= total), position = position_dodge(0.9), vjust = 0) + 
+  ggtitle("Public Package Manager: Total downloads by language") + 
+          #subtitle = "R Downloads") +  
+  theme_bw() + 
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1),
+        plot.margin = margin(t = 20,  # Top margin
+                             r = 50,  # Right margin
+                             b = 40,  # Bottom margin
+                             l = 10)) # Left margin
+  
+metricsPackages_plot
 ```
 
 By day cumulative sourceType r package downloads: 
@@ -261,6 +288,138 @@ plot_Python_package_downloads
 ```
 
 
+R individual package downloads daily stacked: 
+
+```{r}
+library(paletteer)
+library(patchwork)
+library(gridExtra)
+
+# Only top 10 show up in label 
+metricsPackagesR_daily_raw_top10 <- metricsPackagesR_daily_raw %>% 
+  group_by(language, name) %>%
+  summarize(downloads = sum(daily_count)) %>% 
+  arrange(desc(downloads)) %>%
+  ungroup() %>%
+  mutate(name_label = ifelse(row_number() <= 10, name, "other")) %>%
+  arrange(downloads) %>%
+  mutate(name_label = factor(name_label, levels=unique(name_label))) 
+  
+metricsPackagesR_daily_raw_plot_data <- metricsPackagesR_daily_raw %>%
+  merge(metricsPackagesR_daily_raw_top10 %>% select(name, name_label, downloads), by = "name") %>% 
+  arrange(downloads)
+
+# Plot daily stack
+metricsPackagesR_daily_raw_plot <- ggplot(metricsPackagesR_daily_raw_plot_data, aes(fill=name_label, y=daily_count, x=date)) + 
+  geom_bar(position='stack', stat='identity') + 
+  ggtitle("Public Package Manager R Packages: ") +
+          #subtitle = "R Downloads") +
+  scale_color_paletteer_d("colorBlindness::paletteMartin") + 
+  scale_colour_paletteer_d("colorBlindness::paletteMartin") + 
+  scale_fill_paletteer_d("colorBlindness::paletteMartin") + 
+  theme_bw() +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1),
+        legend.position = "none",
+        plot.margin = margin(t = 20,  # Top margin
+                             r = 50,  # Right margin
+                             b = 40,  # Bottom margin
+                             l = 10)) # Left margin
+
+# Plot top 10 
+metricsPackagesR_daily_raw_plot2 <- ggplot(metricsPackagesR_daily_raw_plot_data %>% select(name, name_label, downloads) %>% unique(), aes(fill=name_label, y=downloads, x=name_label)) + 
+  geom_bar(position='stack', stat='identity') + 
+  ggtitle("Downloads") +
+          #subtitle = "R Downloads") +
+  scale_color_paletteer_d("colorBlindness::paletteMartin") + 
+  scale_colour_paletteer_d("colorBlindness::paletteMartin") + 
+  scale_fill_paletteer_d("colorBlindness::paletteMartin") + 
+  coord_flip(clip = "off") + 
+  # geom_text(data = metricsPackagesR_daily_raw_plot_data %>% select(name, name_label, downloads) %>% unique() %>% top_n(5), aes(x = name_label, y = downloads, label = downloads), position = position_stack(vjust = 0.5)) +
+  geom_text(data = metricsPackagesR_daily_raw_plot_data %>% select(name, name_label, downloads) %>% unique() %>% top_n(5), aes(x = name_label, y = downloads, label = downloads), position = position_dodge(width=0.9), hjust = -0.2) +
+  theme_bw() +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1),
+        legend.position = "none",
+        panel.border = element_rect(linetype = "dashed", fill = NA, colour = "white"),
+        axis.title.y = element_blank(),
+        plot.margin = margin(t = 20,  # Top margin
+                             r = 50,  # Right margin
+                             b = 40,  # Bottom margin
+                             l = 10)) # Left margin
+
+metricsPackagesR_daily_raw_plot
+metricsPackagesR_daily_raw_plot2
+
+metricsPackagesR_daily_raw_plot3 <- gridExtra::grid.arrange(metricsPackagesR_daily_raw_plot,metricsPackagesR_daily_raw_plot2, ncol=2, widths = 3:2)
+
+metricsPackagesR_daily_raw_plot3
+```
+
+Python individual package downloads daily stacked: 
+
+```{r}
+library(paletteer)
+library(patchwork)
+library(gridExtra)
+
+# Only top 10 show up in label 
+metricsPackagesPython_daily_raw_top10 <- metricsPackagesPython_daily_raw %>% 
+  group_by(language, name) %>%
+  summarize(downloads = sum(daily_count)) %>% 
+  arrange(desc(downloads)) %>%
+  ungroup() %>%
+  mutate(name_label = ifelse(row_number() <= 10, name, "other")) %>%
+  arrange(downloads) %>%
+  mutate(name_label = factor(name_label, levels=unique(name_label))) 
+  
+metricsPackagesPython_daily_raw_plot_data <- metricsPackagesPython_daily_raw %>%
+  merge(metricsPackagesPython_daily_raw_top10 %>% select(name, name_label, downloads), by = "name") %>% 
+  arrange(downloads)
+
+# Plot daily stack
+metricsPackagesPython_daily_raw_plot <- ggplot(metricsPackagesPython_daily_raw_plot_data, aes(fill=name_label, y=daily_count, x=date)) + 
+  geom_bar(position='stack', stat='identity') + 
+  ggtitle("Public Package Manager Python Packages: ") +
+          #subtitle = "R Downloads") +
+  scale_color_paletteer_d("colorBlindness::paletteMartin") + 
+  scale_colour_paletteer_d("colorBlindness::paletteMartin") + 
+  scale_fill_paletteer_d("colorBlindness::paletteMartin") + 
+  theme_bw() +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1),
+        legend.position = "none",
+        plot.margin = margin(t = 20,  # Top margin
+                             r = 50,  # Right margin
+                             b = 40,  # Bottom margin
+                             l = 10)) # Left margin
+
+# Plot top 10 
+metricsPackagesPython_daily_raw_plot2 <- ggplot(metricsPackagesPython_daily_raw_plot_data %>% select(name, name_label, downloads) %>% unique(), aes(fill=name_label, y=downloads, x=name_label)) + 
+  geom_bar(position='stack', stat='identity') + 
+  ggtitle("Downloads") +
+          #subtitle = "R Downloads") +
+  scale_color_paletteer_d("colorBlindness::paletteMartin") + 
+  scale_colour_paletteer_d("colorBlindness::paletteMartin") + 
+  scale_fill_paletteer_d("colorBlindness::paletteMartin") + 
+  coord_flip(clip = "off") + 
+  # geom_text(data = metricsPackagesPython_daily_raw_plot_data %>% select(name, name_label, downloads) %>% unique() %>% top_n(5), aes(label = downloads), position = position_stack(vjust = 0.5)) +
+  geom_text(data = metricsPackagesPython_daily_raw_plot_data %>% select(name, name_label, downloads) %>% unique() %>% top_n(5), aes(x = name_label, y = downloads, label = downloads), position = position_dodge(width=0.9), hjust = -0.2) +
+  theme_bw() +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1),
+        panel.border = element_rect(linetype = "dashed", fill = NA, colour = "white"),
+        legend.position = "none",
+        axis.title.y = element_blank(),
+        plot.margin = margin(t = 20,  # Top margin
+                             r = 50,  # Right margin
+                             b = 40,  # Bottom margin
+                             l = 10)) # Left margin
+
+metricsPackagesPython_daily_raw_plot
+metricsPackagesPython_daily_raw_plot2
+
+metricsPackagesPython_daily_raw_plot3 <- gridExtra::grid.arrange(metricsPackagesPython_daily_raw_plot,metricsPackagesPython_daily_raw_plot2, ncol=2, widths = 3:2)
+
+metricsPackagesPython_daily_raw_plot3
+```
+
 Packages with currently detected vulnerabilities
 
 
@@ -273,8 +432,53 @@ Send an email.
 ::: {.email}
 
 ::: {.subject}
-Here's some curated content for you
+Curated report of p3m metrics
 :::
+
+Lookback: `{r} lookback`
+
+Package Manager is on version: `{r} rspm_version`
+
+Package Manager total downloads: 
+
+```{r}
+#| echo: false
+
+metricsPackages_plot
+```
+
+R Package downloads from p3m: 
+
+```{r}
+#| echo: false
+
+plot_r_package_downloads
+```
+
+R Package downloads from p3m, daily stack and pareto: 
+
+```{r}
+#| echo: false
+
+metricsPackagesR_daily_raw_plot3
+```
+
+Python Package downloads from p3m: 
+
+```{r}
+#| echo: false
+
+plot_Python_package_downloads
+```
+
+Python Package downloads from p3m, daily stack and pareto: 
+
+```{r}
+#| echo: false
+
+metricsPackagesPython_daily_raw_plot3
+```
+
 
 
 Here's a map
@@ -291,22 +495,6 @@ Here's good ol mtcars
 #| echo: false
 
 mtcars_plot
-```
-
-R Package downloads from p3m
-
-```{r}
-#| echo: false
-
-plot_r_package_downloads
-```
-
-Python Package downloads from p3m
-
-```{r}
-#| echo: false
-
-plot_Python_package_downloads
 ```
 
 :::
