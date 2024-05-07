@@ -130,3 +130,6 @@ These items need to be added to the git repository to make that possible:
 
 - url: ${{ secrets.CONNECT_URL }}
 - api-key: ${{ secrets.CONNECT_API_KEY }}
+
+
+TODO: Add landing page, make it deploy last: <https://stackoverflow.com/questions/62750603/github-actions-trigger-another-action-after-one-action-is-completed> 
