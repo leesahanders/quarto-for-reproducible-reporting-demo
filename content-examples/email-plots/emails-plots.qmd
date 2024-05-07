@@ -8,41 +8,7 @@ Make the magic happen: <https://docs.posit.co/connect/user/quarto/#email-customi
 
 ## Email notifications: Add plots n stuff
 
-### Generate contents: a map
-
-```{r}
-library(ggplot2)
-library(maps)
-
-df <- data.frame(x = state.center$x, y = state.center$y,
-                 state = state.name)
-
-map_plot <- ggplot(df, aes(x = x, y = y)) + 
-       geom_polygon(data = map_data("state"),
-                    color = "white",
-                    aes(x = long, y = lat,
-                        fill = map_data("state")$region,
-                        group = group)) +
-       guides(fill = FALSE) + 
-        geom_text(aes(x = -115, y = 25, label = "Map of the United States"),
-                    stat = "unique") +
-        geom_label(aes(label = state))
-
-map_plot
-```
-
-### Generate contents: Good ol mtcars
-
-```{r echo = FALSE}
-library(ggplot2)
-library(ggiraph)
-
-# Create a ggplot object
-mtcars_plot <- ggplot(mtcars, aes(x = wt, y = mpg, tooltip = paste("Weight:", wt, "MPG:", mpg), data_id = row.names(mtcars))) +
-  geom_point_interactive()
-
-mtcars_plot
-```
+### Generate contents
 
 Generate contents: Package Manager metrics 
 
@@ -68,7 +34,7 @@ var_version_bioconductor = 3.16
 lookback = 30 #days
 ```
 
-Server Status
+#### Server Status
 
 ```{r}
 #Server status 
@@ -79,7 +45,7 @@ rspm_version <- status$version
 rspm_version
 ```
 
-Package Downloads 
+#### Package Downloads 
 
 PPM has an endpoint metrics/packages that allows you to get the download count of a given package for the last x days which should make it simple to expand this to date ranges. A sample call for package clustermq ’s download stats for the last 112 days would look like
 
@@ -115,7 +81,7 @@ metricsPackagesPython_sum <- metricsPackagesPython %>%
   mutate(language = "Python")
 ```
 
-Comparing R to Python downloads: 
+#### Comparing R to Python total downloads: 
 
 ```{r}
 library(ggrepel)
@@ -139,6 +105,8 @@ metricsPackages_plot <- ggplot(metricsPackages, aes(x=total, y=language, label =
   
 metricsPackages_plot
 ```
+
+#### Cumulative downloads by day
 
 By day cumulative sourceType r package downloads: 
 
@@ -287,6 +255,7 @@ plot_Python_package_downloads <- ggplot(metricsPackagesPython_daily) +
 plot_Python_package_downloads
 ```
 
+#### Stack of individual package downloads, top 10
 
 R individual package downloads daily stacked: 
 
@@ -420,14 +389,11 @@ metricsPackagesPython_daily_raw_plot3 <- gridExtra::grid.arrange(metricsPackages
 metricsPackagesPython_daily_raw_plot3
 ```
 
-Packages with currently detected vulnerabilities
+#### Future work
 
+TODO: Packages with currently detected vulnerabilities
 
-
-
-
-
-Send an email. 
+#### Send an email. 
 
 ::: {.email}
 
@@ -460,7 +426,7 @@ R Package downloads from p3m, daily stack and pareto:
 ```{r}
 #| echo: false
 
-metricsPackagesR_daily_raw_plot3
+gridExtra::grid.arrange(metricsPackagesR_daily_raw_plot,metricsPackagesR_daily_raw_plot2, ncol=2, widths = 3:2)
 ```
 
 Python Package downloads from p3m: 
@@ -476,25 +442,15 @@ Python Package downloads from p3m, daily stack and pareto:
 ```{r}
 #| echo: false
 
-metricsPackagesPython_daily_raw_plot3
+gridExtra::grid.arrange(metricsPackagesPython_daily_raw_plot,metricsPackagesPython_daily_raw_plot2, ncol=2, widths = 3:2)
 ```
 
-
-
-Here's a map
+This is what happens if you try to include an interactive plot: 
 
 ```{r}
 #| echo: false
 
-map_plot
-```
-
-Here's good ol mtcars
-
-```{r}
-#| echo: false
-
-mtcars_plot
+ggplotly(metricsPackages_plot)
 ```
 
 :::
