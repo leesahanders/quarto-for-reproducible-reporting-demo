@@ -216,7 +216,7 @@ jobs:
           force: TRUE
           dir: ./content-examples/email-conditional/:email-conditional
   connect-publish-dashboard:
-    name: connect-publish
+    name: connect-publish-dashboard
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -235,7 +235,7 @@ jobs:
           force: TRUE
           dir: ./content-examples/dashboard/:dashboard
   notify:
-    needs: connect-publish
+    needs: connect-publish-dashboard
     runs-on: ubuntu-latest
     name: connect-publish-landing-page
     steps:
