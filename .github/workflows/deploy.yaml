@@ -238,7 +238,6 @@ jobs:
     needs: connect-publish
     runs-on: ubuntu-latest
     name: connect-publish-landing-page
-    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: r-lib/actions/setup-pandoc@v2
