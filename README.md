@@ -59,8 +59,6 @@ Websites:
 
 workshop outline: https://github.com/jeremy-allen/quarto-workshop/blob/main/workshop-guide
 
-
-
 # Publishing
 
 Notes for the developer:
