@@ -6,6 +6,7 @@
 
 - [x] Today's date
 - [x] Check if today is a US holiday
+- [x] When is the next US holiday
 - [x] Today's weather
 - [x] Weather forecast
 - [x] Today's UV index
@@ -26,6 +27,7 @@
 - [] Daily water quality: [1](https://waterdata.usgs.gov/blog/dataretrieval/#multi-agency-water-quality-data-from-the-water-quality-portal-wqp)
 - [] Add conditionality: [1](https://github.com/quarto-dev/quarto-r/issues/137#issuecomment-1966765073) [2](https://github.com/rich-iannone/quarto-email/issues/9) [3](https://github.com/quarto-dev/quarto-r/issues/137)
 - [] Send conditional emails (only on weekdays)
+- [x] Add better [icons](https://icons.getbootstrap.com/) 
 
 
 # Environment management 

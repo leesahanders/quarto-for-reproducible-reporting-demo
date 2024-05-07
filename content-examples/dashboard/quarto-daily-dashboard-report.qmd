@@ -17,7 +17,7 @@ theme:
 
 # DATE `r Sys.Date()`
 
-## Row {height=20%}
+## Row {height=25%}
 
 <!-- ## US Company Holidays -->
 
@@ -26,7 +26,7 @@ theme:
 #| warning: false
 #| message: false
 #| content: valuebox
-#| title: "Holiday"
+#| title: "Today's Holiday Status"
 
 library(lubridate)
 library(httr)
@@ -38,6 +38,7 @@ library(tibble)
 library(knitr)
 library(kableExtra)
 library(stringr)
+library(tidyverse)
 
 # Function to check if a date is a holiday
 is_us_holiday <- function(date) {
@@ -88,7 +89,7 @@ holiday_status <- is_us_holiday(input_date)
 # print(paste("Date:", input_date, "- Holiday:", holiday_status))
 
 list(
-  icon = "cake",
+  icon = "balloon",
   color = "primary",
   value = holiday_status
 )
@@ -104,6 +105,44 @@ list(
 # https://quarto.org/docs/projects/virtual-environments.html#using-renv
 # https://quarto.org/docs/dashboards/data-display.html#icon-and-color
 ```
+
+<!-- ## Next holiday -->
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| content: valuebox
+#| title: "Next Holiday"
+
+# Function to check if a date is a holiday
+next_us_holiday <- function(date) {
+  # Extract month and day
+  month_day <- month(date) * 100 + day(date)
+  
+  holidays <- data.frame("holiday" = c("New Year's Day", "Martin Luther King, Jr. Day", "Presidents' Day", "Patriots' Day ", "Memorial Day", "Juneteenth", "Independence Day", "Labor Day", "Indigenous Peoples' Day", "Citizenship Day",  "Veterans' Day", "Thanksgiving Day", "Day After Thanksgiving", "Christmas Day", "Day After Christmas", "New Year's Eve"), 
+    "month_day_num" = c(101,115,219,415,527,619,704,902,1014,1105,1111,1128,1129,1225,1226,1231))
+
+  # Check time to each holiday
+  holiday_check <- holidays %>%
+    mutate(holiday_check = month_day_num - month_day) %>%
+    filter(holiday_check >= 0) %>%
+    slice_head(n=1)
+    
+  return(paste0(holiday_check$holiday, " is in ", holiday_check$holiday_check, " days."))
+}
+
+#input_date <- ymd("2024-07-04")  # Input date for known holiday
+input_date <- Sys.Date()
+holiday_status <- next_us_holiday(input_date)
+
+list(
+  icon = "cake",
+  color = "primary",
+  value = holiday_status
+)
+```
+
 
 <!-- ## UV Index -->
 
@@ -250,7 +289,7 @@ Weather: `r period_1_detailedForecast`
 
 
 
-## Row {height=80%}
+## Row {height=75%}
 
 <!-- ## Car Recalls -->
 
@@ -287,7 +326,7 @@ car_recalls_results <- do.call(rbind.data.frame, car_recalls$results) %>% select
   mutate(ReportReceivedDate = dmy(ReportReceivedDate)) %>%
   arrange(desc(ReportReceivedDate))
 
-car_tbl_cap <- paste(car_recalls_results$ModelYear[1], car_recalls_results$Make[1], car_recalls_results$Model[1])
+car_tbl_cap <- paste(car_recalls_results$ModelYear[1], car_recalls_results$Make[1], car_recalls_results$Model[1], "RECALLS")
 
 car_recalls_results %>%
   select(ReportReceivedDate, Consequence) %>%
@@ -302,7 +341,7 @@ car_recalls_results %>%
 # https://stackoverflow.com/questions/76747571/kable-caption-as-tbl-cap-in-quarto
 ```
 
-`r paste(car_recalls_results$ModelYear[1], car_recalls_results$Make[1], car_recalls_results$Model[1])` 
+`r paste(car_recalls_results$ModelYear[1], car_recalls_results$Make[1], car_recalls_results$Model[1], "RECALLS")` 
 
 :::
 
@@ -314,7 +353,6 @@ car_recalls_results %>%
 #| message: false
 #| label: tbl-weather2
 #| tbl-cap: "Weather forecast"
-#| cap: "Weather forecast"
 
 library(httr)
 library(httr2)
@@ -346,14 +384,14 @@ weather_periods <- data.table::rbindlist(weather$properties$periods, fill = TRUE
   unique() %>%
   mutate(forecast = "", temperature = paste(temperature, temperatureUnit), windSpeed = paste(windSpeed, windDirection)) %>% 
   select(name, forecast, temperature, windSpeed, shortForecast, icon) %>% 
-  slice_head(n=6)
+  slice_head(n=5)
 weather_periods_url_image <- weather_periods %>% select(icon)
 #   select(name, forecast, temperature, temperatureUnit, windSpeed, windDirection, shortForecast, icon) 
 # weather_periods_url_image <- weather_periods %>% select(icon)
 
 weather_periods %>% 
   select(-icon) %>% 
-  kbl(booktabs = T, align = "c", caption = "Weather forecast") %>%
+  kbl(booktabs = T, align = "c") %>% #, caption = "Weather forecast") %>%
   kable_styling() %>%
   kable_paper(full_width = T) %>%
   column_spec(2, image = spec_image(weather_periods_url_image$icon, 280, 200))

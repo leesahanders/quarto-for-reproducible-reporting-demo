@@ -1,0 +1,15 @@
+name: quarto-daily-dashboard-report
+title: quarto-daily-dashboard-report
+username: lisa.anders
+account: lisa.anders
+server: colorado.posit.co
+hostUrl: https://colorado.posit.co/rsc/__api__
+appId: 19071
+bundleId: 113633
+url: https://colorado.posit.co/rsc/lisas-quarto-dashboard/
+version: 1
+quarto_version: 1.4.550
+quarto_engines: knitr
+asMultiple: FALSE
+asStatic: FALSE
+additionalFiles: custom.scss|images/Leafey.PNG
