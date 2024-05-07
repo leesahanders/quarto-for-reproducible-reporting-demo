@@ -14,7 +14,7 @@ on:
 
 jobs:
   connect-publish-report-mermaid-diagrams:
-    name: connect-publish
+    name: connect-publish-report-mermaid-diagrams
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
