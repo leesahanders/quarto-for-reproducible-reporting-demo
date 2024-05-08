@@ -251,6 +251,7 @@ jobs:
           CONNECT_ENV_SET_MYVAR: available at runtime
         with:
           url: ${{ secrets.CONNECT_URL }}
+          server: ${{ secrets.CONNECT_SERVER }}
           api-key: ${{ secrets.CONNECT_API_KEY }}
           access-type: logged_in
           show-logs: TRUE
