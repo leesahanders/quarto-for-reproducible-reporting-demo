@@ -250,7 +250,7 @@ jobs:
         env:
           CONNECT_ENV_SET_MYVAR: available at runtime
           CONNECT_ENV_SET_CONNECT_SERVER: ${{ secrets.CONNECT_SERVER }}
-          CONNECT_ENV_SET_CONNECT_URL: ${{ secrets.CONNECT_SERVER }}
+          CONNECT_ENV_SET_CONNECT_URL: ${{ secrets.CONNECT_URL }}
           CONNECT_ENV_SET_CONNECT_API_KEY: ${{ secrets.CONNECT_API_KEY }}
         with:
           url: ${{ secrets.CONNECT_URL }}
