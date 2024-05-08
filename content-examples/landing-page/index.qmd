@@ -9,26 +9,17 @@ css: styles.css
 
 `r knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, cache = F)`
 
-<img src="img/logo-team-full-color.svg" class="w-75"/>
-
 <h1>Content</h1>
 
 ::: increased-font-size
-Posit Test Drive is a limited demo environment hosted by Posit to help you learn more and try out the various features of the professional products.
+Quarto is an exciting new content framework by Posit and open source developers to help you create phenomenal things. Below is a collection of Posit Connect Quarto hosted content, showcasing the many different content types. 
 
-Below is a collection of Posit Connect hosted content, showcasing the outputs from the many demo examples. Check them out and have fun!
+These examples are hosted on Posit Test Drive, a limited demo environment hosted by Posit to help you learn more and try out the various features of the professional products.
+
+Check them out and have fun!
 :::
 
 <br>
-
-
-## Print environment to log, for debugging
-
-```{r}
-#| echo: true
-#| output: console
-Sys.getenv()
-```
 
 
 ## Server content using connectwidgets
@@ -357,15 +348,15 @@ library(purrr)
 ```{r}
 #| output: asis
 #| echo: false
-res <- purrr::map_chr(unique(starwars$homeworld), \(hw) {
-    knitr::knit_child(
-      input = "child-dir/_child.qmd",
-      envir = environment(),
-      quiet = TRUE
-      )
-  })
-
-cat(res, sep = '\n')
+# res <- purrr::map_chr(unique(starwars$homeworld), \(hw) {
+#     knitr::knit_child(
+#       input = "child-dir/_child.qmd",
+#       envir = environment(),
+#       quiet = TRUE
+#       )
+#   })
+# 
+# cat(res, sep = '\n')
 ```
 :::
 

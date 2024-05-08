@@ -1,5 +1,7 @@
 # Landing Page
 
+Preview with: `quarto preview index.qmd --to default --no-watch-inputs --no-browse`
+
 ## Resources
 
 - Custom dashboard with connectwidgets: <https://docs.posit.co/connect/how-to/connectwidgets/index.html#a-custom-dashboard>
