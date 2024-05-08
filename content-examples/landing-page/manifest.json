@@ -155,131 +155,6 @@
         "Built": "R 4.3.1; ; 2023-10-20 00:51:12 UTC; windows"
       }
     },
-    "Rcpp": {
-      "Source": "CRAN",
-      "Repository": "https://cran.rstudio.com",
-      "description": {
-        "Package": "Rcpp",
-        "Title": "Seamless R and C++ Integration",
-        "Version": "1.0.11",
-        "Date": "2023-07-03",
-        "Author": "Dirk Eddelbuettel, Romain Francois, JJ Allaire, Kevin Ushey, Qiang Kou,\n Nathan Russell, Inaki Ucar, Douglas Bates and John Chambers",
-        "Maintainer": "Dirk Eddelbuettel <edd@debian.org>",
-        "Description": "The 'Rcpp' package provides R functions as well as C++ classes which\n offer a seamless integration of R and C++. Many R data types and objects can be\n mapped back and forth to C++ equivalents which facilitates both writing of new\n code as well as easier integration of third-party libraries. Documentation\n about 'Rcpp' is provided by several vignettes included in this package, via the\n 'Rcpp Gallery' site at <https://gallery.rcpp.org>, the paper by Eddelbuettel and\n Francois (2011, <doi:10.18637/jss.v040.i08>), the book by Eddelbuettel (2013,\n <doi:10.1007/978-1-4614-6868-4>) and the paper by Eddelbuettel and Balamuta (2018,\n <doi:10.1080/00031305.2017.1375990>); see 'citation(\"Rcpp\")' for details.",
-        "Imports": "methods, utils",
-        "Suggests": "tinytest, inline, rbenchmark, pkgKitten (>= 0.1.2)",
-        "URL": "https://www.rcpp.org,\nhttps://dirk.eddelbuettel.com/code/rcpp.html,\nhttps://github.com/RcppCore/Rcpp",
-        "License": "GPL (>= 2)",
-        "BugReports": "https://github.com/RcppCore/Rcpp/issues",
-        "MailingList": "rcpp-devel@lists.r-forge.r-project.org",
-        "RoxygenNote": "6.1.1",
-        "Encoding": "UTF-8",
-        "NeedsCompilation": "yes",
-        "Packaged": "2023-07-03 15:56:55 UTC; edd",
-        "Repository": "CRAN",
-        "Date/Publication": "2023-07-06 07:33:14 UTC",
-        "Built": "R 4.3.1; x86_64-w64-mingw32; 2023-09-07 01:09:19 UTC; windows",
-        "Archs": "x64"
-      }
-    },
-    "TTR": {
-      "Source": "CRAN",
-      "Repository": "https://cran.rstudio.com",
-      "description": {
-        "Package": "TTR",
-        "Type": "Package",
-        "Title": "Technical Trading Rules",
-        "Version": "0.24.4",
-        "Authors@R": "c(\n  person(given=\"Joshua\", family=\"Ulrich\", role=c(\"cre\",\"aut\"), email=\"josh.m.ulrich@gmail.com\"),\n  person(given=c(\"Ethan\",\"B.\"), family=\"Smith\", role=\"ctb\")\n  )",
-        "Imports": "xts (>= 0.10-0), zoo, curl",
-        "LinkingTo": "xts",
-        "Enhances": "quantmod",
-        "Suggests": "RUnit",
-        "Description": "A collection of over 50 technical indicators for creating technical trading rules. The package also provides fast implementations of common rolling-window functions, and several volatility calculations.",
-        "License": "GPL (>= 2)",
-        "URL": "https://github.com/joshuaulrich/TTR",
-        "BugReports": "https://github.com/joshuaulrich/TTR/issues",
-        "NeedsCompilation": "yes",
-        "Packaged": "2023-11-28 00:12:35 UTC; josh",
-        "Author": "Joshua Ulrich [cre, aut],\n  Ethan B. Smith [ctb]",
-        "Maintainer": "Joshua Ulrich <josh.m.ulrich@gmail.com>",
-        "Repository": "CRAN",
-        "Date/Publication": "2023-11-28 05:20:21 UTC",
-        "Built": "R 4.3.3; x86_64-w64-mingw32; 2024-05-06 01:57:07 UTC; windows",
-        "Archs": "x64",
-        "RemoteType": "standard",
-        "RemotePkgRef": "TTR",
-        "RemoteRef": "TTR",
-        "RemoteRepos": "https://cran.rstudio.com",
-        "RemoteReposName": "CRAN",
-        "RemotePkgPlatform": "x86_64-w64-mingw32",
-        "RemoteSha": "0.24.4"
-      }
-    },
-    "V8": {
-      "Source": "CRAN",
-      "Repository": "https://cran.rstudio.com",
-      "description": {
-        "Package": "V8",
-        "Type": "Package",
-        "Title": "Embedded JavaScript and WebAssembly Engine for R",
-        "Version": "4.4.2",
-        "Authors@R": "c(\n    person(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroen@berkeley.edu\",\n      comment = c(ORCID = \"0000-0002-4035-0289\")),\n    person(\"Jan Marvin\", \"Garbuszus\", role = \"ctb\"))",
-        "Description": "An R interface to V8 <https://v8.dev>: Google's open source JavaScript\n    and WebAssembly engine. This package can be compiled either with V8 version 6 \n    and up or NodeJS when built as a shared library.",
-        "License": "MIT + file LICENSE",
-        "URL": "https://jeroen.r-universe.dev/V8",
-        "BugReports": "https://github.com/jeroen/v8/issues",
-        "SystemRequirements": "V8 engine version 6+ is needed for ES6 and WASM\nsupport. On Linux you can build against libv8-dev (Debian) or\nv8-devel (Fedora). We also provide static libv8 binaries for\nmost platforms, see the README for details.",
-        "NeedsCompilation": "yes",
-        "VignetteBuilder": "knitr",
-        "Imports": "Rcpp (>= 0.12.12), jsonlite (>= 1.0), curl (>= 1.0), utils",
-        "LinkingTo": "Rcpp",
-        "Suggests": "testthat, knitr, rmarkdown",
-        "RoxygenNote": "7.2.3",
-        "Language": "en-US",
-        "Encoding": "UTF-8",
-        "Biarch": "true",
-        "Packaged": "2024-02-15 11:17:46 UTC; jeroen",
-        "Author": "Jeroen Ooms [aut, cre] (<https://orcid.org/0000-0002-4035-0289>),\n  Jan Marvin Garbuszus [ctb]",
-        "Maintainer": "Jeroen Ooms <jeroen@berkeley.edu>",
-        "Repository": "CRAN",
-        "Date/Publication": "2024-02-15 15:00:02 UTC",
-        "Built": "R 4.3.3; x86_64-w64-mingw32; 2024-04-23 01:03:16 UTC; windows",
-        "Archs": "x64"
-      }
-    },
-    "XML": {
-      "Source": "CRAN",
-      "Repository": "https://cran.rstudio.com",
-      "description": {
-        "Package": "XML",
-        "Version": "3.99-0.16.1",
-        "Authors@R": "c(person(\"CRAN Team\", role = c('ctb', 'cre'),\n                    email = \"CRAN@r-project.org\",\n                    comment = \"de facto maintainer since 2013\"),\n             person(\"Duncan\", \"Temple Lang\", role = c(\"aut\"),\n                    email = \"duncan@r-project.org\",\n                    comment = c(ORCID = \"0000-0003-0159-1546\")),\n\t    person(\"Tomas\", \"Kalibera\", role = \"ctb\"))",
-        "Title": "Tools for Parsing and Generating XML Within R and S-Plus",
-        "Depends": "R (>= 4.0.0), methods, utils",
-        "Suggests": "bitops, RCurl",
-        "SystemRequirements": "libxml2 (>= 2.6.3)",
-        "Description": "Many approaches for both reading and\n        creating XML (and HTML) documents (including DTDs), both local\n        and accessible via HTTP or FTP.  Also offers access to an\n        'XPath' \"interpreter\".",
-        "URL": "https://www.omegahat.net/RSXML/",
-        "License": "BSD_3_clause + file LICENSE",
-        "Collate": "AAA.R DTD.R DTDClasses.R DTDRef.R SAXMethods.R XMLClasses.R\napplyDOM.R assignChild.R catalog.R createNode.R dynSupports.R\nerror.R flatTree.R nodeAccessors.R parseDTD.R schema.R\nsummary.R tangle.R toString.R tree.R version.R xmlErrorEnums.R\nxmlEventHandler.R xmlEventParse.R xmlHandler.R\nxmlInternalSource.R xmlOutputDOM.R xmlNodes.R xmlOutputBuffer.R\nxmlTree.R xmlTreeParse.R htmlParse.R hashTree.R zzz.R\nsupports.R parser.R libxmlFeatures.R xmlString.R saveXML.R\nnamespaces.R readHTMLTable.R reflection.R xmlToDataFrame.R\nbitList.R compare.R encoding.R fixNS.R xmlRoot.R serialize.R\nxmlMemoryMgmt.R keyValueDB.R solrDocs.R XMLRErrorInfo.R\nxincludes.R namespaceHandlers.R tangle1.R htmlLinks.R\nhtmlLists.R getDependencies.R getRelativeURL.R xmlIncludes.R\nsimplifyPath.R",
-        "NeedsCompilation": "yes",
-        "Packaged": "2024-01-22 12:29:38 UTC; ripley",
-        "Author": "CRAN Team [ctb, cre] (de facto maintainer since 2013),\n  Duncan Temple Lang [aut] (<https://orcid.org/0000-0003-0159-1546>),\n  Tomas Kalibera [ctb]",
-        "Maintainer": "CRAN Team <CRAN@r-project.org>",
-        "Repository": "CRAN",
-        "Date/Publication": "2024-01-22 13:30:59",
-        "Built": "R 4.3.2; x86_64-w64-mingw32; 2024-01-23 00:52:25 UTC; windows",
-        "Archs": "x64",
-        "RemoteType": "standard",
-        "RemotePkgRef": "XML",
-        "RemoteRef": "XML",
-        "RemoteRepos": "https://cran.rstudio.com",
-        "RemoteReposName": "CRAN",
-        "RemotePkgPlatform": "x86_64-w64-mingw32",
-        "RemoteSha": "3.99-0.16.1"
-      }
-    },
     "askpass": {
       "Source": "CRAN",
       "Repository": "https://cran.rstudio.com",
@@ -306,29 +181,6 @@
         "Date/Publication": "2023-09-03 20:00:02 UTC",
         "Built": "R 4.3.1; x86_64-w64-mingw32; 2023-09-07 01:47:05 UTC; windows",
         "Archs": "x64"
-      }
-    },
-    "assertthat": {
-      "Source": "CRAN",
-      "Repository": "https://cran.rstudio.com",
-      "description": {
-        "Package": "assertthat",
-        "Title": "Easy Pre and Post Assertions",
-        "Version": "0.2.1",
-        "Authors@R": "\n  person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", c(\"aut\", \"cre\"))",
-        "Description": "An extension to stopifnot() that makes it easy to declare \n    the pre and post conditions that you code should satisfy, while also \n    producing friendly error messages so that your users know what's gone\n    wrong.",
-        "License": "GPL-3",
-        "Imports": "tools",
-        "Suggests": "testthat, covr",
-        "RoxygenNote": "6.0.1",
-        "Collate": "'assert-that.r' 'on-failure.r' 'assertions-file.r'\n'assertions-scalar.R' 'assertions.r' 'base.r'\n'base-comparison.r' 'base-is.r' 'base-logical.r' 'base-misc.r'\n'utils.r' 'validate-that.R'",
-        "NeedsCompilation": "no",
-        "Packaged": "2019-03-21 13:11:01 UTC; hadley",
-        "Author": "Hadley Wickham [aut, cre]",
-        "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
-        "Repository": "CRAN",
-        "Date/Publication": "2019-03-21 14:53:46 UTC",
-        "Built": "R 4.3.1; ; 2023-09-07 01:09:35 UTC; windows"
       }
     },
     "backports": {
@@ -378,34 +230,6 @@
         "Date/Publication": "2015-07-28 08:03:37",
         "Built": "R 4.3.0; x86_64-w64-mingw32; 2023-04-15 00:42:00 UTC; windows",
         "Archs": "x64"
-      }
-    },
-    "bigD": {
-      "Source": "CRAN",
-      "Repository": "https://cran.rstudio.com",
-      "description": {
-        "Type": "Package",
-        "Package": "bigD",
-        "Title": "Flexibly Format Dates and Times to a Given Locale",
-        "Version": "0.2.0",
-        "Authors@R": "person(\"Richard\", \"Iannone\", , \"riannone@me.com\", c(\"aut\", \"cre\"),\n                  comment = c(ORCID = \"0000-0003-3925-190X\"))",
-        "Description": "Format dates and times flexibly and to whichever locales\n    make sense. Parses dates, times, and date-times in various formats\n    (including string-based ISO 8601 constructions). The formatting syntax gives\n    the user many options for formatting the date and time output in a precise\n    manner. Time zones in the input can be expressed in multiple ways and there\n    are many options for formatting time zones in the output as well. Several of\n    the provided helper functions allow for automatic generation of locale-aware\n    formatting patterns based on date/time skeleton formats and standardized\n    date/time formats with varying specificity.",
-        "License": "MIT + file LICENSE",
-        "URL": "https://github.com/rich-iannone/bigD",
-        "BugReports": "https://github.com/rich-iannone/bigD/issues",
-        "Depends": "R (>= 3.2.0)",
-        "Encoding": "UTF-8",
-        "RoxygenNote": "7.2.1",
-        "Suggests": "covr, testthat (>= 3.0.0)",
-        "Config/testthat/edition": "3",
-        "Config/testthat/parallel": "true",
-        "NeedsCompilation": "no",
-        "Packaged": "2022-09-02 20:05:54 UTC; rich",
-        "Author": "Richard Iannone [aut, cre] (<https://orcid.org/0000-0003-3925-190X>)",
-        "Maintainer": "Richard Iannone <riannone@me.com>",
-        "Repository": "CRAN",
-        "Date/Publication": "2022-09-05 08:30:08 UTC",
-        "Built": "R 4.3.3; ; 2024-04-23 00:28:23 UTC; windows"
       }
     },
     "bit": {
@@ -463,28 +287,6 @@
         "NeedsCompilation": "yes",
         "Packaged": "2020-08-29 10:56:45 UTC; jo",
         "Built": "R 4.3.1; x86_64-w64-mingw32; 2023-09-07 01:47:11 UTC; windows",
-        "Archs": "x64"
-      }
-    },
-    "bitops": {
-      "Source": "CRAN",
-      "Repository": "https://cran.rstudio.com",
-      "description": {
-        "Package": "bitops",
-        "Version": "1.0-7",
-        "Date": "2021-04-13",
-        "Author": "S original by Steve Dutky <sdutky@terpalum.umd.edu> initial R\n        port and extensions by Martin Maechler; revised and modified\n        by Steve Dutky",
-        "Maintainer": "Martin Maechler <maechler@stat.math.ethz.ch>",
-        "Title": "Bitwise Operations",
-        "Description": "Functions for bitwise operations on integer vectors.",
-        "License": "GPL (>= 2)",
-        "URL": "https://github.com/mmaechler/R-bitops",
-        "BugReports": "https://github.com/mmaechler/R-bitops/issues",
-        "NeedsCompilation": "yes",
-        "Packaged": "2021-04-13 20:50:22 UTC; maechler",
-        "Repository": "CRAN",
-        "Date/Publication": "2021-04-24 11:40:08 UTC",
-        "Built": "R 4.3.1; x86_64-w64-mingw32; 2023-10-20 00:52:07 UTC; windows",
         "Archs": "x64"
       }
     },
@@ -747,33 +549,6 @@
         "Repository": "CRAN",
         "Date/Publication": "2023-01-23 11:40:02 UTC",
         "Built": "R 4.3.1; x86_64-w64-mingw32; 2023-09-07 01:09:23 UTC; windows",
-        "Archs": "x64"
-      }
-    },
-    "commonmark": {
-      "Source": "CRAN",
-      "Repository": "https://cran.rstudio.com",
-      "description": {
-        "Package": "commonmark",
-        "Type": "Package",
-        "Title": "High Performance CommonMark and Github Markdown Rendering in R",
-        "Version": "1.9.0",
-        "Authors@R": "c(\n    person(\"Jeroen\", \"Ooms\", ,\"jeroen@berkeley.edu\", role = c(\"aut\", \"cre\"),\n        comment = c(ORCID = \"0000-0002-4035-0289\")),\n    person(\"John MacFarlane\", role = \"cph\", comment = \"Author of cmark\"))",
-        "URL": "https://docs.ropensci.org/commonmark/\nhttps://r-lib.r-universe.dev/commonmark\nhttps://github.github.com/gfm/ (spec)",
-        "BugReports": "https://github.com/r-lib/commonmark/issues",
-        "Description": "The CommonMark specification defines a rationalized version of markdown\n    syntax. This package uses the 'cmark' reference implementation for converting\n    markdown text into various formats including html, latex and groff man. In\n    addition it exposes the markdown parse tree in xml format. Also includes opt-in\n    support for GFM extensions including tables, autolinks, and strikethrough text.",
-        "License": "BSD_2_clause + file LICENSE",
-        "Suggests": "curl, testthat, xml2",
-        "RoxygenNote": "7.2.3",
-        "Language": "en-US",
-        "Encoding": "UTF-8",
-        "NeedsCompilation": "yes",
-        "Packaged": "2023-03-17 18:02:44 UTC; jeroen",
-        "Author": "Jeroen Ooms [aut, cre] (<https://orcid.org/0000-0002-4035-0289>),\n  John MacFarlane [cph] (Author of cmark)",
-        "Maintainer": "Jeroen Ooms <jeroen@berkeley.edu>",
-        "Repository": "CRAN",
-        "Date/Publication": "2023-03-17 18:40:02 UTC",
-        "Built": "R 4.3.1; x86_64-w64-mingw32; 2023-09-05 00:39:52 UTC; windows",
         "Archs": "x64"
       }
     },
@@ -1581,38 +1356,6 @@
         "Built": "R 4.3.1; ; 2023-09-07 03:03:14 UTC; windows"
       }
     },
-    "gt": {
-      "Source": "CRAN",
-      "Repository": "https://cran.rstudio.com",
-      "description": {
-        "Type": "Package",
-        "Package": "gt",
-        "Version": "0.10.1",
-        "Title": "Easily Create Presentation-Ready Display Tables",
-        "Description": "Build display tables from tabular data with an easy-to-use set of\n    functions. With its progressive approach, we can construct display tables\n    with a cohesive set of table parts. Table values can be formatted using any\n    of the included formatting functions. Footnotes and cell styles can be \n    precisely added through a location targeting system. The way in which 'gt'\n    handles things for you means that you don't often have to worry about the\n    fine details.",
-        "Authors@R": "c(\n    person(\"Richard\", \"Iannone\", , \"rich@posit.co\", c(\"aut\", \"cre\"),\n           comment = c(ORCID = \"0000-0003-3925-190X\")),\n    person(\"Joe\", \"Cheng\", , \"joe@posit.co\", \"aut\"),\n    person(\"Barret\", \"Schloerke\", , \"barret@posit.co\", \"aut\",\n           comment = c(ORCID = \"0000-0001-9986-114X\")),\n    person(\"Ellis\", \"Hughes\", , \"ellis.h.hughes@gsk.com\", \"aut\",\n           comment = c(ORCID = \"0000-0003-0637-4436\")),   \n    person(\"Alexandra\", \"Lauer\", , \"alexandralauer1@gmail.com\", \"aut\",\n           comment = c(ORCID = \"0000-0002-4191-6301\")),    \n    person(\"JooYoung\", \"Seo\", , \"jseo1005@illinois.edu\", \"aut\",\n           comment = c(ORCID = \"0000-0002-4064-6012\")),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"))\n    )",
-        "License": "MIT + file LICENSE",
-        "URL": "https://gt.rstudio.com, https://github.com/rstudio/gt",
-        "BugReports": "https://github.com/rstudio/gt/issues",
-        "Encoding": "UTF-8",
-        "LazyData": "true",
-        "ByteCompile": "true",
-        "RoxygenNote": "7.2.3",
-        "Depends": "R (>= 3.2.0)",
-        "Imports": "base64enc (>= 0.1-3), bigD (>= 0.2), bitops (>= 1.0-7), cli\n(>= 3.6.0), commonmark (>= 1.8.1), dplyr (>= 1.1.0), fs (>=\n1.6.1), glue (>= 1.6.2), htmltools (>= 0.5.4), htmlwidgets (>=\n1.6.1), juicyjuice (>= 0.1.0), magrittr (>= 2.0.2), markdown\n(>= 1.5), reactable (>= 0.4.3), rlang (>= 1.0.2), sass (>=\n0.4.5), scales (>= 1.2.1), tidyselect (>= 1.2.0), vctrs, xml2\n(>= 1.3.3)",
-        "Suggests": "covr, digest (>= 0.6.31), fontawesome (>= 0.5.2), ggplot2,\nknitr, lubridate, magick, paletteer, RColorBrewer, rmarkdown\n(>= 2.20), rvest, shiny (>= 1.7.4), testthat (>= 3.1.9), tidyr,\nwebshot2 (>= 0.1.0)",
-        "Collate": "'as_data_frame.R' 'build_data.R' 'compile_scss.R'\n'data_color.R' 'datasets.R' 'dt__.R' 'dt_body.R' 'dt_boxhead.R'\n'dt_cols_merge.R' 'dt_data.R' 'dt_footnotes.R' 'dt_formats.R'\n'dt_groups_rows.R' 'dt_has_built.R' 'dt_heading.R'\n'dt_locale.R' 'dt_options.R' 'dt_row_groups.R'\n'dt_source_notes.R' 'dt_spanners.R' 'dt_stub_df.R'\n'dt_stubhead.R' 'dt_styles.R' 'dt_substitutions.R'\n'dt_summary.R' 'dt_transforms.R' 'export.R' 'format_data.R'\n'format_vec.R' 'gt-package.R' 'gt.R' 'gt_group.R'\n'gt_preview.R' 'gt_split.R' 'helpers.R' 'image.R'\n'info_tables.R' 'knitr-utils.R' 'location_methods.R'\n'modify_columns.R' 'modify_rows.R' 'tab_create_modify.R'\n'opts.R' 'print.R' 'reexports.R' 'render_as_html.R'\n'render_as_i_html.R' 'resolver.R' 'rows_add.R' 'shiny.R'\n'substitution.R' 'summary_rows.R' 'tab_info.R' 'tab_remove.R'\n'tab_style_body.R' 'text_transform.R' 'utils.R'\n'utils_color_contrast.R' 'utils_environments.R'\n'utils_examples.R' 'utils_formatters.R'\n'utils_general_str_formatting.R' 'utils_pipe.R' 'utils_plots.R'\n'utils_render_common.R' 'utils_render_html.R'\n'utils_render_latex.R' 'utils_render_rtf.R'\n'utils_render_xml.R' 'utils_units.R'\n'z_utils_render_footnotes.R' 'zzz.R'",
-        "Config/testthat/edition": "3",
-        "Config/testthat/parallel": "true",
-        "NeedsCompilation": "no",
-        "Packaged": "2024-01-17 22:09:40 UTC; rich",
-        "Author": "Richard Iannone [aut, cre] (<https://orcid.org/0000-0003-3925-190X>),\n  Joe Cheng [aut],\n  Barret Schloerke [aut] (<https://orcid.org/0000-0001-9986-114X>),\n  Ellis Hughes [aut] (<https://orcid.org/0000-0003-0637-4436>),\n  Alexandra Lauer [aut] (<https://orcid.org/0000-0002-4191-6301>),\n  JooYoung Seo [aut] (<https://orcid.org/0000-0002-4064-6012>),\n  Posit Software, PBC [cph, fnd]",
-        "Maintainer": "Richard Iannone <rich@posit.co>",
-        "Repository": "CRAN",
-        "Date/Publication": "2024-01-17 23:50:05 UTC",
-        "Built": "R 4.3.3; ; 2024-04-23 02:11:31 UTC; windows"
-      }
-    },
     "gtable": {
       "Source": "CRAN",
       "Repository": "https://cran.rstudio.com",
@@ -1672,42 +1415,6 @@
         "Date/Publication": "2023-06-30 20:00:02 UTC",
         "Built": "R 4.3.1; x86_64-w64-mingw32; 2023-09-07 03:49:59 UTC; windows",
         "Archs": "x64"
-      }
-    },
-    "highcharter": {
-      "Source": "CRAN",
-      "Repository": "https://cran.rstudio.com",
-      "description": {
-        "Package": "highcharter",
-        "Type": "Package",
-        "Version": "0.9.4",
-        "Title": "A Wrapper for the 'Highcharts' Library",
-        "Description": "A wrapper for the 'Highcharts' library including\n    shortcut functions to plot R objects. 'Highcharts'\n    <https://www.highcharts.com/> is a charting library offering\n    numerous chart types with a simple configuration syntax.",
-        "Authors@R": "c(\n  person(\"Joshua\", \"Kunst\", role = c(\"aut\", \"cre\"), email = \"jbkunst@gmail.com\"),\n  person(\"Nuno\", \"Agostinho\", role = c(\"ctb\"), comment  = \"hchart.survfit, densities and hc_add_series_scatter\"),\n  person(\"Danton\", \"Noriega\", role = c(\"ctb\"), comment  = \"hcaes_\"),\n  person(\"Martin John \", \"Hadley\", role = c(\"ctb\"), comment  = \"hc_add_event_point improvement\"),\n  person(\"Eduardo\", \"Flores\", role = c(\"ctb\"), comment  = \"First version hc_add_series_df_tidy\"),\n  person(\"Dean\", \"Kilfoyle\", role = c(\"ctb\"), comment  = \"First version hc_add_series_boxplot\"),\n  person(\"Adline\", \"Dsilva\", role = c(\"ctb\"), comment  = \"First version Matrix heatmap\"),\n  person(\"Kamil\", \"Slowikowski\", role = c(\"ctb\"), comment = c(ORCID = \"0000-0002-2843-6370\")),\n  person(\"Christian\", \"Minich\", role = c(\"ctb\"), comment  = \"hcaes mutate_mapping improvement\"),\n  person(\"Jonathan\", \"Armond\", role = c(\"ctb\"), comment = \"mutate_mapping bugfix\"),\n  person(\"David\", \"Breuer\", role = c(\"ctb\"), comment = \"download_map_data quiet parameter\"),\n  person(\"Mauricio\", \"Vargas\", role = c(\"ctb\"), comment = \"tests and gh-actions\"),\n  person(\"Michael\", \"Yan\", role = c(\"ctb\"), comment = \"Motivational example for treemap/sunburst data helper\"),\n  person(\"Bart\", \"Oortwijn\", role = c(\"ctb\"), comment = \"rjson option, hc_add_yAxis, and GH issues collaborator\"),\n  person(\"Paul\", \"Campbell\", role = c(\"ctb\"), comment = \"additional proxy methods\")\n  )",
-        "URL": "https://jkunst.com/highcharter/,\nhttps://github.com/jbkunst/highcharter",
-        "BugReports": "https://github.com/jbkunst/highcharter/issues",
-        "License": "MIT + file LICENSE",
-        "RoxygenNote": "7.1.2",
-        "Encoding": "UTF-8",
-        "Depends": "R (>= 2.10)",
-        "Imports": "htmlwidgets, magrittr, purrr, rlist, assertthat, zoo, dplyr\n(>= 1.0.0), tibble (>= 1.1), stringr (>= 1.3.0), broom, xts,\nquantmod, tidyr, htmltools, jsonlite, igraph, lubridate, yaml,\nrlang (>= 0.1.1), rjson",
-        "Suggests": "knitr, rmarkdown, survival, ggplot2, httr, viridisLite,\nshiny, MASS, gapminder, forecast, geojsonio, testthat, covr,\nspelling",
-        "LazyData": "true",
-        "Language": "en-US",
-        "NeedsCompilation": "no",
-        "Packaged": "2022-01-03 15:53:04 UTC; jbkun",
-        "Author": "Joshua Kunst [aut, cre],\n  Nuno Agostinho [ctb] (hchart.survfit, densities and\n    hc_add_series_scatter),\n  Danton Noriega [ctb] (hcaes_),\n  Martin John Hadley [ctb] (hc_add_event_point improvement),\n  Eduardo Flores [ctb] (First version hc_add_series_df_tidy),\n  Dean Kilfoyle [ctb] (First version hc_add_series_boxplot),\n  Adline Dsilva [ctb] (First version Matrix heatmap),\n  Kamil Slowikowski [ctb] (<https://orcid.org/0000-0002-2843-6370>),\n  Christian Minich [ctb] (hcaes mutate_mapping improvement),\n  Jonathan Armond [ctb] (mutate_mapping bugfix),\n  David Breuer [ctb] (download_map_data quiet parameter),\n  Mauricio Vargas [ctb] (tests and gh-actions),\n  Michael Yan [ctb] (Motivational example for treemap/sunburst data\n    helper),\n  Bart Oortwijn [ctb] (rjson option, hc_add_yAxis, and GH issues\n    collaborator),\n  Paul Campbell [ctb] (additional proxy methods)",
-        "Maintainer": "Joshua Kunst <jbkunst@gmail.com>",
-        "Repository": "CRAN",
-        "Date/Publication": "2022-01-03 16:40:05 UTC",
-        "Built": "R 4.3.3; ; 2024-05-06 03:33:21 UTC; windows",
-        "RemoteType": "standard",
-        "RemotePkgRef": "highcharter",
-        "RemoteRef": "highcharter",
-        "RemoteRepos": "https://cran.rstudio.com",
-        "RemoteReposName": "CRAN",
-        "RemotePkgPlatform": "x86_64-w64-mingw32",
-        "RemoteSha": "0.9.4"
       }
     },
     "highr": {
@@ -1881,41 +1588,6 @@
         "Built": "R 4.3.1; ; 2023-09-07 02:06:41 UTC; windows"
       }
     },
-    "igraph": {
-      "Source": "CRAN",
-      "Repository": "https://cran.rstudio.com",
-      "description": {
-        "Package": "igraph",
-        "Version": "1.5.1",
-        "Title": "Network Analysis and Visualization",
-        "Authors@R": "c(\n    person(\"Gábor\", \"Csárdi\", , \"csardi.gabor@gmail.com\", role = \"aut\",\n           comment = c(ORCID = \"0000-0001-7098-9676\")),\n    person(\"Tamás\", \"Nepusz\", , \"ntamas@gmail.com\", role = \"aut\",\n           comment = c(ORCID = \"0000-0002-1451-338X\")),\n    person(\"Vincent\", \"Traag\", role = \"aut\",\n           comment = c(ORCID = \"0000-0003-3170-3879\")),\n    person(\"Szabolcs\", \"Horvát\", , \"szhorvat@gmail.com\", role = \"aut\",\n           comment = c(ORCID = \"0000-0002-3100-523X\")),\n    person(\"Fabio\", \"Zanini\", , \"fabio.zanini@unsw.edu.au\", role = \"aut\",\n           comment = c(ORCID = \"0000-0001-7097-8539\")),\n    person(\"Daniel\", \"Noom\", role = \"aut\"),\n    person(\"Kirill\", \"Müller\", , \"kirill@cynkra.com\", role = c(\"aut\", \"cre\"),\n           comment = c(ORCID = \"0000-0002-1416-3412\")),\n    person(\"Maëlle\", \"Salmon\", role = \"ctb\"),\n    person(\"Chan Zuckerberg Initiative\", role = \"fnd\")\n  )",
-        "Description": "Routines for simple graphs and network analysis. It can\n    handle large graphs very well and provides functions for generating\n    random and regular graphs, graph visualization, centrality methods and\n    much more.",
-        "License": "GPL (>= 2)",
-        "URL": "https://r.igraph.org/, https://igraph.org/,\nhttps://igraph.discourse.group/",
-        "BugReports": "https://github.com/igraph/rigraph/issues",
-        "Depends": "methods, R (>= 3.5.0)",
-        "Imports": "cli, graphics, grDevices, lifecycle, magrittr, Matrix,\npkgconfig (>= 2.0.0), rlang, stats, utils",
-        "Suggests": "ape (>= 5.7-0.1), callr, decor, digest, graph, igraphdata,\nknitr, rgl, rmarkdown, scales, stats4, tcltk, testthat, vdiffr,\nwithr",
-        "LinkingTo": "cpp11 (>= 0.2.0)",
-        "VignetteBuilder": "knitr",
-        "Config/Needs/build": "roxygen2, devtools, irlba, pkgconfig",
-        "Config/Needs/coverage": "covr",
-        "Config/testthat/edition": "3",
-        "Config/testthat/parallel": "true",
-        "Config/testthat/start-first": "vs-es, scan, vs-operators, weakref,\nwatts.strogatz.game",
-        "Encoding": "UTF-8",
-        "RoxygenNote": "7.2.3",
-        "SystemRequirements": "gmp (optional), libxml2 (optional), glpk (>= 4.57,\noptional)",
-        "NeedsCompilation": "yes",
-        "Packaged": "2023-08-09 04:30:08 UTC; kirill",
-        "Author": "Gábor Csárdi [aut] (<https://orcid.org/0000-0001-7098-9676>),\n  Tamás Nepusz [aut] (<https://orcid.org/0000-0002-1451-338X>),\n  Vincent Traag [aut] (<https://orcid.org/0000-0003-3170-3879>),\n  Szabolcs Horvát [aut] (<https://orcid.org/0000-0002-3100-523X>),\n  Fabio Zanini [aut] (<https://orcid.org/0000-0001-7097-8539>),\n  Daniel Noom [aut],\n  Kirill Müller [aut, cre] (<https://orcid.org/0000-0002-1416-3412>),\n  Maëlle Salmon [ctb],\n  Chan Zuckerberg Initiative [fnd]",
-        "Maintainer": "Kirill Müller <kirill@cynkra.com>",
-        "Repository": "CRAN",
-        "Date/Publication": "2023-08-10 09:00:05 UTC",
-        "Built": "R 4.3.1; x86_64-w64-mingw32; 2023-09-07 02:05:40 UTC; windows",
-        "Archs": "x64"
-      }
-    },
     "isoband": {
       "Source": "CRAN",
       "Repository": "https://cran.rstudio.com",
@@ -1995,32 +1667,6 @@
         "Date/Publication": "2023-06-29 22:10:02 UTC",
         "Built": "R 4.3.1; x86_64-w64-mingw32; 2023-09-05 00:39:52 UTC; windows",
         "Archs": "x64"
-      }
-    },
-    "juicyjuice": {
-      "Source": "CRAN",
-      "Repository": "https://cran.rstudio.com",
-      "description": {
-        "Package": "juicyjuice",
-        "Title": "Inline CSS Properties into HTML Tags Using 'juice'",
-        "Version": "0.1.0",
-        "Authors@R": "c(\n    person(\"Richard\", \"Iannone\", , \"riannone@me.com\", c(\"aut\", \"cre\", \"cph\"),\n           comment = c(ORCID = \"0000-0003-3925-190X\")),\n    person(\"Automattic\", role = c(\"cph\"), comment = \"juice library\"),\n    person(\"juice contributors\", role = c(\"ctb\"), comment = \"juice library\")\n    )",
-        "Description": "There are occasions where you need a piece of HTML with integrated\n    styles. A prime example of this is HTML email. This transformation\n    involves moving the CSS and associated formatting instructions from the\n    style block in the head of your document into the body of the HTML. Many\n    prominent email clients require integrated styles in HTML email; otherwise a\n    received HTML email will be displayed without any styling. This package will\n    quickly and precisely perform these CSS transformations when given HTML text\n    and it does so by using the JavaScript 'juice' library.",
-        "License": "MIT + file LICENSE",
-        "URL": "https://github.com/rich-iannone/juicyjuice",
-        "BugReports": "https://github.com/rich-iannone/juicyjuice/issues",
-        "Encoding": "UTF-8",
-        "RoxygenNote": "7.2.1",
-        "Imports": "V8 (>= 4.2.0)",
-        "Suggests": "testthat (>= 3.0.0)",
-        "Config/testthat/edition": "3",
-        "NeedsCompilation": "no",
-        "Packaged": "2022-11-09 19:42:30 UTC; rich",
-        "Author": "Richard Iannone [aut, cre, cph]\n    (<https://orcid.org/0000-0003-3925-190X>),\n  Automattic [cph] (juice library),\n  juice contributors [ctb] (juice library)",
-        "Maintainer": "Richard Iannone <riannone@me.com>",
-        "Repository": "CRAN",
-        "Date/Publication": "2022-11-10 19:00:02 UTC",
-        "Built": "R 4.3.3; ; 2024-04-23 01:31:10 UTC; windows"
       }
     },
     "knitr": {
@@ -2222,34 +1868,6 @@
         "Date/Publication": "2022-03-30 07:30:09 UTC",
         "Built": "R 4.3.1; x86_64-w64-mingw32; 2023-09-05 00:39:49 UTC; windows",
         "Archs": "x64"
-      }
-    },
-    "markdown": {
-      "Source": "CRAN",
-      "Repository": "https://cran.rstudio.com",
-      "description": {
-        "Package": "markdown",
-        "Type": "Package",
-        "Title": "Render Markdown with 'commonmark'",
-        "Version": "1.8",
-        "Authors@R": "c(\n   person(\"Yihui\", \"Xie\", role = c(\"aut\", \"cre\"), email = \"xie@yihui.name\", comment = c(ORCID = \"0000-0003-0645-5666\")),\n   person(\"JJ\", \"Allaire\", role = \"aut\"),\n   person(\"Jeffrey\", \"Horner\", role = \"aut\"),\n   person(\"Henrik\", \"Bengtsson\", role = \"ctb\"),\n   person(\"Jim\", \"Hester\", role = \"ctb\"),\n   person(\"Yixuan\", \"Qiu\", role = \"ctb\"),\n   person(\"Kohske\", \"Takahashi\", role = \"ctb\"),\n   person(\"Adam\", \"November\", role = \"ctb\"),\n   person(\"Nacho\", \"Caballero\", role = \"ctb\"),\n   person(\"Jeroen\", \"Ooms\", role = \"ctb\"),\n   person(\"Thomas\", \"Leeper\", role = \"ctb\"),\n   person(\"Joe\", \"Cheng\", role = \"ctb\"),\n   person(\"Andrzej\", \"Oles\", role = \"ctb\"),\n   person(given = \"Posit Software, PBC\", role = c(\"cph\", \"fnd\"))\n   )",
-        "Description": "Render Markdown to full and lightweight HTML/LaTeX documents with\n    the 'commonmark' package. It also supports features that are missing in\n    'commonmark', such as raw HTML/LaTeX blocks, LaTeX math, superscripts,\n    subscripts, footnotes, element attributes, appendices, and fenced 'Divs'.\n    With additional JavaScript and CSS, it can also create HTML slides and\n    articles.",
-        "Depends": "R (>= 2.11.1)",
-        "Imports": "utils, commonmark (>= 1.9.0), xfun (>= 0.38)",
-        "Suggests": "knitr, rmarkdown (>= 2.18), yaml, RCurl",
-        "License": "MIT + file LICENSE",
-        "URL": "https://github.com/rstudio/markdown",
-        "BugReports": "https://github.com/rstudio/markdown/issues",
-        "VignetteBuilder": "knitr",
-        "RoxygenNote": "7.2.3",
-        "Encoding": "UTF-8",
-        "NeedsCompilation": "no",
-        "Packaged": "2023-08-22 14:06:27 UTC; yihui",
-        "Author": "Yihui Xie [aut, cre] (<https://orcid.org/0000-0003-0645-5666>),\n  JJ Allaire [aut],\n  Jeffrey Horner [aut],\n  Henrik Bengtsson [ctb],\n  Jim Hester [ctb],\n  Yixuan Qiu [ctb],\n  Kohske Takahashi [ctb],\n  Adam November [ctb],\n  Nacho Caballero [ctb],\n  Jeroen Ooms [ctb],\n  Thomas Leeper [ctb],\n  Joe Cheng [ctb],\n  Andrzej Oles [ctb],\n  Posit Software, PBC [cph, fnd]",
-        "Maintainer": "Yihui Xie <xie@yihui.name>",
-        "Repository": "CRAN",
-        "Date/Publication": "2023-08-23 00:10:09 UTC",
-        "Built": "R 4.3.1; ; 2023-09-05 01:18:17 UTC; windows"
       }
     },
     "memoise": {
@@ -2637,39 +2255,6 @@
         "Archs": "x64"
       }
     },
-    "quantmod": {
-      "Source": "CRAN",
-      "Repository": "https://cran.rstudio.com",
-      "description": {
-        "Package": "quantmod",
-        "Type": "Package",
-        "Title": "Quantitative Financial Modelling Framework",
-        "Version": "0.4.26",
-        "Authors@R": "c(\n  person(given=c(\"Jeffrey\",\"A.\"), family=\"Ryan\", role=c(\"aut\",\"cph\")),\n  person(given=c(\"Joshua\",\"M.\"), family=\"Ulrich\", role=c(\"cre\",\"aut\"), email=\"josh.m.ulrich@gmail.com\"),\n  person(given=c(\"Ethan\",\"B.\"), family=\"Smith\", role=\"ctb\"),\n  person(given=\"Wouter\", family=\"Thielen\", role=\"ctb\"),\n  person(given=\"Paul\", family=\"Teetor\", role=\"ctb\"),\n  person(given=\"Steve\", family=\"Bronder\", role=\"ctb\")\n  )",
-        "Depends": "R (>= 3.2.0), xts(>= 0.9-0), zoo, TTR(>= 0.2), methods",
-        "Imports": "curl, jsonlite(>= 1.1)",
-        "Suggests": "DBI,RMySQL,RSQLite,timeSeries,xml2,downloader",
-        "Description": "Specify, build, trade, and analyse quantitative financial trading strategies.",
-        "LazyLoad": "yes",
-        "License": "GPL-3",
-        "URL": "https://www.quantmod.com/,\nhttps://github.com/joshuaulrich/quantmod",
-        "BugReports": "https://github.com/joshuaulrich/quantmod/issues",
-        "NeedsCompilation": "no",
-        "Packaged": "2024-02-13 17:49:13 UTC; josh",
-        "Author": "Jeffrey A. Ryan [aut, cph],\n  Joshua M. Ulrich [cre, aut],\n  Ethan B. Smith [ctb],\n  Wouter Thielen [ctb],\n  Paul Teetor [ctb],\n  Steve Bronder [ctb]",
-        "Maintainer": "Joshua M. Ulrich <josh.m.ulrich@gmail.com>",
-        "Repository": "CRAN",
-        "Date/Publication": "2024-02-14 08:20:02 UTC",
-        "Built": "R 4.3.3; ; 2024-05-06 02:09:16 UTC; windows",
-        "RemoteType": "standard",
-        "RemotePkgRef": "quantmod",
-        "RemoteRef": "quantmod",
-        "RemoteRepos": "https://cran.rstudio.com",
-        "RemoteReposName": "CRAN",
-        "RemotePkgPlatform": "x86_64-w64-mingw32",
-        "RemoteSha": "0.4.26"
-      }
-    },
     "ragg": {
       "Source": "CRAN",
       "Repository": "https://cran.rstudio.com",
@@ -2930,28 +2515,6 @@
         "Built": "R 4.3.1; ; 2023-09-07 03:03:59 UTC; windows"
       }
     },
-    "rjson": {
-      "Source": "CRAN",
-      "Repository": "https://cran.rstudio.com",
-      "description": {
-        "Package": "rjson",
-        "Version": "0.2.21",
-        "Date": "2022-01-06",
-        "Title": "JSON for R",
-        "Author": "Alex Couture-Beil <rjson_pkg@mofo.ca>",
-        "Maintainer": "Alex Couture-Beil <rjson_pkg@mofo.ca>",
-        "Depends": "R (>= 4.0.0)",
-        "Description": "Converts R object into JSON objects and vice-versa.",
-        "URL": "https://github.com/alexcb/rjson",
-        "License": "GPL-2",
-        "Repository": "CRAN",
-        "Date/Publication": "2022-01-09 03:32:41 UTC",
-        "Packaged": "2022-01-08 19:22:39 UTC; root",
-        "NeedsCompilation": "yes",
-        "Built": "R 4.3.0; x86_64-w64-mingw32; 2023-04-15 00:43:51 UTC; windows",
-        "Archs": "x64"
-      }
-    },
     "rlang": {
       "Source": "CRAN",
       "Repository": "https://cran.rstudio.com",
@@ -2982,42 +2545,6 @@
         "Date/Publication": "2023-04-28 22:30:03 UTC",
         "Built": "R 4.3.1; x86_64-w64-mingw32; 2023-09-05 00:39:49 UTC; windows",
         "Archs": "x64"
-      }
-    },
-    "rlist": {
-      "Source": "CRAN",
-      "Repository": "https://cran.rstudio.com",
-      "description": {
-        "Package": "rlist",
-        "Type": "Package",
-        "Title": "A Toolbox for Non-Tabular Data Manipulation",
-        "Version": "0.4.6.2",
-        "Author": "Kun Ren <ken@renkun.me>",
-        "Maintainer": "Kun Ren <ken@renkun.me>",
-        "Description": "Provides a set of functions for data manipulation with\n    list objects, including mapping, filtering, grouping, sorting,\n    updating, searching, and other useful functions. Most functions\n    are designed to be pipeline friendly so that data processing with\n    lists can be chained.",
-        "Depends": "R (>= 2.15)",
-        "Date": "2021-09-02",
-        "Suggests": "testthat, stringdist",
-        "Imports": "yaml, jsonlite, XML, data.table",
-        "License": "MIT + file LICENSE",
-        "URL": "https://renkun-ken.github.io/rlist/,\nhttps://github.com/renkun-ken/rlist,\nhttps://renkun-ken.github.io/rlist-tutorial/",
-        "BugReports": "https://github.com/renkun-ken/rlist/issues",
-        "ByteCompile": "TRUE",
-        "LazyData": "true",
-        "RoxygenNote": "7.1.1",
-        "Encoding": "UTF-8",
-        "NeedsCompilation": "no",
-        "Packaged": "2021-09-02 23:36:14 UTC; ken",
-        "Repository": "CRAN",
-        "Date/Publication": "2021-09-03 12:20:02 UTC",
-        "Built": "R 4.3.3; ; 2024-05-06 01:10:29 UTC; windows",
-        "RemoteType": "standard",
-        "RemotePkgRef": "rlist",
-        "RemoteRef": "rlist",
-        "RemoteRepos": "https://cran.rstudio.com",
-        "RemoteReposName": "CRAN",
-        "RemotePkgPlatform": "x86_64-w64-mingw32",
-        "RemoteSha": "0.4.6.2"
       }
     },
     "rmarkdown": {
@@ -3779,34 +3306,6 @@
         "Archs": "x64"
       }
     },
-    "xts": {
-      "Source": "CRAN",
-      "Repository": "https://cran.rstudio.com",
-      "description": {
-        "Package": "xts",
-        "Type": "Package",
-        "Title": "eXtensible Time Series",
-        "Version": "0.13.2",
-        "Authors@R": "c(\n  person(given=c(\"Jeffrey\",\"A.\"), family=\"Ryan\", role=c(\"aut\",\"cph\")),\n  person(given=c(\"Joshua\",\"M.\"), family=\"Ulrich\", role=c(\"cre\",\"aut\"), email=\"josh.m.ulrich@gmail.com\"),\n  person(given=\"Ross\", family=\"Bennett\", role=\"ctb\"),\n  person(given=\"Corwin\", family=\"Joy\", role=\"ctb\")\n  )",
-        "Depends": "R (>= 3.6.0), zoo (>= 1.7-12)",
-        "Imports": "methods",
-        "LinkingTo": "zoo",
-        "Suggests": "timeSeries, timeDate, tseries, chron, tinytest",
-        "LazyLoad": "yes",
-        "Description": "Provide for uniform handling of R's different time-based data classes by extending zoo, maximizing native format information preservation and allowing for user level customization and extension, while simplifying cross-class interoperability.",
-        "License": "GPL (>= 2)",
-        "URL": "https://joshuaulrich.github.io/xts/,\nhttps://github.com/joshuaulrich/xts",
-        "BugReports": "https://github.com/joshuaulrich/xts/issues",
-        "NeedsCompilation": "yes",
-        "Packaged": "2024-01-19 19:31:01 UTC; josh",
-        "Author": "Jeffrey A. Ryan [aut, cph],\n  Joshua M. Ulrich [cre, aut],\n  Ross Bennett [ctb],\n  Corwin Joy [ctb]",
-        "Maintainer": "Joshua M. Ulrich <josh.m.ulrich@gmail.com>",
-        "Repository": "CRAN",
-        "Date/Publication": "2024-01-21 16:10:02 UTC",
-        "Built": "R 4.3.3; x86_64-w64-mingw32; 2024-05-03 01:34:01 UTC; windows",
-        "Archs": "x64"
-      }
-    },
     "yaml": {
       "Source": "CRAN",
       "Repository": "https://cran.rstudio.com",
@@ -3830,39 +3329,416 @@
         "Built": "R 4.3.0; x86_64-w64-mingw32; 2023-04-15 00:42:13 UTC; windows",
         "Archs": "x64"
       }
-    },
-    "zoo": {
-      "Source": "CRAN",
-      "Repository": "https://cran.rstudio.com",
-      "description": {
-        "Package": "zoo",
-        "Version": "1.8-12",
-        "Date": "2023-04-11",
-        "Title": "S3 Infrastructure for Regular and Irregular Time Series (Z's\nOrdered Observations)",
-        "Authors@R": "c(person(given = \"Achim\", family = \"Zeileis\", role = c(\"aut\", \"cre\"), email = \"Achim.Zeileis@R-project.org\",\n                    comment = c(ORCID = \"0000-0003-0918-3766\")),\n             person(given = \"Gabor\", family = \"Grothendieck\", role = \"aut\", email = \"ggrothendieck@gmail.com\"),\n             person(given = c(\"Jeffrey\", \"A.\"), family = \"Ryan\", role = \"aut\", email = \"jeff.a.ryan@gmail.com\"),\n             person(given = c(\"Joshua\", \"M.\"), family = \"Ulrich\", role = \"ctb\", email = \"josh.m.ulrich@gmail.com\"),\n             person(given = \"Felix\", family = \"Andrews\", role = \"ctb\", email = \"felix@nfrac.org\"))",
-        "Description": "An S3 class with methods for totally ordered indexed\n             observations. It is particularly aimed at irregular time series\n             of numeric vectors/matrices and factors. zoo's key design goals\n             are independence of a particular index/date/time class and\n             consistency with ts and base R by providing methods to extend\n             standard generics.",
-        "Depends": "R (>= 3.1.0), stats",
-        "Suggests": "AER, coda, chron, ggplot2 (>= 3.0.0), mondate, scales,\nstinepack, strucchange, timeDate, timeSeries, tis, tseries, xts",
-        "Imports": "utils, graphics, grDevices, lattice (>= 0.20-27)",
-        "License": "GPL-2 | GPL-3",
-        "URL": "https://zoo.R-Forge.R-project.org/",
-        "NeedsCompilation": "yes",
-        "Packaged": "2023-04-11 21:24:32 UTC; zeileis",
-        "Author": "Achim Zeileis [aut, cre] (<https://orcid.org/0000-0003-0918-3766>),\n  Gabor Grothendieck [aut],\n  Jeffrey A. Ryan [aut],\n  Joshua M. Ulrich [ctb],\n  Felix Andrews [ctb]",
-        "Maintainer": "Achim Zeileis <Achim.Zeileis@R-project.org>",
-        "Repository": "CRAN",
-        "Date/Publication": "2023-04-13 12:13:20 UTC",
-        "Built": "R 4.3.2; x86_64-w64-mingw32; 2024-02-29 02:41:58 UTC; windows",
-        "Archs": "x64"
-      }
     }
   },
   "files": {
     "_quarto.yml": {
-      "checksum": "193a79d84a86a9f43cf92efdb67d432a"
+      "checksum": "f85efad75d1e5bafeaf31a5605be3f59"
+    },
+    "_site/help.html": {
+      "checksum": "ef5618ba10ef5e72ece2965b21ac9c07"
+    },
+    "_site/img/concept_map.jpg": {
+      "checksum": "70582aa5658d25ebe760ef60e70d0ab5"
+    },
+    "_site/img/logo-team-full-color.svg": {
+      "checksum": "9e38645012975ac149e20aac34f0a220"
+    },
+    "_site/index.html": {
+      "checksum": "0d2e62c3b14b081fdb881cc6f5d5900c"
+    },
+    "_site/index_files/figure-html/unnamed-chunk-12-1.png": {
+      "checksum": "bd10895869ec1b2a1f41a4d6c8dc8391"
+    },
+    "_site/index_files/figure-html/unnamed-chunk-12-2.png": {
+      "checksum": "5767e659210fa657ab0ab2ae42edfc57"
+    },
+    "_site/index_files/figure-html/unnamed-chunk-12-3.png": {
+      "checksum": "baa3d3858d1c7594543abd47c65a7ff8"
+    },
+    "_site/index_files/figure-html/unnamed-chunk-13-1.png": {
+      "checksum": "bd10895869ec1b2a1f41a4d6c8dc8391"
+    },
+    "_site/index_files/figure-html/unnamed-chunk-13-2.png": {
+      "checksum": "5767e659210fa657ab0ab2ae42edfc57"
+    },
+    "_site/index_files/figure-html/unnamed-chunk-13-3.png": {
+      "checksum": "baa3d3858d1c7594543abd47c65a7ff8"
+    },
+    "_site/index_files/figure-html/unnamed-chunk-14-1.png": {
+      "checksum": "bd10895869ec1b2a1f41a4d6c8dc8391"
+    },
+    "_site/index_files/figure-html/unnamed-chunk-14-2.png": {
+      "checksum": "5767e659210fa657ab0ab2ae42edfc57"
+    },
+    "_site/index_files/figure-html/unnamed-chunk-14-3.png": {
+      "checksum": "baa3d3858d1c7594543abd47c65a7ff8"
+    },
+    "_site/index_files/figure-html/unnamed-chunk-6-1.png": {
+      "checksum": "7350a449a73a6344bea38c0c616a0d73"
+    },
+    "_site/index_files/figure-html/unnamed-chunk-6-2.png": {
+      "checksum": "af19dcec7f7009857d6ed4cef6934e7d"
+    },
+    "_site/index_files/figure-html/unnamed-chunk-6-3.png": {
+      "checksum": "627808509124b0454e8edaac22e0733b"
+    },
+    "_site/index_files/figure-html/unnamed-chunk-6-4.png": {
+      "checksum": "c57d88fb0e7643c37733817375ed1064"
+    },
+    "_site/index_files/figure-html/unnamed-chunk-7-1.png": {
+      "checksum": "7350a449a73a6344bea38c0c616a0d73"
+    },
+    "_site/index_files/figure-html/unnamed-chunk-7-2.png": {
+      "checksum": "af19dcec7f7009857d6ed4cef6934e7d"
+    },
+    "_site/index_files/figure-html/unnamed-chunk-7-3.png": {
+      "checksum": "627808509124b0454e8edaac22e0733b"
+    },
+    "_site/index_files/figure-html/unnamed-chunk-7-4.png": {
+      "checksum": "c57d88fb0e7643c37733817375ed1064"
+    },
+    "_site/index_files/figure-html/unnamed-chunk-8-1.png": {
+      "checksum": "7350a449a73a6344bea38c0c616a0d73"
+    },
+    "_site/index_files/figure-html/unnamed-chunk-8-2.png": {
+      "checksum": "af19dcec7f7009857d6ed4cef6934e7d"
+    },
+    "_site/index_files/figure-html/unnamed-chunk-8-3.png": {
+      "checksum": "627808509124b0454e8edaac22e0733b"
+    },
+    "_site/index_files/figure-html/unnamed-chunk-8-4.png": {
+      "checksum": "c57d88fb0e7643c37733817375ed1064"
+    },
+    "_site/landing.html": {
+      "checksum": "a3c89c38472a22a80010bc8d29545913"
+    },
+    "_site/search.json": {
+      "checksum": "5498fa3e21c9292883a49bfe2379040b"
+    },
+    "_site/site_libs/bootstrap/bootstrap-icons.css": {
+      "checksum": "2318f137d201fbf51601fa0faba6bef7"
+    },
+    "_site/site_libs/bootstrap/bootstrap-icons.woff": {
+      "checksum": "1a51dfbe5467607389d603c02a77cd10"
+    },
+    "_site/site_libs/bootstrap/bootstrap.min.css": {
+      "checksum": "3ea674583037f418cbc50c804a3ad92a"
+    },
+    "_site/site_libs/bootstrap/bootstrap.min.js": {
+      "checksum": "e2b09c06f0e714b6144a6788a28e3950"
+    },
+    "_site/site_libs/clipboard/clipboard.min.js": {
+      "checksum": "15f52a1ee547f2bdd46e56747332ca2d"
+    },
+    "_site/site_libs/highchart-binding-0.9.4/highchart.js": {
+      "checksum": "48f1882f51af37ab23252f54bf981479"
+    },
+    "_site/site_libs/highcharts-9.3.1/css/htmlwdgtgrid.css": {
+      "checksum": "f739b21a0129eb55722f4dc156e741f2"
+    },
+    "_site/site_libs/highcharts-9.3.1/css/motion.css": {
+      "checksum": "4d182f8ff6c356e0d91e9c4f29c9a959"
+    },
+    "_site/site_libs/highcharts-9.3.1/custom/appear.js": {
+      "checksum": "031a418562c2c557100e24e2a06c7791"
+    },
+    "_site/site_libs/highcharts-9.3.1/custom/delay-animation.js": {
+      "checksum": "68d59c3d81c517bdc798110b23ec7d83"
+    },
+    "_site/site_libs/highcharts-9.3.1/custom/reset.js": {
+      "checksum": "6dace14111eab8d59dc79c7d188951b6"
+    },
+    "_site/site_libs/highcharts-9.3.1/custom/symbols-extra.js": {
+      "checksum": "43e37147d279155be8b05f3e54759d1d"
+    },
+    "_site/site_libs/highcharts-9.3.1/custom/text-symbols.js": {
+      "checksum": "5466b27fb71b960b34ae42601b123ad9"
+    },
+    "_site/site_libs/highcharts-9.3.1/custom/tooltip-delay.js": {
+      "checksum": "ebc1a7775b1c110c5cb8609fb248e546"
+    },
+    "_site/site_libs/highcharts-9.3.1/highcharts-3d.js": {
+      "checksum": "f8081d699608d94d8d81de1298fe270f"
+    },
+    "_site/site_libs/highcharts-9.3.1/highcharts-more.js": {
+      "checksum": "d333cb058be4d43721ef642a73310585"
+    },
+    "_site/site_libs/highcharts-9.3.1/highcharts.js": {
+      "checksum": "34c156f0d05482ef1868d9a979d0924a"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/accessibility.js": {
+      "checksum": "109c7a88c0ed1e2e86a16027f70ae4bb"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/annotations-advanced.js": {
+      "checksum": "7d4c809d6913693ffeaf48c9ff8e95e2"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/annotations.js": {
+      "checksum": "49559b2d016848b2f5bea4c87fea45b0"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/arrow-symbols.js": {
+      "checksum": "cb068d38c84745a761081711f545ff89"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/boost-canvas.js": {
+      "checksum": "b53438253f54b1d29ffc4d4e41bf59d9"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/boost.js": {
+      "checksum": "698f09d7f54cb3862c0f80d74025913a"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/broken-axis.js": {
+      "checksum": "2360327d0a3858401a6376df8f8fd0f2"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/bullet.js": {
+      "checksum": "8304ca74f659bbb874a64304bf5668ce"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/coloraxis.js": {
+      "checksum": "696202f6b31af34b06b10b44a49b7681"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/current-date-indicator.js": {
+      "checksum": "f11ada8a524cc269f749899cc42483de"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/cylinder.js": {
+      "checksum": "7abdfcead84ff635516b80b9275cbdf6"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/data.js": {
+      "checksum": "9157689601fb2e64a35d57ae8bd36f58"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/datagrouping.js": {
+      "checksum": "a87e836058e7e0a8225c09ee99184080"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/debugger.js": {
+      "checksum": "c7b8111ae939a83d752a8e27b2bba0e0"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/dependency-wheel.js": {
+      "checksum": "c2469be8a860a7793926d17eef954b14"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/dotplot.js": {
+      "checksum": "611f95cc69b48fdd00198aac821d5628"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/drag-panes.js": {
+      "checksum": "0474d60707b2dc05783f6c3181eb81da"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/draggable-points.js": {
+      "checksum": "77a910a97951c5d8a624eabffe45bece"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/drilldown.js": {
+      "checksum": "b83454bf5b2e38ee18ff01fcf66e6750"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/dumbbell.js": {
+      "checksum": "520b4fabab52b594efe7d6496f185163"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/export-data.js": {
+      "checksum": "003333c4cbe9e1e3f6c44b8a1c5f194d"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/exporting.js": {
+      "checksum": "68ccb3b40bc63a82c88f5b74585a42f6"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/full-screen.js": {
+      "checksum": "7427b66df21c377a8993feca8d36f15e"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/funnel.js": {
+      "checksum": "0057cb6cd36939767c10092370443145"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/funnel3d.js": {
+      "checksum": "6eebcb255425bab3f8d609e36c78e6eb"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/gantt.js": {
+      "checksum": "53deabc39aff05bf837683579864c234"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/grid-axis.js": {
+      "checksum": "fec154817cbd334edb176553db245485"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/heatmap.js": {
+      "checksum": "bcbb45f83e37a945d784aea5b1b73f7b"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/heikinashi.js": {
+      "checksum": "0e2cc4ba2eb3a2bc55025092e3873c82"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/histogram-bellcurve.js": {
+      "checksum": "12f9e56c033a8718b101c0c798fe57c9"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/hollowcandlestick.js": {
+      "checksum": "801b31fe02e68179849aeb41942928e9"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/item-series.js": {
+      "checksum": "06b563382f995094cf39b8a981b82755"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/lollipop.js": {
+      "checksum": "24c447074b5f6c4a5a7abaf55ec3a8f7"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/map.js": {
+      "checksum": "fda964c2b3b7e22e874bb231fc4c1daa"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/marker-clusters.js": {
+      "checksum": "87e32d1b71fec75f318a816ddb88b8a5"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/networkgraph.js": {
+      "checksum": "244213b351b482407698749202a29cf3"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/no-data-to-display.js": {
+      "checksum": "db2eac2ea4bf50471c89837b9db7a4f4"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/offline-exporting.js": {
+      "checksum": "87f2df85f0e8583dae93e6511b278d96"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/oldie-polyfills.js": {
+      "checksum": "b2a33c54a166ea9c14fa8e81605d20fd"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/oldie.js": {
+      "checksum": "dad7a43db76c5fc5ff316cfc162a7c3c"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/organization.js": {
+      "checksum": "964a66b3d736f63bf07c04f820798571"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/overlapping-datalabels.js": {
+      "checksum": "844f2209cc436391e1cea3d2f7be358a"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/parallel-coordinates.js": {
+      "checksum": "b6fef1f5271597b84dffff4d5ea1fafb"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/pareto.js": {
+      "checksum": "5731a79aac17a54d6a98d20bb2c6ccae"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/pathfinder.js": {
+      "checksum": "a8270f121b1f27eab05e33c90cbab602"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/pattern-fill.js": {
+      "checksum": "622bae24127205ceeb68f5f667668cc6"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/price-indicator.js": {
+      "checksum": "c62be3dcc1fc8f6e944393b75ed6371a"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/pyramid3d.js": {
+      "checksum": "29adfc51415da677952fab25a78be093"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/sankey.js": {
+      "checksum": "aadbecda890bcc16c9f192bce1608227"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/series-label.js": {
+      "checksum": "6ae25cffbc76daba79fd23dad5d4ca71"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/solid-gauge.js": {
+      "checksum": "0e5dc65b403058776e451ecd5b5511d8"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/sonification.js": {
+      "checksum": "d5f4a1b1fd91b56f017b89bf920e422d"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/static-scale.js": {
+      "checksum": "84ddab2f9de5a98c9543185112754bed"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/stock-tools.js": {
+      "checksum": "da52bdbbdb1d889bbf7d7ec2e8bb7075"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/stock.js": {
+      "checksum": "1eab50132cf5fb731877f489b73743b0"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/streamgraph.js": {
+      "checksum": "72d5b0154893429e8deec312063cf29c"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/sunburst.js": {
+      "checksum": "6ee5d654bad1293b33fbc20f42c8f7e5"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/tilemap.js": {
+      "checksum": "404b8ff04da0275094871b9f5e946896"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/timeline.js": {
+      "checksum": "503fc363d2c65f689e9565c8146e9b7b"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/treegrid.js": {
+      "checksum": "88c948f620f6317b103dc199fa26058f"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/treemap.js": {
+      "checksum": "d793f6a7bf735ce2fefd47b548bc02b4"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/variable-pie.js": {
+      "checksum": "661da40e66ff1c700ca178e97c223bf0"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/variwide.js": {
+      "checksum": "e93ea28d5fa4e67aeb3ad6a6b0633548"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/vector.js": {
+      "checksum": "14e391a6c11eff0d519a3bc1e1195341"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/venn.js": {
+      "checksum": "e4cb2cd03a0fca3291686d6c4d1e914c"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/windbarb.js": {
+      "checksum": "9385821336b26c0eb63e17e71cc0a2a1"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/wordcloud.js": {
+      "checksum": "7223b00c171accbcda74453b408a73ad"
+    },
+    "_site/site_libs/highcharts-9.3.1/modules/xrange.js": {
+      "checksum": "771da134c32b48cf7f86d03532a5d24c"
+    },
+    "_site/site_libs/highcharts-9.3.1/plugins/draggable-legend.js": {
+      "checksum": "d0100580732f671297cb6bae193680c0"
+    },
+    "_site/site_libs/highcharts-9.3.1/plugins/grouped-categories.js": {
+      "checksum": "458dd517834097053f6b0bbb6fea7363"
+    },
+    "_site/site_libs/highcharts-9.3.1/plugins/highcharts-regression.js": {
+      "checksum": "0094ada5e0cdb2d361f0866ec872e854"
+    },
+    "_site/site_libs/highcharts-9.3.1/plugins/motion.js": {
+      "checksum": "19a257af4cd78e099f0c07503e11cfa2"
+    },
+    "_site/site_libs/highcharts-9.3.1/plugins/multicolor_series.js": {
+      "checksum": "87ce60b44ff971954e801013677ab8bd"
+    },
+    "_site/site_libs/htmlwidgets-1.6.2/htmlwidgets.js": {
+      "checksum": "237f59bc086ccf24f39be55311023b91"
+    },
+    "_site/site_libs/jquery-3.5.1/jquery.min.js": {
+      "checksum": "b61aa6e2d68d21b3546b5b418bf0e9c3"
+    },
+    "_site/site_libs/proj4js-2.3.15/proj4.js": {
+      "checksum": "fefe74c447baadb4c04d0262d5a98e99"
+    },
+    "_site/site_libs/quarto-html/anchor.min.js": {
+      "checksum": "91bcf6cd1fd88fec3f109811e5fc3546"
+    },
+    "_site/site_libs/quarto-html/popper.min.js": {
+      "checksum": "3a4a291ccf3f1ea0f82b641542fd3827"
+    },
+    "_site/site_libs/quarto-html/quarto-syntax-highlighting.css": {
+      "checksum": "49bff82b9355f257417faaaa77dd1607"
+    },
+    "_site/site_libs/quarto-html/quarto.js": {
+      "checksum": "2ca82ae8ee1e5762d249c6b6c0802e30"
+    },
+    "_site/site_libs/quarto-html/tippy.css": {
+      "checksum": "ebd6f8ce46a677e1a4f5f8a8317109a9"
+    },
+    "_site/site_libs/quarto-html/tippy.umd.min.js": {
+      "checksum": "d828775275749701b48bd9d958814111"
+    },
+    "_site/site_libs/quarto-nav/headroom.min.js": {
+      "checksum": "ace0360e576db9b6e7df48ac68ddbbf4"
+    },
+    "_site/site_libs/quarto-nav/quarto-nav.js": {
+      "checksum": "724bf5148c96bf8aec0d1b259345bfa5"
+    },
+    "_site/site_libs/quarto-search/autocomplete.umd.js": {
+      "checksum": "c64544db941e048f2652217cb9a7f29c"
+    },
+    "_site/site_libs/quarto-search/fuse.min.js": {
+      "checksum": "de7d60e4a6881074275feca14b84a49d"
+    },
+    "_site/site_libs/quarto-search/quarto-search.js": {
+      "checksum": "b7c6b7b5b20051c7e6db312a2588cbf7"
+    },
+    "_site/slides/quarto-for-reproducible-reporting-demo.html": {
+      "checksum": "8a24c9ce65b725f39eaddb6fe63e6409"
+    },
+    "_site/styles.css": {
+      "checksum": "5e8b486d7fa28a38714478238feac26a"
+    },
+    "_site/thumbnails/placeholder.png": {
+      "checksum": "efecd9d40367ec0d16517eccd2131f51"
     },
     "help.qmd": {
-      "checksum": "f53da6858db37af7e75f86c1c0de5993"
+      "checksum": "00cfe41c82ae228946ea49f8f1f0f418"
     },
     "img/concept_map.jpg": {
       "checksum": "70582aa5658d25ebe760ef60e70d0ab5"
@@ -3883,13 +3759,22 @@
       "checksum": "b2d94b954899aeba770d03b68e4324aa"
     },
     "index.qmd": {
-      "checksum": "928e0dc24dd07df63f6a1ff1fabc3605"
+      "checksum": "5c4980fffb9f7d5b1a5a967a7e488586"
+    },
+    "landing.qmd": {
+      "checksum": "0fa712d37421982634a6844e61b3c8ce"
     },
     "README.md": {
-      "checksum": "6f9117561eaeb2fbae0a8863d799732a"
+      "checksum": "776cde86c00ef62103667b1e661f795d"
+    },
+    "slides/quarto-for-reproducible-reporting-demo.html": {
+      "checksum": "8a24c9ce65b725f39eaddb6fe63e6409"
     },
     "styles.css": {
       "checksum": "5e8b486d7fa28a38714478238feac26a"
+    },
+    "thumbnails/placeholder.png": {
+      "checksum": "efecd9d40367ec0d16517eccd2131f51"
     }
   },
   "users": null

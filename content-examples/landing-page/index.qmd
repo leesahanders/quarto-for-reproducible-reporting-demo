@@ -50,18 +50,20 @@ text <- c("hello")
 ### Examples
 
 :::: {.column-body}
+
 ::: {.panel-tabset}
+
 ```{r}
 #| results: asis
 #| fig-width: 14
 #| fig-height: 6
 
-for(i in 1:ceiling(nrow(all_content)/4)){
-  # Every 4 cards start a new row
-  cat('#### ', i, '\n\n')
+for(i in 1:ceiling(nrow(all_content)/5)){
+  # Every 5 cards start a new row
+  cat('#### ', '\n\n') # Do I need a heading here? 
 
   content <- all_content %>%
-    filter(row_key >= i*4, row_key < i*4+4)
+    filter(row_key >= i*5, row_key < i*5+5)
     # Alternatively we could filter on something like language
     # {if (i == "R") dplyr::filter(., r_environment_management == TRUE) else .} %>%
     # {if (i == "Python") dplyr::filter(., py_environment_management == TRUE) else .}  

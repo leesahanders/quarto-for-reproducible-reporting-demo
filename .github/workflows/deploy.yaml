@@ -261,10 +261,10 @@ jobs:
           force: TRUE
           dir: ./content-examples/landing-page/:landing-page          
       - name: Add content title
-          run: |
-            export DATA='{"title": "Reproduceable Reporting with Quarto Landing Page"}'
-            contentguid=$(curl ${{ secrets.CONNECT_SERVER }}__api__/v1/content?name=landing-page -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" | jq -r '.[]')
-            contentitle=$(curl ${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid} --data "${DATA}" -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" | jq -r '.[]')
+        run: |
+          export DATA='{"title": "Reproduceable Reporting with Quarto Landing Page"}'
+          contentguid=$(curl ${{ secrets.CONNECT_SERVER }}__api__/v1/content?name=landing-page -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" | jq -r '.[]')
+          contentitle=$(curl ${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid} --data "${DATA}" -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" | jq -r '.[]')
         with: 
           url: ${{ secrets.CONNECT_URL }}
           api-key: ${{ secrets.CONNECT_API_KEY }} 
