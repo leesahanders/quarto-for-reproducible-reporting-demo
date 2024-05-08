@@ -206,8 +206,8 @@ jobs:
         with:
           r-version: 4.2.0
           use-public-rspm: true
-      - name: Install setup-connect
-      - uses: rstudio/actions/setup-connect@main
+      # - name: Install setup-connect
+      # - uses: rstudio/actions/setup-connect@main
       # - uses: r-lib/actions/setup-renv@v2 # use our renv.lock
       - name: Install rsconnect package
       - run: Rscript --vanilla -e "packageVersion('rsconnect')"
