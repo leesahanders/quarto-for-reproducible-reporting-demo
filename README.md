@@ -135,3 +135,18 @@ These items need to be added to the git repository to make that possible:
 
 
 TODO: Add landing page, make it deploy last: <https://stackoverflow.com/questions/62750603/github-actions-trigger-another-action-after-one-action-is-completed> 
+
+Does this need to be deployed to a new server? Checklist: 
+
+Update the environment variables as secrets on github actions: 
+
+- CONNECT_URL=<redacted>
+- CONNECT_API_KEY=<redacted>
+
+Update the environment variables in /content-examples/landing-page/.rstudio-connect.env
+
+- CONNECT_SERVER=<redacted>
+- CONNECT_URL=<redacted>
+- CONNECT_API_KEY=<redacted>
+
+

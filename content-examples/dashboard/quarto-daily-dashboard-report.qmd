@@ -572,39 +572,6 @@ rss_posit_blog %>%
 ```
 
 
-
-<!-- ## RSS Feed for R Journal -->
-
-```{r}
-#| echo: false
-#| warning: false
-#| message: false
-#| tbl-cap-location: top
-#| label: tbl-rss-r-journal
-#| tbl-cap: "RSS Feed for R Journal"
-
-library(tidyRSS)
-library(dplyr)
-library(lubridate)
-library(kableExtra)
-
-# Test your rss generator using this URL for the contents of the R Journal
-rss_url <- "http://journal.r-project.org/rss.atom"
-
-rss_r_journal <- tidyfeed(rss_url) %>% slice_head(n=5) %>% select(entry_title, entry_last_updated) %>% mutate(entry_last_updated = as.Date(entry_last_updated))
-
-rss_r_journal_url <- tidyfeed(rss_url) %>% slice_head(n=5) %>% select(entry_link)
-
-rss_r_journal %>%
-  kbl(booktabs = T, align = "lc") %>% #, caption = "RSS Feed for R Journal") %>%
-  kable_styling() %>%
-  kable_paper(full_width = T) %>%
-  column_spec(1, link = rss_r_journal_url$entry_link)
-
-# entry_title, entry_url, entry_link, entry_last_updated
-```
-
-
 <!-- ## RSS Feed for R-weekly -->
 
 ```{r}
