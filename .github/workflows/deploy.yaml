@@ -29,7 +29,6 @@ jobs:
           url: ${{ secrets.CONNECT_URL }}
           api-key: ${{ secrets.CONNECT_API_KEY }}
           access-type: logged_in
-          namespace: report-mermaid-diagrams
           show-logs: TRUE
           force: FALSE
           dir: ./content-examples/report-mermaid-diagrams/:report-mermaid-diagrams 
@@ -49,7 +48,6 @@ jobs:
           url: ${{ secrets.CONNECT_URL }}
           api-key: ${{ secrets.CONNECT_API_KEY }}
           access-type: logged_in
-          namespace: website
           show-logs: TRUE
           force: FALSE
           dir: ./content-examples/website/:website 
@@ -68,7 +66,6 @@ jobs:
         with:
           url: ${{ secrets.CONNECT_URL }}
           api-key: ${{ secrets.CONNECT_API_KEY }}
-          title: Interacting with Images
           access-type: logged_in
           show-logs: TRUE
           force: FALSE
@@ -263,4 +260,14 @@ jobs:
           show-logs: TRUE
           force: TRUE
           dir: ./content-examples/landing-page/:landing-page          
+      - name: Add content title
+          run: |
+            export DATA='{"title": "Reproduceable Reporting with Quarto Landing Page"}'
+            contentguid=$(curl ${{ secrets.CONNECT_SERVER }}__api__/v1/content?name=landing-page -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" | jq -r '.[]')
+            contentitle=$(curl ${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid} --data "${DATA}" -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" | jq -r '.[]')
+        with: 
+          url: ${{ secrets.CONNECT_URL }}
+          api-key: ${{ secrets.CONNECT_API_KEY }} 
+          
+          
           

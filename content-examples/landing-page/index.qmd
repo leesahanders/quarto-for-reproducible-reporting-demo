@@ -62,6 +62,7 @@ for(i in 1:ceiling(nrow(all_content)/4)){
 
   content <- all_content %>%
     filter(row_key >= i*4, row_key < i*4+4)
+    # Alternatively we could filter on something like language
     # {if (i == "R") dplyr::filter(., r_environment_management == TRUE) else .} %>%
     # {if (i == "Python") dplyr::filter(., py_environment_management == TRUE) else .}  
 
@@ -113,9 +114,6 @@ for(i in 1:ceiling(nrow(all_content)/4)){
 
   # cat('\n\n')
 }
-
-# Columns that matter: app_mode, r_version, py_version, r_environment_management, py_environment_management, content_url, dashboard_url
-
 
 ```
 

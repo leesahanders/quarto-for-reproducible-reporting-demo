@@ -891,6 +891,9 @@
     }
   },
   "files": {
+    ".internal.yml": {
+      "checksum": "2fe6eee5fdb2451b3120eac1c923b4d9"
+    },
     "_extensions/quarto-ext/lightbox/_extension.yml": {
       "checksum": "3db0b546785dbeb0117afef962c424bd"
     },
@@ -926,6 +929,9 @@
     },
     "README.md": {
       "checksum": "0102ae5fc842a4919b7becec8331dab1"
+    },
+    "report-lightbox.png": {
+      "checksum": "1105422772d95ab055a6c8a2f96c7061"
     }
   },
   "users": null

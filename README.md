@@ -152,3 +152,17 @@ Update the environment variables in /content-examples/landing-page/.rstudio-conn
 - CONNECT_API_KEY=<redacted>
 
 
+Connect currently lacks a supported way to deploy content while setting:
+
+- custom content URLs
+- cover images
+- ACLs
+- Content title
+
+Instead, this uses the `.internal.yml` file located at the root of the tree of the content to be deployed.
+See [this example](https://github.com/sol-eng/stockportfolio/blob/master/.internal.yml) which illustrates usage.
+
+- Deployment is manifest-based, so example content must have a `manifest.json`
+  - `requirements.txt` or `renv.lock` files should also be included as appropriate
+  - content should be self-contained
+
