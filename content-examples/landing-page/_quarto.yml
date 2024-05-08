@@ -2,13 +2,20 @@ project:
   type: website
 
 website:
-  title: "Posit Test Drive"
+  title: "Reproduceable Reporting With Quarto"
   navbar:
-    left:
+      left:
+      - href: landing.qmd
+        text: Slides
       - href: index.qmd
-        text: Content
+        text: Examples
       - href: help.qmd
-        text: About
+        text: About Posit Team
+      right:
+      - href: https://github.com/leesahanders/
+        text: Lisa Anders
+      - icon: github
+        href: https://github.com/leesahanders/quarto-for-reproducible-reporting-demo
 
 format:
   html:

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Posit Test Drive</title>
+<title>Reproduceable Reporting With Quarto</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -66,49 +66,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
-<script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
-<script src="site_libs/proj4js-2.3.15/proj4.js"></script>
-<link href="site_libs/highcharts-9.3.1/css/motion.css" rel="stylesheet">
-<script src="site_libs/highcharts-9.3.1/highcharts.js"></script>
-<script src="site_libs/highcharts-9.3.1/highcharts-3d.js"></script>
-<script src="site_libs/highcharts-9.3.1/highcharts-more.js"></script>
-<script src="site_libs/highcharts-9.3.1/modules/stock.js"></script>
-<script src="site_libs/highcharts-9.3.1/modules/map.js"></script>
-<script src="site_libs/highcharts-9.3.1/modules/data.js"></script>
-<script src="site_libs/highcharts-9.3.1/modules/exporting.js"></script>
-<script src="site_libs/highcharts-9.3.1/modules/offline-exporting.js"></script>
-<script src="site_libs/highcharts-9.3.1/modules/drilldown.js"></script>
-<script src="site_libs/highcharts-9.3.1/modules/item-series.js"></script>
-<script src="site_libs/highcharts-9.3.1/modules/overlapping-datalabels.js"></script>
-<script src="site_libs/highcharts-9.3.1/modules/annotations.js"></script>
-<script src="site_libs/highcharts-9.3.1/modules/export-data.js"></script>
-<script src="site_libs/highcharts-9.3.1/modules/funnel.js"></script>
-<script src="site_libs/highcharts-9.3.1/modules/heatmap.js"></script>
-<script src="site_libs/highcharts-9.3.1/modules/treemap.js"></script>
-<script src="site_libs/highcharts-9.3.1/modules/sankey.js"></script>
-<script src="site_libs/highcharts-9.3.1/modules/dependency-wheel.js"></script>
-<script src="site_libs/highcharts-9.3.1/modules/organization.js"></script>
-<script src="site_libs/highcharts-9.3.1/modules/solid-gauge.js"></script>
-<script src="site_libs/highcharts-9.3.1/modules/streamgraph.js"></script>
-<script src="site_libs/highcharts-9.3.1/modules/sunburst.js"></script>
-<script src="site_libs/highcharts-9.3.1/modules/vector.js"></script>
-<script src="site_libs/highcharts-9.3.1/modules/wordcloud.js"></script>
-<script src="site_libs/highcharts-9.3.1/modules/xrange.js"></script>
-<script src="site_libs/highcharts-9.3.1/modules/tilemap.js"></script>
-<script src="site_libs/highcharts-9.3.1/modules/venn.js"></script>
-<script src="site_libs/highcharts-9.3.1/modules/gantt.js"></script>
-<script src="site_libs/highcharts-9.3.1/modules/timeline.js"></script>
-<script src="site_libs/highcharts-9.3.1/modules/parallel-coordinates.js"></script>
-<script src="site_libs/highcharts-9.3.1/modules/bullet.js"></script>
-<script src="site_libs/highcharts-9.3.1/modules/coloraxis.js"></script>
-<script src="site_libs/highcharts-9.3.1/modules/dumbbell.js"></script>
-<script src="site_libs/highcharts-9.3.1/modules/lollipop.js"></script>
-<script src="site_libs/highcharts-9.3.1/modules/series-label.js"></script>
-<script src="site_libs/highcharts-9.3.1/plugins/motion.js"></script>
-<script src="site_libs/highcharts-9.3.1/custom/reset.js"></script>
-<script src="site_libs/highcharts-9.3.1/modules/boost.js"></script>
-<script src="site_libs/highchart-binding-0.9.4/highchart.js"></script>
 
 
 <link rel="stylesheet" href="styles.css">
@@ -122,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Posit Test Drive</span>
+    <span class="navbar-title">Reproduceable Reporting With Quarto</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -132,12 +89,27 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
+    <a class="nav-link" href="./landing.html"> 
+<span class="menu-text">Slides</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link active" href="./index.html" aria-current="page"> 
-<span class="menu-text">Content</span></a>
+<span class="menu-text">Examples</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./help.html"> 
-<span class="menu-text">About</span></a>
+<span class="menu-text">About Posit Team</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/leesahanders/"> 
+<span class="menu-text">Lisa Anders</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/leesahanders/quarto-for-reproducible-reporting-demo"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -154,9 +126,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#server-content-using-connectwidgets" id="toc-server-content-using-connectwidgets" class="nav-link active" data-scroll-target="#server-content-using-connectwidgets">Server content using connectwidgets</a></li>
-  <li><a href="#server-content-using-quarto-card-group" id="toc-server-content-using-quarto-card-group" class="nav-link" data-scroll-target="#server-content-using-quarto-card-group">Server content using quarto card-group</a>
+  <li><a href="#server-content-using-quarto-card-group" id="toc-server-content-using-quarto-card-group" class="nav-link active" data-scroll-target="#server-content-using-quarto-card-group">Server content using quarto card-group</a>
   <ul class="collapse">
+  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a></li>
   <li><a href="#tabs" id="toc-tabs" class="nav-link" data-scroll-target="#tabs">tabs</a></li>
   </ul></li>
   <li><a href="#manual-generation" id="toc-manual-generation" class="nav-link" data-scroll-target="#manual-generation">Manual generation</a>
@@ -169,17 +141,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#programmatic-generation" id="toc-programmatic-generation" class="nav-link" data-scroll-target="#programmatic-generation">Programmatic generation</a>
   <ul class="collapse">
   <li><a href="#minimal-example" id="toc-minimal-example" class="nav-link" data-scroll-target="#minimal-example">Minimal example</a></li>
-  <li><a href="#tabset-with-plots-example-from-stackoverflow---doesnt-work" id="toc-tabset-with-plots-example-from-stackoverflow---doesnt-work" class="nav-link" data-scroll-target="#tabset-with-plots-example-from-stackoverflow---doesnt-work">Tabset with plots example from stackoverflow - doesn’t work</a></li>
-  <li><a href="#header-1" id="toc-header-1" class="nav-link" data-scroll-target="#header-1">header 1</a></li>
   </ul></li>
-  <li><a href="#header" id="toc-header" class="nav-link" data-scroll-target="#header">header</a>
-  <ul class="collapse">
-  <li><a href="#one" id="toc-one" class="nav-link" data-scroll-target="#one">one</a></li>
-  <li><a href="#two" id="toc-two" class="nav-link" data-scroll-target="#two">two</a></li>
-  <li><a href="#tabset-with-plots-example-from-stackoverflow---doesnt-work-1" id="toc-tabset-with-plots-example-from-stackoverflow---doesnt-work-1" class="nav-link" data-scroll-target="#tabset-with-plots-example-from-stackoverflow---doesnt-work-1">Tabset with plots example from stackoverflow - doesn’t work</a></li>
-  <li><a href="#tabset-from-chunks-example" id="toc-tabset-from-chunks-example" class="nav-link" data-scroll-target="#tabset-from-chunks-example">Tabset from chunks example</a></li>
-  <li><a href="#stackoverflow-example" id="toc-stackoverflow-example" class="nav-link" data-scroll-target="#stackoverflow-example">Stackoverflow example</a></li>
-  </ul></li>
+  <li><a href="#server-content-using-connectwidgets" id="toc-server-content-using-connectwidgets" class="nav-link" data-scroll-target="#server-content-using-connectwidgets">Server content using connectwidgets</a></li>
   </ul>
 </nav>
 </nav>
@@ -193,21 +156,138 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><img src="img/logo-team-full-color.svg" class="w-75"></p>
 <h1>
 Content
 </h1>
 <div class="increased-font-size">
-<p>Posit Test Drive is a limited demo environment hosted by Posit to help you learn more and try out the various features of the professional products.</p>
-<p>Below is a collection of Posit Connect hosted content, showcasing the outputs from the many demo examples. Check them out and have fun!</p>
+<p>Quarto is an exciting new content framework by Posit and open source developers to help you create phenomenal things. Below is a collection of Posit Connect Quarto hosted content, showcasing the many different content types.</p>
+<p>These examples are hosted on Posit Test Drive, a limited demo environment hosted by Posit to help you learn more and try out the various features of the professional products.</p>
+<p>Check them out and have fun!</p>
 </div>
 <p><br></p>
-<section id="server-content-using-connectwidgets" class="level2">
-<h2 class="anchored" data-anchor-id="server-content-using-connectwidgets">Server content using connectwidgets</h2>
-</section>
 <section id="server-content-using-quarto-card-group" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="server-content-using-quarto-card-group">Server content using quarto card-group</h2>
 <p>Why don’t the links and text get rendered?</p>
+<section id="examples" class="level3">
+<h3 class="anchored" data-anchor-id="examples">Examples</h3>
+<p>:::: {.column-body} ::: {.panel-tabset}</p>
+<section id="section" class="level4">
+<h4 class="anchored" data-anchor-id="section">1</h4>
+<div class="card-group">
+<div class="card">
+<p>** NA **</p>
+<p><img src="thumbnails/placeholder.png" class="img-fluid quarto-figure quarto-figure-center" width="200"> # <a href=" https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/b73a65f1-41e4-4a73-9daa-5f23276155ba " class="stretched-link"></a></p>
+<p>[Viewer link](” https://logical-locust.staging.eval.posit.co/pub/content/b73a65f1-41e4-4a73-9daa-5f23276155ba/ “)</p>
+<p>[Dashboard link](” https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/b73a65f1-41e4-4a73-9daa-5f23276155ba “)</p>
+</div>
+<div class="card">
+<p>** NA **</p>
+<p><img src="thumbnails/placeholder.png" class="img-fluid quarto-figure quarto-figure-center" width="200"> # <a href=" https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/b041ad07-381b-421d-8bf2-5fb76981e911 " class="stretched-link"></a></p>
+<p>[Viewer link](” https://logical-locust.staging.eval.posit.co/pub/content/b041ad07-381b-421d-8bf2-5fb76981e911/ “)</p>
+<p>[Dashboard link](” https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/b041ad07-381b-421d-8bf2-5fb76981e911 “)</p>
+</div>
+<div class="card">
+<p>** NA **</p>
+<p><img src="thumbnails/placeholder.png" class="img-fluid quarto-figure quarto-figure-center" width="200"> # <a href=" https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/20485345-8c2a-44b5-80ee-5a53d9f5554f " class="stretched-link"></a></p>
+<p>[Viewer link](” https://logical-locust.staging.eval.posit.co/pub/content/20485345-8c2a-44b5-80ee-5a53d9f5554f/ “)</p>
+<p>[Dashboard link](” https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/20485345-8c2a-44b5-80ee-5a53d9f5554f “)</p>
+</div>
+<div class="card">
+<p>** NA **</p>
+<p><img src="thumbnails/placeholder.png" class="img-fluid quarto-figure quarto-figure-center" width="200"> # <a href=" https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/66357ddd-22b3-466d-b3b0-e4a56846aa18 " class="stretched-link"></a></p>
+<p>[Viewer link](” https://logical-locust.staging.eval.posit.co/pub/content/66357ddd-22b3-466d-b3b0-e4a56846aa18/ “)</p>
+<p>[Dashboard link](” https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/66357ddd-22b3-466d-b3b0-e4a56846aa18 “)</p>
+</div>
+</div>
+</section>
+<section id="section-1" class="level4">
+<h4 class="anchored" data-anchor-id="section-1">2</h4>
+<div class="card-group">
+<div class="card">
+<p>** NA **</p>
+<p><img src="thumbnails/placeholder.png" class="img-fluid quarto-figure quarto-figure-center" width="200"> # <a href=" https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/b041ad07-381b-421d-8bf2-5fb76981e911 " class="stretched-link"></a></p>
+<p>[Viewer link](” https://logical-locust.staging.eval.posit.co/pub/content/b041ad07-381b-421d-8bf2-5fb76981e911/ “)</p>
+<p>[Dashboard link](” https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/b041ad07-381b-421d-8bf2-5fb76981e911 “)</p>
+</div>
+<div class="card">
+<p>** NA **</p>
+<p><img src="thumbnails/placeholder.png" class="img-fluid quarto-figure quarto-figure-center" width="200"> # <a href=" https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/20485345-8c2a-44b5-80ee-5a53d9f5554f " class="stretched-link"></a></p>
+<p>[Viewer link](” https://logical-locust.staging.eval.posit.co/pub/content/20485345-8c2a-44b5-80ee-5a53d9f5554f/ “)</p>
+<p>[Dashboard link](” https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/20485345-8c2a-44b5-80ee-5a53d9f5554f “)</p>
+</div>
+<div class="card">
+<p>** NA **</p>
+<p><img src="thumbnails/placeholder.png" class="img-fluid quarto-figure quarto-figure-center" width="200"> # <a href=" https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/66357ddd-22b3-466d-b3b0-e4a56846aa18 " class="stretched-link"></a></p>
+<p>[Viewer link](” https://logical-locust.staging.eval.posit.co/pub/content/66357ddd-22b3-466d-b3b0-e4a56846aa18/ “)</p>
+<p>[Dashboard link](” https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/66357ddd-22b3-466d-b3b0-e4a56846aa18 “)</p>
+</div>
+<div class="card">
+<p>** NA **</p>
+<p><img src="thumbnails/placeholder.png" class="img-fluid quarto-figure quarto-figure-center" width="200"> # <a href=" https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/bcb0c12b-aa34-45ad-a57b-e92c9fda787e " class="stretched-link"></a></p>
+<p>[Viewer link](” https://logical-locust.staging.eval.posit.co/pub/content/bcb0c12b-aa34-45ad-a57b-e92c9fda787e/ “)</p>
+<p>[Dashboard link](” https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/bcb0c12b-aa34-45ad-a57b-e92c9fda787e “)</p>
+</div>
+</div>
+</section>
+<section id="section-2" class="level4">
+<h4 class="anchored" data-anchor-id="section-2">3</h4>
+<div class="card-group">
+<div class="card">
+<p>** NA **</p>
+<p><img src="thumbnails/placeholder.png" class="img-fluid quarto-figure quarto-figure-center" width="200"> # <a href=" https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/20485345-8c2a-44b5-80ee-5a53d9f5554f " class="stretched-link"></a></p>
+<p>[Viewer link](” https://logical-locust.staging.eval.posit.co/pub/content/20485345-8c2a-44b5-80ee-5a53d9f5554f/ “)</p>
+<p>[Dashboard link](” https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/20485345-8c2a-44b5-80ee-5a53d9f5554f “)</p>
+</div>
+<div class="card">
+<p>** NA **</p>
+<p><img src="thumbnails/placeholder.png" class="img-fluid quarto-figure quarto-figure-center" width="200"> # <a href=" https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/66357ddd-22b3-466d-b3b0-e4a56846aa18 " class="stretched-link"></a></p>
+<p>[Viewer link](” https://logical-locust.staging.eval.posit.co/pub/content/66357ddd-22b3-466d-b3b0-e4a56846aa18/ “)</p>
+<p>[Dashboard link](” https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/66357ddd-22b3-466d-b3b0-e4a56846aa18 “)</p>
+</div>
+<div class="card">
+<p>** NA **</p>
+<p><img src="thumbnails/placeholder.png" class="img-fluid quarto-figure quarto-figure-center" width="200"> # <a href=" https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/bcb0c12b-aa34-45ad-a57b-e92c9fda787e " class="stretched-link"></a></p>
+<p>[Viewer link](” https://logical-locust.staging.eval.posit.co/pub/content/bcb0c12b-aa34-45ad-a57b-e92c9fda787e/ “)</p>
+<p>[Dashboard link](” https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/bcb0c12b-aa34-45ad-a57b-e92c9fda787e “)</p>
+</div>
+<div class="card">
+<p>** NA **</p>
+<p><img src="thumbnails/placeholder.png" class="img-fluid quarto-figure quarto-figure-center" width="200"> # <a href=" https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/d40e046a-26dc-4a56-8ad0-5d210176ce1c " class="stretched-link"></a></p>
+<p>[Viewer link](” https://logical-locust.staging.eval.posit.co/pub/content/d40e046a-26dc-4a56-8ad0-5d210176ce1c/ “)</p>
+<p>[Dashboard link](” https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/d40e046a-26dc-4a56-8ad0-5d210176ce1c “)</p>
+</div>
+</div>
+</section>
+<section id="section-3" class="level4">
+<h4 class="anchored" data-anchor-id="section-3">4</h4>
+<div class="card-group">
+<div class="card">
+<p>** NA **</p>
+<p><img src="thumbnails/placeholder.png" class="img-fluid quarto-figure quarto-figure-center" width="200"> # <a href=" https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/66357ddd-22b3-466d-b3b0-e4a56846aa18 " class="stretched-link"></a></p>
+<p>[Viewer link](” https://logical-locust.staging.eval.posit.co/pub/content/66357ddd-22b3-466d-b3b0-e4a56846aa18/ “)</p>
+<p>[Dashboard link](” https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/66357ddd-22b3-466d-b3b0-e4a56846aa18 “)</p>
+</div>
+<div class="card">
+<p>** NA **</p>
+<p><img src="thumbnails/placeholder.png" class="img-fluid quarto-figure quarto-figure-center" width="200"> # <a href=" https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/bcb0c12b-aa34-45ad-a57b-e92c9fda787e " class="stretched-link"></a></p>
+<p>[Viewer link](” https://logical-locust.staging.eval.posit.co/pub/content/bcb0c12b-aa34-45ad-a57b-e92c9fda787e/ “)</p>
+<p>[Dashboard link](” https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/bcb0c12b-aa34-45ad-a57b-e92c9fda787e “)</p>
+</div>
+<div class="card">
+<p>** NA **</p>
+<p><img src="thumbnails/placeholder.png" class="img-fluid quarto-figure quarto-figure-center" width="200"> # <a href=" https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/d40e046a-26dc-4a56-8ad0-5d210176ce1c " class="stretched-link"></a></p>
+<p>[Viewer link](” https://logical-locust.staging.eval.posit.co/pub/content/d40e046a-26dc-4a56-8ad0-5d210176ce1c/ “)</p>
+<p>[Dashboard link](” https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/d40e046a-26dc-4a56-8ad0-5d210176ce1c “)</p>
+</div>
+<div class="card">
+<p>** NA **</p>
+<p><img src="thumbnails/placeholder.png" class="img-fluid quarto-figure quarto-figure-center" width="200"> # <a href=" https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/f30761c1-2e93-4010-830b-15cf6b1cc069 " class="stretched-link"></a></p>
+<p>[Viewer link](” https://logical-locust.staging.eval.posit.co/pub/content/f30761c1-2e93-4010-830b-15cf6b1cc069/ “)</p>
+<p>[Dashboard link](” https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/f30761c1-2e93-4010-830b-15cf6b1cc069 “)</p>
+</div>
+</div>
+</section>
+</section>
 <section id="tabs" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="tabs">tabs</h3>
 <div class="column-body">
@@ -230,9 +310,9 @@ Content
 </div>
 <div class="card">
 <p>** NA **</p>
-<p><img src="thumbnails/placeholder.png" class="img-fluid quarto-figure quarto-figure-center" width="200"> # <a href=" https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/6508f6dd-6187-4274-8a35-6c847d5ffa5c " class="stretched-link"></a></p>
-<p>[Viewer link](” https://logical-locust.staging.eval.posit.co/pub/content/6508f6dd-6187-4274-8a35-6c847d5ffa5c/ “)</p>
-<p>[Dashboard link](” https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/6508f6dd-6187-4274-8a35-6c847d5ffa5c “)</p>
+<p><img src="thumbnails/placeholder.png" class="img-fluid quarto-figure quarto-figure-center" width="200"> # <a href=" https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/66357ddd-22b3-466d-b3b0-e4a56846aa18 " class="stretched-link"></a></p>
+<p>[Viewer link](” https://logical-locust.staging.eval.posit.co/pub/content/66357ddd-22b3-466d-b3b0-e4a56846aa18/ “)</p>
+<p>[Dashboard link](” https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/66357ddd-22b3-466d-b3b0-e4a56846aa18 “)</p>
 </div>
 <div class="card">
 <p>** NA **</p>
@@ -248,9 +328,15 @@ Content
 </div>
 <div class="card">
 <p>** NA **</p>
-<p><img src="thumbnails/placeholder.png" class="img-fluid quarto-figure quarto-figure-center" width="200"> # <a href=" https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/66357ddd-22b3-466d-b3b0-e4a56846aa18 " class="stretched-link"></a></p>
-<p>[Viewer link](” https://logical-locust.staging.eval.posit.co/pub/content/66357ddd-22b3-466d-b3b0-e4a56846aa18/ “)</p>
-<p>[Dashboard link](” https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/66357ddd-22b3-466d-b3b0-e4a56846aa18 “)</p>
+<p><img src="thumbnails/placeholder.png" class="img-fluid quarto-figure quarto-figure-center" width="200"> # <a href=" https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/e7d3dff1-a509-43b4-921c-a45451e03ae8 " class="stretched-link"></a></p>
+<p>[Viewer link](” https://logical-locust.staging.eval.posit.co/pub/content/e7d3dff1-a509-43b4-921c-a45451e03ae8/ “)</p>
+<p>[Dashboard link](” https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/e7d3dff1-a509-43b4-921c-a45451e03ae8 “)</p>
+</div>
+<div class="card">
+<p>** NA **</p>
+<p><img src="thumbnails/placeholder.png" class="img-fluid quarto-figure quarto-figure-center" width="200"> # <a href=" https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/6508f6dd-6187-4274-8a35-6c847d5ffa5c " class="stretched-link"></a></p>
+<p>[Viewer link](” https://logical-locust.staging.eval.posit.co/pub/content/6508f6dd-6187-4274-8a35-6c847d5ffa5c/ “)</p>
+<p>[Dashboard link](” https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/6508f6dd-6187-4274-8a35-6c847d5ffa5c “)</p>
 </div>
 <div class="card">
 <p>** NA **</p>
@@ -259,46 +345,10 @@ Content
 <p>[Dashboard link](” https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/3ef3f84d-9f23-4405-b06b-30614c68444e “)</p>
 </div>
 <div class="card">
-<p>** NA **</p>
-<p><img src="thumbnails/placeholder.png" class="img-fluid quarto-figure quarto-figure-center" width="200"> # <a href=" https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/e7d3dff1-a509-43b4-921c-a45451e03ae8 " class="stretched-link"></a></p>
-<p>[Viewer link](” https://logical-locust.staging.eval.posit.co/pub/content/e7d3dff1-a509-43b4-921c-a45451e03ae8/ “)</p>
-<p>[Dashboard link](” https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/e7d3dff1-a509-43b4-921c-a45451e03ae8 “)</p>
-</div>
-<div class="card">
-<p>** Conditional Emails with blastula **</p>
-<p><img src="thumbnails/placeholder.png" class="img-fluid quarto-figure quarto-figure-center" width="200"> # <a href=" https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/10660776-2ca3-44f0-83df-e6b24801feb9 " class="stretched-link"></a></p>
-<p>[Viewer link](” https://logical-locust.staging.eval.posit.co/pub/content/10660776-2ca3-44f0-83df-e6b24801feb9/ “)</p>
-<p>[Dashboard link](” https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/10660776-2ca3-44f0-83df-e6b24801feb9 “)</p>
-</div>
-<div class="card">
-<p>** Evaluation Analysis Dashboard **</p>
-<p><img src="thumbnails/placeholder.png" class="img-fluid quarto-figure quarto-figure-center" width="200"> # <a href=" https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/4e1c9b99-451f-4b18-9146-200eb3326dcd " class="stretched-link"></a></p>
-<p>[Viewer link](” https://logical-locust.staging.eval.posit.co/pub/content/4e1c9b99-451f-4b18-9146-200eb3326dcd/ “)</p>
-<p>[Dashboard link](” https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/4e1c9b99-451f-4b18-9146-200eb3326dcd “)</p>
-</div>
-<div class="card">
 <p>** Using Databases with Posit Products **</p>
 <p><img src="thumbnails/placeholder.png" class="img-fluid quarto-figure quarto-figure-center" width="200"> # <a href=" https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/c92568fb-73b1-4025-b2ef-71b1521b5233 " class="stretched-link"></a></p>
 <p>[Viewer link](” https://logical-locust.staging.eval.posit.co/pub/content/c92568fb-73b1-4025-b2ef-71b1521b5233/ “)</p>
 <p>[Dashboard link](” https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/c92568fb-73b1-4025-b2ef-71b1521b5233 “)</p>
-</div>
-<div class="card">
-<p>** Penguins Document **</p>
-<p><img src="thumbnails/placeholder.png" class="img-fluid quarto-figure quarto-figure-center" width="200"> # <a href=" https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/e8345486-8854-4ab7-9bb6-8d7f4011a2a0 " class="stretched-link"></a></p>
-<p>[Viewer link](” https://logical-locust.staging.eval.posit.co/pub/content/e8345486-8854-4ab7-9bb6-8d7f4011a2a0/ “)</p>
-<p>[Dashboard link](” https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/e8345486-8854-4ab7-9bb6-8d7f4011a2a0 “)</p>
-</div>
-<div class="card">
-<p>** Loan Risk API **</p>
-<p><img src="thumbnails/placeholder.png" class="img-fluid quarto-figure quarto-figure-center" width="200"> # <a href=" https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/82e27a92-71f7-446c-934b-083e2c416218 " class="stretched-link"></a></p>
-<p>[Viewer link](” https://logical-locust.staging.eval.posit.co/pub/content/82e27a92-71f7-446c-934b-083e2c416218/ “)</p>
-<p>[Dashboard link](” https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/82e27a92-71f7-446c-934b-083e2c416218 “)</p>
-</div>
-<div class="card">
-<p>** Penguins Dashboard **</p>
-<p><img src="thumbnails/placeholder.png" class="img-fluid quarto-figure quarto-figure-center" width="200"> # <a href=" https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/effd8a67-0462-4c0f-b179-fd0ed857e17d " class="stretched-link"></a></p>
-<p>[Viewer link](” https://logical-locust.staging.eval.posit.co/pub/content/effd8a67-0462-4c0f-b179-fd0ed857e17d/ “)</p>
-<p>[Dashboard link](” https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/effd8a67-0462-4c0f-b179-fd0ed857e17d “)</p>
 </div>
 </div>
 </div>
@@ -309,30 +359,6 @@ Content
 <p><img src="thumbnails/placeholder.png" class="img-fluid quarto-figure quarto-figure-center" width="200"> # <a href=" https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/4b32257c-a144-4661-9ae3-b08e1b1c9766 " class="stretched-link"></a></p>
 <p>[Viewer link](” https://logical-locust.staging.eval.posit.co/pub/content/4b32257c-a144-4661-9ae3-b08e1b1c9766/ “)</p>
 <p>[Dashboard link](” https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/4b32257c-a144-4661-9ae3-b08e1b1c9766 “)</p>
-</div>
-<div class="card">
-<p>** Loan Risk Prediction Model using FastAPI **</p>
-<p><img src="thumbnails/placeholder.png" class="img-fluid quarto-figure quarto-figure-center" width="200"> # <a href=" https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/a921b474-8725-4a47-9fa3-0b732fa4522c " class="stretched-link"></a></p>
-<p>[Viewer link](” https://logical-locust.staging.eval.posit.co/pub/content/a921b474-8725-4a47-9fa3-0b732fa4522c/ “)</p>
-<p>[Dashboard link](” https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/a921b474-8725-4a47-9fa3-0b732fa4522c “)</p>
-</div>
-<div class="card">
-<p>** Interactive Data Exploration with Shiny for Python **</p>
-<p><img src="thumbnails/placeholder.png" class="img-fluid quarto-figure quarto-figure-center" width="200"> # <a href=" https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/a80d87c9-f807-4665-84ad-65190d6afd2a " class="stretched-link"></a></p>
-<p>[Viewer link](” https://logical-locust.staging.eval.posit.co/pub/content/a80d87c9-f807-4665-84ad-65190d6afd2a/ “)</p>
-<p>[Dashboard link](” https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/a80d87c9-f807-4665-84ad-65190d6afd2a “)</p>
-</div>
-<div class="card">
-<p>** Stock Pricing Dashboard with Dash **</p>
-<p><img src="thumbnails/placeholder.png" class="img-fluid quarto-figure quarto-figure-center" width="200"> # <a href=" https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/a2e51e07-0006-4f57-aafa-d1b6e5e49157 " class="stretched-link"></a></p>
-<p>[Viewer link](” https://logical-locust.staging.eval.posit.co/pub/content/a2e51e07-0006-4f57-aafa-d1b6e5e49157/ “)</p>
-<p>[Dashboard link](” https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/a2e51e07-0006-4f57-aafa-d1b6e5e49157 “)</p>
-</div>
-<div class="card">
-<p>** Interactive Data Exploration with Streamlit **</p>
-<p><img src="thumbnails/placeholder.png" class="img-fluid quarto-figure quarto-figure-center" width="200"> # <a href=" https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/04e72047-7001-46a4-ba56-7f3fecc3e0e3 " class="stretched-link"></a></p>
-<p>[Viewer link](” https://logical-locust.staging.eval.posit.co/pub/content/04e72047-7001-46a4-ba56-7f3fecc3e0e3/ “)</p>
-<p>[Dashboard link](” https://logical-locust.staging.eval.posit.co/pub/connect/#/apps/04e72047-7001-46a4-ba56-7f3fecc3e0e3 “)</p>
 </div>
 </div>
 </div>
@@ -410,94 +436,11 @@ Content
 </div>
 </section>
 </section>
-<section id="tabset-with-plots-example-from-stackoverflow---doesnt-work" class="level3">
-<h3 class="anchored" data-anchor-id="tabset-with-plots-example-from-stackoverflow---doesnt-work">Tabset with plots example from stackoverflow - doesn’t work</h3>
-<p><a href="https://stackoverflow.com/questions/53444333/dynamic-tabsets-with-multiple-plots-r-markdown" class="uri">https://stackoverflow.com/questions/53444333/dynamic-tabsets-with-multiple-plots-r-markdown</a></p>
 </section>
-<section id="header-1" class="level3">
-<h3 class="anchored" data-anchor-id="header-1">header 1</h3>
-</section>
-</section>
-<section id="header" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="header">header</h2>
-<section id="one" class="level3">
-<h3 class="anchored" data-anchor-id="one">one</h3>
-<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"><img src="index_files/figure-html/unnamed-chunk-7-2.png" class="img-fluid" width="672"></p>
-</section>
-<section id="two" class="level3">
-<h3 class="anchored" data-anchor-id="two">two</h3>
-<p><img src="index_files/figure-html/unnamed-chunk-7-3.png" class="img-fluid" width="672"><img src="index_files/figure-html/unnamed-chunk-7-4.png" class="img-fluid" width="672"></p>
-</section>
-<section id="tabset-with-plots-example-from-stackoverflow---doesnt-work-1" class="level3">
-<h3 class="anchored" data-anchor-id="tabset-with-plots-example-from-stackoverflow---doesnt-work-1">Tabset with plots example from stackoverflow - doesn’t work</h3>
-<p><a href="https://stackoverflow.com/questions/63397427/programmatically-create-tab-and-plot-in-markdown" class="uri">https://stackoverflow.com/questions/63397427/programmatically-create-tab-and-plot-in-markdown</a></p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true">Tabs panel</a></li></ul>
-<div class="tab-content">
-<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
-<section id="tab-1" class="level5">
-<h5 class="anchored" data-anchor-id="tab-1">Tab 1</h5>
-<div id="htmlwidget-da4b023e1c6ab8cb8a16" class="highchart html-widget html-fill-item-overflow-hidden html-fill-item" style="width:100%;height:500px;">
-
-</div>
-<script type="application/json" data-for="htmlwidget-da4b023e1c6ab8cb8a16">{"x":{"hc_opts":{"chart":{"reflow":true},"title":{"text":null},"yAxis":{"title":{"text":"Sepal.Width"},"type":"linear"},"credits":{"enabled":false},"exporting":{"enabled":false},"boost":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":false},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}}},"series":[{"group":"group","data":[{"Sepal.Length":5.1,"Sepal.Width":3.5,"Petal.Length":1.4,"Petal.Width":0.2,"Species":"setosa","x":5.1,"y":3.5},{"Sepal.Length":4.9,"Sepal.Width":3,"Petal.Length":1.4,"Petal.Width":0.2,"Species":"setosa","x":4.9,"y":3},{"Sepal.Length":4.7,"Sepal.Width":3.2,"Petal.Length":1.3,"Petal.Width":0.2,"Species":"setosa","x":4.7,"y":3.2},{"Sepal.Length":4.6,"Sepal.Width":3.1,"Petal.Length":1.5,"Petal.Width":0.2,"Species":"setosa","x":4.6,"y":3.1},{"Sepal.Length":5,"Sepal.Width":3.6,"Petal.Length":1.4,"Petal.Width":0.2,"Species":"setosa","x":5,"y":3.6},{"Sepal.Length":5.4,"Sepal.Width":3.9,"Petal.Length":1.7,"Petal.Width":0.4,"Species":"setosa","x":5.4,"y":3.9},{"Sepal.Length":4.6,"Sepal.Width":3.4,"Petal.Length":1.4,"Petal.Width":0.3,"Species":"setosa","x":4.6,"y":3.4},{"Sepal.Length":5,"Sepal.Width":3.4,"Petal.Length":1.5,"Petal.Width":0.2,"Species":"setosa","x":5,"y":3.4},{"Sepal.Length":4.4,"Sepal.Width":2.9,"Petal.Length":1.4,"Petal.Width":0.2,"Species":"setosa","x":4.4,"y":2.9},{"Sepal.Length":4.9,"Sepal.Width":3.1,"Petal.Length":1.5,"Petal.Width":0.1,"Species":"setosa","x":4.9,"y":3.1},{"Sepal.Length":5.4,"Sepal.Width":3.7,"Petal.Length":1.5,"Petal.Width":0.2,"Species":"setosa","x":5.4,"y":3.7},{"Sepal.Length":4.8,"Sepal.Width":3.4,"Petal.Length":1.6,"Petal.Width":0.2,"Species":"setosa","x":4.8,"y":3.4},{"Sepal.Length":4.8,"Sepal.Width":3,"Petal.Length":1.4,"Petal.Width":0.1,"Species":"setosa","x":4.8,"y":3},{"Sepal.Length":4.3,"Sepal.Width":3,"Petal.Length":1.1,"Petal.Width":0.1,"Species":"setosa","x":4.3,"y":3},{"Sepal.Length":5.8,"Sepal.Width":4,"Petal.Length":1.2,"Petal.Width":0.2,"Species":"setosa","x":5.8,"y":4},{"Sepal.Length":5.7,"Sepal.Width":4.4,"Petal.Length":1.5,"Petal.Width":0.4,"Species":"setosa","x":5.7,"y":4.4},{"Sepal.Length":5.4,"Sepal.Width":3.9,"Petal.Length":1.3,"Petal.Width":0.4,"Species":"setosa","x":5.4,"y":3.9},{"Sepal.Length":5.1,"Sepal.Width":3.5,"Petal.Length":1.4,"Petal.Width":0.3,"Species":"setosa","x":5.1,"y":3.5},{"Sepal.Length":5.7,"Sepal.Width":3.8,"Petal.Length":1.7,"Petal.Width":0.3,"Species":"setosa","x":5.7,"y":3.8},{"Sepal.Length":5.1,"Sepal.Width":3.8,"Petal.Length":1.5,"Petal.Width":0.3,"Species":"setosa","x":5.1,"y":3.8},{"Sepal.Length":5.4,"Sepal.Width":3.4,"Petal.Length":1.7,"Petal.Width":0.2,"Species":"setosa","x":5.4,"y":3.4},{"Sepal.Length":5.1,"Sepal.Width":3.7,"Petal.Length":1.5,"Petal.Width":0.4,"Species":"setosa","x":5.1,"y":3.7},{"Sepal.Length":4.6,"Sepal.Width":3.6,"Petal.Length":1,"Petal.Width":0.2,"Species":"setosa","x":4.6,"y":3.6},{"Sepal.Length":5.1,"Sepal.Width":3.3,"Petal.Length":1.7,"Petal.Width":0.5,"Species":"setosa","x":5.1,"y":3.3},{"Sepal.Length":4.8,"Sepal.Width":3.4,"Petal.Length":1.9,"Petal.Width":0.2,"Species":"setosa","x":4.8,"y":3.4},{"Sepal.Length":5,"Sepal.Width":3,"Petal.Length":1.6,"Petal.Width":0.2,"Species":"setosa","x":5,"y":3},{"Sepal.Length":5,"Sepal.Width":3.4,"Petal.Length":1.6,"Petal.Width":0.4,"Species":"setosa","x":5,"y":3.4},{"Sepal.Length":5.2,"Sepal.Width":3.5,"Petal.Length":1.5,"Petal.Width":0.2,"Species":"setosa","x":5.2,"y":3.5},{"Sepal.Length":5.2,"Sepal.Width":3.4,"Petal.Length":1.4,"Petal.Width":0.2,"Species":"setosa","x":5.2,"y":3.4},{"Sepal.Length":4.7,"Sepal.Width":3.2,"Petal.Length":1.6,"Petal.Width":0.2,"Species":"setosa","x":4.7,"y":3.2},{"Sepal.Length":4.8,"Sepal.Width":3.1,"Petal.Length":1.6,"Petal.Width":0.2,"Species":"setosa","x":4.8,"y":3.1},{"Sepal.Length":5.4,"Sepal.Width":3.4,"Petal.Length":1.5,"Petal.Width":0.4,"Species":"setosa","x":5.4,"y":3.4},{"Sepal.Length":5.2,"Sepal.Width":4.1,"Petal.Length":1.5,"Petal.Width":0.1,"Species":"setosa","x":5.2,"y":4.1},{"Sepal.Length":5.5,"Sepal.Width":4.2,"Petal.Length":1.4,"Petal.Width":0.2,"Species":"setosa","x":5.5,"y":4.2},{"Sepal.Length":4.9,"Sepal.Width":3.1,"Petal.Length":1.5,"Petal.Width":0.2,"Species":"setosa","x":4.9,"y":3.1},{"Sepal.Length":5,"Sepal.Width":3.2,"Petal.Length":1.2,"Petal.Width":0.2,"Species":"setosa","x":5,"y":3.2},{"Sepal.Length":5.5,"Sepal.Width":3.5,"Petal.Length":1.3,"Petal.Width":0.2,"Species":"setosa","x":5.5,"y":3.5},{"Sepal.Length":4.9,"Sepal.Width":3.6,"Petal.Length":1.4,"Petal.Width":0.1,"Species":"setosa","x":4.9,"y":3.6},{"Sepal.Length":4.4,"Sepal.Width":3,"Petal.Length":1.3,"Petal.Width":0.2,"Species":"setosa","x":4.4,"y":3},{"Sepal.Length":5.1,"Sepal.Width":3.4,"Petal.Length":1.5,"Petal.Width":0.2,"Species":"setosa","x":5.1,"y":3.4},{"Sepal.Length":5,"Sepal.Width":3.5,"Petal.Length":1.3,"Petal.Width":0.3,"Species":"setosa","x":5,"y":3.5},{"Sepal.Length":4.5,"Sepal.Width":2.3,"Petal.Length":1.3,"Petal.Width":0.3,"Species":"setosa","x":4.5,"y":2.3},{"Sepal.Length":4.4,"Sepal.Width":3.2,"Petal.Length":1.3,"Petal.Width":0.2,"Species":"setosa","x":4.4,"y":3.2},{"Sepal.Length":5,"Sepal.Width":3.5,"Petal.Length":1.6,"Petal.Width":0.6,"Species":"setosa","x":5,"y":3.5},{"Sepal.Length":5.1,"Sepal.Width":3.8,"Petal.Length":1.9,"Petal.Width":0.4,"Species":"setosa","x":5.1,"y":3.8},{"Sepal.Length":4.8,"Sepal.Width":3,"Petal.Length":1.4,"Petal.Width":0.3,"Species":"setosa","x":4.8,"y":3},{"Sepal.Length":5.1,"Sepal.Width":3.8,"Petal.Length":1.6,"Petal.Width":0.2,"Species":"setosa","x":5.1,"y":3.8},{"Sepal.Length":4.6,"Sepal.Width":3.2,"Petal.Length":1.4,"Petal.Width":0.2,"Species":"setosa","x":4.6,"y":3.2},{"Sepal.Length":5.3,"Sepal.Width":3.7,"Petal.Length":1.5,"Petal.Width":0.2,"Species":"setosa","x":5.3,"y":3.7},{"Sepal.Length":5,"Sepal.Width":3.3,"Petal.Length":1.4,"Petal.Width":0.2,"Species":"setosa","x":5,"y":3.3}],"type":"scatter"}],"xAxis":{"type":"linear","title":{"text":"Sepal.Length"},"categories":null}},"theme":{"chart":{"backgroundColor":"transparent"},"colors":["#7cb5ec","#434348","#90ed7d","#f7a35c","#8085e9","#f15c80","#e4d354","#2b908f","#f45b5b","#91e8e1"]},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadCSV":"Download CSV","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","downloadXLS":"Download XLS","drillUpText":"◁ Back to {series.name}","exitFullscreen":"Exit from full screen","exportData":{"annotationHeader":"Annotations","categoryDatetimeHeader":"DateTime","categoryHeader":"Category"},"hideData":"Hide data table","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbolMagnitude":1000,"numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"shortWeekdays":["Sat","Sun","Mon","Tue","Wed","Thu","Fri"],"thousandsSep":" ","viewData":"View data table","viewFullscreen":"View in full screen","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
-</section>
-<section id="tab-2" class="level5">
-<h5 class="anchored" data-anchor-id="tab-2">Tab 2</h5>
-<div id="htmlwidget-ddb60c80607c2bbbbbfa" class="highchart html-widget html-fill-item-overflow-hidden html-fill-item" style="width:100%;height:500px;">
-
-</div>
-<script type="application/json" data-for="htmlwidget-ddb60c80607c2bbbbbfa">{"x":{"hc_opts":{"chart":{"reflow":true},"title":{"text":null},"yAxis":{"title":{"text":"Sepal.Width"},"type":"linear"},"credits":{"enabled":false},"exporting":{"enabled":false},"boost":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":false},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}}},"series":[{"group":"group","data":[{"Sepal.Length":7,"Sepal.Width":3.2,"Petal.Length":4.7,"Petal.Width":1.4,"Species":"versicolor","x":7,"y":3.2},{"Sepal.Length":6.4,"Sepal.Width":3.2,"Petal.Length":4.5,"Petal.Width":1.5,"Species":"versicolor","x":6.4,"y":3.2},{"Sepal.Length":6.9,"Sepal.Width":3.1,"Petal.Length":4.9,"Petal.Width":1.5,"Species":"versicolor","x":6.9,"y":3.1},{"Sepal.Length":5.5,"Sepal.Width":2.3,"Petal.Length":4,"Petal.Width":1.3,"Species":"versicolor","x":5.5,"y":2.3},{"Sepal.Length":6.5,"Sepal.Width":2.8,"Petal.Length":4.6,"Petal.Width":1.5,"Species":"versicolor","x":6.5,"y":2.8},{"Sepal.Length":5.7,"Sepal.Width":2.8,"Petal.Length":4.5,"Petal.Width":1.3,"Species":"versicolor","x":5.7,"y":2.8},{"Sepal.Length":6.3,"Sepal.Width":3.3,"Petal.Length":4.7,"Petal.Width":1.6,"Species":"versicolor","x":6.3,"y":3.3},{"Sepal.Length":4.9,"Sepal.Width":2.4,"Petal.Length":3.3,"Petal.Width":1,"Species":"versicolor","x":4.9,"y":2.4},{"Sepal.Length":6.6,"Sepal.Width":2.9,"Petal.Length":4.6,"Petal.Width":1.3,"Species":"versicolor","x":6.6,"y":2.9},{"Sepal.Length":5.2,"Sepal.Width":2.7,"Petal.Length":3.9,"Petal.Width":1.4,"Species":"versicolor","x":5.2,"y":2.7},{"Sepal.Length":5,"Sepal.Width":2,"Petal.Length":3.5,"Petal.Width":1,"Species":"versicolor","x":5,"y":2},{"Sepal.Length":5.9,"Sepal.Width":3,"Petal.Length":4.2,"Petal.Width":1.5,"Species":"versicolor","x":5.9,"y":3},{"Sepal.Length":6,"Sepal.Width":2.2,"Petal.Length":4,"Petal.Width":1,"Species":"versicolor","x":6,"y":2.2},{"Sepal.Length":6.1,"Sepal.Width":2.9,"Petal.Length":4.7,"Petal.Width":1.4,"Species":"versicolor","x":6.1,"y":2.9},{"Sepal.Length":5.6,"Sepal.Width":2.9,"Petal.Length":3.6,"Petal.Width":1.3,"Species":"versicolor","x":5.6,"y":2.9},{"Sepal.Length":6.7,"Sepal.Width":3.1,"Petal.Length":4.4,"Petal.Width":1.4,"Species":"versicolor","x":6.7,"y":3.1},{"Sepal.Length":5.6,"Sepal.Width":3,"Petal.Length":4.5,"Petal.Width":1.5,"Species":"versicolor","x":5.6,"y":3},{"Sepal.Length":5.8,"Sepal.Width":2.7,"Petal.Length":4.1,"Petal.Width":1,"Species":"versicolor","x":5.8,"y":2.7},{"Sepal.Length":6.2,"Sepal.Width":2.2,"Petal.Length":4.5,"Petal.Width":1.5,"Species":"versicolor","x":6.2,"y":2.2},{"Sepal.Length":5.6,"Sepal.Width":2.5,"Petal.Length":3.9,"Petal.Width":1.1,"Species":"versicolor","x":5.6,"y":2.5},{"Sepal.Length":5.9,"Sepal.Width":3.2,"Petal.Length":4.8,"Petal.Width":1.8,"Species":"versicolor","x":5.9,"y":3.2},{"Sepal.Length":6.1,"Sepal.Width":2.8,"Petal.Length":4,"Petal.Width":1.3,"Species":"versicolor","x":6.1,"y":2.8},{"Sepal.Length":6.3,"Sepal.Width":2.5,"Petal.Length":4.9,"Petal.Width":1.5,"Species":"versicolor","x":6.3,"y":2.5},{"Sepal.Length":6.1,"Sepal.Width":2.8,"Petal.Length":4.7,"Petal.Width":1.2,"Species":"versicolor","x":6.1,"y":2.8},{"Sepal.Length":6.4,"Sepal.Width":2.9,"Petal.Length":4.3,"Petal.Width":1.3,"Species":"versicolor","x":6.4,"y":2.9},{"Sepal.Length":6.6,"Sepal.Width":3,"Petal.Length":4.4,"Petal.Width":1.4,"Species":"versicolor","x":6.6,"y":3},{"Sepal.Length":6.8,"Sepal.Width":2.8,"Petal.Length":4.8,"Petal.Width":1.4,"Species":"versicolor","x":6.8,"y":2.8},{"Sepal.Length":6.7,"Sepal.Width":3,"Petal.Length":5,"Petal.Width":1.7,"Species":"versicolor","x":6.7,"y":3},{"Sepal.Length":6,"Sepal.Width":2.9,"Petal.Length":4.5,"Petal.Width":1.5,"Species":"versicolor","x":6,"y":2.9},{"Sepal.Length":5.7,"Sepal.Width":2.6,"Petal.Length":3.5,"Petal.Width":1,"Species":"versicolor","x":5.7,"y":2.6},{"Sepal.Length":5.5,"Sepal.Width":2.4,"Petal.Length":3.8,"Petal.Width":1.1,"Species":"versicolor","x":5.5,"y":2.4},{"Sepal.Length":5.5,"Sepal.Width":2.4,"Petal.Length":3.7,"Petal.Width":1,"Species":"versicolor","x":5.5,"y":2.4},{"Sepal.Length":5.8,"Sepal.Width":2.7,"Petal.Length":3.9,"Petal.Width":1.2,"Species":"versicolor","x":5.8,"y":2.7},{"Sepal.Length":6,"Sepal.Width":2.7,"Petal.Length":5.1,"Petal.Width":1.6,"Species":"versicolor","x":6,"y":2.7},{"Sepal.Length":5.4,"Sepal.Width":3,"Petal.Length":4.5,"Petal.Width":1.5,"Species":"versicolor","x":5.4,"y":3},{"Sepal.Length":6,"Sepal.Width":3.4,"Petal.Length":4.5,"Petal.Width":1.6,"Species":"versicolor","x":6,"y":3.4},{"Sepal.Length":6.7,"Sepal.Width":3.1,"Petal.Length":4.7,"Petal.Width":1.5,"Species":"versicolor","x":6.7,"y":3.1},{"Sepal.Length":6.3,"Sepal.Width":2.3,"Petal.Length":4.4,"Petal.Width":1.3,"Species":"versicolor","x":6.3,"y":2.3},{"Sepal.Length":5.6,"Sepal.Width":3,"Petal.Length":4.1,"Petal.Width":1.3,"Species":"versicolor","x":5.6,"y":3},{"Sepal.Length":5.5,"Sepal.Width":2.5,"Petal.Length":4,"Petal.Width":1.3,"Species":"versicolor","x":5.5,"y":2.5},{"Sepal.Length":5.5,"Sepal.Width":2.6,"Petal.Length":4.4,"Petal.Width":1.2,"Species":"versicolor","x":5.5,"y":2.6},{"Sepal.Length":6.1,"Sepal.Width":3,"Petal.Length":4.6,"Petal.Width":1.4,"Species":"versicolor","x":6.1,"y":3},{"Sepal.Length":5.8,"Sepal.Width":2.6,"Petal.Length":4,"Petal.Width":1.2,"Species":"versicolor","x":5.8,"y":2.6},{"Sepal.Length":5,"Sepal.Width":2.3,"Petal.Length":3.3,"Petal.Width":1,"Species":"versicolor","x":5,"y":2.3},{"Sepal.Length":5.6,"Sepal.Width":2.7,"Petal.Length":4.2,"Petal.Width":1.3,"Species":"versicolor","x":5.6,"y":2.7},{"Sepal.Length":5.7,"Sepal.Width":3,"Petal.Length":4.2,"Petal.Width":1.2,"Species":"versicolor","x":5.7,"y":3},{"Sepal.Length":5.7,"Sepal.Width":2.9,"Petal.Length":4.2,"Petal.Width":1.3,"Species":"versicolor","x":5.7,"y":2.9},{"Sepal.Length":6.2,"Sepal.Width":2.9,"Petal.Length":4.3,"Petal.Width":1.3,"Species":"versicolor","x":6.2,"y":2.9},{"Sepal.Length":5.1,"Sepal.Width":2.5,"Petal.Length":3,"Petal.Width":1.1,"Species":"versicolor","x":5.1,"y":2.5},{"Sepal.Length":5.7,"Sepal.Width":2.8,"Petal.Length":4.1,"Petal.Width":1.3,"Species":"versicolor","x":5.7,"y":2.8}],"type":"scatter"}],"xAxis":{"type":"linear","title":{"text":"Sepal.Length"},"categories":null}},"theme":{"chart":{"backgroundColor":"transparent"},"colors":["#7cb5ec","#434348","#90ed7d","#f7a35c","#8085e9","#f15c80","#e4d354","#2b908f","#f45b5b","#91e8e1"]},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadCSV":"Download CSV","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","downloadXLS":"Download XLS","drillUpText":"◁ Back to {series.name}","exitFullscreen":"Exit from full screen","exportData":{"annotationHeader":"Annotations","categoryDatetimeHeader":"DateTime","categoryHeader":"Category"},"hideData":"Hide data table","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbolMagnitude":1000,"numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"shortWeekdays":["Sat","Sun","Mon","Tue","Wed","Thu","Fri"],"thousandsSep":" ","viewData":"View data table","viewFullscreen":"View in full screen","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
-</section>
-<section id="tab-3" class="level5">
-<h5 class="anchored" data-anchor-id="tab-3">Tab 3</h5>
-<div id="htmlwidget-488c3451c04ea52c47c5" class="highchart html-widget html-fill-item-overflow-hidden html-fill-item" style="width:100%;height:500px;">
-
-</div>
-<script type="application/json" data-for="htmlwidget-488c3451c04ea52c47c5">{"x":{"hc_opts":{"chart":{"reflow":true},"title":{"text":null},"yAxis":{"title":{"text":"Sepal.Width"},"type":"linear"},"credits":{"enabled":false},"exporting":{"enabled":false},"boost":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":false},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}}},"series":[{"group":"group","data":[{"Sepal.Length":6.3,"Sepal.Width":3.3,"Petal.Length":6,"Petal.Width":2.5,"Species":"virginica","x":6.3,"y":3.3},{"Sepal.Length":5.8,"Sepal.Width":2.7,"Petal.Length":5.1,"Petal.Width":1.9,"Species":"virginica","x":5.8,"y":2.7},{"Sepal.Length":7.1,"Sepal.Width":3,"Petal.Length":5.9,"Petal.Width":2.1,"Species":"virginica","x":7.1,"y":3},{"Sepal.Length":6.3,"Sepal.Width":2.9,"Petal.Length":5.6,"Petal.Width":1.8,"Species":"virginica","x":6.3,"y":2.9},{"Sepal.Length":6.5,"Sepal.Width":3,"Petal.Length":5.8,"Petal.Width":2.2,"Species":"virginica","x":6.5,"y":3},{"Sepal.Length":7.6,"Sepal.Width":3,"Petal.Length":6.6,"Petal.Width":2.1,"Species":"virginica","x":7.6,"y":3},{"Sepal.Length":4.9,"Sepal.Width":2.5,"Petal.Length":4.5,"Petal.Width":1.7,"Species":"virginica","x":4.9,"y":2.5},{"Sepal.Length":7.3,"Sepal.Width":2.9,"Petal.Length":6.3,"Petal.Width":1.8,"Species":"virginica","x":7.3,"y":2.9},{"Sepal.Length":6.7,"Sepal.Width":2.5,"Petal.Length":5.8,"Petal.Width":1.8,"Species":"virginica","x":6.7,"y":2.5},{"Sepal.Length":7.2,"Sepal.Width":3.6,"Petal.Length":6.1,"Petal.Width":2.5,"Species":"virginica","x":7.2,"y":3.6},{"Sepal.Length":6.5,"Sepal.Width":3.2,"Petal.Length":5.1,"Petal.Width":2,"Species":"virginica","x":6.5,"y":3.2},{"Sepal.Length":6.4,"Sepal.Width":2.7,"Petal.Length":5.3,"Petal.Width":1.9,"Species":"virginica","x":6.4,"y":2.7},{"Sepal.Length":6.8,"Sepal.Width":3,"Petal.Length":5.5,"Petal.Width":2.1,"Species":"virginica","x":6.8,"y":3},{"Sepal.Length":5.7,"Sepal.Width":2.5,"Petal.Length":5,"Petal.Width":2,"Species":"virginica","x":5.7,"y":2.5},{"Sepal.Length":5.8,"Sepal.Width":2.8,"Petal.Length":5.1,"Petal.Width":2.4,"Species":"virginica","x":5.8,"y":2.8},{"Sepal.Length":6.4,"Sepal.Width":3.2,"Petal.Length":5.3,"Petal.Width":2.3,"Species":"virginica","x":6.4,"y":3.2},{"Sepal.Length":6.5,"Sepal.Width":3,"Petal.Length":5.5,"Petal.Width":1.8,"Species":"virginica","x":6.5,"y":3},{"Sepal.Length":7.7,"Sepal.Width":3.8,"Petal.Length":6.7,"Petal.Width":2.2,"Species":"virginica","x":7.7,"y":3.8},{"Sepal.Length":7.7,"Sepal.Width":2.6,"Petal.Length":6.9,"Petal.Width":2.3,"Species":"virginica","x":7.7,"y":2.6},{"Sepal.Length":6,"Sepal.Width":2.2,"Petal.Length":5,"Petal.Width":1.5,"Species":"virginica","x":6,"y":2.2},{"Sepal.Length":6.9,"Sepal.Width":3.2,"Petal.Length":5.7,"Petal.Width":2.3,"Species":"virginica","x":6.9,"y":3.2},{"Sepal.Length":5.6,"Sepal.Width":2.8,"Petal.Length":4.9,"Petal.Width":2,"Species":"virginica","x":5.6,"y":2.8},{"Sepal.Length":7.7,"Sepal.Width":2.8,"Petal.Length":6.7,"Petal.Width":2,"Species":"virginica","x":7.7,"y":2.8},{"Sepal.Length":6.3,"Sepal.Width":2.7,"Petal.Length":4.9,"Petal.Width":1.8,"Species":"virginica","x":6.3,"y":2.7},{"Sepal.Length":6.7,"Sepal.Width":3.3,"Petal.Length":5.7,"Petal.Width":2.1,"Species":"virginica","x":6.7,"y":3.3},{"Sepal.Length":7.2,"Sepal.Width":3.2,"Petal.Length":6,"Petal.Width":1.8,"Species":"virginica","x":7.2,"y":3.2},{"Sepal.Length":6.2,"Sepal.Width":2.8,"Petal.Length":4.8,"Petal.Width":1.8,"Species":"virginica","x":6.2,"y":2.8},{"Sepal.Length":6.1,"Sepal.Width":3,"Petal.Length":4.9,"Petal.Width":1.8,"Species":"virginica","x":6.1,"y":3},{"Sepal.Length":6.4,"Sepal.Width":2.8,"Petal.Length":5.6,"Petal.Width":2.1,"Species":"virginica","x":6.4,"y":2.8},{"Sepal.Length":7.2,"Sepal.Width":3,"Petal.Length":5.8,"Petal.Width":1.6,"Species":"virginica","x":7.2,"y":3},{"Sepal.Length":7.4,"Sepal.Width":2.8,"Petal.Length":6.1,"Petal.Width":1.9,"Species":"virginica","x":7.4,"y":2.8},{"Sepal.Length":7.9,"Sepal.Width":3.8,"Petal.Length":6.4,"Petal.Width":2,"Species":"virginica","x":7.9,"y":3.8},{"Sepal.Length":6.4,"Sepal.Width":2.8,"Petal.Length":5.6,"Petal.Width":2.2,"Species":"virginica","x":6.4,"y":2.8},{"Sepal.Length":6.3,"Sepal.Width":2.8,"Petal.Length":5.1,"Petal.Width":1.5,"Species":"virginica","x":6.3,"y":2.8},{"Sepal.Length":6.1,"Sepal.Width":2.6,"Petal.Length":5.6,"Petal.Width":1.4,"Species":"virginica","x":6.1,"y":2.6},{"Sepal.Length":7.7,"Sepal.Width":3,"Petal.Length":6.1,"Petal.Width":2.3,"Species":"virginica","x":7.7,"y":3},{"Sepal.Length":6.3,"Sepal.Width":3.4,"Petal.Length":5.6,"Petal.Width":2.4,"Species":"virginica","x":6.3,"y":3.4},{"Sepal.Length":6.4,"Sepal.Width":3.1,"Petal.Length":5.5,"Petal.Width":1.8,"Species":"virginica","x":6.4,"y":3.1},{"Sepal.Length":6,"Sepal.Width":3,"Petal.Length":4.8,"Petal.Width":1.8,"Species":"virginica","x":6,"y":3},{"Sepal.Length":6.9,"Sepal.Width":3.1,"Petal.Length":5.4,"Petal.Width":2.1,"Species":"virginica","x":6.9,"y":3.1},{"Sepal.Length":6.7,"Sepal.Width":3.1,"Petal.Length":5.6,"Petal.Width":2.4,"Species":"virginica","x":6.7,"y":3.1},{"Sepal.Length":6.9,"Sepal.Width":3.1,"Petal.Length":5.1,"Petal.Width":2.3,"Species":"virginica","x":6.9,"y":3.1},{"Sepal.Length":5.8,"Sepal.Width":2.7,"Petal.Length":5.1,"Petal.Width":1.9,"Species":"virginica","x":5.8,"y":2.7},{"Sepal.Length":6.8,"Sepal.Width":3.2,"Petal.Length":5.9,"Petal.Width":2.3,"Species":"virginica","x":6.8,"y":3.2},{"Sepal.Length":6.7,"Sepal.Width":3.3,"Petal.Length":5.7,"Petal.Width":2.5,"Species":"virginica","x":6.7,"y":3.3},{"Sepal.Length":6.7,"Sepal.Width":3,"Petal.Length":5.2,"Petal.Width":2.3,"Species":"virginica","x":6.7,"y":3},{"Sepal.Length":6.3,"Sepal.Width":2.5,"Petal.Length":5,"Petal.Width":1.9,"Species":"virginica","x":6.3,"y":2.5},{"Sepal.Length":6.5,"Sepal.Width":3,"Petal.Length":5.2,"Petal.Width":2,"Species":"virginica","x":6.5,"y":3},{"Sepal.Length":6.2,"Sepal.Width":3.4,"Petal.Length":5.4,"Petal.Width":2.3,"Species":"virginica","x":6.2,"y":3.4},{"Sepal.Length":5.9,"Sepal.Width":3,"Petal.Length":5.1,"Petal.Width":1.8,"Species":"virginica","x":5.9,"y":3}],"type":"scatter"}],"xAxis":{"type":"linear","title":{"text":"Sepal.Length"},"categories":null}},"theme":{"chart":{"backgroundColor":"transparent"},"colors":["#7cb5ec","#434348","#90ed7d","#f7a35c","#8085e9","#f15c80","#e4d354","#2b908f","#f45b5b","#91e8e1"]},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadCSV":"Download CSV","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","downloadXLS":"Download XLS","drillUpText":"◁ Back to {series.name}","exitFullscreen":"Exit from full screen","exportData":{"annotationHeader":"Annotations","categoryDatetimeHeader":"DateTime","categoryHeader":"Category"},"hideData":"Hide data table","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbolMagnitude":1000,"numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"shortWeekdays":["Sat","Sun","Mon","Tue","Wed","Thu","Fri"],"thousandsSep":" ","viewData":"View data table","viewFullscreen":"View in full screen","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
-</section>
-</div>
-</div>
-</div>
-</section>
-<section id="tabset-from-chunks-example" class="level3">
-<h3 class="anchored" data-anchor-id="tabset-from-chunks-example">Tabset from chunks example</h3>
-<p><a href="https://github.com/quarto-dev/quarto-examples/blob/main/tabsets/tabsets-from-r-chunks/index.qmd" class="uri">https://github.com/quarto-dev/quarto-examples/blob/main/tabsets/tabsets-from-r-chunks/index.qmd</a></p>
-<section id="tables" class="level4">
-<h4 class="anchored" data-anchor-id="tables">Tables</h4>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"></ul>
-<div class="tab-content">
-
-</div>
-</div>
-</section>
-</section>
-<section id="stackoverflow-example" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="stackoverflow-example">Stackoverflow example</h3>
-<p><a href="https://stackoverflow.com/questions/73367433/how-to-programmatically-generate-tabset-panel-in-quarto" class="uri">https://stackoverflow.com/questions/73367433/how-to-programmatically-generate-tabset-panel-in-quarto</a></p>
-<section id="iris-plots" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="iris-plots">Iris Plots</h4>
-<div class="column-screen">
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true">setosa</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false">versicolor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-3" role="tab" aria-controls="tabset-6-3" aria-selected="false">virginica</a></li></ul>
-<div class="tab-content">
-<div id="tabset-6-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-6-1-tab">
-<p><img src="index_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="1344"></p>
-</div>
-<div id="tabset-6-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-2-tab">
-<p><img src="index_files/figure-html/unnamed-chunk-13-2.png" class="img-fluid" width="1344"></p>
-</div>
-<div id="tabset-6-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-3-tab">
-<p><img src="index_files/figure-html/unnamed-chunk-13-3.png" class="img-fluid" width="1344"></p>
-</div>
-</div>
-</div>
-</div>
+<section id="server-content-using-connectwidgets" class="level2">
+<h2 class="anchored" data-anchor-id="server-content-using-connectwidgets">Server content using connectwidgets</h2>
 
 
-</section>
-</section>
 </section>
 
 </main> <!-- /main -->

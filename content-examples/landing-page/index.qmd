@@ -21,29 +21,6 @@ Check them out and have fun!
 
 <br>
 
-
-## Server content using connectwidgets
-
-```{r}
-library(connectwidgets)
-
-client2 <- connect(
-  # server  = Sys.getenv("CONNECT_URL"),
-  # api_key = Sys.getenv("CONNECT_API_KEY")
-  # server  = Sys.getenv("CONNECT_SERVER"),
-  # api_key = Sys.getenv("CONNECT_API_KEY")
-  )
-
-all_content2 <- client2 %>%
-  content()
-
-# Filter by content_category
-
-
-```
-
-
-
 ## Server content using quarto card-group
 
 Why don't the links and text get rendered?
@@ -58,7 +35,9 @@ library(tidyverse)
 client <- connectapi::connect()
 
 # get all content
-all_content <- connectapi::get_content(client, limit = Inf)
+all_content <- connectapi::get_content(client, limit = Inf) %>% 
+  filter(app_mode %in% "quarto-static") %>% 
+  mutate(row_key = row_number())
 
 languages <- c("R", "Python")
 sections <- c("Static Documents", "Interactive Applications", "API's", "Pins")
@@ -66,6 +45,83 @@ text <- c("hello")
 
 # Columns that matter: app_mode, r_version, py_version, r_environment_management, py_environment_management, content_url, dashboard_url
 ```
+
+
+### Examples
+
+:::: {.column-body}
+::: {.panel-tabset}
+```{r}
+#| results: asis
+#| fig-width: 14
+#| fig-height: 6
+
+for(i in 1:ceiling(nrow(all_content)/4)){
+  # Every 4 cards start a new row
+  cat('#### ', i, '\n\n')
+
+  content <- all_content %>%
+    filter(row_key >= i*4, row_key < i*4+4)
+    # {if (i == "R") dplyr::filter(., r_environment_management == TRUE) else .} %>%
+    # {if (i == "Python") dplyr::filter(., py_environment_management == TRUE) else .}  
+
+  cat('\n\n')
+
+  cat('::: card-group', '\n\n')
+
+  for(t in content$id){
+
+    cat('::: card', '\n\n')
+
+    # cat(name=content[content$id ==t ,]$title)
+    # cat(type=content[content$id ==t ,]$app_mode)
+    # cat(url_viewer=content[content$id ==t ,]$content_url)
+    # cat(url_dashboard=content[content$id ==t ,]$dashboard_url)
+
+    cat('**', content[content$id ==t ,]$title, '**')
+
+    cat('\n\n')
+
+    cat('![](thumbnails/placeholder.png){fig-align="center" width=200}
+# <a href="', content[content$id ==t ,]$dashboard_url, '" class="stretched-link"></a>')
+
+    cat('\n\n')
+
+    cat('[Viewer link]("', content[content$id ==t ,]$content_url, '")')
+
+    cat('\n\n')
+
+    cat('[Dashboard link]("', content[content$id ==t ,]$dashboard_url, '")')
+
+    cat('\n\n')
+
+    #cat(tags=content[content$id ==t ,]$tags)
+
+# ![](thumbnails/placeholder.png){fig-align="center" width=200}
+# <a href="https://smiling-shark.staging.eval.posit.co/pub/connect/#/apps/24d2f5d9-a930-4345-8c30-17717b9d8d8d/access/3" class="stretched-link"></a>
+#
+# [Viewer link]("https://smiling-shark.staging.eval.posit.co/pub/r/rmd-conditional-emails/")
+# [Dashboard link]("https://smiling-shark.staging.eval.posit.co/pub/r/rmd-conditional-emails/")
+
+    cat('\n\n')
+
+    cat(':::', '\n\n')
+
+  }
+
+  cat(':::', '\n\n')
+
+  # cat('\n\n')
+}
+
+# Columns that matter: app_mode, r_version, py_version, r_environment_management, py_environment_management, content_url, dashboard_url
+
+
+```
+
+
+
+
 
 ### tabs
 
@@ -254,160 +310,28 @@ iwalk(languages, ~ {
 :::
 ::::
 
-### Tabset with plots example from stackoverflow - doesn't work
-
-<https://stackoverflow.com/questions/53444333/dynamic-tabsets-with-multiple-plots-r-markdown>
 
 
-```{r, functions}
-catHeader <- function(text = "", level = 3) {
-    cat(paste0("\n\n",
-               paste(rep("#", level), collapse = ""),
-               " ", text, "\n"))
-}
-```
 
-### header 1
+## Server content using connectwidgets
 
 ```{r}
-library(ggplot2)
-df <- mtcars
+library(connectwidgets)
 
-pl_list <- list()
+client2 <- connect(
+  # server  = Sys.getenv("CONNECT_URL"),
+  # api_key = Sys.getenv("CONNECT_API_KEY")
+  # server  = Sys.getenv("CONNECT_SERVER"),
+  # api_key = Sys.getenv("CONNECT_API_KEY")
+  )
 
-pl1 <- qplot(cyl, disp, data = df[1:12,])
-pl2 <- qplot(mpg, cyl, data = df[13:20,])
-pl3 <- qplot(mpg, cyl, data = df[21:30,])
-pl4 <- qplot(mpg, cyl, data = df[1:12,])
+all_content2 <- client2 %>%
+  content()
 
-pl_list[[1]] <- list(pl1, pl3,  "one")
-pl_list[[2]] <- list(pl2, pl4,  "two")
-```
+# Filter by content_category
 
-
-## header
-
-```{r, results = "asis", echo = FALSE}
-
-for(i in seq_along(pl_list)){
-    tmp <- pl_list[[i]]
-    # As you want to use tabset level here has to be lower than
-    # parent level (ie, parent is 2, so here you have to use 3)
-    catHeader(tmp[[3]], 3)
-    lapply(tmp[1:2], print)
-}
-```
-
-### Tabset with plots example from stackoverflow - doesn't work
-
-<https://stackoverflow.com/questions/63397427/programmatically-create-tab-and-plot-in-markdown>
-
-::: {.panel-tabset}
-
-```{r}
-library(highcharter)
-library(tidyverse)
-# This empty chart is necessary to initialize Highcharter in the tabs
-highchart(height = 1)
-```
-
-
-```{r}
-#| results: asis
-
-cat('#### Tabs panel {.panel-tabset}   \n')
-invisible(
-  iris %>%
-      dplyr::group_split(Species) %>%
-      purrr::imap(.,~{
-        # create tabset for each group
-        cat('##### Tab',.y,'   \n')
-        cat('\n')
-        p <- hchart(.x,"scatter", hcaes(x = Sepal.Length, y = Sepal.Width))
-        cat(as.character(htmltools::tagList(p)))
-      })
-)
-```
-
-:::
-
-### Tabset from chunks example
-
-<https://github.com/quarto-dev/quarto-examples/blob/main/tabsets/tabsets-from-r-chunks/index.qmd>
-
-```{r}
-library(dplyr)
-library(gt)
-library(purrr)
-```
-
-#### Tables
-
-::: {.panel-tabset}
-
-```{r}
-#| output: asis
-#| echo: false
-# res <- purrr::map_chr(unique(starwars$homeworld), \(hw) {
-#     knitr::knit_child(
-#       input = "child-dir/_child.qmd",
-#       envir = environment(),
-#       quiet = TRUE
-#       )
-#   })
-# 
-# cat(res, sep = '\n')
-```
-:::
-
-
-### Stackoverflow example
-
-<https://stackoverflow.com/questions/73367433/how-to-programmatically-generate-tabset-panel-in-quarto>
-
-```{r}
-library(tidyverse)
-
-data <- iris %>% as_tibble()
-
-plots <- data %>%
-  group_nest(Species) %>%
-  deframe() %>%
-  map(., ~ {
-    ggplot(.x, aes(x = Sepal.Length, y = Sepal.Width)) +
-      geom_point() +
-      theme_bw(
-        base_size = 18 # to increase the size of the plot elements
-      )
-  })
 
 ```
-
-#### Iris Plots
-
-:::: {.column-screen}
-::: {.panel-tabset}
-```{r}
-#| results: asis
-#| fig-width: 14
-#| fig-height: 6
-
-iwalk(plots, ~ {
-  cat('## ', .y, '\n\n')
-
-  print(.x)
-
-  cat('\n\n')
-
-})
-
-```
-
-:::
-::::
-
-
-
 
 
 

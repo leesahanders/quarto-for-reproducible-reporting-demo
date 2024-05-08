@@ -79,6 +79,16 @@ Needs work:
           api-key: ${{ secrets.CONNECT_API_KEY }}
 ```
 
+## Presentation embedding 
+
+In order to successfully embed the presentation, the presentation html needs to be self-contained: 
+
+```
+format:
+  positslides-revealjs: 
+    embed-resources: true
+```
+
 ## TODO
 
 Programmatically generate tabsets: <https://stackoverflow.com/questions/73367433/how-to-programmatically-generate-tabset-panel-in-quarto>
