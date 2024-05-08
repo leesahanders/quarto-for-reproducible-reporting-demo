@@ -206,6 +206,10 @@ jobs:
         with:
           r-version: 4.2.0
           use-public-rspm: true
+      - name: Create manifest.json
+        shell: Rscript {0}
+        run: |
+          rsconnect::writeManifest()
       - name: Publish the app to Connect
         uses: rstudio/actions/connect-publish@main
         with:
@@ -265,9 +269,7 @@ jobs:
           export DATA='{"title": "Reproduceable Reporting with Quarto Landing Page"}'
           contentguid=$(curl ${{ secrets.CONNECT_SERVER }}__api__/v1/content?name=landing-page -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" | jq -r '.[]')
           contentitle=$(curl ${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid} --data "${DATA}" -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" | jq -r '.[]')
-        with: 
-          url: ${{ secrets.CONNECT_URL }}
-          api-key: ${{ secrets.CONNECT_API_KEY }} 
+
           
           
           
