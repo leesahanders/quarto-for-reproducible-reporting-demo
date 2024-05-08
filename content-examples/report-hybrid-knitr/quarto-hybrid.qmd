@@ -120,6 +120,31 @@ gg <- ggplot(mpg, aes(displ, hwy, colour = class)) +
 gg
 ```
 
+### Iris Plots
+
+:::: {.column-screen}
+::: {.panel-tabset}
+```{r}
+#| results: asis
+#| fig-width: 14
+#| fig-height: 6
+
+iwalk(plots, ~ {
+  cat('## ', .y, '\n\n')
+
+  print(.x)
+
+  cat('\n\n')
+
+})
+
+```
+
+:::
+::::
+
+
+
 ## plotly! 
 
 ```{r}
