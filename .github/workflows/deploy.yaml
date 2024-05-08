@@ -235,7 +235,7 @@ jobs:
           force: TRUE
           dir: ./content-examples/dashboard/:dashboard
   notify:
-    needs: connect-publish-dashboard
+    needs: [connect-publish-dashboard,connect-publish-email-conditional,connect-publish-email-plots,connect-publish-email-programmatic,connect-publish-presentation,connect-publish-report-branded,connect-publish-report-commentable,connect-publish-report-hybrid-jupyter,connect-publish-report-hybrid-knitr,connect-publish-report-lightbox,connect-publish-website,connect-publish-report-mermaid-diagrams]
     name: connect-publish-landing-page
     runs-on: ubuntu-latest
     steps:
@@ -249,6 +249,8 @@ jobs:
         uses: rstudio/actions/connect-publish@main
         env:
           CONNECT_ENV_SET_MYVAR: available at runtime
+          CONNECT_ENV_SET_CONNECT_SERVER: available at runtime
+          CONNECT_ENV_SET_CONNECT_API_KEY: available at runtime
         with:
           url: ${{ secrets.CONNECT_URL }}
           server: ${{ secrets.CONNECT_SERVER }}
