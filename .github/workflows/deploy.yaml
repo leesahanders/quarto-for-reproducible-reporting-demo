@@ -249,9 +249,9 @@ jobs:
         uses: rstudio/actions/connect-publish@main
         env:
           CONNECT_ENV_SET_MYVAR: available at runtime
-          CONNECT_ENV_SET_CONNECT_SERVER: available at runtime
-          CONNECT_ENV_SET_CONNECT_URL: available at runtime
-          CONNECT_ENV_SET_CONNECT_API_KEY: available at runtime
+          CONNECT_ENV_SET_CONNECT_SERVER: ${{ secrets.CONNECT_SERVER }}
+          CONNECT_ENV_SET_CONNECT_URL: ${{ secrets.CONNECT_SERVER }}
+          CONNECT_ENV_SET_CONNECT_API_KEY: ${{ secrets.CONNECT_API_KEY }}
         with:
           url: ${{ secrets.CONNECT_URL }}
           server: ${{ secrets.CONNECT_SERVER }}
