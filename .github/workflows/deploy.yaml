@@ -30,7 +30,7 @@ jobs:
           api-key: ${{ secrets.CONNECT_API_KEY }}
           access-type: logged_in
           show-logs: TRUE
-          force: TRUE
+          force: FALSE
           dir: ./content-examples/report-mermaid-diagrams/:report-mermaid-diagrams 
   connect-publish-website:
     name: connect-publish-website
@@ -49,7 +49,7 @@ jobs:
           api-key: ${{ secrets.CONNECT_API_KEY }}
           access-type: logged_in
           show-logs: TRUE
-          force: TRUE
+          force: FALSE
           dir: ./content-examples/website/:website 
   connect-publish-report-lightbox:
     name: connect-publish-report-lightbox
@@ -68,7 +68,7 @@ jobs:
           api-key: ${{ secrets.CONNECT_API_KEY }}
           access-type: logged_in
           show-logs: TRUE
-          force: TRUE
+          force: FALSE
           dir: ./content-examples/report-lightbox/:report-lightbox 
   connect-publish-report-hybrid-knitr:
     name: connect-publish-report-hybrid-knitr
@@ -87,7 +87,7 @@ jobs:
           api-key: ${{ secrets.CONNECT_API_KEY }}
           access-type: logged_in
           show-logs: TRUE
-          force: TRUE
+          force: FALSE
           dir: ./content-examples/report-hybrid-knitr/:report-hybrid-knitr
   connect-publish-report-hybrid-jupyter:
     name: connect-publish-report-hybrid-jupyter
@@ -118,7 +118,7 @@ jobs:
           api-key: ${{ secrets.CONNECT_API_KEY }}
           access-type: logged_in
           show-logs: TRUE
-          force: TRUE
+          force: FALSE
           dir: ./content-examples/report-commentable/:report-commentable
   connect-publish-report-branded:
     name: connect-publish-report-branded
@@ -137,7 +137,7 @@ jobs:
           api-key: ${{ secrets.CONNECT_API_KEY }}
           access-type: logged_in
           show-logs: TRUE
-          force: TRUE
+          force: FALSE
           dir: ./content-examples/report-branded/:report-branded
   connect-publish-presentation:
     name: connect-publish-presentation
@@ -156,7 +156,7 @@ jobs:
           api-key: ${{ secrets.CONNECT_API_KEY }}
           access-type: logged_in
           show-logs: TRUE
-          force: TRUE
+          force: FALSE
           dir: ./content-examples/presentation/:presentation
   connect-publish-email-programmatic:
     name: connect-publish-email-programmatic
@@ -175,7 +175,7 @@ jobs:
           api-key: ${{ secrets.CONNECT_API_KEY }}
           access-type: logged_in
           show-logs: TRUE
-          force: TRUE
+          force: FALSE
           dir: ./content-examples/email-programmatic/:email-programmatic
   connect-publish-email-plots:
     name: connect-publish-email-plots
@@ -194,7 +194,7 @@ jobs:
           api-key: ${{ secrets.CONNECT_API_KEY }}
           access-type: logged_in
           show-logs: TRUE
-          force: TRUE
+          force: FALSE
           dir: ./content-examples/email-plots/:email-plots
   connect-publish-email-conditional:
     name: connect-publish-email-conditional
@@ -213,7 +213,7 @@ jobs:
           api-key: ${{ secrets.CONNECT_API_KEY }}
           access-type: logged_in
           show-logs: TRUE
-          force: TRUE
+          force: FALSE
           dir: ./content-examples/email-conditional/:email-conditional
   connect-publish-dashboard:
     name: connect-publish-dashboard
@@ -232,7 +232,7 @@ jobs:
           api-key: ${{ secrets.CONNECT_API_KEY }}
           access-type: logged_in
           show-logs: TRUE
-          force: TRUE
+          force: FALSE
           dir: ./content-examples/dashboard/:dashboard
   notify:
     needs: [connect-publish-dashboard,connect-publish-email-conditional,connect-publish-email-plots,connect-publish-email-programmatic,connect-publish-presentation,connect-publish-report-branded,connect-publish-report-commentable,connect-publish-report-hybrid-jupyter,connect-publish-report-hybrid-knitr,connect-publish-report-lightbox,connect-publish-website,connect-publish-report-mermaid-diagrams]
