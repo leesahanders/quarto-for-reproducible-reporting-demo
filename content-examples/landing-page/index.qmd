@@ -30,6 +30,8 @@ Below is a collection of Posit Connect hosted content, showcasing the outputs fr
 library(connectwidgets)
 
 client2 <- connect(
+  server  = Sys.getenv("CONNECT_URL"),
+  api_key = Sys.getenv("CONNECT_API_KEY")
   # server  = Sys.getenv("CONNECT_SERVER"),
   # api_key = Sys.getenv("CONNECT_API_KEY")
   )

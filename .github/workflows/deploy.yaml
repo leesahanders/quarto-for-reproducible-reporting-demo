@@ -236,8 +236,8 @@ jobs:
           dir: ./content-examples/dashboard/:dashboard
   notify:
     needs: connect-publish-dashboard
-    runs-on: ubuntu-latest
     name: connect-publish-landing-page
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: r-lib/actions/setup-pandoc@v2
@@ -247,10 +247,13 @@ jobs:
           use-public-rspm: true
       - name: Publish the app to Connect
         uses: rstudio/actions/connect-publish@main
+        env:
+          CONNECT_ENV_SET_MYVAR: available at runtime
         with:
           url: ${{ secrets.CONNECT_URL }}
           api-key: ${{ secrets.CONNECT_API_KEY }}
           access-type: logged_in
           show-logs: TRUE
           force: TRUE
-          dir: ./content-examples/landing-page/:landing-page
+          dir: ./content-examples/landing-page/:landing-page          
+          

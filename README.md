@@ -30,7 +30,8 @@
 - [Extending quarto](https://www.youtube.com/watch?v=EihuM4oyOvs)
 - [Quarto job scheduling](https://github.com/ryjohnson09/quarto-job-scheduling?tab=readme-ov-file) 
 - [Some Quarto Tips for Academic Presentation](https://kazuyanagimoto.com/blog/2022/12/27/quarto_tips/)
-- [Posit blog, building a reporting infrastructure with quarto](https://posit.co/blog/building-a-reporting-infrastructure-with-quarto/) 
+- [Posit blog, building a reporting infrastructure with quarto](https://posit.co/blog/building-a-reporting-infrastructure-with-quarto/)
+- [2022 talk by Daniel Chen at pydata 2022]( https://github.com/chendaniely/pydata-nyc-2022-python_quarto) and [the recording](https://www.youtube.com/watch?v=AnrGW8zoLx8)
 
 From Posit conf: 
 

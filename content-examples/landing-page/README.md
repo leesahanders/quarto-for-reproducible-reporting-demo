@@ -1,4 +1,4 @@
-
+# Landing Page
 
 ## Resources
 
@@ -27,6 +27,55 @@ quarto preview content.qmd --to default --no-watch-inputs --no-browse
 ## Set the API keys
 
 Follow this: <https://docs.posit.co/connect/how-to/connectwidgets/index.html#api-keys>
+
+Reference this example: <https://github.com/rstudio/actions/tree/main/connect-publish#update-env> 
+
+We want to set this up so that the environment variable is attached when deploying to the server. 
+
+Alternatively, could try pulling from the github environment and setting with rsconnect. In order to pull that into the script for the landing page we can follow this: <https://canovasjm.netlify.app/2021/01/12/github-secrets-from-python-and-r/> 
+
+They are named: 
+
+- CONNECT_API_KEY
+- CONNECT_URL
+
+
+Needs work: 
+
+```
+  notify:
+    needs: connect-publish-dashboard
+    runs-on: ubuntu-latest
+    name: connect-publish-landing-page
+    steps:
+      - uses: actions/checkout@v3
+      - uses: r-lib/actions/setup-pandoc@v2
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: 4.2.0
+          use-public-rspm: true
+      - uses: r-lib/actions/setup-renv@v2
+      # - name: Create manifest.json
+      #     shell: Rscript {0}
+      #     run: |
+      #       rsconnect::writeManifest()
+      - name: Publish the app to Connect
+      - uses: rstudio/actions/connect-publish@main
+        with:
+          url: ${{ secrets.CONNECT_URL }}
+          api-key: ${{ secrets.CONNECT_API_KEY }}
+          access-type: logged_in
+          show-logs: TRUE
+          force: TRUE
+          dir: ./content-examples/landing-page/:landing-page
+      - name: Add environment variables
+          shell: Rscript {0}
+          run: |
+            rsconnect::updateAccountEnvVars(envVars, server = NULL, account = NULL)
+        with: 
+          url: ${{ secrets.CONNECT_URL }}
+          api-key: ${{ secrets.CONNECT_API_KEY }}
+```
 
 ## TODO
 
