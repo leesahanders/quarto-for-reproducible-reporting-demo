@@ -207,7 +207,7 @@ jobs:
           r-version: 4.2.0
           use-public-rspm: true
       - name: Install rsconnect package
-      - run: Rscript --vanilla -e "packageVersion('rsconnect')"
+        run: Rscript --vanilla -e "packageVersion('rsconnect')"
       - name: Create manifest.json
         shell: Rscript {0}
         run: |
