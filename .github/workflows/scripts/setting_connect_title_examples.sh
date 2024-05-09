@@ -33,27 +33,19 @@ curl --silent --show-error -L --max-redirs 0 --fail -X PATCH \
     
 #### Example using github secrets ####
 
-# doesn't work: 
-
-
+# Try 1, using github secrets as environment variables
 export DATA='{"title": "My Custom Quarto Dashboard"}'
 export CONTENT_NAME='dashboard'
 export contentguid=$(curl -H "Authorization: KEY ${CONNECT_API_KEY}" ${CONNECT_SERVER}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
 curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${CONNECT_API_KEY}" --data "${DATA}" "${CONNECT_SERVER}__api__/v1/content/${contentguid}"
 
-# doesn't work: 
+# Try 2, using github secrets attached directly
 export DATA='{"title": "My Custom Quarto Dashboard"}'
-export CONTENT_NAME='dashboard'
-export contentguid=$(curl -H "Authorization: KEY "${CONNECT_API_KEY}""" "${CONNECT_SERVER}"/__api__/v1/content?name="${CONTENT_NAME}"" | jq -r '.[].guid')
-curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${CONNECT_API_KEY}" --data "${DATA}" "${CONNECT_SERVER}__api__/v1/content/${contentguid}"
-
-# doesn't work: 
-export DATA='{"title": "Lisa's Custom Quarto Dashboard"}'
 export CONTENT_NAME='dashboard'
 export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
 curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
 
-# doesn't work: 
+# Doesn't work bcause of the new lines
 export DATA='{"title": "Reproduceable Reporting with Quarto Landing Page"}'
 export CONTENT_NAME='landing-page'
 export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" \
