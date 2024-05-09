@@ -165,6 +165,14 @@ This project is deploying the content then using the Connect API to update the c
 
 ```
 
+```
+run: |
+  export DATA='{"title": "Lisa's Custom Quarto Dashboard"}'
+  export CONTENT_NAME='dashboard'
+  export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
+  curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
+```
+
 Alternatively, we could us an `.internal.yml` file located at the root of the tree of the content to be deployed, following [this example](https://github.com/sol-eng/stockportfolio/blob/master/.internal.yml) which illustrates usage.
 
 - Deployment is manifest-based, so example content must have a `manifest.json`
