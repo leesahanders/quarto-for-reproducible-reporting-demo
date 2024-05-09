@@ -1,13 +1,46 @@
 ---
 title: "Quarto mermaid sandbox"
 author: "Lisa Anders" 
+date: last-modified
 format: 
   html:
+    anchor-sections: true
+    toc: true
+    toc-location: right
+    toc-title: "Contents"
+    link-external-icon: true
+    link-external-newwindow: true
+    other-links:
+      - text: Check out the documentation
+        href: https://quarto.org/docs/authoring/diagrams.html
+    theme:
+      light: [quartz]
+      dark: [darkly]
     mermaid:
       theme: forest
-editor: visual
+execute:
+  echo: true
+editor: source
 ---
 
+![](img/mermaid-logo.svg){fig-align="center" width=150}
+
+# Mermaid
+
+Mermaid diagrams are a programmatic way to create diagrams and visualizations using code. These can be a great way to add diagrams into reports, regardless of preferred language. 
+
+Check out the magic here: <https://quarto.org/docs/authoring/diagrams.html> 
+
+
+# Simple mermaid diagram, from inside the document
+
+```{mermaid}
+flowchart LR
+  A[Hard edge] --> B(Round edge)
+  B --> C{Decision}
+  C --> D[Result one]
+  C --> E[Result two]
+```
 
 # Complex mermaid diagram, from inside the document
 
@@ -24,17 +57,7 @@ graph TD
   H[End]
 ```
 
-
-# We aren't just constrained to mermaid - Succesful dot file from file: 
-
-```{dot}
-//| label: fig-linux-kernel
-//| fig-cap: "A diagram of the Linux kernel."
-//| file: linux-kernel-diagram.dot
-```
-
-
-# We can also access a mermaid diagram from file: 
+# We can also access a mermaid diagram from file:
 
 ```{mermaid}
 %%| label: fig-mermaid
@@ -42,12 +65,9 @@ graph TD
 %%| file: mermaid.mmd
 ```
 
+# Unfortunately from inside a tabset there is an error where the later tabsets don't display:
 
-
-# Unfortunately from inside a tabset there is an error where the later tabsets don't display: 
-
-::: {.panel-tabset}
-
+::: panel-tabset
 ## first mermaid
 
 ```{mermaid}
@@ -68,22 +88,24 @@ three---four
 flowchart TD
 five---six
 ```
-
 :::
 
+# We aren't just constrained to mermaid - Succesful dot file from file:
 
-References: 
+```{dot}
+//| label: fig-linux-kernel
+//| fig-cap: "A diagram of the Linux kernel."
+//| file: linux-kernel-diagram.dot
+```
 
-- <https://github.com/quarto-dev/quarto-cli/issues/5145> 
-- <https://github.com/quarto-dev/quarto-cli/issues/9031> 
-- <https://quarto.org/docs/authoring/diagrams.html> 
-- <https://quarto.org/docs/authoring/diagrams.html#file-include> 
-- <https://stackoverflow.com/questions/50762662/how-to-install-mermaid-to-render-flowcharts-in-markdown> 
-- <https://mermaid.js.org/intro/getting-started.html?#%E2%80%A2-loading-from-gists> 
-- <https://github.com/quarto-dev/quarto-cli/issues/3665> 
-- <https://github.com/quarto-dev/quarto-cli/discussions/5219> 
-- <https://github.com/quarto-dev/quarto-cli/discussions/1054> 
+References:
 
-
-
-
+-   <https://github.com/quarto-dev/quarto-cli/issues/5145>
+-   <https://github.com/quarto-dev/quarto-cli/issues/9031>
+-   <https://quarto.org/docs/authoring/diagrams.html>
+-   <https://quarto.org/docs/authoring/diagrams.html#file-include>
+-   <https://stackoverflow.com/questions/50762662/how-to-install-mermaid-to-render-flowcharts-in-markdown>
+-   <https://mermaid.js.org/intro/getting-started.html?#%E2%80%A2-loading-from-gists>
+-   <https://github.com/quarto-dev/quarto-cli/issues/3665>
+-   <https://github.com/quarto-dev/quarto-cli/discussions/5219>
+-   <https://github.com/quarto-dev/quarto-cli/discussions/1054>
