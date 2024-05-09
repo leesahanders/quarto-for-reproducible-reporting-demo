@@ -211,7 +211,7 @@ jobs:
       - name: Install setup-connect
         uses: rstudio/actions/setup-connect@main
       - name: Install rsconnect package
-        run: Rscript --vanilla -e "install.packages('rsconnect')"
+        run: Rscript --vanilla -e "install.packages('rsconnect', repos=c(CRAN = 'https://packagemanager.posit.co/cran/__linux__/noble/latest'))"
       - name: Version rsconnect package
         run: Rscript --vanilla -e "packageVersion('rsconnect')"
       - name: Create manifest.json
