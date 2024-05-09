@@ -166,6 +166,18 @@ This project is deploying the content then using the Connect API to update the c
 ```
 
 ```
+env:
+  CONNECT_ENV_SET_CONNECT_SERVER: ${{ secrets.CONNECT_SERVER }}
+  CONNECT_ENV_SET_CONNECT_URL: ${{ secrets.CONNECT_URL }}
+  CONNECT_ENV_SET_CONNECT_API_KEY: ${{ secrets.CONNECT_API_KEY }}          
+run: |
+  export DATA='{"title": "Lisa's Custom Quarto Dashboard"}'
+  export CONTENT_NAME='dashboard'
+  export contentguid=$(curl -H "Authorization: KEY "${CONNECT_API_KEY}""" "${CONNECT_SERVER}"/__api__/v1/content?name="${CONTENT_NAME}"" | jq -r '.[].guid')
+  curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${CONNECT_API_KEY}" --data "${DATA}" "${CONNECT_SERVER}__api__/v1/content/${contentguid}"
+```
+
+```
 run: |
   export DATA='{"title": "Lisa's Custom Quarto Dashboard"}'
   export CONTENT_NAME='dashboard'
