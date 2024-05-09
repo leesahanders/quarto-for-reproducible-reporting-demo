@@ -260,10 +260,6 @@ jobs:
           force: FALSE
           dir: ./content-examples/dashboard/:dashboard
       - name: Use Connect API to set content title
-        env:
-          CONNECT_ENV_SET_CONNECT_SERVER: ${{ secrets.CONNECT_SERVER }}
-          CONNECT_ENV_SET_CONNECT_URL: ${{ secrets.CONNECT_URL }}
-          CONNECT_ENV_SET_CONNECT_API_KEY: ${{ secrets.CONNECT_API_KEY }}          
         run: |
           export DATA='{"title": "My Custom Quarto Dashboard"}'
           export CONTENT_NAME='dashboard'
