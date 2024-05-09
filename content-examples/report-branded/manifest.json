@@ -24,6 +24,9 @@
     "install_guide.qmd": {
       "checksum": "01877c412e3438f1c3719b0fb1049dc9"
     },
+    "renv.lock": {
+      "checksum": "67dfec04e0c93c40b38aab961f95feb1"
+    },
     "styles.css": {
       "checksum": "5695af9544b8c07ce4e8ad7871c9910c"
     },

@@ -16,7 +16,7 @@
   "packages": null,
   "files": {
     ".Rprofile": {
-      "checksum": "1c8b14cf5570bca1ee6c3af0a61828b6"
+      "checksum": "a11693e9a9008ed3c6b432be9dba831a"
     },
     "_extensions/positslides/_extension.yml": {
       "checksum": "16d2179feb0d86054b7dc1891ae9d857"
@@ -76,10 +76,10 @@
       "checksum": "8f97483155532e33621d134b4dd2a761"
     },
     "presentation.html": {
-      "checksum": "3244b4d6ed9f4be33a4d832f14787c13"
+      "checksum": "b7c6b39f5d0a77054d5b4a686ceb7b5e"
     },
     "presentation.qmd": {
-      "checksum": "87049db9c74884f8a3222a6d0e39f938"
+      "checksum": "fb37fb923a0656f671cfa5e317afb058"
     },
     "presentation_files/libs/clipboard/clipboard.min.js": {
       "checksum": "15f52a1ee547f2bdd46e56747332ca2d"
@@ -264,6 +264,141 @@
     "presentation_files/libs/revealjs/plugin/quarto-support/support.js": {
       "checksum": "f96812c757563961073840bad853766a"
     },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css": {
+      "checksum": "826c57385f3d35cfed5478ba7b1f5c03"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/brands.css": {
+      "checksum": "a3ceb4f1b808969cd8f1bb0aac1510c2"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/fontawesome.css": {
+      "checksum": "dbcb133434de9fcab3b59ade7ec21498"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/regular.css": {
+      "checksum": "fee1728359ce4620fd348a3e54507aa2"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/solid.css": {
+      "checksum": "29836be7445cd9786959237ea8e13405"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/svg-with-js.css": {
+      "checksum": "bd066123cdf3337103b21713df9bfd01"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/v4-shims.css": {
+      "checksum": "6dd334cc89ff203f10b026482960997d"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/v4-shims.min.css": {
+      "checksum": "7254c92168d4717ed7b36234b2bba3b8"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/LICENSE.txt": {
+      "checksum": "626db860f543d02f2f8d8599aac4fbc0"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/webfonts/fa-brands-400.eot": {
+      "checksum": "e2a76403183eff8967cf6318c6e51509"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/webfonts/fa-brands-400.svg": {
+      "checksum": "a999c7b8823b901248833dc7fe07a52f"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/webfonts/fa-brands-400.ttf": {
+      "checksum": "e0fc4e5c719b4dc10c97fc111d7374e1"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/webfonts/fa-brands-400.woff": {
+      "checksum": "d034c1b2ee84dd981ef2e637754a0b4f"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/webfonts/fa-brands-400.woff2": {
+      "checksum": "f319eac1c755f9929fd856720ce1695e"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/webfonts/fa-regular-400.eot": {
+      "checksum": "5a4618f029618cc2795c05fe53d57028"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/webfonts/fa-regular-400.svg": {
+      "checksum": "e9d8dbb0c3e9b97ffc59c50ff5d01422"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/webfonts/fa-regular-400.ttf": {
+      "checksum": "6534c603e0892488132ad57248ec69e2"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/webfonts/fa-regular-400.woff": {
+      "checksum": "e99569d3d10c94c60d9a68523c1c0e71"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/webfonts/fa-regular-400.woff2": {
+      "checksum": "a3715c6fe264a51f1d9260b447ff46bc"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/webfonts/fa-solid-900.eot": {
+      "checksum": "d9824d00712532d7697df68df16ae0d3"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/webfonts/fa-solid-900.svg": {
+      "checksum": "666a82cb3e9f8591bef4049aea26c4c6"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/webfonts/fa-solid-900.ttf": {
+      "checksum": "00ddaede094b83270cadbfc1a907e8ca"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/webfonts/fa-solid-900.woff": {
+      "checksum": "128d2b0be23925e5cf36717ddc6f093b"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/webfonts/fa-solid-900.woff2": {
+      "checksum": "18d2347ab2a9f40ca2247cdb03303d84"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/img/blackboard.png": {
+      "checksum": "6fb19d93b5ab5f0b7aca4b1e130b8e36"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/img/boardmarker-black.png": {
+      "checksum": "ffdd43056d3b6aeb79b5ab2c9fdffbb5"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/img/boardmarker-blue.png": {
+      "checksum": "9c51726f1aba58b3ea58c7e6f3a1eb69"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/img/boardmarker-green.png": {
+      "checksum": "b2174dfab385d64b82d472fe6bf8732c"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/img/boardmarker-orange.png": {
+      "checksum": "5bd94666605a7c19b66e821dcfcd6e81"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/img/boardmarker-purple.png": {
+      "checksum": "d82f80fb45a6c2796fed58d794b1dbcc"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/img/boardmarker-red.png": {
+      "checksum": "4e003969a8898bda1034fdc83c6775a8"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/img/boardmarker-yellow.png": {
+      "checksum": "c51cd745582a05d5a4a274396f9e1f64"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/img/chalk-blue.png": {
+      "checksum": "20fcdd8b7a051b6d2bcbe5223ca8f93a"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/img/chalk-green.png": {
+      "checksum": "6a99931b528659ae783fdba973ebee2d"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/img/chalk-orange.png": {
+      "checksum": "1e673a9b3ba41c3817a7791537e687cb"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/img/chalk-purple.png": {
+      "checksum": "b3a6bbfd32d883879f6f52348c71d997"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/img/chalk-red.png": {
+      "checksum": "5be9fc1fca1db55857f70f1bdb92477a"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/img/chalk-white.png": {
+      "checksum": "e6911337608cb3b270cf2faba186dfca"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/img/chalk-yellow.png": {
+      "checksum": "d5ce34338bd385c8baa40920eab65e18"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/img/sponge.png": {
+      "checksum": "6877bfebc4e000eb7f429ca7cca24969"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/img/whiteboard.png": {
+      "checksum": "f92eafcef815acaed323435b65469684"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js": {
+      "checksum": "bd8665b9f31e8bdb4b6ab896c12eb5c7"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/plugin.yml": {
+      "checksum": "a42805b0271e44d994c2c7a1dbb33646"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/README.md": {
+      "checksum": "bcb6f0f209ce0b0f4c464fc1e45fadce"
+    },
+    "presentation_files/libs/revealjs/plugin/reveal-chalkboard/style.css": {
+      "checksum": "6bdeacb96f8b18c0046039c8de10c51b"
+    },
     "presentation_files/libs/revealjs/plugin/reveal-menu/menu.css": {
       "checksum": "1b9988f08dfe354c44e134304b3df8af"
     },
@@ -298,7 +433,7 @@
       "checksum": "dbab999c1a2fe1f31046733759dd1e2b"
     },
     "renv.lock": {
-      "checksum": "ff09cd9b70505a384bd397c047033720"
+      "checksum": "6d787428b37f528542a491f280d87d03"
     }
   },
   "users": null
