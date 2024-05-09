@@ -225,6 +225,8 @@ jobs:
         run: Rscript --vanilla -e "install.packages('rsconnect', repos=c(CRAN = 'https://packagemanager.posit.co/cran/__linux__/noble/latest'))"
       - name: Version rsconnect package
         run: Rscript --vanilla -e "packageVersion('rsconnect')"
+      - name: Update lock file 
+        run: Rscript --vanilla -e "renv::snapshot()"
       - name: Create manifest.json
         shell: Rscript {0}
         run: |
