@@ -81,7 +81,7 @@ Needs work:
 
 ## Presentation embedding 
 
-In order to successfully embed the presentation, the presentation html needs to be self-contained: 
+In order to successfully embed the presentation, the presentation html needs to be self-contained and also located within the directory of the home landing page: 
 
 ```
 format:
