@@ -265,10 +265,10 @@ jobs:
           CONNECT_ENV_SET_CONNECT_URL: ${{ secrets.CONNECT_URL }}
           CONNECT_ENV_SET_CONNECT_API_KEY: ${{ secrets.CONNECT_API_KEY }}          
         run: |
-          export DATA='{"title": "Lisa's Custom Quarto Dashboard"}'
+          export DATA='{"title": "My Custom Quarto Dashboard"}'
           export CONTENT_NAME='dashboard'
-          export contentdetails=$(curl --silent --show-error -L --max-redirs 0 --fail -X GET -H "Authorization: Key ${CONNECT_API_KEY}" "${CONNECT_SERVER}__api__/v1/content?name=${CONTENT_NAME}")
-          echo $contentdetails
+          export contentguid=$(curl -H "Authorization: KEY ${CONNECT_API_KEY}" ${CONNECT_SERVER}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
+          curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${CONNECT_API_KEY}" --data "${DATA}" "${CONNECT_SERVER}__api__/v1/content/${contentguid}"
   notify:
     needs: [connect-publish-dashboard,connect-publish-email-conditional,connect-publish-email-plots,connect-publish-email-programmatic,connect-publish-presentation,connect-publish-report-branded,connect-publish-report-commentable,connect-publish-report-hybrid-jupyter,connect-publish-report-hybrid-knitr,connect-publish-report-lightbox,connect-publish-website,connect-publish-report-mermaid-diagrams]
     name: connect-publish-landing-page
