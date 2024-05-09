@@ -80,8 +80,9 @@ Each piece of content, in order to be published, needs:
 - `_quarto.yml`
 - `manifest.json`
 
-```r
+I can set each one manually with this: 
 
+```r
 library(rsconnect)
 
 setwd("C:/Users/LisaAnders/Documents/git/quarto-for-reproducible-reporting-demo/content-examples/report-mermaid-diagrams")
@@ -128,6 +129,10 @@ setwd("C:/Users/LisaAnders/Documents/git/quarto-for-reproducible-reporting-demo"
 getwd()
 ```
 
+Each piece of content was also made it's own project, so we can use that to walk into each one to update the `renv.lock` and `manifest.json` instead. 
+
+## Github actions
+
 The content examples included here are published using a manual trigger with github actions. For more on setting that up see: <https://solutions.posit.co/operations/deploy-methods/ci-cd/github-actions/index.html#github-actions-example> 
 
 These items need to be added to the git repository to make that possible: 
@@ -135,22 +140,14 @@ These items need to be added to the git repository to make that possible:
 - url: ${{ secrets.CONNECT_URL }}
 - api-key: ${{ secrets.CONNECT_API_KEY }}
 
+The landing page is deployed last, by setting it to depend on a notification of successful deployment after the other content items. This is because it is programmatically looking up content, they need to be deployed first in order to be found. 
 
-TODO: Add landing page, make it deploy last: <https://stackoverflow.com/questions/62750603/github-actions-trigger-another-action-after-one-action-is-completed> 
-
-Does this need to be deployed to a new server? Checklist: 
-
-Update the environment variables as secrets on github actions: 
-
-- CONNECT_URL=<redacted>
-- CONNECT_API_KEY=<redacted>
-
-Update the environment variables in /content-examples/landing-page/.rstudio-connect.env
-
-- CONNECT_SERVER=<redacted>
-- CONNECT_URL=<redacted>
-- CONNECT_API_KEY=<redacted>
-
+```
+  notify:
+    needs: [connect-publish-dashboard,connect-publish-email-conditional,connect-publish-email-plots,connect-publish-email-programmatic,connect-publish-presentation,connect-publish-report-branded,connect-publish-report-commentable,connect-publish-report-hybrid-jupyter,connect-publish-report-hybrid-knitr,connect-publish-report-lightbox,connect-publish-website,connect-publish-report-mermaid-diagrams]
+    name: connect-publish-landing-page
+    runs-on: ubuntu-latest
+```
 
 Connect currently lacks a supported way to deploy content while setting:
 
@@ -159,10 +156,30 @@ Connect currently lacks a supported way to deploy content while setting:
 - ACLs
 - Content title
 
-Instead, this uses the `.internal.yml` file located at the root of the tree of the content to be deployed.
-See [this example](https://github.com/sol-eng/stockportfolio/blob/master/.internal.yml) which illustrates usage.
+
+There are two options. 
+
+This project is deploying the content then using the Connect API to update the content title. 
+
+```
+
+```
+
+Alternatively, we could us an `.internal.yml` file located at the root of the tree of the content to be deployed, following [this example](https://github.com/sol-eng/stockportfolio/blob/master/.internal.yml) which illustrates usage.
 
 - Deployment is manifest-based, so example content must have a `manifest.json`
   - `requirements.txt` or `renv.lock` files should also be included as appropriate
   - content should be self-contained
+
+
+## New server
+
+For uploading to a new server, follow this checklist: 
+
+Update the environment variables as secrets on github actions: 
+
+- CONNECT_URL=<redacted>
+- CONNECT_SERVER=<redacted>
+- CONNECT_API_KEY=<redacted>
+
 
