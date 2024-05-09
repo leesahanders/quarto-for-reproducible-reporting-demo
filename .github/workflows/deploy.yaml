@@ -207,7 +207,16 @@ jobs:
           r-version: 4.2.0
           py-version: 3.10.12
           use-public-rspm: true
-      - uses: actions/setup-python@v2
+      - name: Install packages
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          packages: |
+            any::tidyverse 
+            any::dplyr
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
       - name: Install setup-connect
         uses: rstudio/actions/setup-connect@main
       - name: Install rsconnect package
