@@ -21,7 +21,7 @@ jobs:
       - uses: r-lib/actions/setup-pandoc@v2
       - uses: r-lib/actions/setup-r@v2
         with:
-          r-version: 4.2.0
+          r-version: 4.3.1
           use-public-rspm: true
       - name: Publish the app to Connect
         uses: rstudio/actions/connect-publish@main
@@ -40,7 +40,7 @@ jobs:
       - uses: r-lib/actions/setup-pandoc@v2
       - uses: r-lib/actions/setup-r@v2
         with:
-          r-version: 4.2.0
+          r-version: 4.3.1
           use-public-rspm: true
       - name: Publish the app to Connect
         uses: rstudio/actions/connect-publish@main
@@ -59,7 +59,7 @@ jobs:
       - uses: r-lib/actions/setup-pandoc@v2
       - uses: r-lib/actions/setup-r@v2
         with:
-          r-version: 4.2.0
+          r-version: 4.3.1
           use-public-rspm: true
       - name: Publish the app to Connect
         uses: rstudio/actions/connect-publish@main
@@ -78,7 +78,7 @@ jobs:
       - uses: r-lib/actions/setup-pandoc@v2
       - uses: r-lib/actions/setup-r@v2
         with:
-          r-version: 4.2.0
+          r-version: 4.3.1
           use-public-rspm: true
       - name: Publish the app to Connect
         uses: rstudio/actions/connect-publish@main
@@ -109,7 +109,7 @@ jobs:
       - uses: r-lib/actions/setup-pandoc@v2
       - uses: r-lib/actions/setup-r@v2
         with:
-          r-version: 4.2.0
+          r-version: 4.3.1
           use-public-rspm: true
       - name: Publish the app to Connect
         uses: rstudio/actions/connect-publish@main
@@ -128,7 +128,7 @@ jobs:
       - uses: r-lib/actions/setup-pandoc@v2
       - uses: r-lib/actions/setup-r@v2
         with:
-          r-version: 4.2.0
+          r-version: 4.3.1
           use-public-rspm: true
       - name: Publish the app to Connect
         uses: rstudio/actions/connect-publish@main
@@ -147,7 +147,7 @@ jobs:
       - uses: r-lib/actions/setup-pandoc@v2
       - uses: r-lib/actions/setup-r@v2
         with:
-          r-version: 4.2.0
+          r-version: 4.3.1
           use-public-rspm: true
       - name: Publish the app to Connect
         uses: rstudio/actions/connect-publish@main
@@ -166,7 +166,7 @@ jobs:
       - uses: r-lib/actions/setup-pandoc@v2
       - uses: r-lib/actions/setup-r@v2
         with:
-          r-version: 4.2.0
+          r-version: 4.3.1
           use-public-rspm: true
       - name: Publish the app to Connect
         uses: rstudio/actions/connect-publish@main
@@ -185,7 +185,7 @@ jobs:
       - uses: r-lib/actions/setup-pandoc@v2
       - uses: r-lib/actions/setup-r@v2
         with:
-          r-version: 4.2.0
+          r-version: 4.3.1
           use-public-rspm: true
       - name: Publish the app to Connect
         uses: rstudio/actions/connect-publish@main
@@ -204,7 +204,7 @@ jobs:
       - uses: r-lib/actions/setup-pandoc@v2
       - uses: r-lib/actions/setup-r@v2
         with:
-          r-version: 4.2.0
+          r-version: 4.3.1
           py-version: 3.10.12
           use-public-rspm: true
       - name: Set up Quarto
@@ -248,7 +248,7 @@ jobs:
       - uses: r-lib/actions/setup-pandoc@v2
       - uses: r-lib/actions/setup-r@v2
         with:
-          r-version: 4.2.0
+          r-version: 4.3.1
           use-public-rspm: true
       - name: Publish the app to Connect
         uses: rstudio/actions/connect-publish@main
@@ -268,7 +268,7 @@ jobs:
       - uses: r-lib/actions/setup-pandoc@v2
       - uses: r-lib/actions/setup-r@v2
         with:
-          r-version: 4.2.0
+          r-version: 4.3.1
           use-public-rspm: true
       - name: Publish the app to Connect
         uses: rstudio/actions/connect-publish@main
