@@ -9,7 +9,7 @@
 <meta name="author" content="Lisa Anders">
 <meta name="dcterms.date" content="2024-05-09">
 
-<title>Quarto mermaid sandbox</title>
+<title>Mermaid diagrams in Quarto</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,13 +65,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="quarto-mermaid_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="quarto-mermaid_files/libs/quarto-html/anchor.min.js"></script>
 <link href="quarto-mermaid_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="quarto-mermaid_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="quarto-mermaid_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="quarto-mermaid_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="quarto-mermaid_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="quarto-mermaid_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="quarto-mermaid_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="quarto-mermaid_files/libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<meta name="mermaid-theme" content="forest">
+<link href="quarto-mermaid_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<meta name="mermaid-theme" content="dark">
 <script src="quarto-mermaid_files/libs/quarto-diagram/mermaid.min.js"></script>
 <script src="quarto-mermaid_files/libs/quarto-diagram/mermaid-init.js"></script>
 <link href="quarto-mermaid_files/libs/quarto-diagram/mermaid.css" rel="stylesheet">
@@ -88,11 +86,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#mermaid" id="toc-mermaid" class="nav-link active" data-scroll-target="#mermaid">Mermaid</a></li>
-  <li><a href="#simple-mermaid-diagram-from-inside-the-document" id="toc-simple-mermaid-diagram-from-inside-the-document" class="nav-link" data-scroll-target="#simple-mermaid-diagram-from-inside-the-document">Simple mermaid diagram, from inside the document</a></li>
-  <li><a href="#complex-mermaid-diagram-from-inside-the-document" id="toc-complex-mermaid-diagram-from-inside-the-document" class="nav-link" data-scroll-target="#complex-mermaid-diagram-from-inside-the-document">Complex mermaid diagram, from inside the document</a></li>
-  <li><a href="#we-can-also-access-a-mermaid-diagram-from-file" id="toc-we-can-also-access-a-mermaid-diagram-from-file" class="nav-link" data-scroll-target="#we-can-also-access-a-mermaid-diagram-from-file">We can also access a mermaid diagram from file:</a></li>
-  <li><a href="#unfortunately-from-inside-a-tabset-there-is-an-error-where-the-later-tabsets-dont-display" id="toc-unfortunately-from-inside-a-tabset-there-is-an-error-where-the-later-tabsets-dont-display" class="nav-link" data-scroll-target="#unfortunately-from-inside-a-tabset-there-is-an-error-where-the-later-tabsets-dont-display">Unfortunately from inside a tabset there is an error where the later tabsets don’t display:</a></li>
-  <li><a href="#we-arent-just-constrained-to-mermaid---succesful-dot-file-from-file" id="toc-we-arent-just-constrained-to-mermaid---succesful-dot-file-from-file" class="nav-link" data-scroll-target="#we-arent-just-constrained-to-mermaid---succesful-dot-file-from-file">We aren’t just constrained to mermaid - Succesful dot file from file:</a></li>
+  <li><a href="#different-themes" id="toc-different-themes" class="nav-link" data-scroll-target="#different-themes">Different themes</a></li>
+  <li><a href="#simple-mermaid-diagram" id="toc-simple-mermaid-diagram" class="nav-link" data-scroll-target="#simple-mermaid-diagram">Simple mermaid diagram</a></li>
+  <li><a href="#complex-mermaid-diagram" id="toc-complex-mermaid-diagram" class="nav-link" data-scroll-target="#complex-mermaid-diagram">Complex mermaid diagram</a></li>
+  <li><a href="#from-a-file" id="toc-from-a-file" class="nav-link" data-scroll-target="#from-a-file">From a file</a></li>
+  <li><a href="#fyi-on-tabset-error" id="toc-fyi-on-tabset-error" class="nav-link" data-scroll-target="#fyi-on-tabset-error">FYI on tabset error</a></li>
+  <li><a href="#not-just-mermaid---succesful-dot-file-from-file" id="toc-not-just-mermaid---succesful-dot-file-from-file" class="nav-link" data-scroll-target="#not-just-mermaid---succesful-dot-file-from-file">Not just mermaid - Succesful dot file from file</a></li>
   </ul>
 <div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://quarto.org/docs/authoring/diagrams.html"><i class="bi bi-link-45deg"></i>Check out the documentation</a></li></ul></div></nav>
 </div>
@@ -100,7 +99,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Quarto mermaid sandbox</h1>
+<h1 class="title">Mermaid diagrams in Quarto</h1>
 </div>
 
 
@@ -136,11 +135,46 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <section id="mermaid" class="level1">
 <h1>Mermaid</h1>
-<p>Mermaid diagrams are a programmatic way to create diagrams and visualizations using code. These can be a great way to add diagrams into reports, regardless of preferred language.</p>
-<p>Check out the magic here: <a href="https://quarto.org/docs/authoring/diagrams.html" class="uri">https://quarto.org/docs/authoring/diagrams.html</a></p>
+<p><code>Mermaid diagrams</code> are a programmatic way to create diagrams and visualizations using code. These can be a great way to add diagrams into reports, regardless of preferred language.</p>
+<p>Check out how to implement this for yourself here: <a href="https://quarto.org/docs/authoring/diagrams.html" class="uri">https://quarto.org/docs/authoring/diagrams.html</a></p>
 </section>
-<section id="simple-mermaid-diagram-from-inside-the-document" class="level1">
-<h1>Simple mermaid diagram, from inside the document</h1>
+<section id="different-themes" class="level1">
+<h1>Different themes</h1>
+<p>The available themes from mermaid are: <code>default</code>, <code>dark</code>, <code>forest</code>, and <code>neutral</code>.</p>
+<div class="columns">
+<div class="column" style="width:25%;">
+<p><code>default</code></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/default.png" class="quarto-figure quarto-figure-center figure-img" height="200"></p>
+</figure>
+</div>
+</div><div class="column" style="width:25%;">
+<p><code>dark</code></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/dark.png" class="quarto-figure quarto-figure-center figure-img" height="200"></p>
+</figure>
+</div>
+</div><div class="column" style="width:25%;">
+<p><code>forest</code></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/forest.png" class="quarto-figure quarto-figure-center figure-img" height="200"></p>
+</figure>
+</div>
+</div><div class="column" style="width:25%;">
+<p><code>neutral</code></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/neutral.png" class="quarto-figure quarto-figure-center figure-img" height="200"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="simple-mermaid-diagram" class="level1">
+<h1>Simple mermaid diagram</h1>
 <div class="cell" data-layout-align="default">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>flowchart LR</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  A[Hard edge] --&gt; B(Round edge)</span>
@@ -163,8 +197,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="complex-mermaid-diagram-from-inside-the-document" class="level1">
-<h1>Complex mermaid diagram, from inside the document</h1>
+<section id="complex-mermaid-diagram" class="level1">
+<h1>Complex mermaid diagram</h1>
 <div class="cell" data-fig-width="6.5" data-layout-align="default">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>graph TD</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  A[Start] --&gt; B[Step 1: Define a library reference libref named 'vitra']</span>
@@ -195,8 +229,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="we-can-also-access-a-mermaid-diagram-from-file" class="level1">
-<h1>We can also access a mermaid diagram from file:</h1>
+<section id="from-a-file" class="level1">
+<h1>From a file</h1>
 <div class="cell" data-file="mermaid.mmd" data-layout-align="default">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -217,8 +251,9 @@ Figure&nbsp;1: A diagram.
 </div>
 </div>
 </section>
-<section id="unfortunately-from-inside-a-tabset-there-is-an-error-where-the-later-tabsets-dont-display" class="level1">
-<h1>Unfortunately from inside a tabset there is an error where the later tabsets don’t display:</h1>
+<section id="fyi-on-tabset-error" class="level1">
+<h1>FYI on tabset error</h1>
+<p>There is an error where the later tabsets don’t display</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">first mermaid</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">second mermaid</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">third mermaid</a></li></ul>
 <div class="tab-content">
@@ -276,8 +311,8 @@ five---six
 </div>
 </div>
 </section>
-<section id="we-arent-just-constrained-to-mermaid---succesful-dot-file-from-file" class="level1">
-<h1>We aren’t just constrained to mermaid - Succesful dot file from file:</h1>
+<section id="not-just-mermaid---succesful-dot-file-from-file" class="level1">
+<h1>Not just mermaid - Succesful dot file from file</h1>
 <div class="cell" data-file="linux-kernel-diagram.dot" data-layout-align="default">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode dot code-with-copy"><code class="sourceCode dot"></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -1026,150 +1061,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
-  const disableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'prefetch';
-    }
-  }
-  const enableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'stylesheet';
-    }
-  }
-  const manageTransitions = (selector, allowTransitions) => {
-    const els = window.document.querySelectorAll(selector);
-    for (let i=0; i < els.length; i++) {
-      const el = els[i];
-      if (allowTransitions) {
-        el.classList.remove('notransition');
-      } else {
-        el.classList.add('notransition');
-      }
-    }
-  }
-  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-    let newTheme = '';
-    if(darkModeDefault) {
-      newTheme = isAlternate ? baseTheme : alternateTheme;
-    } else {
-      newTheme = isAlternate ? alternateTheme : baseTheme;
-    }
-    const changeGiscusTheme = () => {
-      // From: https://github.com/giscus/giscus/issues/336
-      const sendMessage = (message) => {
-        const iframe = document.querySelector('iframe.giscus-frame');
-        if (!iframe) return;
-        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-      }
-      sendMessage({
-        setConfig: {
-          theme: newTheme
-        }
-      });
-    }
-    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-    if (isGiscussLoaded) {
-      changeGiscusTheme();
-    }
-  }
-  const toggleColorMode = (alternate) => {
-    // Switch the stylesheets
-    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-    manageTransitions('#quarto-margin-sidebar .nav-link', false);
-    if (alternate) {
-      enableStylesheet(alternateStylesheets);
-      for (const sheetNode of alternateStylesheets) {
-        if (sheetNode.id === "quarto-bootstrap") {
-          toggleBodyColorMode(sheetNode);
-        }
-      }
-    } else {
-      disableStylesheet(alternateStylesheets);
-      toggleBodyColorPrimary();
-    }
-    manageTransitions('#quarto-margin-sidebar .nav-link', true);
-    // Switch the toggles
-    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-    for (let i=0; i < toggles.length; i++) {
-      const toggle = toggles[i];
-      if (toggle) {
-        if (alternate) {
-          toggle.classList.add("alternate");     
-        } else {
-          toggle.classList.remove("alternate");
-        }
-      }
-    }
-    // Hack to workaround the fact that safari doesn't
-    // properly recolor the scrollbar when toggling (#1455)
-    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-      manageTransitions("body", false);
-      window.scrollTo(0, 1);
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-        manageTransitions("body", true);
-      }, 40);  
-    }
-  }
-  const isFileUrl = () => { 
-    return window.location.protocol === 'file:';
-  }
-  const hasAlternateSentinel = () => {  
-    let styleSentinel = getColorSchemeSentinel();
-    if (styleSentinel !== null) {
-      return styleSentinel === "alternate";
-    } else {
-      return false;
-    }
-  }
-  const setStyleSentinel = (alternate) => {
-    const value = alternate ? "alternate" : "default";
-    if (!isFileUrl()) {
-      window.localStorage.setItem("quarto-color-scheme", value);
-    } else {
-      localAlternateSentinel = value;
-    }
-  }
-  const getColorSchemeSentinel = () => {
-    if (!isFileUrl()) {
-      const storageValue = window.localStorage.getItem("quarto-color-scheme");
-      return storageValue != null ? storageValue : localAlternateSentinel;
-    } else {
-      return localAlternateSentinel;
-    }
-  }
-  const darkModeDefault = false;
-  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
-  // Dark / light mode switch
-  window.quartoToggleColorScheme = () => {
-    // Read the current dark / light value 
-    let toAlternate = !hasAlternateSentinel();
-    toggleColorMode(toAlternate);
-    setStyleSentinel(toAlternate);
-    toggleGiscusIfUsed(toAlternate, darkModeDefault);
-  };
-  // Ensure there is a toggle, if there isn't float one in the top right
-  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-    const a = window.document.createElement('a');
-    a.classList.add('top-right');
-    a.classList.add('quarto-color-scheme-toggle');
-    a.href = "";
-    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-    const i = window.document.createElement("i");
-    i.classList.add('bi');
-    a.appendChild(i);
-    window.document.body.appendChild(a);
-  }
-  // Switch to dark mode if need be
-  if (hasAlternateSentinel()) {
-    toggleColorMode(true);
-  } else {
-    toggleColorMode(false);
-  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {

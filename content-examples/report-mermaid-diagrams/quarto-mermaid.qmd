@@ -1,5 +1,5 @@
 ---
-title: "Quarto mermaid sandbox"
+title: "Mermaid diagrams in Quarto"
 author: "Lisa Anders" 
 date: last-modified
 format: 
@@ -13,11 +13,10 @@ format:
     other-links:
       - text: Check out the documentation
         href: https://quarto.org/docs/authoring/diagrams.html
-    theme:
-      light: [quartz]
-      dark: [darkly]
+    theme: 
+      light: quartz
     mermaid:
-      theme: forest
+      theme: dark
 execute:
   echo: true
 editor: source
@@ -27,12 +26,44 @@ editor: source
 
 # Mermaid
 
-Mermaid diagrams are a programmatic way to create diagrams and visualizations using code. These can be a great way to add diagrams into reports, regardless of preferred language. 
+`Mermaid diagrams` are a programmatic way to create diagrams and visualizations using code. These can be a great way to add diagrams into reports, regardless of preferred language. 
 
-Check out the magic here: <https://quarto.org/docs/authoring/diagrams.html> 
+Check out how to implement this for yourself here: <https://quarto.org/docs/authoring/diagrams.html> 
 
+# Different themes 
 
-# Simple mermaid diagram, from inside the document
+The available themes from mermaid are: `default`, `dark`, `forest`, and `neutral`.
+
+:::: {.columns}
+
+::: {.column width="25%"}
+`default`
+
+![](img/default.png){fig-align="center" height=200 fig-alt="A screenshot of a Mermaid flowchart using the Mermaid's default theme."}
+
+:::
+
+::: {.column width="25%"}
+`dark`
+
+![](img/dark.png){fig-align="center" height=200 fig-alt="A screenshot of a Mermaid flowchart using the Mermaid's dark theme."}
+:::
+
+::: {.column width="25%"}
+`forest`
+
+![](img/forest.png){fig-align="center" height=200 fig-alt="A screenshot of a Mermaid flowchart using the Mermaid's forest theme."}
+:::
+
+::: {.column width="25%"}
+`neutral`
+
+![](img/neutral.png){fig-align="center" height=200 fig-alt="A screenshot of a Mermaid flowchart using the Mermaid's neutral theme."}
+:::
+
+::::
+
+# Simple mermaid diagram
 
 ```{mermaid}
 flowchart LR
@@ -42,7 +73,7 @@ flowchart LR
   C --> E[Result two]
 ```
 
-# Complex mermaid diagram, from inside the document
+# Complex mermaid diagram
 
 ```{mermaid}
 %%| fig-width: 6.5
@@ -57,7 +88,7 @@ graph TD
   H[End]
 ```
 
-# We can also access a mermaid diagram from file:
+# From a file
 
 ```{mermaid}
 %%| label: fig-mermaid
@@ -65,7 +96,9 @@ graph TD
 %%| file: mermaid.mmd
 ```
 
-# Unfortunately from inside a tabset there is an error where the later tabsets don't display:
+# FYI on tabset error
+
+There is currently an error where the later tabsets don't display, hopefully to be fixed soon. 
 
 ::: panel-tabset
 ## first mermaid
@@ -90,7 +123,7 @@ five---six
 ```
 :::
 
-# We aren't just constrained to mermaid - Succesful dot file from file:
+# Not just mermaid - Succesful dot diagram from file
 
 ```{dot}
 //| label: fig-linux-kernel
@@ -109,3 +142,5 @@ References:
 -   <https://github.com/quarto-dev/quarto-cli/issues/3665>
 -   <https://github.com/quarto-dev/quarto-cli/discussions/5219>
 -   <https://github.com/quarto-dev/quarto-cli/discussions/1054>
+
+The theme used on this page is `quartz` 
