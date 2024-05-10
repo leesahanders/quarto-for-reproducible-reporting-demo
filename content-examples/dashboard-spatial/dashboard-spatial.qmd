@@ -44,27 +44,49 @@ library(leaflet)
 library(gt)
 library(zipcodeR)
 
+zipcodes_eastern <- search_tz('Eastern')
+zipcodes_mountain <- search_tz('Mountain')
+zipcodes_central <- search_tz('Central')
+zipcodes_pacific <- search_tz('Pacific')
+#zipcodes_alaska <- search_tz('Alaska')
+
+# zipcodes_all <- c(zipcodes_eastern$zipcode, zipcodes_mountain$zipcode, zipcodes_central$zipcode, zipcodes_pacific$zipcode)
+#zipcodes <- unique(c(sample(x = zipcodes_all, size = 100),"80304"))
+
+# Randomly sample zipcodes by timezone to make sure there is coverage, make sure 80304 is always included
+zipcodes <- c(sample(x = zipcodes_eastern$zipcode, size = 100), 
+              sample(x = zipcodes_mountain$zipcode, size = 100), 
+              sample(x = zipcodes_central$zipcode, size = 100), 
+              sample(x = zipcodes_pacific$zipcode, size = 100),"80304") %>%
+  unique()
+
+# For testing, downselect
 #zipcodes <- c("80304","80302","80301","80310","80303","80305","80025","77024","77025","77030","77035","77096","77320","77342","77334")
 #zipcodes <- c("80304","80302","80301","80310","80303","80305","80025")
+
 output_format <- c("XML", "JSON", "EXCEL", "CSV")[1] ## As XML 
 # Test from terminal with: curl "https://data.epa.gov/efservice/getEnvirofactsUVDAILY/ZIP/80304/XML"
 
+# Try to load the cached data while developing to make things faster
+#if(interactive()){
+  if(exists("tmp/data.RData")){
+    load(file="tmp/data.RData") 
+  }
+#}
+
+if(!exists("uv_df")){
+  
 uv_df <- data.frame()
 uv_today <- data.frame()
 
+# Todo: Parallelize 
 for(i in zipcodes){
-  #print(i)
+  print(i)
   url <- paste0("https://data.epa.gov/efservice/getEnvirofactsUVDAILY/ZIP/",i,"/",output_format)
   
   uv <- request(url) |> 
     req_perform() |> 
     resp_body_xml()
-  
-  # resp_l <- resp |> 
-  #   as_list() |> 
-  #   unlist(recursive = FALSE)
-  
-  # uv_str <- xml_structure(uv)
   
   state <- xml_text(xml_find_all(uv, xpath = "//STATE"))
   uv_index <- xml_text(xml_find_all(uv, xpath = "//UV_INDEX"))
@@ -78,7 +100,7 @@ for(i in zipcodes){
   uv_today_tmp <- tibble(state = state,  zipcode = i, uv_index = uv_index) %>%
     mutate(
       uv_index = cell_spec(uv_index, color = ifelse(uv_index < 3, "green","red"))) 
-  
+
   uv_today <- rbind(uv_today, uv_today_tmp)
 }
 
@@ -105,10 +127,11 @@ uv_df_zip <- uv_df %>%
     .default = "white"
   ))
 
-
-
-n_color = nrow(df)
-colors = colfunc(n_color) # generate nrow(df) (number of rows in df) colors, from darkred to magenta
+  # For testing, cache the data if it hasn't been already
+  if(interactive()){
+    save.image(file="tmp/data.RData") 
+  }
+}
 
 # Resources: 
 # https://www.reddit.com/r/scacjdiscussion/comments/12qpj80/how_do_you_find_an_accurate_uv_index_forecast/
@@ -139,7 +162,7 @@ colors = colfunc(n_color) # generate nrow(df) (number of rows in df) colors, fro
 #| content: valuebox
 #| title: "UV Index Today"
 
-uv_today_box = uv_df %>% filter(zipcode == "80304")
+uv_today_box = filter(uv_df_zip, zipcode == "80304")
 
 list(
   icon = "sun",
@@ -270,8 +293,25 @@ weather_periods %>%
 
 <!-- UV Choropleth Map -->
 
+#### UV Choropleth Map
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: plot-map-choropleth
+#| tbl-cap: "UV Map"
+#| padding: 0px
+
+
+# TODO: 
+# https://lucaliehner.com/blog/mapping-zip-codes-to-shapefiles-in-r-with-ggplot-g/ 
+```
+
 
 <!-- UV Map with leaflet -->
+
+#### UV Map with leaflet
 
 ```{r}
 #| echo: false
@@ -315,7 +355,11 @@ leaflet() %>%
 # https://r-charts.com/spatial/interactive-maps-leaflet/
 ```
 
+
+
 <!-- UV Map Raw Data -->
+
+#### Data
 
 ```{r}
 #| echo: false
