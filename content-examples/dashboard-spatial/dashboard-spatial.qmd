@@ -42,8 +42,10 @@ library(tidyverse)
 library(sf)
 library(leaflet)
 library(gt)
+library(zipcodeR)
 
-zipcodes <- c("80304","80302","80301","80310","80303","80305","80025")
+#zipcodes <- c("80304","80302","80301","80310","80303","80305","80025","77024","77025","77030","77035","77096","77320","77342","77334")
+#zipcodes <- c("80304","80302","80301","80310","80303","80305","80025")
 output_format <- c("XML", "JSON", "EXCEL", "CSV")[1] ## As XML 
 # Test from terminal with: curl "https://data.epa.gov/efservice/getEnvirofactsUVDAILY/ZIP/80304/XML"
 
@@ -80,6 +82,33 @@ for(i in zipcodes){
   uv_today <- rbind(uv_today, uv_today_tmp)
 }
 
+uv_df_zip <- uv_df %>% 
+  # Add geocode 
+  mutate(lat = geocode_zip(zipcode)$lat) %>% 
+  mutate(lng = geocode_zip(zipcode)$lng) %>%
+  # Add color
+  mutate(uv_index = as.numeric(uv_index)) %>%
+  mutate(color = case_when(
+    uv_index <= 2 ~ "#6B990F",
+    3 < uv_index &  uv_index <= 5 ~ "#FFFF32",
+    5 < uv_index &  uv_index <= 7 ~ "#FF7F00",
+    7 < uv_index &  uv_index <= 10 ~ "#E51932",
+    uv_index >= 11 ~ "#6551CC",
+    .default = "#E5E5E5"
+  )) %>%
+  mutate(color_name = case_when(
+    uv_index <= 2 ~ "green",
+    3 < uv_index &  uv_index <= 5 ~ "yellow",
+    5 < uv_index &  uv_index <= 7 ~ "orange",
+    7 < uv_index &  uv_index <= 10 ~ "red",
+    uv_index >= 11 ~ "purple",
+    .default = "white"
+  ))
+
+
+
+n_color = nrow(df)
+colors = colfunc(n_color) # generate nrow(df) (number of rows in df) colors, from darkred to magenta
 
 # Resources: 
 # https://www.reddit.com/r/scacjdiscussion/comments/12qpj80/how_do_you_find_an_accurate_uv_index_forecast/
@@ -93,9 +122,13 @@ for(i in zipcodes){
 # https://www.robwiederstein.org/2021/03/05/xml-to-dataframe/
 # https://www.epa.gov/enviro/envirofacts-data-service-api
 # Search zipcodes: https://www.unitedstateszipcodes.org/
+# Uv index reference: https://19january2017snapshot.epa.gov/sunsafety/uv-index-scale-1_.html
+# Color pallettes: https://r-charts.com/color-palettes/ 
 ```
 
-## Row {height=25%}
+## Column {width=25%}
+
+### Row {height=25%}
 
 <!-- ## UV Index Today -->
 
@@ -172,6 +205,8 @@ period_1_detailedForecast <- weather_periods[[1]]$detailedForecast
 Weather: `r period_1_detailedForecast`
 :::
 
+### Row {height=75%}
+
 <!-- ## Weather forecast -->
 
 ```{r}
@@ -231,9 +266,12 @@ weather_periods %>%
 ```
 
 
-## Row {.tabset height=75%}
+### Column {.tabset width=75%}
 
-<!-- UV Map  -->
+<!-- UV Choropleth Map -->
+
+
+<!-- UV Map with leaflet -->
 
 ```{r}
 #| echo: false
@@ -243,27 +281,21 @@ weather_periods %>%
 #| tbl-cap: "UV Map"
 #| padding: 0px
 
-circles <- data.frame(lng = c(-3.7, -8, -4.2),
-                      lat = c(40.4, 43.1, 41.4),
-                      values = c(10, 20, 30))
-
-# Continuous palette
-# pal <- colorNumeric(palette = "viridis", domain = circles$values)
-
-# Discrete palette
-pal <- colorFactor("viridis", levels = circles$values)
-
 # Find the grid forecast endpoint with this url: https://api.weather.gov/points/{latitude},{longitude}
 # https://api.weather.gov/points/40.04,-105.23
 
 leaflet() %>%
   addTiles() %>%
   setView(lng = -105.23, lat = 40.04, zoom = 7) %>%
-  addCircleMarkers(data = circles, color = ~pal(values)) %>%
+  # Add UV data
+  addCircleMarkers(data = uv_df_zip, color = uv_df_zip$color,
+                   popup = paste0("Selected point","<hr>","UV index: ",uv_df_zip$uv_index, "<br>", "Zipcode: ", uv_df_zip$zipcode)) %>%
+  #addCircles(data = uv_df_zip, radius = 2000) %>% 
   # Add legend 
-  addLegend(data = circles,
+  addLegend(data = uv_df_zip,
             position = "bottomright",
-            pal = pal, values = ~values,
+            colors = unique(uv_df_zip %>% select(color, uv_index))$color,
+            labels = unique(uv_df_zip %>% select(color, uv_index))$uv_index,
             title = "Legend",
             opacity = 1) %>%
   # Add measurement tool - for fun
@@ -295,9 +327,7 @@ leaflet() %>%
 uv_df %>%
   kbl(booktabs = T, align = "lc") %>% #, caption = "RSS Feed for R-weekly") %>%
   kable_styling() %>%
-  kable_paper(full_width = T) #%>%
-  #column_spec(1, link = rss_r_weekly_url$entry_link)
-
+  kable_paper(full_width = T)
 ```
 
 

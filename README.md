@@ -26,6 +26,7 @@
 - Quarto callouts: <https://www.andreashandel.com/posts/2023-06-13-custom-callouts-quarto/> 
 - rmflight quarto blog: <https://rmflight.github.io/> 
 - Let's make a presentation with quarto: <https://gesiscss.github.io/quarto-workshop/material/slides/05_presentations.html#/title-slide> 
+- Sharing data in a Quarto dashboard by Mine: <https://mine.quarto.pub/quarto-dashboards-pydata/#/title-slide> 
 - Thomas Mock's presentation to Austin Python meetup in 2024: <https://thomasmock.quarto.pub/python-austin/#/> 
 - [Parameterized Reports with Quarto: R-Ladies DC Workshop](https://jadeyryan.com/talks/2024-01-18_rladies-dc_quarto-params/)
 - [Extending quarto](https://www.youtube.com/watch?v=EihuM4oyOvs)
@@ -62,6 +63,12 @@ Websites:
 - including code 
 
 workshop outline: https://github.com/jeremy-allen/quarto-workshop/blob/main/workshop-guide
+
+# TODO 
+
+-[] Publishing to confluence 
+-[] A spatial model (UV index) 
+-[] Parameterization
 
 # Publishing
 
