@@ -41,8 +41,9 @@ library(sf)
 library(leaflet)
 library(gt)
 library(jsonlite)
+library(data.table)
 
-samplesize = 2
+samplesize = 20
 
 us_cities <- read.csv("data/us_cities.csv")
 
@@ -120,23 +121,36 @@ for(i in 1:nrow(us_cities_sample)){
       req_perform() |>
       resp_body_json()     
     
-    # uv_hourly_tmp <- fromJSON(uv_hourly_raw[[1]]) %>% as.data.frame
-    # uv_hourly_tmp <- fromJSON(uv_hourly_raw) %>% as.data.frame
-    # uv_hourly_tmp <- enframe(unlist(uv_hourly_raw)) %>% 
-    #   as.data.frame %>% 
-    #   separate(name, into = c(paste0("x", 1:5)), fill = "right")
-    # uv_hourly_tmp <- as.data.frame(uv_hourly_raw, optional = TRUE) 
-    # class(uv_hourly_raw) <- "json"
-    # sample_data <- jsonlite::fromJSON(uv_hourly_raw)
-    # uv_hourly_tmp <- as.data.frame(uv_hourly_raw, optional = TRUE) 
-    uv_hourly_tmp <- as.data.frame(unlist(uv_hourly_raw, recursive = FALSE) , optional = TRUE) 
+    uv_hourly_tmp <- data.frame(rbindlist(uv_hourly_raw, fill=TRUE), uv_index = uv_index, uv_alert = uv_alert, date = date, id = id, state_code = state_code, state_orig = state_orig, county = county, lat = lat, lng = lng)
     
     uv_hourly <- rbind(uv_hourly, uv_hourly_tmp)   
     
   } 
 }
 
-uv_df_zip <- uv_df %>%
+uv_df_zip <- uv_hourly %>%
+  # Add color
+  mutate(uv_index = as.numeric(uv_index)) %>%
+  mutate(color = case_when(
+    uv_index <= 2 ~ "#6B990F",
+    3 < uv_index &  uv_index <= 5 ~ "#FFFF32",
+    5 < uv_index &  uv_index <= 7 ~ "#FF7F00",
+    7 < uv_index &  uv_index <= 10 ~ "#E51932",
+    uv_index >= 11 ~ "#6551CC",
+    .default = "#E5E5E5"
+  )) %>%
+  mutate(color_name = case_when(
+    uv_index <= 2 ~ "green",
+    3 < uv_index &  uv_index <= 5 ~ "yellow",
+    5 < uv_index &  uv_index <= 7 ~ "orange",
+    7 < uv_index &  uv_index <= 10 ~ "red",
+    uv_index >= 11 ~ "purple",
+    .default = "white"
+  )) %>%
+  # Add pop-up text
+  mutate(popup = paste0("Selected point","<hr>","UV index: ", uv_index, "<br>", "City: ", city, "<br>", "State: ", state))
+
+uv_hourly_zip <- uv_df %>%
   # Add color
   mutate(uv_index = as.numeric(uv_index)) %>%
   mutate(color = case_when(

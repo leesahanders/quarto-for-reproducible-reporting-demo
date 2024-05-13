@@ -15,7 +15,6 @@
 -[] Add cancer gov data: <https://stackoverflow.com/questions/49173967/trouble-using-jsonlites-fromjson-with-url-in-r> 
 -[] Create a zipcode map: <https://stackoverflow.com/questions/59539423/creating-a-zipcode-map-in-r> 
 
-
 ## Preview
 
 ```
