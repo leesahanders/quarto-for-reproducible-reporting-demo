@@ -5,9 +5,15 @@
 
 ## TODO
 
+-[] Fix zipcode to lat, long lookup, using the census API's: <https://www.census.gov/data/developers/data-sets.html> 
 -[] Make maps with leaflet: <https://r-charts.com/spatial/interactive-maps-leaflet/> 
 -[] Consider using kepler: <https://github.com/keplergl/kepler.gl> 
 -[] Consider switching to choropleth: <https://r-charts.com/spatial/choropleth-map-ggplot2/> 
+-[] Add alerts when click on state: <https://www.weather.gov/documentation/services-web-api> 
+-[] Add more data using envstats: <https://cran.r-project.org/web//packages/EnvStats/EnvStats.pdf> 
+-[] Add layers with different coloring: <https://rstudio.github.io/leaflet/articles/showhide.html> 
+-[] Add cancer gov data: <https://stackoverflow.com/questions/49173967/trouble-using-jsonlites-fromjson-with-url-in-r> 
+-[] Create a zipcode map: <https://stackoverflow.com/questions/59539423/creating-a-zipcode-map-in-r> 
 
 
 ## Preview
