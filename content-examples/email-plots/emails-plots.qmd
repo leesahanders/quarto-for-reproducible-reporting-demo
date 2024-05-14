@@ -18,6 +18,15 @@ Reference the documentation on the server API either on your URL, or using the p
 
 For the hidden endpoints I'm referencing the proprietary source code: <https://github.com/rstudio/package-manager/tree/main/docs/api> and <https://github.com/rstudio/package-manager/tree/main/src/api> 
 
+Alternatively to the below, we could use the package that Joe has made for us: 
+
+```r
+devtools::install_git("https://github.com/rstudio/ppmtools")
+library(ppmtools)
+configure("https://colorado.posit.co/rspm")
+get_package_count_history("archer", start_date="2024-05-01")
+```
+
 ```{r echo = FALSE, results = 'hide', message=FALSE, warning=FALSE}
 library(httr)
 library(tidyr)
