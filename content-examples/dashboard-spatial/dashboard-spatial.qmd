@@ -4,19 +4,22 @@ date: "last-modified"
 date-format: "YYYY-MM-DD HH:mm"
 format:
   dashboard:
-    logo: images/Leafey.PNG
+    theme: 
+      - vapor
+      - custom.scss
     nav-buttons:
     - icon: github
       href: "https://github.com/leesahanders/quarto-for-reproducible-reporting-demo"
+    logo: images/sun_nasa.png
 editor: source
 expandable: true
-theme: lux
 resource_files:
 - custom.scss
 - images/Leafey.PNG
 ---
 
 <!-- Other good themes: morph, pulse, sandstone, spacelab, solar, slate, lux  -->
+<!-- Add a logo with:     logo: images/Leafey.PNG -->
 
 # DATE `r Sys.Date()`
 
@@ -42,6 +45,7 @@ library(leaflet)
 library(gt)
 library(jsonlite)
 library(data.table)
+library(basemaps)
 
 samplesize = 20
 
@@ -179,141 +183,6 @@ uv_hourly_zip <- uv_df %>%
 }
 
 # Resources: 
-# Get all us cities: https://opendata.stackexchange.com/questions/18473/seeking-list-of-all-us-cities-and-their-latitude-and-longitude
-# https://stackoverflow.com/questions/8093914/use-trycatch-skip-to-next-value-of-loop-upon-error/
-# https://www.geeksforgeeks.org/convert-json-data-to-dataframe-in-r/
-```
-
-
-<!-- Use data based on zipcode -->
-
-```{r}
-#| echo: false
-#| warning: false
-#| message: false
-#| content: valuebox
-#| title: "UV Index"
-
-# library(httr)
-# library(httr2)
-# library(png)
-# library(xml2)
-# library(rvest)
-# library(tibble)
-# library(knitr)
-# library(kableExtra)
-# library(dplyr)
-# library(tidyverse)
-# library(sf)
-# library(leaflet)
-# library(gt)
-# library(zipcodeR)
-# library(sp)
-# #library(ggmap)
-# 
-# zipcodes_eastern <- search_tz('Eastern')
-# zipcodes_mountain <- search_tz('Mountain')
-# zipcodes_central <- search_tz('Central')
-# zipcodes_pacific <- search_tz('Pacific')
-# 
-# samplesize = 100
-# 
-# # Randomly sample zipcodes by timezone to make sure there is coverage, make sure 80304 is always included
-# zipcodes <- c(sample(x = zipcodes_eastern$zipcode, size = samplesize), 
-#               sample(x = zipcodes_mountain$zipcode, size = samplesize), 
-#               sample(x = zipcodes_central$zipcode, size = samplesize), 
-#               sample(x = zipcodes_pacific$zipcode, size = samplesize),"80304") %>%
-#   unique()
-# 
-# # Downselect for testing
-# #zipcodes <- c("80304","80302","80301","80310","80303","80305","80025","77024","77025","77030","77035","77096","77320","77342","77334")
-# 
-# output_format <- c("XML", "JSON", "EXCEL", "CSV")[1] ## As XML 
-# # Test from terminal with: curl "https://data.epa.gov/efservice/getEnvirofactsUVDAILY/ZIP/80304/XML"
-# 
-# # Try to load the cached data while developing to make things faster
-# flagcached = 1
-# 
-# if(flagcached == 1){
-#   if(file.exists(paste0(getwd(),"/tmp/data.RData"))){
-#     load(file="tmp/data.RData") 
-#   }
-# }
-
-# if(!exists("uv_df")){
-#   
-# uv_df <- data.frame()
-# uv_today <- data.frame()
-# 
-# zcta_place_rel_10 <- read.table("data/zcta_place_rel_10.txt",sep = ",", header = TRUE)
-# USA_ZIP_Code_Boundaries <- read.csv("data/USA_ZIP_Code_Boundaries.csv")
-# 
-# # Todo: Parallelize
-# for(i in zipcodes){
-#   print(i)
-#   # Get UV forecast
-#   url <- paste0("https://data.epa.gov/efservice/getEnvirofactsUVDAILY/ZIP/",i,"/",output_format)
-# 
-#   uv <- request(url) |>
-#     req_perform() |>
-#     resp_body_xml()
-# 
-#   state <- xml_text(xml_find_all(uv, xpath = "//STATE"))
-#   uv_index <- xml_text(xml_find_all(uv, xpath = "//UV_INDEX"))
-#   uv_alert <- xml_text(xml_find_all(uv, xpath = "//UV_ALERT"))
-#   date <- xml_text(xml_find_all(uv, xpath = "//DATE"))
-# 
-#   uv_df_tmp <- data.frame(state = state,  zipcode = i, uv_index = uv_index, uv_alert = uv_alert, date = date)
-# 
-#   uv_df <- rbind(uv_df, uv_df_tmp)
-# 
-#   # Get census data for zipcode geocoding 
-#   # url <- paste0("https://geocoding.geo.census.gov/geocoder/geographies/address?street=4600+Silver+Hill+Rd&city=Washington&state=DC&benchmark=Public_AR_Census2020&vintage=Census2020_Census2020&layers=10&format=json")
-#   # url <- paste0("https://geocoding.geo.census.gov/geocoder/geographies/address?street=4600+Silver+Hill+Rd&city=Washington&state=DC&benchmark=Public_AR_Census2020&vintage=Census2020_Census2020&format=json")
-#   # url <- paste0("https://geocoding.geo.census.gov/geocoder/geographies/address?street=4600+Silver+Hill+Rd&city=Washington&state=DC&zipcode=20233&benchmark=Public_AR_Census2020&vintage=Census2020_Census2020&format=json")
-#   url <- paste0("https://geocoding.geo.census.gov/geocoder/geographies/address?zipcode=20233&benchmark=Public_AR_Census2020&vintage=Census2020_Census2020&format=json")
-# 
-#   geocode <- request(url) |>
-#   req_perform() |>
-#   resp_body_json()
-#   
-#   geocode$result$addressMatches[[1]]$coordinates$y
-#   geocode$result$addressMatches[[1]]$coordinates$x
-#   
-# }
-# 
-# uv_df_zip <- uv_df %>%
-#   # Add geocode
-#   mutate(lat = geocode_zip(zipcode)$lat) %>% # Using zipcoder, wrong?
-#   mutate(lng = geocode_zip(zipcode)$lng) %>% # Using zipcoder, wrong?
-#   # Add color
-#   mutate(uv_index = as.numeric(uv_index)) %>%
-#   mutate(color = case_when(
-#     uv_index <= 2 ~ "#6B990F",
-#     3 < uv_index &  uv_index <= 5 ~ "#FFFF32",
-#     5 < uv_index &  uv_index <= 7 ~ "#FF7F00",
-#     7 < uv_index &  uv_index <= 10 ~ "#E51932",
-#     uv_index >= 11 ~ "#6551CC",
-#     .default = "#E5E5E5"
-#   )) %>%
-#   mutate(color_name = case_when(
-#     uv_index <= 2 ~ "green",
-#     3 < uv_index &  uv_index <= 5 ~ "yellow",
-#     5 < uv_index &  uv_index <= 7 ~ "orange",
-#     7 < uv_index &  uv_index <= 10 ~ "red",
-#     uv_index >= 11 ~ "purple",
-#     .default = "white"
-#   )) %>%
-#   # Add pop-up text
-#   mutate(popup = paste0("Selected point","<hr>","UV index: ", uv_index, "<br>", "Zipcode: ", zipcode, "<br>", "State: ", state))
-# 
-#   # For testing cache the data if it hasn't been already
-#   if(flagcached == 1){
-#     save.image(file="tmp/data.RData")
-#   }
-# }
-
-# Resources: 
 # https://www.reddit.com/r/scacjdiscussion/comments/12qpj80/how_do_you_find_an_accurate_uv_index_forecast/
 # https://pyowm.readthedocs.io/en/latest/v3/uv-api-usage-examples.html (deprecated 2021) 
 # https://openweathermap.org/api/uvi (deprecated 2021)
@@ -334,58 +203,31 @@ uv_hourly_zip <- uv_df %>%
 # ARCgis api: https://developers.arcgis.com/rest/geocode/api-reference/overview-world-geocoding-service.htm 
 # USA zipcode boundaries: https://hub.arcgis.com/datasets/esri::usa-zip-code-boundaries/about 
 # Open and plot shapefiles: https://r-graph-gallery.com/168-load-a-shape-file-into-r.html 
+# Get all us cities: https://opendata.stackexchange.com/questions/18473/seeking-list-of-all-us-cities-and-their-latitude-and-longitude
+# https://stackoverflow.com/questions/8093914/use-trycatch-skip-to-next-value-of-loop-upon-error/
+# https://www.geeksforgeeks.org/convert-json-data-to-dataframe-in-r/
 ```
 
 ## Row {.tabset height=100%}
-
-### UV Map with leaflet
-
-<!-- UV Map with leaflet -->
 
 ```{r}
 #| echo: false
 #| warning: false
 #| message: false
-#| label: plot-map
+#| label: plot-map-providers$Stadia.AlidadeSmoothDark
 #| tbl-cap: "UV Map"
 #| padding: 0px
 
 # Find the grid forecast endpoint with this url: https://api.weather.gov/points/{latitude},{longitude}
 # https://api.weather.gov/points/40.04,-105.23
 
-# leaflet() %>%
-#   addTiles() %>%
-#   setView(lng = -105.23, lat = 40.04, zoom = 7) %>%
-#   # Add UV data
-#   addCircleMarkers(#data = uv_df_zip, color = uv_df_zip$color,
-#                    #data = getMapData(map),
-#                    lng = uv_df_zip$lat,
-#                    lat = uv_df_zip$lng,
-#                    color = uv_df_zip$color,
-#                    popup = paste0("Selected point","<hr>","UV index: ",uv_df_zip$uv_index, "<br>", "Zipcode: ", uv_df_zip$zipcode, "<br>", "State: ", uv_df_zip$state)) %>%
-#   #addCircles(data = uv_df_zip, radius = 2000) %>%
-#   # Add legend
-#   # addLegend(data = uv_df_zip,
-#   #           position = "bottomright",
-#   #           colors = arrange(unique(uv_df_zip %>% select(color, uv_index))$color),
-#   #           labels = arrange(unique(uv_df_zip %>% select(color, uv_index))$uv_index),
-#   #           title = "Legend",
-#   #           opacity = 1) %>%
-#   # Add measurement tool - for fun
-#   addMeasure(
-#     position = "bottomleft",
-#     primaryLengthUnit = "meters",
-#     primaryAreaUnit = "sqmeters",
-#     activeColor = "#3D535D",
-#     completedColor = "#7D4479") %>%
-#   # Add daylight layer
-#   addTerminator() %>%
-#   # Add minimap
-#   addMiniMap(width = 150, height = 150)
-
 leaflet(data = uv_df_zip) %>%
   addTiles() %>%
+  addProviderTiles(providers$Stadia.AlidadeSmoothDark) %>% 
+  # Stadia_AlidadeSmoothDark
   # addTiles(providers$Stadia.StamenToner, group = "Toner") %>%
+  #addProviderTiles(providers$Thunderforest_TransportDark) %>%
+  # addProviderTiles("Thunderforest_TransportDark") %>%
   setView(lng = -105.23, lat = 40.04, zoom = 7) %>%
   # Add UV data
   addCircleMarkers(lng = ~LONGITUDE,
@@ -403,12 +245,12 @@ leaflet(data = uv_df_zip) %>%
   #           title = "Legend",
   #           opacity = 1) %>%
   # # Add measurement tool - for fun
-  # addMeasure(
-  #   position = "bottomleft",
-  #   primaryLengthUnit = "meters",
-  #   primaryAreaUnit = "sqmeters",
-  #   activeColor = "#3D535D",
-  #   completedColor = "#7D4479") %>%
+  addMeasure(
+    position = "bottomleft",
+    primaryLengthUnit = "meters",
+    primaryAreaUnit = "sqmeters",
+    activeColor = "#3D535D",
+    completedColor = "#7D4479") %>%
   # Add daylight layer
   addTerminator() %>%
   # Add minimap
@@ -418,12 +260,11 @@ leaflet(data = uv_df_zip) %>%
 # https://r-charts.com/spatial/interactive-maps-leaflet/
 # https://warin.ca/posts/rcourse-datavisualizationwithr-interactivemaps/
 # https://www.library.virginia.edu/data/articles/data-scientist-as-cartographer-an-introduction-to-making-interactive-maps-in-r-with-leaflet
-```
+# https://r-graph-gallery.com/180-change-background-in-leaflet-map.html
+# https://jakob.schwalb-willmann.de/basemaps/
+``` 
 
-
-### UV Choropleth Map
-
-<!-- UV Choropleth Map -->
+<!-- TODO: UV Choropleth Map -->
 
 ```{r}
 #| echo: false
@@ -437,6 +278,7 @@ leaflet(data = uv_df_zip) %>%
 # TODO: 
 # https://lucaliehner.com/blog/mapping-zip-codes-to-shapefiles-in-r-with-ggplot-g/ 
 # https://rstudio.github.io/leaflet/articles/choropleths.html
+# https://www.r-bloggers.com/2021/01/visualizing-geospatial-data-in-r-part-3-making-interactive-maps-with-leaflet/
 ```
 
 
@@ -456,6 +298,51 @@ uv_df_zip %>%
   kable_styling() %>%
   kable_paper(full_width = T)
 ```
+
+
+### Base Map Samples
+
+<center>
+
+See the full list [here](https://leaflet-extras.github.io/leaflet-providers/preview/)
+
+::: {layout-ncol=3}
+![Default](images/default.png)
+
+![CartoDB.DarkMatter](images/CartoDB.DarkMatter.png)
+
+![providers$Stadia.AlidadeSmoothDark](images/providers$Stadia.AlidadeSmoothDark.png)
+
+![NASAGIBS.ViirsEarthAtNight2012](images/NASAGIBS.ViirsEarthAtNight2012.png)
+
+
+
+![OpenTopoMap](images/OpenTopoMap.png)
+
+![GeoportailFrance.orthos](images/GeoportailFrance.orthos.png)
+
+![providers$Esri.NatGeoWorldMap](images/providers$Esri.NatGeoWorldMap.png)
+
+![Esri.WorldGrayCanvas](images/Esri.WorldGrayCanvas.png)
+
+![Esri.WorldTerrain](images/Esri.WorldTerrain.png)
+
+![Esri.WorldTopoMap](images/Esri.WorldTopoMap.png)
+
+![providers$CartoDB.Positron](images/providers$CartoDB.Positron.png)
+
+![providers$Stadia.StamenToner](images/providers$Stadia.StamenToner.png)
+
+
+![providers$Stadia.StamenTonerLabels](images/providers$Stadia.StamenTonerLabels.png)
+
+![providers$Stadia.StamenTonerLines](images/providers$Stadia.StamenTonerLines.png)
+
+![USGS.USTopo](images/USGS.USTopo.png)
+
+:::
+
+</center>
 
 
 ## Row {height=15%}
