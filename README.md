@@ -35,6 +35,7 @@
 - [Posit blog, building a reporting infrastructure with quarto](https://posit.co/blog/building-a-reporting-infrastructure-with-quarto/)
 - [2022 talk by Daniel Chen at pydata 2022]( https://github.com/chendaniely/pydata-nyc-2022-python_quarto) and [the recording](https://www.youtube.com/watch?v=AnrGW8zoLx8)
 - [2022 topic building websites with quarto](https://rstudio-conf-2022.github.io/get-started-quarto/materials/06-websites.html#/websites) 
+- [Making pretty pdf's with quarto](https://nrennie.rbind.io/blog/making-pretty-pdf-quarto/) 
 
 From Posit conf: 
 

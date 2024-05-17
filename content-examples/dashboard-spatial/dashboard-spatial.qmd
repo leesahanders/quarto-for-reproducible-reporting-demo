@@ -230,7 +230,6 @@ leaflet(data = uv_df_daily) %>%
   addTiles() %>%
   addProviderTiles("CartoDB.DarkMatter") %>% 
   #addProviderTiles(providers$Stadia.AlidadeSmoothDark) %>% 
-  # Stadia_AlidadeSmoothDark
   # addTiles(providers$Stadia.StamenToner, group = "Toner") %>%
   #addProviderTiles(providers$Thunderforest_TransportDark) %>%
   # addProviderTiles("Thunderforest_TransportDark") %>%

@@ -12,7 +12,7 @@ css: styles.css
 <h1>Content</h1>
 
 ::: increased-font-size
-Quarto is an exciting new content framework by Posit and open source developers to help you create phenomenal things. Below is a collection of Posit Connect Quarto hosted content, showcasing the many different content types. 
+Quarto is an exciting content framework by Posit and open source developers to help you create *phenomenal* outputs ranging from web sites, to documents, blog posts, books, and more. Below is a collection of Posit Connect Quarto hosted content. 
 
 These examples are hosted on Posit Test Drive, a limited demo environment hosted by Posit to help you learn more and try out the various features of the professional products.
 
@@ -21,9 +21,6 @@ Check them out and have fun!
 
 <br>
 
-## Server content using quarto card-group
-
-Why don't the links and text get rendered?
 
 ```{r}
 #| echo: false
@@ -46,6 +43,121 @@ text <- c("hello")
 # Columns that matter: app_mode, r_version, py_version, r_environment_management, py_environment_management, content_url, dashboard_url
 ```
 
+## Dashboards {.tabset}
+
+### Webinar
+
+::: card-group
+::: card
+
+**Literate Programming with Quarto**
+
+![](thumbnails/placeholder.png){fig-align="center" width=200}
+<a href="https://smiling-shark.staging.eval.posit.co/pub/connect/#/apps/f55cdaed-c13e-4838-b466-c288e021f5ee/access/4" class="stretched-link"></a>
+
+[Viewer link]("https://smiling-shark.staging.eval.posit.co/pub/python/quarto-lightbox/")
+:::
+:::
+
+### Gallery
+
+### Learn more
+
+
+## Reports {.tabset}
+
+### Webinar
+
+::: card-group
+::: card
+
+**Literate Programming with Quarto**
+
+![](thumbnails/placeholder.png){fig-align="center" width=200}
+<a href="https://smiling-shark.staging.eval.posit.co/pub/connect/#/apps/f55cdaed-c13e-4838-b466-c288e021f5ee/access/4" class="stretched-link"></a>
+
+[Viewer link]("https://smiling-shark.staging.eval.posit.co/pub/python/quarto-lightbox/")
+:::
+:::
+
+### Gallery
+
+### Learn more
+
+
+## Emails {.tabset}
+
+### Webinar
+
+::: card-group
+::: card
+
+**Literate Programming with Quarto**
+
+![](thumbnails/placeholder.png){fig-align="center" width=200}
+<a href="https://smiling-shark.staging.eval.posit.co/pub/connect/#/apps/f55cdaed-c13e-4838-b466-c288e021f5ee/access/4" class="stretched-link"></a>
+
+[Viewer link]("https://smiling-shark.staging.eval.posit.co/pub/python/quarto-lightbox/")
+:::
+:::
+
+### Gallery
+
+### Learn more
+
+
+## Presentations {.tabset}
+
+### Webinar
+
+::: card-group
+::: card
+
+**Literate Programming with Quarto**
+
+![](thumbnails/placeholder.png){fig-align="center" width=200}
+<a href="https://smiling-shark.staging.eval.posit.co/pub/connect/#/apps/f55cdaed-c13e-4838-b466-c288e021f5ee/access/4" class="stretched-link"></a>
+
+[Viewer link]("https://smiling-shark.staging.eval.posit.co/pub/python/quarto-lightbox/")
+:::
+:::
+
+### Gallery
+
+### Learn more
+
+
+## Websites {.tabset}
+
+### Webinar
+
+::: card-group
+::: card
+
+**Literate Programming with Quarto**
+
+![](thumbnails/placeholder.png){fig-align="center" width=200}
+<a href="https://smiling-shark.staging.eval.posit.co/pub/connect/#/apps/f55cdaed-c13e-4838-b466-c288e021f5ee/access/4" class="stretched-link"></a>
+
+[Viewer link]("https://smiling-shark.staging.eval.posit.co/pub/python/quarto-lightbox/")
+:::
+:::
+
+### Gallery
+
+
+
+### Learn more
+
+
+
+
+
+
+## Server content using quarto card-group
+
+
+
 
 ### Examples
 
@@ -57,6 +169,8 @@ text <- c("hello")
 #| results: asis
 #| fig-width: 14
 #| fig-height: 6
+
+# Why don't the links and text get rendered?
 
 for(i in 1:ceiling(nrow(all_content)/5)){
   # Every 5 cards start a new row

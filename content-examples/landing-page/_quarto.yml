@@ -4,6 +4,7 @@ project:
 website:
   title: "Reproduceable Reporting With Quarto"
   navbar:
+      logo: /img/quarto-logo.png
       left:
       - href: landing.qmd
         text: Slides
