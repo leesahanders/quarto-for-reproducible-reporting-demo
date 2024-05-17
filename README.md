@@ -156,6 +156,8 @@ The landing page is deployed last, by setting it to depend on a notification of 
     runs-on: ubuntu-latest
 ```
 
+### Content Name 
+
 Connect currently lacks a supported way to deploy content while setting:
 
 - custom content URLs
@@ -217,14 +219,78 @@ curl --silent --show-error -L --max-redirs 0 --fail -X GET \
 # => ]
 ```
 
+### Adding a step to update the manifest.json 
+
+This was omitted in order to speed up publishing, but here is an example that could be followed to add it back in (particularly useful if also wanting to implement any testing): 
+
+```
+  pub-email-conditional:
+    name: pub-email-conditional
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: r-lib/actions/setup-pandoc@v2
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: 4.3.1
+          py-version: 3.10.12
+          use-public-rspm: true
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+      - name: Install setup-connect
+        uses: rstudio/actions/setup-connect@main
+      - name: Setup renv environment
+        uses: r-lib/actions/setup-renv@v2
+      - name: Install packages
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          packages: |
+            any::rsconnect 
+            any::dplyr
+      - name: Install rsconnect package
+        run: Rscript --vanilla -e "install.packages('rsconnect', repos=c(CRAN = 'https://packagemanager.posit.co/cran/__linux__/noble/latest'))"
+      - name: Version rsconnect package
+        run: Rscript --vanilla -e "packageVersion('rsconnect')"
+      - name: Update lock file 
+        run: Rscript --vanilla -e "renv::snapshot()"
+      - name: Create manifest.json
+        shell: Rscript {0}
+        run: |
+          rsconnect::writeManifest()
+      - name: Publish the app to Connect
+        uses: rstudio/actions/connect-publish@main
+        with:
+          url: ${{ secrets.CONNECT_URL }}
+          api-key: ${{ secrets.CONNECT_API_KEY }}
+          access-type: all
+          show-logs: TRUE
+          force: FALSE
+          dir: ./content-examples/email-conditional/:email-conditional
+      - name: Use Connect API to set content title
+        run: |
+          export DATA='{"title": "Using an RSS feed to send conditional emails when a blog has new posts"}'
+          export CONTENT_NAME='email-conditional'
+          export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
+          echo contentguid
+          curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
+```
+
 ## New server
 
-For uploading to a new server, follow this checklist: 
+For uploading to a new server, follow these steps: 
+
+Get the Connect URL and generate the API key with a publisher or admin account. 
 
 Update the environment variables as secrets on github actions: 
 
-- CONNECT_URL=<redacted>
-- CONNECT_SERVER=<redacted>
-- CONNECT_API_KEY=<redacted>
+- `CONNECT_URL=<redacted>`
+- `CONNECT_SERVER=<redacted>`
+- `CONNECT_API_KEY=<redacted>`
+
+Add tags on the server following this naming convention (or a different one and update the deploy.yaml script under github actions): 
+
+- `Webinar |-| Quarto Lisa`
 
 
