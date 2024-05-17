@@ -20,6 +20,15 @@ format:
 execute:
   echo: true
 editor: source
+resource_files: 
+- "mermaid.mmd"
+- "linux-kernel-diagram.dot"
+- "img/neutral.png"
+- "img/forest.png"
+- "img/default.png"
+- "img/dark.png"
+- "img/mermaid-logo.svg"
+- "img/mermaid-logo.svg"
 ---
 
 ![](img/mermaid-logo.svg){fig-align="center" width=150}
