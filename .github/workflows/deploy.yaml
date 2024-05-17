@@ -1,5 +1,5 @@
 name: connect-publish
-run-name: ${{ github.actor }} is testing out GitHub Actions
+run-name: ${{ github.actor }} is using GitHub Actions for publishing to Connect
 on:
   workflow_dispatch:
     inputs:
@@ -13,8 +13,8 @@ on:
     branches: [master, main]
 
 jobs:
-  connect-publish-report-mermaid-diagrams:
-    name: connect-publish-report-mermaid-diagrams
+  pub-report-mermaid-diagrams:
+    name: pub-report-mermaid-diagrams
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -39,8 +39,8 @@ jobs:
           export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
           echo contentguid
           curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
-  connect-publish-website:
-    name: connect-publish-website
+  pub-website:
+    name: pub-website
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -65,8 +65,8 @@ jobs:
           export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
           echo contentguid
           curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
-  connect-publish-report-lightbox:
-    name: connect-publish-report-lightbox
+  pub-report-lightbox:
+    name: pub-report-lightbox
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -91,8 +91,8 @@ jobs:
           export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
           echo contentguid
           curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
-  connect-publish-report-hybrid-knitr:
-    name: connect-publish-report-hybrid-knitr
+  pub-report-hybrid-knitr:
+    name: pub-report-hybrid-knitr
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -117,8 +117,8 @@ jobs:
           export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
           echo contentguid
           curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
-  connect-publish-report-hybrid-jupyter:
-    name: connect-publish-report-hybrid-jupyter
+  pub-report-hybrid-jupyter:
+    name: pub-report-hybrid-jupyter
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -137,8 +137,8 @@ jobs:
           echo contentguid
           curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
 
-  connect-publish-report-commentable:
-    name: connect-publish-report-commentable
+  pub-report-commentable:
+    name: pub-report-commentable
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -164,8 +164,8 @@ jobs:
           echo contentguid
           curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
 
-  connect-publish-report-branded:
-    name: connect-publish-report-branded
+  pub-report-branded:
+    name: pub-report-branded
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -191,8 +191,8 @@ jobs:
           echo contentguid
           curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
 
-  connect-publish-presentation:
-    name: connect-publish-presentation
+  pub-presentation:
+    name: pub-presentation
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -210,8 +210,16 @@ jobs:
           show-logs: TRUE
           force: FALSE
           dir: ./content-examples/presentation/:presentation
-  connect-publish-email-programmatic:
-    name: connect-publish-email-programmatic
+      - name: Use Connect API to set content title
+        run: |
+          export DATA='{"title": "Sample Branded Presentation"}'
+          export CONTENT_NAME='presentation'
+          export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
+          echo contentguid
+          curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
+
+  pub-email-programmatic:
+    name: pub-email-programmatic
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -229,8 +237,8 @@ jobs:
           show-logs: TRUE
           force: FALSE
           dir: ./content-examples/email-programmatic/:email-programmatic
-  connect-publish-email-plots:
-    name: connect-publish-email-plots
+  pub-email-plots:
+    name: pub-email-plots
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -256,8 +264,8 @@ jobs:
           echo contentguid
           curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
 
-  connect-publish-email-conditional:
-    name: connect-publish-email-conditional
+  pub-email-conditional:
+    name: pub-email-conditional
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -308,8 +316,8 @@ jobs:
           echo contentguid
           curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
 
-  connect-publish-dashboard:
-    name: connect-publish-dashboard
+  pub-dashboard:
+    name: pub-dashboard
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -335,8 +343,8 @@ jobs:
           echo contentguid
           curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
 
-  connect-publish-dashboard-spatial:
-    name: connect-publish-dashboard-spatial
+  pub-dashboard-spatial:
+    name: pub-dashboard-spatial
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -363,8 +371,8 @@ jobs:
           curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
 
   notify:
-    needs: [connect-publish-dashboard,connect-publish-email-conditional,connect-publish-email-plots,connect-publish-email-programmatic,connect-publish-presentation,connect-publish-report-branded,connect-publish-report-commentable,connect-publish-report-hybrid-jupyter,connect-publish-report-hybrid-knitr,connect-publish-report-lightbox,connect-publish-website,connect-publish-report-mermaid-diagrams]
-    name: connect-publish-landing-page
+    needs: [pub-dashboard,pub-dashboard-spatial,pub-email-conditional,pub-email-plots,pub-email-programmatic,pub-presentation,pub-report-branded,pub-report-commentable,pub-report-hybrid-jupyter,pub-report-hybrid-knitr,pub-report-lightbox,pub-website,pub-report-mermaid-diagrams]
+    name: pub-landing-page
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
