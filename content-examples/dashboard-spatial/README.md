@@ -2,7 +2,6 @@
 
 **Access the dashboard at: <>**
 
-
 ## TODO
 
 -[] Fix zipcode to lat, long lookup, using the census API's: <https://www.census.gov/data/developers/data-sets.html> 
@@ -38,8 +37,27 @@ Inspired by Jeremy Allen's Whale dashboard: <https://github.com/jeremy-allen/wha
 
 Notes for the developer:
 
-This presentation is published to the RStudio demo server using push button publishing from the RStudio IDE.
+This content needs to be deployed with an image that supports the system dependencies for the curl package. For example: <ghcr.io/npelikan/pwb-session-daily:latest> or building your own from <https://github.com/sol-eng/pro-product-images> 
+
+The [image can be declared](https://docs.posit.co/connect/user/publishing-r/index.html#target-image) when writing the rsconnect manifest: 
+
+```r
+rsconnect::writeManifest(image = "ghcr.io/npelikan/pwb-session-daily:latest")
+
+rsconnect::writeManifest(...,
+    image = "ghcr.io/rstudio/content-base:r4.0.5-py3.8.8-jammy")
+rsconnect::deployApp(...,
+    image = "ghcr.io/rstudio/content-base:r4.0.5-py3.8.8-jammy")
+rsconnect::deployAPI(...,
+    image = "ghcr.io/rstudio/content-base:r4.0.5-py3.8.8-jammy")
+rsconnect::deployDoc(...,
+    image = "ghcr.io/rstudio/content-base:r4.0.5-py3.8.8-jammy")
+rsconnect::deploySite(...,
+    image = "ghcr.io/rstudio/content-base:r4.0.5-py3.8.8-jammy")
+```
 
 It is also published to my quarto pub space. I run quarto publish quarto-pub from terminal after `cd`-ing in to the directory. Answer "Y" to overwrite my previous site and to use the correct account. For example, to publish this slide deck I'm running: `quarto publish quarto-pub 2024-git-demo.qmd`. It will need to be a quarto project. If you have an existing directory of documents that you want to treat as a project just invoke `quarto create-project` with no arguments from within the directory.
 
 I can access my account and see my deployments at https://questionable.quarto.pub/.
+
+

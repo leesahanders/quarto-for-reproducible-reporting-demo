@@ -1,0 +1,14 @@
+name: spatial_dashboard_uv_index
+title: Spatial Dashboard: UV Index
+username: lisa.anders
+account: lisa.anders
+server: pub.palm.ptd.posit.it
+hostUrl: https://pub.palm.ptd.posit.it/__api__
+appId: 100
+bundleId: 235
+url: https://pub.palm.ptd.posit.it/content/662b9c30-fbfc-4671-86f3-e16759d50044/
+version: 1
+quarto_version: 1.4.550
+quarto_engines: knitr
+asMultiple: FALSE
+asStatic: FALSE
