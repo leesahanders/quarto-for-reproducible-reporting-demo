@@ -39,6 +39,7 @@ jobs:
           export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
           echo contentguid
           curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
+          export DATA2='{"tag_id": "Quarto Report with Mermaid Diagrams"}'
   pub-website:
     name: pub-website
     runs-on: ubuntu-latest
@@ -313,7 +314,7 @@ jobs:
           dir: ./content-examples/dashboard/:dashboard
       - name: Use Connect API to set content title
         run: |
-          export DATA='{"title": "My Custom Quarto Dashboard"}'
+          export DATA='{"title": "Custom Quarto Dashboard"}'
           export CONTENT_NAME='dashboard'
           export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
           echo contentguid
@@ -340,7 +341,7 @@ jobs:
           dir: ./content-examples/dashboard-spatial/:dashboard-spatial
       - name: Use Connect API to set content title
         run: |
-          export DATA='{"title": "My Custom Quarto Dashboard"}'
+          export DATA='{"title": "Quarto Dashboard with Spatial Map"}'
           export CONTENT_NAME='dashboard-spatial'
           export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
           echo contentguid
