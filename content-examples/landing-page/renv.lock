@@ -11,14 +11,14 @@
   "Packages": {
     "DBI": {
       "Package": "DBI",
-      "Version": "1.1.3",
+      "Version": "1.2.2",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R",
         "methods"
       ],
-      "Hash": "b2866e62bab9378c3cc9476a1954226b"
+      "Hash": "164809cd72e1d5160b4cb3aa57f510fe"
     },
     "MASS": {
       "Package": "MASS",
@@ -377,14 +377,14 @@
     },
     "data.table": {
       "Package": "data.table",
-      "Version": "1.14.8",
+      "Version": "1.15.4",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R",
         "methods"
       ],
-      "Hash": "b4c06e554f33344e044ccd7fdca750a9"
+      "Hash": "8ee9ac56ef633d0c7cab8b2ca87d683e"
     },
     "dbplyr": {
       "Package": "dbplyr",

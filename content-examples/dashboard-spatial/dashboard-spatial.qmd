@@ -228,7 +228,7 @@ uv_hourly <- uv_hourly %>%
 
 leaflet(data = uv_df_daily) %>%
   addTiles() %>%
-  addProviderTiles(CartoDB.DarkMatter) %>% 
+  addProviderTiles("CartoDB.DarkMatter") %>% 
   #addProviderTiles(providers$Stadia.AlidadeSmoothDark) %>% 
   # Stadia_AlidadeSmoothDark
   # addTiles(providers$Stadia.StamenToner, group = "Toner") %>%
