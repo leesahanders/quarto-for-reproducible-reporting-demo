@@ -1,0 +1,14 @@
+name: dashboard-spatial
+title: dashboard-spatial
+username: admin1
+account: admin1
+server: stalwart-tarsier.staging.eval.posit.co
+hostUrl: https://stalwart-tarsier.staging.eval.posit.co/pub/__api__
+appId: 12
+bundleId: 12
+url: https://stalwart-tarsier.staging.eval.posit.co/pub/content/727d7ddc-3e10-4b27-bedb-2e97922f46f7/
+version: 1
+quarto_version: 1.4.550
+quarto_engines: knitr
+asMultiple: FALSE
+asStatic: FALSE

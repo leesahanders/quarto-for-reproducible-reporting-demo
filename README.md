@@ -136,7 +136,7 @@ setwd("C:/Users/LisaAnders/Documents/git/quarto-for-reproducible-reporting-demo"
 getwd()
 ```
 
-Each piece of content was also made it's own project, so we can use that to walk into each one to update the `renv.lock` and `manifest.json` instead. 
+Each piece of content was also made its own project, so we can use that to walk into each one to update the `renv.lock` and `manifest.json` instead. 
 
 ## Github actions
 
@@ -166,7 +166,7 @@ Connect currently lacks a supported way to deploy content while setting:
 
 There are two options. 
 
-1. This project is deploying the content then using the Connect API to update the content title. 
+1. This project is using the Connect API to update the content title after deploying. 
 
 ```
 - name: Use Connect API to set content title
@@ -184,6 +184,38 @@ There are two options.
   - `requirements.txt` or `renv.lock` files should also be included as appropriate
   - content should be self-contained
 
+
+### Setting tags 
+
+Add a tag hierarchy: 
+
+Webinar |-| Quarto Lisa
+[Assign the tag to the content item)[https://docs.posit.co/connect/cookbook/organizing/#tags-assigning] 
+
+```
+export DATA='{"tag_id": "15"}'
+curl --silent --show-error -L --max-redirs 0 --fail -X POST \
+    -H "Authorization: Key ${CONNECT_API_KEY}" \
+    --data "${DATA}" \
+    "${CONNECT_SERVER}__api__/v1/content/ccbd1a41-90a0-4b7b-89c7-16dd9ad47eb5/tags"
+# =>
+```
+
+We can then list all content associated with those tags: 
+
+```
+curl --silent --show-error -L --max-redirs 0 --fail -X GET \
+    -H "Authorization: Key ${CONNECT_API_KEY}" \
+    "${CONNECT_SERVER}__api__/v1/tags/15/content"
+# => [
+# =>   {
+# =>     "guid": "ccbd1a41-90a0-4b7b-89c7-16dd9ad47eb5",
+# =>     "name": "shakespeare",
+# =>     "title": "Shakespeare Word Clouds",
+# =>     ...
+# =>   }
+# => ]
+```
 
 ## New server
 

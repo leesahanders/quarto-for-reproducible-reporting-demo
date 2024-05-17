@@ -46,8 +46,9 @@ library(leaflet)
 library(gt)
 library(jsonlite)
 library(data.table)
-library(basemaps)
+#library(basemaps)
 library(DT)
+library(pak)
 
 samplesize = 20
 

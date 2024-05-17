@@ -134,18 +134,6 @@
       ],
       "Hash": "ca98390ad1cef2a5a609597b49d3d042"
     },
-    "abind": {
-      "Package": "abind",
-      "Version": "1.4-5",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "methods",
-        "utils"
-      ],
-      "Hash": "4f57884290cc75ab22f4af9e9d4ca862"
-    },
     "askpass": {
       "Package": "askpass",
       "Version": "1.2.0",
@@ -175,27 +163,6 @@
         "R"
       ],
       "Hash": "543776ae6848fde2f48ff3816d0628bc"
-    },
-    "basemaps": {
-      "Package": "basemaps",
-      "Version": "0.0.7",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "curl",
-        "grDevices",
-        "httr",
-        "magick",
-        "methods",
-        "pbapply",
-        "sf",
-        "slippymath",
-        "stars",
-        "terra",
-        "utils"
-      ],
-      "Hash": "c8aa96081bd449bc904dcdb3018957b3"
     },
     "bigD": {
       "Package": "bigD",
@@ -1152,18 +1119,6 @@
       ],
       "Hash": "e25f18436e3efd42c7c590a1c4c15390"
     },
-    "magick": {
-      "Package": "magick",
-      "Version": "2.8.3",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "Rcpp",
-        "curl",
-        "magrittr"
-      ],
-      "Hash": "3f6bcbb8a0c1c9365b2f02d5d04ad7bc"
-    },
     "magrittr": {
       "Package": "magrittr",
       "Version": "2.0.3",
@@ -1290,16 +1245,17 @@
       ],
       "Hash": "55ddd2d4a1959535f18393478b0c14a6"
     },
-    "pbapply": {
-      "Package": "pbapply",
-      "Version": "1.7-2",
+    "pak": {
+      "Package": "pak",
+      "Version": "0.7.2",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R",
-        "parallel"
+        "tools",
+        "utils"
       ],
-      "Hash": "68a2d681e10cf72f0afa1d84d45380e5"
+      "Hash": "93288e19455e09f590b56db4d50248fe"
     },
     "pillar": {
       "Package": "pillar",
@@ -1542,13 +1498,13 @@
     },
     "renv": {
       "Package": "renv",
-      "Version": "1.0.5",
+      "Version": "1.0.7",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "utils"
       ],
-      "Hash": "32c3f93e8360f667ca5863272ec8ba6a"
+      "Hash": "397b7b2a265bc5a7a06852524dabae20"
     },
     "reprex": {
       "Package": "reprex",
@@ -1739,20 +1695,6 @@
       ],
       "Hash": "ad57b543f7c3fca05213ba78ff63df9b"
     },
-    "slippymath": {
-      "Package": "slippymath",
-      "Version": "0.3.1",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "png",
-        "purrr",
-        "raster",
-        "stats"
-      ],
-      "Hash": "abdaf883004a4791545655d79ca3aae0"
-    },
     "sp": {
       "Package": "sp",
       "Version": "2.1-4",
@@ -1769,23 +1711,6 @@
         "utils"
       ],
       "Hash": "75940133cca2e339afce15a586f85b11"
-    },
-    "stars": {
-      "Package": "stars",
-      "Version": "0.6-5",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "abind",
-        "classInt",
-        "methods",
-        "parallel",
-        "rlang",
-        "sf",
-        "units"
-      ],
-      "Hash": "7ce64dc10f536ec74475652a2fd764fe"
     },
     "stringi": {
       "Package": "stringi",
