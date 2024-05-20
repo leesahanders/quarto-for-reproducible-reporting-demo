@@ -91,124 +91,6 @@ text <- c("hello")
 
 :::
 
-## Reports 
-
-::: {.panel-tabset group="reports"}
-
-### Webinar Examples
-
-::: card-group
-::: card
-
-**`{r} all_content[all_content$name =="dashboard-spatial",]$title`**
-
-![](thumbnails/placeholder.png){fig-align="center" width=200}
-
-<a href="`r all_content[all_content$name =="dashboard-spatial",]$dashboard_url`" class="stretched-link"></a>
-
-:::
-
-::: card
-
-**`{r} all_content[all_content$name =="dashboard-spatial",]$title`**
-
-![](thumbnails/placeholder.png){fig-align="center" width=200}
-
-<a href="`r all_content[all_content$name =="dashboard-spatial",]$dashboard_url`" class="stretched-link"></a>
-
-:::
-
-::: card
-
-**`{r} all_content[all_content$name =="dashboard-spatial",]$title`**
-
-![](thumbnails/placeholder.png){fig-align="center" width=200}
-
-<a href="`r all_content[all_content$name =="dashboard-spatial",]$dashboard_url`" class="stretched-link"></a>
-
-:::
-
-::: card
-
-**`{r} all_content[all_content$name =="dashboard-spatial",]$title`**
-
-![](thumbnails/placeholder.png){fig-align="center" width=200}
-
-<a href="`r all_content[all_content$name =="dashboard-spatial",]$dashboard_url`" class="stretched-link"></a>
-
-:::
-
-::: card
-
-**`{r} all_content[all_content$name =="dashboard-spatial",]$title`**
-
-![](thumbnails/placeholder.png){fig-align="center" width=200}
-
-<a href="`r all_content[all_content$name =="dashboard-spatial",]$dashboard_url`" class="stretched-link"></a>
-
-:::
-
-::: card
-
-**`{r} all_content[all_content$name =="dashboard-spatial",]$title`**
-
-![](thumbnails/placeholder.png){fig-align="center" width=200}
-
-<a href="`r all_content[all_content$name =="dashboard-spatial",]$dashboard_url`" class="stretched-link"></a>
-
-:::
-:::
-
-### Community Examples
-
-### Learn more
-
-:::
-
-## Emails 
-
-::: {.panel-tabset group="emails"}
-
-### Webinar Examples
-
-::: card-group
-::: card
-
-**`{r} all_content[all_content$name =="email-plots",]$title`**
-
-![](thumbnails/placeholder.png){fig-align="center" width=200}
-
-<a href="`r all_content[all_content$name =="email-plots",]$dashboard_url`" class="stretched-link"></a>
-
-:::
-
-::: card
-
-**`{r} all_content[all_content$name =="email-programmatic",]$title`**
-
-![](thumbnails/placeholder.png){fig-align="center" width=200}
-
-<a href="`r all_content[all_content$name =="email-programmatic",]$dashboard_url`" class="stretched-link"></a>
-
-:::
-
-::: card
-
-**`{r} all_content[all_content$name =="email-conditional",]$title`**
-
-![](thumbnails/placeholder.png){fig-align="center" width=200}
-
-<a href="`r all_content[all_content$name =="email-conditional",]$dashboard_url`" class="stretched-link"></a>
-
-:::
-:::
-
-### Community Examples
-
-### Learn more
-
-:::
-
 ## Presentations 
 
 ::: {.panel-tabset group="presentations"}
@@ -232,6 +114,135 @@ text <- c("hello")
 ### Learn more
 
 :::
+
+## Reports 
+
+::: {.panel-tabset group="reports"}
+
+### Webinar Examples
+
+::: card-group
+::: card
+
+**`{r} all_content[all_content$name =="report-basic",]$title`**
+
+![](thumbnails/placeholder.png){fig-align="center" width=200}
+
+<a href="`r all_content[all_content$name =="report-basic",]$dashboard_url`" class="stretched-link"></a>
+
+:::
+
+::: card
+
+**`{r} all_content[all_content$name =="report-branded",]$title`**
+
+![](thumbnails/placeholder.png){fig-align="center" width=200}
+
+<a href="`r all_content[all_content$name =="report-branded",]$dashboard_url`" class="stretched-link"></a>
+
+:::
+
+::: card
+
+**`{r} all_content[all_content$name =="report-commentable",]$title`**
+
+![](thumbnails/placeholder.png){fig-align="center" width=200}
+
+<a href="`r all_content[all_content$name =="report-commentable",]$dashboard_url`" class="stretched-link"></a>
+
+:::
+
+::: card
+
+**`{r} all_content[all_content$name =="report-lightbox",]$title`**
+
+![](thumbnails/placeholder.png){fig-align="center" width=200}
+
+<a href="`r all_content[all_content$name =="report-lightbox",]$dashboard_url`" class="stretched-link"></a>
+
+:::
+
+::: card
+
+**`{r} all_content[all_content$name =="report-mermaid-diagrams",]$title`**
+
+![](thumbnails/placeholder.png){fig-align="center" width=200}
+
+<a href="`r all_content[all_content$name =="report-mermaid-diagrams",]$dashboard_url`" class="stretched-link"></a>
+
+:::
+
+::: card
+
+**`{r} all_content[all_content$name =="report-hybrid-knitr",]$title`**
+
+![](thumbnails/placeholder.png){fig-align="center" width=200}
+
+<a href="`r all_content[all_content$name =="report-hybrid-knitr",]$dashboard_url`" class="stretched-link"></a>
+
+:::
+
+::: card
+
+**`{r} all_content[all_content$name =="report-hybrid-jupyter",]$title`**
+
+![](thumbnails/placeholder.png){fig-align="center" width=200}
+
+<a href="`r all_content[all_content$name =="report-hybrid-jupyter",]$dashboard_url`" class="stretched-link"></a>
+
+:::
+:::
+
+### Community Examples
+
+### Learn more
+
+:::
+
+## Emails 
+
+::: {.panel-tabset group="emails"}
+
+### Webinar Examples
+
+::: card-group
+::: card
+
+**`{r} all_content[all_content$name =="email-plots",]$title`**
+
+![](content-img/email-plots.png){fig-align="center" width=200}
+
+<a href="`r all_content[all_content$name =="email-plots",]$dashboard_url`" class="stretched-link"></a>
+
+:::
+
+::: card
+
+**`{r} all_content[all_content$name =="email-programmatic",]$title`**
+
+![](content-img/email-programmatic.png){fig-align="center" width=200}
+
+<a href="`r all_content[all_content$name =="email-programmatic",]$dashboard_url`" class="stretched-link"></a>
+
+:::
+
+::: card
+
+**`{r} all_content[all_content$name =="email-conditional",]$title`**
+
+![](content-img/email-conditional.png){fig-align="center" width=200}
+
+<a href="`r all_content[all_content$name =="email-conditional",]$dashboard_url`" class="stretched-link"></a>
+
+:::
+:::
+
+### Community Examples
+
+### Learn more
+
+:::
+
 
 ## Websites
 

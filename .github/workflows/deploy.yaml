@@ -264,6 +264,15 @@ jobs:
           show-logs: TRUE
           force: FALSE
           dir: ./content-examples/email-programmatic/:email-programmatic
+      - name: Use Connect API to set content title
+        run: |
+          export DATA='{"title": "Email with contents programmatically generated"}'
+          export CONTENT_NAME='email-programmatic'
+          export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
+          echo contentguid
+          curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
+          
+          
   pub-email-plots:
     name: pub-email-plots
     runs-on: ubuntu-latest
