@@ -1,0 +1,318 @@
+---
+title: "Dynamically Generated Report"
+author: "Lisa Anders" 
+date: last-modified
+format: 
+  html:
+    anchor-sections: true
+    toc: true
+    toc-location: right
+    toc-title: "Contents"
+    link-external-icon: true
+    link-external-newwindow: true
+    other-links:
+      - text: Check out the documentation
+        href: https://quarto.org/docs/authoring/diagrams.html
+    theme: 
+      light: morph
+      dark: cyborg
+execute:
+  echo: true
+editor: source
+---
+
+
+
+```{r}
+#| echo: false
+#| include: false
+
+library(connectapi)
+library(tidyverse)
+
+client <- connectapi::connect()
+
+# get all content
+all_content <- connectapi::get_content(client, limit = Inf) %>% 
+  filter(app_mode %in% "quarto-static") %>% 
+  mutate(row_key = row_number())
+
+languages <- c("R", "Python")
+sections <- c("Static Documents", "Interactive Applications", "API's", "Pins")
+text <- c("hello")
+
+# Columns that matter: app_mode, r_version, py_version, r_environment_management, py_environment_management, content_url, dashboard_url
+
+# Resources
+# adding output asis to inline code: https://github.com/quarto-dev/quarto-cli/discussions/4333
+```
+
+
+
+
+## Server content using quarto card-group
+
+### Examples
+
+:::: {.column-body}
+
+::: {.panel-tabset}
+
+```{r}
+#| results: asis
+#| fig-width: 14
+#| fig-height: 6
+
+# Why don't the links and text get rendered?
+
+for(i in 1:ceiling(nrow(all_content)/5)){
+  # Every 5 cards start a new row
+  cat('#### ', '\n\n') # Do I need a heading here? 
+
+  content <- all_content %>%
+    filter(row_key >= i*5, row_key < i*5+5)
+    # Alternatively we could filter on something like language
+    # {if (i == "R") dplyr::filter(., r_environment_management == TRUE) else .} %>%
+    # {if (i == "Python") dplyr::filter(., py_environment_management == TRUE) else .}  
+
+  cat('\n\n')
+
+  cat('::: card-group', '\n\n')
+
+  for(t in content$id){
+
+    cat('::: card', '\n\n')
+
+    # cat(name=content[content$id ==t ,]$title)
+    # cat(type=content[content$id ==t ,]$app_mode)
+    # cat(url_viewer=content[content$id ==t ,]$content_url)
+    # cat(url_dashboard=content[content$id ==t ,]$dashboard_url)
+
+    cat('**', content[content$id ==t ,]$title, '**')
+
+    cat('\n\n')
+
+    cat('![](thumbnails/placeholder.png){fig-align="center" width=200}
+# <a href="', content[content$id ==t ,]$dashboard_url, '" class="stretched-link"></a>')
+
+    cat('\n\n')
+
+    cat('[Viewer link]("', content[content$id ==t ,]$content_url, '")')
+
+    cat('\n\n')
+
+    cat('[Dashboard link]("', content[content$id ==t ,]$dashboard_url, '")')
+
+    cat('\n\n')
+
+    #cat(tags=content[content$id ==t ,]$tags)
+
+# ![](thumbnails/placeholder.png){fig-align="center" width=200}
+# <a href="https://smiling-shark.staging.eval.posit.co/pub/connect/#/apps/24d2f5d9-a930-4345-8c30-17717b9d8d8d/access/3" class="stretched-link"></a>
+#
+# [Viewer link]("https://smiling-shark.staging.eval.posit.co/pub/r/rmd-conditional-emails/")
+# [Dashboard link]("https://smiling-shark.staging.eval.posit.co/pub/r/rmd-conditional-emails/")
+
+    cat('\n\n')
+
+    cat(':::', '\n\n')
+
+  }
+
+  cat(':::', '\n\n')
+
+  # cat('\n\n')
+}
+
+```
+
+### tabs
+
+:::: {.column-body}
+::: {.panel-tabset}
+```{r}
+#| results: asis
+#| fig-width: 14
+#| fig-height: 6
+
+for(i in languages){
+  cat('#### ', i, '\n\n')
+
+  #print(paste0(text, collapse = ""))
+
+  r_or_python <- case_when(
+    i == "R" ~ "r_environment_management",
+    i == "Python" ~ "py_environment_management",
+    TRUE ~ "other"
+  )
+
+  content <- all_content %>%
+    {if (i == "R") dplyr::filter(., r_environment_management == TRUE) else .} %>%
+    {if (i == "Python") dplyr::filter(., py_environment_management == TRUE) else .}
+
+  cat('\n\n')
+
+  cat('::: card-group', '\n\n')
+
+  for(t in content$id){
+
+    cat('::: card', '\n\n')
+
+    # cat(name=content[content$id ==t ,]$title)
+    # cat(type=content[content$id ==t ,]$app_mode)
+    # cat(url_viewer=content[content$id ==t ,]$content_url)
+    # cat(url_dashboard=content[content$id ==t ,]$dashboard_url)
+
+    cat('**', content[content$id ==t ,]$title, '**')
+
+    cat('\n\n')
+
+    cat('![](thumbnails/placeholder.png){fig-align="center" width=200}
+# <a href="', content[content$id ==t ,]$dashboard_url, '" class="stretched-link"></a>')
+
+    cat('\n\n')
+
+    cat('[Viewer link]("', content[content$id ==t ,]$content_url, '")')
+
+    cat('\n\n')
+
+    cat('[Dashboard link]("', content[content$id ==t ,]$dashboard_url, '")')
+
+    cat('\n\n')
+
+    #cat(tags=content[content$id ==t ,]$tags)
+
+# ![](thumbnails/placeholder.png){fig-align="center" width=200}
+# <a href="https://smiling-shark.staging.eval.posit.co/pub/connect/#/apps/24d2f5d9-a930-4345-8c30-17717b9d8d8d/access/3" class="stretched-link"></a>
+#
+# [Viewer link]("https://smiling-shark.staging.eval.posit.co/pub/r/rmd-conditional-emails/")
+# [Dashboard link]("https://smiling-shark.staging.eval.posit.co/pub/r/rmd-conditional-emails/")
+
+    cat('\n\n')
+
+    cat(':::', '\n\n')
+
+  }
+
+  cat(':::', '\n\n')
+
+  # cat('\n\n')
+}
+
+# Columns that matter: app_mode, r_version, py_version, r_environment_management, py_environment_management, content_url, dashboard_url
+```
+
+:::
+::::
+
+
+
+## Manual generation
+
+### Static Documents
+
+::: {.panel-tabset group="language"}
+
+### Python
+
+::: card-group
+::: card
+
+**Literate Programming with Quarto**
+
+![](thumbnails/placeholder.png){fig-align="center" width=200}
+<a href="https://smiling-shark.staging.eval.posit.co/pub/connect/#/apps/f55cdaed-c13e-4838-b466-c288e021f5ee/access/4" class="stretched-link"></a>
+
+[Viewer link]("https://smiling-shark.staging.eval.posit.co/pub/python/quarto-lightbox/")
+:::
+:::
+
+### R
+
+::: card-group
+::: card
+
+**Conditional Emails with blastula**
+
+![](thumbnails/placeholder.png){fig-align="center" width=200}
+<a href="https://smiling-shark.staging.eval.posit.co/pub/connect/#/apps/24d2f5d9-a930-4345-8c30-17717b9d8d8d/access/3" class="stretched-link"></a>
+
+[Viewer link]("https://smiling-shark.staging.eval.posit.co/pub/r/rmd-conditional-emails/")
+:::
+
+::: card
+
+**Using Databases with Posit Products**
+
+![](thumbnails/placeholder.png){fig-align="center" width=200}
+<a href="https://smiling-shark.staging.eval.posit.co/pub/connect/#/apps/39116cb5-d2f7-4492-931d-833b68d6e5e4/access/2" class="stretched-link"></a>
+
+[Viewer link]("https://smiling-shark.staging.eval.posit.co/pub/r/quarto-database/")
+:::
+
+::: card
+
+**Penguins Document**
+
+![](thumbnails/placeholder.png){fig-align="center" width=200}
+<a href="https://smiling-shark.staging.eval.posit.co/pub/connect/#/apps/4aae5018-d974-484d-bb9e-76a665d6178a/access/1" class="stretched-link"></a>
+
+[Viewer link]("https://smiling-shark.staging.eval.posit.co/pub/r/rmd-penguins/")
+:::
+:::
+:::
+
+### Interactive Applications
+
+### API's
+
+### Pins
+
+
+
+## Programmatic generation
+
+### Minimal example
+
+```{r}
+library(tidyverse)
+
+languages <- c("R", "Python")
+sections <- c("Static Documents", "Interactive Applications", "API's", "Pins")
+text <- c("hello")
+```
+
+#### tabs
+
+:::: {.column-body}
+::: {.panel-tabset}
+```{r}
+#| results: asis
+#| fig-width: 14
+#| fig-height: 6
+
+iwalk(languages, ~ {
+  cat('#### ', .y, '\n\n')
+
+  print(paste0(text, collapse = ""))
+  #print(.x)
+
+  cat('\n\n')
+
+})
+
+# Alternatively
+# for(i in languages){
+#   cat('#### ', i, '\n\n')
+#   print(paste0(text, collapse = ""))
+#   cat('\n\n')
+# }
+
+```
+
+:::
+::::
+
+
+
+

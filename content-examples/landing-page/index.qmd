@@ -9,18 +9,28 @@ css: styles.css
 
 `r knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, cache = F)`
 
-<h1>Content</h1>
+<!-- ::: {layout="[ [1,5] ]"} -->
+
+<!-- <img src="img/quarto-logo.png" class="w-75" width="50"/> -->
+
+```{r}
+#| echo: false
+#| include: false
+
+colorize <- function(string, color) {
+  string_colorized <- paste("<span style=\"color: ", color,"\">", string,"</span>",sep = "")
+  string_colorized
+}
+```
+
 
 ::: increased-font-size
-Quarto is an exciting content framework by Posit and open source developers to help you create *phenomenal* outputs ranging from web sites, to documents, blog posts, books, and more. Below is a collection of Posit Connect Quarto hosted content. 
-
-These examples are hosted on Posit Test Drive, a limited demo environment hosted by Posit to help you learn more and try out the various features of the professional products.
-
-Check them out and have fun!
+**[Quarto](https://quarto.org/)** is an exciting new content creation framework by Posit and open source developers to help you create *`r colorize("flexible", "teal")`*, *`r colorize("reproduceable", "teal")`*, and *`r colorize("beautiful", "teal")`* outputs ranging from web sites, to documents, blog posts, books, and more. Below is a collection of Quarto output examples that showcase different things, all hosted on Connect. Check them out and have fun!
 :::
 
-<br>
+<!-- ::: -->
 
+<h1>Content Examples</h1>
 
 ```{r}
 #| echo: false
@@ -41,32 +51,51 @@ sections <- c("Static Documents", "Interactive Applications", "API's", "Pins")
 text <- c("hello")
 
 # Columns that matter: app_mode, r_version, py_version, r_environment_management, py_environment_management, content_url, dashboard_url
+
+# Resources
+# adding output asis to inline code: https://github.com/quarto-dev/quarto-cli/discussions/4333
+# make asis work: https://github.com/yihui/knitr/issues/2332
 ```
 
-## Dashboards {.tabset}
+## Dashboards 
 
-### Webinar
+::: {.panel-tabset group="dashboards"}
+
+### Webinar Examples
 
 ::: card-group
 ::: card
 
-**Literate Programming with Quarto**
+**`{r} all_content[all_content$name =="dashboard",]$title`**
 
 ![](thumbnails/placeholder.png){fig-align="center" width=200}
-<a href="https://smiling-shark.staging.eval.posit.co/pub/connect/#/apps/f55cdaed-c13e-4838-b466-c288e021f5ee/access/4" class="stretched-link"></a>
 
-[Viewer link]("https://smiling-shark.staging.eval.posit.co/pub/python/quarto-lightbox/")
+<a href="`r all_content[all_content$name =="dashboard",]$dashboard_url`" class="stretched-link"></a>
+
+:::
+
+::: card
+
+**`{r} all_content[all_content$name =="dashboard-spatial",]$title`**
+
+![](thumbnails/placeholder.png){fig-align="center" width=200}
+
+<a href="`r all_content[all_content$name =="dashboard-spatial",]$dashboard_url`" class="stretched-link"></a>
+
 :::
 :::
 
-### Gallery
+### Community Examples
 
 ### Learn more
 
+:::
 
-## Reports {.tabset}
+## Reports 
 
-### Webinar
+::: {.panel-tabset group="reports"}
+
+### Webinar Examples
 
 ::: card-group
 ::: card
@@ -80,12 +109,15 @@ text <- c("hello")
 :::
 :::
 
-### Gallery
+### Community Examples
 
 ### Learn more
 
+:::
 
-## Emails {.tabset}
+## Emails 
+
+::: {.panel-tabset group="emails"}
 
 ### Webinar
 
@@ -101,14 +133,17 @@ text <- c("hello")
 :::
 :::
 
-### Gallery
+### Community Examples
 
 ### Learn more
 
+:::
 
-## Presentations {.tabset}
+## Presentations 
 
-### Webinar
+::: {.panel-tabset group="presentations"}
+
+### Webinar Examples
 
 ::: card-group
 ::: card
@@ -122,17 +157,93 @@ text <- c("hello")
 :::
 :::
 
-### Gallery
+### Community Examples
 
 ### Learn more
 
 
 ## Websites {.tabset}
 
-### Webinar
+### Webinar Examples
 
 ::: card-group
 ::: card
+
+**Literate Programming with Quarto**
+
+![](thumbnails/placeholder.png){fig-align="center" width=200}
+<a href="https://smiling-shark.staging.eval.posit.co/pub/connect/#/apps/f55cdaed-c13e-4838-b466-c288e021f5ee/access/4" class="stretched-link"></a>
+
+[Viewer link]("https://smiling-shark.staging.eval.posit.co/pub/python/quarto-lightbox/")
+:::
+:::
+
+### Community Examples
+
+
+
+### Learn more
+
+
+:::
+
+
+
+
+
+## Backup
+
+::: {.panel-tabset group="dashboards"}
+
+### Webinar Examples
+
+<!-- [Viewer link]("https://smiling-shark.staging.eval.posit.co/pub/python/quarto-lightbox/") -->
+<!-- [Developer link]("https://stalwart-tarsier.staging.eval.posit.co/pub/connect/#/apps/52cf7cce-b7d6-4808-b77f-da972a99204f") -->
+<!-- This text is a link: [Developer link]("`r all_content[all_content$name =="dashboard",]$dashboard_url`") -->
+
+::: card-group
+::: card
+
+**`{r} all_content[all_content$name =="dashboard",]$title`**
+
+![](thumbnails/placeholder.png){fig-align="center" width=200}
+
+<!-- <a href="https://stalwart-tarsier.staging.eval.posit.co/pub/connect/#/apps/52cf7cce-b7d6-4808-b77f-da972a99204f" class="stretched-link"></a> -->
+
+<a href="`r all_content[all_content$name =="dashboard",]$dashboard_url`" class="stretched-link"></a>
+
+<!-- [Developer link](`r all_content[all_content$name =="dashboard",]$dashboard_url`) -->
+
+```{r}
+#| results: asis
+
+# cat('\n\n')
+
+# paste0('<a href="',all_content[all_content$name =="dashboard",]$content_url,'" class="stretched-link"></a>')
+# print(paste0('<a href="',all_content[all_content$name =="dashboard",]$content_url,'" class="stretched-link"></a>'))
+
+# cat('\n\n')
+
+# dashboard_content_url <- all_content[all_content$name =="dashboard",]$dashboard_url
+# cat('<a href="',all_content[all_content$name =="dashboard",]$content_url,'" class="stretched-link"></a>')
+# cat('<a href="`{r} dashboard_content_url`" class="stretched-link"></a>')
+
+# cat('\n\n')
+# paste0('[Developer link]("',all_content[all_content$name =="dashboard",]$dashboard_url,'")')
+# cat('\n\n')
+```
+
+:::
+
+::: card
+
+**`{r} all_content[all_content$name =="dashboard",]$title`**
+
+![](thumbnails/placeholder.png){fig-align="center" width=200}
+
+<!-- <a href="https://stalwart-tarsier.staging.eval.posit.co/pub/connect/#/apps/52cf7cce-b7d6-4808-b77f-da972a99204f" class="stretched-link"></a> -->
+
+<a href="`r all_content[all_content$name =="dashboard",]$dashboard_url`" class="stretched-link"></a>
 
 **Literate Programming with Quarto**
 
@@ -145,313 +256,6 @@ text <- c("hello")
 
 ### Gallery
 
-
-
 ### Learn more
 
-
-
-
-
-
-## Server content using quarto card-group
-
-
-
-
-### Examples
-
-:::: {.column-body}
-
-::: {.panel-tabset}
-
-```{r}
-#| results: asis
-#| fig-width: 14
-#| fig-height: 6
-
-# Why don't the links and text get rendered?
-
-for(i in 1:ceiling(nrow(all_content)/5)){
-  # Every 5 cards start a new row
-  cat('#### ', '\n\n') # Do I need a heading here? 
-
-  content <- all_content %>%
-    filter(row_key >= i*5, row_key < i*5+5)
-    # Alternatively we could filter on something like language
-    # {if (i == "R") dplyr::filter(., r_environment_management == TRUE) else .} %>%
-    # {if (i == "Python") dplyr::filter(., py_environment_management == TRUE) else .}  
-
-  cat('\n\n')
-
-  cat('::: card-group', '\n\n')
-
-  for(t in content$id){
-
-    cat('::: card', '\n\n')
-
-    # cat(name=content[content$id ==t ,]$title)
-    # cat(type=content[content$id ==t ,]$app_mode)
-    # cat(url_viewer=content[content$id ==t ,]$content_url)
-    # cat(url_dashboard=content[content$id ==t ,]$dashboard_url)
-
-    cat('**', content[content$id ==t ,]$title, '**')
-
-    cat('\n\n')
-
-    cat('![](thumbnails/placeholder.png){fig-align="center" width=200}
-# <a href="', content[content$id ==t ,]$dashboard_url, '" class="stretched-link"></a>')
-
-    cat('\n\n')
-
-    cat('[Viewer link]("', content[content$id ==t ,]$content_url, '")')
-
-    cat('\n\n')
-
-    cat('[Dashboard link]("', content[content$id ==t ,]$dashboard_url, '")')
-
-    cat('\n\n')
-
-    #cat(tags=content[content$id ==t ,]$tags)
-
-# ![](thumbnails/placeholder.png){fig-align="center" width=200}
-# <a href="https://smiling-shark.staging.eval.posit.co/pub/connect/#/apps/24d2f5d9-a930-4345-8c30-17717b9d8d8d/access/3" class="stretched-link"></a>
-#
-# [Viewer link]("https://smiling-shark.staging.eval.posit.co/pub/r/rmd-conditional-emails/")
-# [Dashboard link]("https://smiling-shark.staging.eval.posit.co/pub/r/rmd-conditional-emails/")
-
-    cat('\n\n')
-
-    cat(':::', '\n\n')
-
-  }
-
-  cat(':::', '\n\n')
-
-  # cat('\n\n')
-}
-
-```
-
-
-
-
-
-### tabs
-
-:::: {.column-body}
-::: {.panel-tabset}
-```{r}
-#| results: asis
-#| fig-width: 14
-#| fig-height: 6
-
-for(i in languages){
-  cat('#### ', i, '\n\n')
-
-  #print(paste0(text, collapse = ""))
-
-  r_or_python <- case_when(
-    i == "R" ~ "r_environment_management",
-    i == "Python" ~ "py_environment_management",
-    TRUE ~ "other"
-  )
-
-  content <- all_content %>%
-    {if (i == "R") dplyr::filter(., r_environment_management == TRUE) else .} %>%
-    {if (i == "Python") dplyr::filter(., py_environment_management == TRUE) else .}
-
-  cat('\n\n')
-
-  cat('::: card-group', '\n\n')
-
-  for(t in content$id){
-
-    cat('::: card', '\n\n')
-
-    # cat(name=content[content$id ==t ,]$title)
-    # cat(type=content[content$id ==t ,]$app_mode)
-    # cat(url_viewer=content[content$id ==t ,]$content_url)
-    # cat(url_dashboard=content[content$id ==t ,]$dashboard_url)
-
-    cat('**', content[content$id ==t ,]$title, '**')
-
-    cat('\n\n')
-
-    cat('![](thumbnails/placeholder.png){fig-align="center" width=200}
-# <a href="', content[content$id ==t ,]$dashboard_url, '" class="stretched-link"></a>')
-
-    cat('\n\n')
-
-    cat('[Viewer link]("', content[content$id ==t ,]$content_url, '")')
-
-    cat('\n\n')
-
-    cat('[Dashboard link]("', content[content$id ==t ,]$dashboard_url, '")')
-
-    cat('\n\n')
-
-    #cat(tags=content[content$id ==t ,]$tags)
-
-# ![](thumbnails/placeholder.png){fig-align="center" width=200}
-# <a href="https://smiling-shark.staging.eval.posit.co/pub/connect/#/apps/24d2f5d9-a930-4345-8c30-17717b9d8d8d/access/3" class="stretched-link"></a>
-#
-# [Viewer link]("https://smiling-shark.staging.eval.posit.co/pub/r/rmd-conditional-emails/")
-# [Dashboard link]("https://smiling-shark.staging.eval.posit.co/pub/r/rmd-conditional-emails/")
-
-    cat('\n\n')
-
-    cat(':::', '\n\n')
-
-  }
-
-  cat(':::', '\n\n')
-
-  # cat('\n\n')
-}
-
-# Columns that matter: app_mode, r_version, py_version, r_environment_management, py_environment_management, content_url, dashboard_url
-```
-
 :::
-::::
-
-
-
-## Manual generation
-
-### Static Documents
-
-::: {.panel-tabset group="language"}
-
-### Python
-
-::: card-group
-::: card
-
-**Literate Programming with Quarto**
-
-![](thumbnails/placeholder.png){fig-align="center" width=200}
-<a href="https://smiling-shark.staging.eval.posit.co/pub/connect/#/apps/f55cdaed-c13e-4838-b466-c288e021f5ee/access/4" class="stretched-link"></a>
-
-[Viewer link]("https://smiling-shark.staging.eval.posit.co/pub/python/quarto-lightbox/")
-:::
-:::
-
-### R
-
-::: card-group
-::: card
-
-**Conditional Emails with blastula**
-
-![](thumbnails/placeholder.png){fig-align="center" width=200}
-<a href="https://smiling-shark.staging.eval.posit.co/pub/connect/#/apps/24d2f5d9-a930-4345-8c30-17717b9d8d8d/access/3" class="stretched-link"></a>
-
-[Viewer link]("https://smiling-shark.staging.eval.posit.co/pub/r/rmd-conditional-emails/")
-:::
-
-::: card
-
-**Using Databases with Posit Products**
-
-![](thumbnails/placeholder.png){fig-align="center" width=200}
-<a href="https://smiling-shark.staging.eval.posit.co/pub/connect/#/apps/39116cb5-d2f7-4492-931d-833b68d6e5e4/access/2" class="stretched-link"></a>
-
-[Viewer link]("https://smiling-shark.staging.eval.posit.co/pub/r/quarto-database/")
-:::
-
-::: card
-
-**Penguins Document**
-
-![](thumbnails/placeholder.png){fig-align="center" width=200}
-<a href="https://smiling-shark.staging.eval.posit.co/pub/connect/#/apps/4aae5018-d974-484d-bb9e-76a665d6178a/access/1" class="stretched-link"></a>
-
-[Viewer link]("https://smiling-shark.staging.eval.posit.co/pub/r/rmd-penguins/")
-:::
-:::
-:::
-
-### Interactive Applications
-
-### API's
-
-### Pins
-
-
-
-## Programmatic generation
-
-### Minimal example
-
-```{r}
-library(tidyverse)
-
-languages <- c("R", "Python")
-sections <- c("Static Documents", "Interactive Applications", "API's", "Pins")
-text <- c("hello")
-```
-
-#### tabs
-
-:::: {.column-body}
-::: {.panel-tabset}
-```{r}
-#| results: asis
-#| fig-width: 14
-#| fig-height: 6
-
-iwalk(languages, ~ {
-  cat('#### ', .y, '\n\n')
-
-  print(paste0(text, collapse = ""))
-  #print(.x)
-
-  cat('\n\n')
-
-})
-
-# Alternatively
-# for(i in languages){
-#   cat('#### ', i, '\n\n')
-#   print(paste0(text, collapse = ""))
-#   cat('\n\n')
-# }
-
-```
-
-:::
-::::
-
-
-
-
-## Server content using connectwidgets
-
-```{r}
-library(connectwidgets)
-
-client2 <- connect(
-  # server  = Sys.getenv("CONNECT_URL"),
-  # api_key = Sys.getenv("CONNECT_API_KEY")
-  # server  = Sys.getenv("CONNECT_SERVER"),
-  # api_key = Sys.getenv("CONNECT_API_KEY")
-  )
-
-all_content2 <- client2 %>%
-  content()
-
-# Filter by content_category
-
-
-```
-
-
-
-
-
-
-
-
-
