@@ -316,3 +316,74 @@ iwalk(languages, ~ {
 
 
 
+
+
+
+## Backup
+
+::: {.panel-tabset group="dashboards2"}
+
+### Webinar Examples
+
+<!-- [Viewer link]("https://smiling-shark.staging.eval.posit.co/pub/python/quarto-lightbox/") -->
+<!-- [Developer link]("https://stalwart-tarsier.staging.eval.posit.co/pub/connect/#/apps/52cf7cce-b7d6-4808-b77f-da972a99204f") -->
+<!-- This text is a link: [Developer link]("`r all_content[all_content$name =="dashboard",]$dashboard_url`") -->
+
+::: card-group
+::: card
+
+**`{r} all_content[all_content$name =="dashboard",]$title`**
+
+![](thumbnails/placeholder.png){fig-align="center" width=200}
+
+<!-- <a href="https://stalwart-tarsier.staging.eval.posit.co/pub/connect/#/apps/52cf7cce-b7d6-4808-b77f-da972a99204f" class="stretched-link"></a> -->
+
+<a href="`r all_content[all_content$name =="dashboard",]$dashboard_url`" class="stretched-link"></a>
+
+<!-- [Developer link](`r all_content[all_content$name =="dashboard",]$dashboard_url`) -->
+
+```{r}
+#| results: asis
+
+# cat('\n\n')
+
+# paste0('<a href="',all_content[all_content$name =="dashboard",]$content_url,'" class="stretched-link"></a>')
+# print(paste0('<a href="',all_content[all_content$name =="dashboard",]$content_url,'" class="stretched-link"></a>'))
+
+# cat('\n\n')
+
+# dashboard_content_url <- all_content[all_content$name =="dashboard",]$dashboard_url
+# cat('<a href="',all_content[all_content$name =="dashboard",]$content_url,'" class="stretched-link"></a>')
+# cat('<a href="`{r} dashboard_content_url`" class="stretched-link"></a>')
+
+# cat('\n\n')
+# paste0('[Developer link]("',all_content[all_content$name =="dashboard",]$dashboard_url,'")')
+# cat('\n\n')
+```
+
+:::
+
+::: card
+
+**`{r} all_content[all_content$name =="dashboard",]$title`**
+
+![](thumbnails/placeholder.png){fig-align="center" width=200}
+
+<!-- <a href="https://stalwart-tarsier.staging.eval.posit.co/pub/connect/#/apps/52cf7cce-b7d6-4808-b77f-da972a99204f" class="stretched-link"></a> -->
+
+<a href="`r all_content[all_content$name =="dashboard",]$dashboard_url`" class="stretched-link"></a>
+
+**Literate Programming with Quarto**
+
+![](thumbnails/placeholder.png){fig-align="center" width=200}
+<a href="https://smiling-shark.staging.eval.posit.co/pub/connect/#/apps/f55cdaed-c13e-4838-b466-c288e021f5ee/access/4" class="stretched-link"></a>
+
+[Viewer link]("https://smiling-shark.staging.eval.posit.co/pub/python/quarto-lightbox/")
+:::
+:::
+
+### Gallery
+
+### Learn more
+
+:::
