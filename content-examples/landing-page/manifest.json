@@ -653,40 +653,6 @@
         "RemoteSha": "0.1.3.1"
       }
     },
-    "connectwidgets": {
-      "Source": "CRAN",
-      "Repository": "https://cran.rstudio.com",
-      "description": {
-        "Package": "connectwidgets",
-        "Title": "Organize and Curate Your Content Within 'Posit Connect'",
-        "Version": "0.2.1",
-        "Authors@R": "c(\n    person(\"Brian\", \"Smith\", email = \"brian@rstudio.com\", role = c(\"aut\", \"cre\")),\n    person(\"Marcos\", \"Navarro\", email = \"marcos@rstudio.com\", role = \"aut\"),\n    person(\"David\", \"Aja\", email = \"david@rstudio.com\", role = \"ctb\"),\n    person(\"Kelly\", \"O'Briant\", email = \"kelly.obriant@rstudio.com\", role = \"ctb\"),\n    person(\"Posit\", role = \"cph\"))",
-        "Description": "A collection of helper functions and 'htmlwidgets' to help publishers\n    curate content collections on 'Posit Connect'. The components,\n    Card, Grid, Table, Search, and Filter can be used to produce a\n    showcase page or gallery contained within a static or interactive\n    R Markdown page.",
-        "License": "MIT + file LICENSE",
-        "Encoding": "UTF-8",
-        "RoxygenNote": "7.2.3",
-        "Depends": "R (>= 3.6.0)",
-        "Suggests": "knitr, lintr, rmarkdown, testthat, webmockr, withr",
-        "Imports": "R6, httr, jsonlite, tibble, htmlwidgets, reactable, dplyr,\nmagrittr, htmltools, glue, rlang, digest, crosstalk, reactR,\npurrr, bslib, sass",
-        "URL": "https://rstudio.github.io/connectwidgets/,\nhttps://github.com/rstudio/connectwidgets",
-        "VignetteBuilder": "knitr",
-        "BugReports": "https://github.com/rstudio/connectwidgets/issues",
-        "NeedsCompilation": "no",
-        "Packaged": "2023-09-20 19:29:06 UTC; bsmith",
-        "Author": "Brian Smith [aut, cre],\n  Marcos Navarro [aut],\n  David Aja [ctb],\n  Kelly O'Briant [ctb],\n  Posit [cph]",
-        "Maintainer": "Brian Smith <brian@rstudio.com>",
-        "Repository": "CRAN",
-        "Date/Publication": "2023-09-20 20:30:02 UTC",
-        "Built": "R 4.3.3; ; 2024-05-06 02:47:39 UTC; windows",
-        "RemoteType": "standard",
-        "RemotePkgRef": "connectwidgets",
-        "RemoteRef": "connectwidgets",
-        "RemoteRepos": "https://cran.rstudio.com",
-        "RemoteReposName": "CRAN",
-        "RemotePkgPlatform": "x86_64-w64-mingw32",
-        "RemoteSha": "0.2.1"
-      }
-    },
     "cpp11": {
       "Source": "CRAN",
       "Repository": "https://cran.rstudio.com",
@@ -740,32 +706,6 @@
         "Repository": "CRAN",
         "Date/Publication": "2022-09-29 16:20:24 UTC",
         "Built": "R 4.3.1; ; 2023-09-07 01:09:21 UTC; windows"
-      }
-    },
-    "crosstalk": {
-      "Source": "CRAN",
-      "Repository": "https://cran.rstudio.com",
-      "description": {
-        "Package": "crosstalk",
-        "Type": "Package",
-        "Title": "Inter-Widget Interactivity for HTML Widgets",
-        "Version": "1.2.0",
-        "Authors@R": "c(\n    person(\"Joe\", \"Cheng\", role = \"aut\", email = \"joe@rstudio.com\"),\n    person(\"Carson\", \"Sievert\", role = c(\"aut\", \"cre\"),\n    email = \"carson@rstudio.com\", comment = c(ORCID = \"0000-0002-4958-2844\")),\n    person(family = \"RStudio\", role = \"cph\"),\n    person(family = \"jQuery Foundation\", role = \"cph\",\n    comment = \"jQuery library and jQuery UI library\"),\n    person(family = \"jQuery contributors\", role = c(\"ctb\", \"cph\"),\n    comment = \"jQuery library; authors listed in inst/www/shared/jquery-AUTHORS.txt\"),\n    person(\"Mark\", \"Otto\", role = \"ctb\",\n    comment = \"Bootstrap library\"),\n    person(\"Jacob\", \"Thornton\", role = \"ctb\",\n    comment = \"Bootstrap library\"),\n    person(family = \"Bootstrap contributors\", role = \"ctb\",\n    comment = \"Bootstrap library\"),\n    person(family = \"Twitter, Inc\", role = \"cph\",\n    comment = \"Bootstrap library\"),\n    person(\"Brian\", \"Reavis\", role = c(\"ctb\", \"cph\"),\n    comment = \"selectize.js library\"),\n    person(\"Kristopher Michael\", \"Kowal\", role = c(\"ctb\", \"cph\"),\n    comment = \"es5-shim library\"),\n    person(family = \"es5-shim contributors\", role = c(\"ctb\", \"cph\"),\n    comment = \"es5-shim library\"),\n    person(\"Denis\", \"Ineshin\", role = c(\"ctb\", \"cph\"),\n    comment = \"ion.rangeSlider library\"),\n    person(\"Sami\", \"Samhuri\", role = c(\"ctb\", \"cph\"),\n    comment = \"Javascript strftime library\")\n    )",
-        "Description": "Provides building blocks for allowing HTML widgets to communicate\n    with each other, with Shiny or without (i.e. static .html files). Currently\n    supports linked brushing and filtering.",
-        "License": "MIT + file LICENSE",
-        "Imports": "htmltools (>= 0.3.6), jsonlite, lazyeval, R6",
-        "Suggests": "shiny, ggplot2, testthat (>= 2.1.0), sass, bslib",
-        "URL": "https://rstudio.github.io/crosstalk/",
-        "BugReports": "https://github.com/rstudio/crosstalk/issues",
-        "RoxygenNote": "7.1.1",
-        "Encoding": "UTF-8",
-        "NeedsCompilation": "no",
-        "Packaged": "2021-11-04 15:35:47 UTC; cpsievert",
-        "Author": "Joe Cheng [aut],\n  Carson Sievert [aut, cre] (<https://orcid.org/0000-0002-4958-2844>),\n  RStudio [cph],\n  jQuery Foundation [cph] (jQuery library and jQuery UI library),\n  jQuery contributors [ctb, cph] (jQuery library; authors listed in\n    inst/www/shared/jquery-AUTHORS.txt),\n  Mark Otto [ctb] (Bootstrap library),\n  Jacob Thornton [ctb] (Bootstrap library),\n  Bootstrap contributors [ctb] (Bootstrap library),\n  Twitter, Inc [cph] (Bootstrap library),\n  Brian Reavis [ctb, cph] (selectize.js library),\n  Kristopher Michael Kowal [ctb, cph] (es5-shim library),\n  es5-shim contributors [ctb, cph] (es5-shim library),\n  Denis Ineshin [ctb, cph] (ion.rangeSlider library),\n  Sami Samhuri [ctb, cph] (Javascript strftime library)",
-        "Maintainer": "Carson Sievert <carson@rstudio.com>",
-        "Repository": "CRAN",
-        "Date/Publication": "2021-11-04 16:30:02 UTC",
-        "Built": "R 4.3.1; ; 2023-09-07 02:28:02 UTC; windows"
       }
     },
     "curl": {
@@ -1506,34 +1446,6 @@
         "Archs": "x64"
       }
     },
-    "htmlwidgets": {
-      "Source": "CRAN",
-      "Repository": "https://cran.rstudio.com",
-      "description": {
-        "Package": "htmlwidgets",
-        "Type": "Package",
-        "Title": "HTML Widgets for R",
-        "Version": "1.6.2",
-        "Authors@R": "c(\n    person(\"Ramnath\", \"Vaidyanathan\", role = c(\"aut\", \"cph\")),\n    person(\"Yihui\", \"Xie\", role = c(\"aut\")),\n    person(\"JJ\", \"Allaire\", role = c(\"aut\")),\n    person(\"Joe\", \"Cheng\", role = c(\"aut\"), email = \"joe@rstudio.com\"),\n    person(\"Carson\", \"Sievert\", role = c(\"aut\", \"cre\"), email = \"carson@rstudio.com\", comment = c(ORCID = \"0000-0002-4958-2844\")),\n    person(\"Kenton\", \"Russell\", role = c(\"aut\", \"cph\")),\n    person(\"Ellis\", \"Hughes\", role = c(\"ctb\")),\n    person(family = \"RStudio\", role = \"cph\")\n    )",
-        "Description": "A framework for creating HTML widgets that render in various\n    contexts including the R console, 'R Markdown' documents, and 'Shiny'\n    web applications.",
-        "License": "MIT + file LICENSE",
-        "VignetteBuilder": "knitr",
-        "Imports": "grDevices, htmltools (>= 0.5.4), jsonlite (>= 0.9.16), yaml,\nknitr (>= 1.8), rmarkdown",
-        "Suggests": "testthat",
-        "Enhances": "shiny (>= 1.1)",
-        "URL": "https://github.com/ramnathv/htmlwidgets",
-        "BugReports": "https://github.com/ramnathv/htmlwidgets/issues",
-        "RoxygenNote": "7.2.3",
-        "Encoding": "UTF-8",
-        "NeedsCompilation": "no",
-        "Packaged": "2023-03-17 15:34:40 UTC; cpsievert",
-        "Author": "Ramnath Vaidyanathan [aut, cph],\n  Yihui Xie [aut],\n  JJ Allaire [aut],\n  Joe Cheng [aut],\n  Carson Sievert [aut, cre] (<https://orcid.org/0000-0002-4958-2844>),\n  Kenton Russell [aut, cph],\n  Ellis Hughes [ctb],\n  RStudio [cph]",
-        "Maintainer": "Carson Sievert <carson@rstudio.com>",
-        "Repository": "CRAN",
-        "Date/Publication": "2023-03-17 16:50:06 UTC",
-        "Built": "R 4.3.1; ; 2023-09-07 03:28:40 UTC; windows"
-      }
-    },
     "httr": {
       "Source": "CRAN",
       "Repository": "https://cran.rstudio.com",
@@ -1747,31 +1659,6 @@
         "Repository": "CRAN",
         "Date/Publication": "2023-04-05 17:43:19 UTC",
         "Built": "R 4.3.1; x86_64-w64-mingw32; 2023-06-16 07:47:21 UTC; windows",
-        "Archs": "x64"
-      }
-    },
-    "lazyeval": {
-      "Source": "CRAN",
-      "Repository": "https://cran.rstudio.com",
-      "description": {
-        "Package": "lazyeval",
-        "Version": "0.2.2",
-        "Title": "Lazy (Non-Standard) Evaluation",
-        "Description": "An alternative approach to non-standard evaluation using\n    formulas. Provides a full implementation of LISP style 'quasiquotation',\n    making it easier to generate code with other code.",
-        "Authors@R": "c(\n    person(\"Hadley\", \"Wickham\", ,\"hadley@rstudio.com\", c(\"aut\", \"cre\")),\n    person(\"RStudio\", role = \"cph\")\n    )",
-        "License": "GPL-3",
-        "LazyData": "true",
-        "Depends": "R (>= 3.1.0)",
-        "Suggests": "knitr, rmarkdown (>= 0.2.65), testthat, covr",
-        "VignetteBuilder": "knitr",
-        "RoxygenNote": "6.1.1",
-        "NeedsCompilation": "yes",
-        "Packaged": "2019-03-15 14:18:01 UTC; lionel",
-        "Author": "Hadley Wickham [aut, cre],\n  RStudio [cph]",
-        "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
-        "Repository": "CRAN",
-        "Date/Publication": "2019-03-15 17:50:07 UTC",
-        "Built": "R 4.3.1; x86_64-w64-mingw32; 2023-09-07 01:09:36 UTC; windows",
         "Archs": "x64"
       }
     },
@@ -2311,62 +2198,6 @@
         "Date/Publication": "2021-01-31 05:40:02 UTC",
         "Built": "R 4.3.1; x86_64-w64-mingw32; 2023-09-05 00:39:51 UTC; windows",
         "Archs": "x64"
-      }
-    },
-    "reactR": {
-      "Source": "CRAN",
-      "Repository": "https://cran.rstudio.com",
-      "description": {
-        "Package": "reactR",
-        "Type": "Package",
-        "Title": "React Helpers",
-        "Version": "0.5.0",
-        "Date": "2023-10-01",
-        "Authors@R": "c(\n      person(\n        \"Facebook\", \"Inc\"\n        , role = c(\"aut\", \"cph\")\n        , comment = \"React library in lib, https://reactjs.org/; see AUTHORS for full list of contributors\"\n      ),\n      person(\n        \"Michel\",\"Weststrate\",\n        , role = c(\"aut\", \"cph\")\n        , comment = \"mobx library in lib, https://github.com/mobxjs\"\n      ),\n      person(\n        \"Kent\", \"Russell\"\n        , role = c(\"aut\", \"cre\")\n        , comment = \"R interface\"\n        , email = \"kent.russell@timelyportfolio.com\"\n      ),\n      person(\n        \"Alan\", \"Dipert\"\n        , role = c(\"aut\")\n        , comment = \"R interface\"\n        , email = \"alan@rstudio.com\"\n      )\n    )",
-        "Maintainer": "Kent Russell <kent.russell@timelyportfolio.com>",
-        "Description": "Make it easy to use 'React' in R with 'htmlwidget' scaffolds,\n              helper dependency functions, an embedded 'Babel' 'transpiler',\n              and examples.",
-        "URL": "https://github.com/react-R/reactR",
-        "BugReports": "https://github.com/react-R/reactR/issues",
-        "License": "MIT + file LICENSE",
-        "Encoding": "UTF-8",
-        "Imports": "htmltools",
-        "Suggests": "htmlwidgets (>= 1.5.3), rmarkdown, shiny, V8, knitr, usethis,\njsonlite",
-        "RoxygenNote": "7.2.3",
-        "VignetteBuilder": "knitr",
-        "NeedsCompilation": "no",
-        "Packaged": "2023-10-11 03:05:02 UTC; kentr",
-        "Author": "Facebook Inc [aut, cph] (React library in lib, https://reactjs.org/;\n    see AUTHORS for full list of contributors),\n  Michel Weststrate [aut, cph] (mobx library in lib,\n    https://github.com/mobxjs),\n  Kent Russell [aut, cre] (R interface),\n  Alan Dipert [aut] (R interface)",
-        "Repository": "CRAN",
-        "Date/Publication": "2023-10-11 04:40:02 UTC",
-        "Built": "R 4.3.3; ; 2024-04-23 01:04:11 UTC; windows"
-      }
-    },
-    "reactable": {
-      "Source": "CRAN",
-      "Repository": "https://cran.rstudio.com",
-      "description": {
-        "Package": "reactable",
-        "Type": "Package",
-        "Title": "Interactive Data Tables for R",
-        "Version": "0.4.4",
-        "Authors@R": "c(\n    person(\"Greg\", \"Lin\", email = \"glin@glin.io\", role = c(\"aut\", \"cre\")),\n    person(\"Tanner\", \"Linsley\", role = c(\"ctb\", \"cph\"), comment = \"React Table library\"),\n    person(family = \"Emotion team and other contributors\", role = c(\"ctb\", \"cph\"),\n           comment = \"Emotion library\"),\n    person(\"Kent\", \"Russell\", role = c(\"ctb\", \"cph\"), comment = \"reactR package\"),\n    person(\"Ramnath\", \"Vaidyanathan\", role = c(\"ctb\", \"cph\"), comment = \"htmlwidgets package\"),\n    person(\"Joe\", \"Cheng\", role = c(\"ctb\", \"cph\"), comment = \"htmlwidgets package\"),\n    person(\"JJ\", \"Allaire\", role = c(\"ctb\", \"cph\"), comment = \"htmlwidgets package\"),\n    person(\"Yihui\", \"Xie\", role = c(\"ctb\", \"cph\"), comment = \"htmlwidgets package\"),\n    person(\"Kenton\", \"Russell\", role = c(\"ctb\", \"cph\"), comment = \"htmlwidgets package\"),\n    person(family = \"Facebook, Inc. and its affiliates\", role = c(\"ctb\", \"cph\"), comment = \"React library\"),\n    person(family = \"FormatJS\", role = c(\"ctb\", \"cph\"), comment = \"FormatJS libraries\"),\n    person(family = \"Feross Aboukhadijeh, and other contributors\", role = c(\"ctb\", \"cph\"),\n           comment = \"buffer library\"),\n    person(\"Roman\", \"Shtylman\", role = c(\"ctb\", \"cph\"), comment = \"process library\"),\n    person(\"James\", \"Halliday\", role = c(\"ctb\", \"cph\"), comment = \"stream-browserify library\"),\n    person(family = \"Posit Software, PBC\", role = c(\"fnd\", \"cph\"))\n    )",
-        "Description": "Interactive data tables for R, based on the 'React Table'\n    JavaScript library. Provides an HTML widget that can be used in 'R Markdown'\n    or 'Quarto' documents, 'Shiny' applications, or viewed from an R console.",
-        "License": "MIT + file LICENSE",
-        "URL": "https://glin.github.io/reactable/,\nhttps://github.com/glin/reactable",
-        "BugReports": "https://github.com/glin/reactable/issues",
-        "Depends": "R (>= 3.1)",
-        "Imports": "digest, htmltools (>= 0.5.2), htmlwidgets (>= 1.5.3),\njsonlite, reactR",
-        "Suggests": "covr, crosstalk, dplyr, fontawesome, knitr, leaflet, MASS,\nrmarkdown, shiny, sparkline, testthat, tippy, V8",
-        "Encoding": "UTF-8",
-        "RoxygenNote": "7.2.1",
-        "Config/testthat/edition": "3",
-        "NeedsCompilation": "no",
-        "Packaged": "2023-03-12 00:59:18 UTC; greg",
-        "Author": "Greg Lin [aut, cre],\n  Tanner Linsley [ctb, cph] (React Table library),\n  Emotion team and other contributors [ctb, cph] (Emotion library),\n  Kent Russell [ctb, cph] (reactR package),\n  Ramnath Vaidyanathan [ctb, cph] (htmlwidgets package),\n  Joe Cheng [ctb, cph] (htmlwidgets package),\n  JJ Allaire [ctb, cph] (htmlwidgets package),\n  Yihui Xie [ctb, cph] (htmlwidgets package),\n  Kenton Russell [ctb, cph] (htmlwidgets package),\n  Facebook, Inc. and its affiliates [ctb, cph] (React library),\n  FormatJS [ctb, cph] (FormatJS libraries),\n  Feross Aboukhadijeh, and other contributors [ctb, cph] (buffer library),\n  Roman Shtylman [ctb, cph] (process library),\n  James Halliday [ctb, cph] (stream-browserify library),\n  Posit Software, PBC [fnd, cph]",
-        "Maintainer": "Greg Lin <glin@glin.io>",
-        "Repository": "CRAN",
-        "Date/Publication": "2023-03-12 10:00:10 UTC",
-        "Built": "R 4.3.3; ; 2024-04-23 02:11:13 UTC; windows"
       }
     },
     "readr": {
@@ -3363,10 +3194,37 @@
   },
   "files": {
     "_quarto.yml": {
-      "checksum": "f85efad75d1e5bafeaf31a5605be3f59"
+      "checksum": "cf774faa7f2c098e32cc7989e656b094"
+    },
+    "_site/content-img/email-conditional.png": {
+      "checksum": "338c96c013d03eec050fc5bf16bedaf3"
+    },
+    "_site/content-img/email-plots.png": {
+      "checksum": "a14b4d492ae8b611720ae86b8618fccc"
+    },
+    "_site/content-img/email-programmatic.png": {
+      "checksum": "8d3429b28a07e4ba0a03826330e911a3"
+    },
+    "_site/content-img/presentation.png": {
+      "checksum": "31591db512ed250ab2429df0ae9fddd7"
+    },
+    "_site/content-img/report-basic.png": {
+      "checksum": "a2d1fd19a660ceadd4c98584ff0856a7"
+    },
+    "_site/content-img/report-branded.png": {
+      "checksum": "60c99ce7a3f67c29c8540a0780a4d4ef"
+    },
+    "_site/content-img/report-lightbox.png": {
+      "checksum": "54391d9b18e4a8d3a49c0bc181c59b2f"
+    },
+    "_site/content-img/report-mermaid-diagrams.png": {
+      "checksum": "7859580db41cc32e4fd3a8256bb9d9d2"
+    },
+    "_site/content-img/website.png": {
+      "checksum": "396d1588115b39bb953cc430e718d061"
     },
     "_site/help.html": {
-      "checksum": "ef5618ba10ef5e72ece2965b21ac9c07"
+      "checksum": "0c1e18cd4afdf0c2dab343362f9346a6"
     },
     "_site/img/concept_map.jpg": {
       "checksum": "70582aa5658d25ebe760ef60e70d0ab5"
@@ -3374,8 +3232,11 @@
     "_site/img/logo-team-full-color.svg": {
       "checksum": "9e38645012975ac149e20aac34f0a220"
     },
+    "_site/img/quarto-logo.png": {
+      "checksum": "c0f6da84f41b7af2dd8de42cfc929cd4"
+    },
     "_site/index.html": {
-      "checksum": "3f58c3a96fae632144e72aea1e96c348"
+      "checksum": "966d34a50cbd8bc4a3018191ac179415"
     },
     "_site/index_files/figure-html/unnamed-chunk-12-1.png": {
       "checksum": "bd10895869ec1b2a1f41a4d6c8dc8391"
@@ -3441,10 +3302,10 @@
       "checksum": "c57d88fb0e7643c37733817375ed1064"
     },
     "_site/landing.html": {
-      "checksum": "76ad90cddfd1c26e309014afde488907"
+      "checksum": "ed9d957b5af38b13d97bc369a2fd15f2"
     },
     "_site/search.json": {
-      "checksum": "16d573e965b205d8c2fd82c79084a78d"
+      "checksum": "850296fd7c5e4f06e5b2c50e62cd6a5e"
     },
     "_site/site_libs/bootstrap/bootstrap-icons.css": {
       "checksum": "2318f137d201fbf51601fa0faba6bef7"
@@ -3453,7 +3314,7 @@
       "checksum": "1a51dfbe5467607389d603c02a77cd10"
     },
     "_site/site_libs/bootstrap/bootstrap.min.css": {
-      "checksum": "3ea674583037f418cbc50c804a3ad92a"
+      "checksum": "8dd7df277c8d0c33975cc7e244b61810"
     },
     "_site/site_libs/bootstrap/bootstrap.min.js": {
       "checksum": "e2b09c06f0e714b6144a6788a28e3950"
@@ -3767,8 +3628,41 @@
     "_site/thumbnails/placeholder.png": {
       "checksum": "efecd9d40367ec0d16517eccd2131f51"
     },
+    "content-img/dashboard-spatial.png": {
+      "checksum": "6f1d473d189a3ffe95d870e5a0e02f08"
+    },
+    "content-img/dashboard.png": {
+      "checksum": "d9acdcdb5804e293431dce4d9c167e11"
+    },
+    "content-img/email-conditional.png": {
+      "checksum": "338c96c013d03eec050fc5bf16bedaf3"
+    },
+    "content-img/email-plots.png": {
+      "checksum": "a14b4d492ae8b611720ae86b8618fccc"
+    },
+    "content-img/email-programmatic.png": {
+      "checksum": "8d3429b28a07e4ba0a03826330e911a3"
+    },
+    "content-img/presentation.png": {
+      "checksum": "31591db512ed250ab2429df0ae9fddd7"
+    },
+    "content-img/report-basic.png": {
+      "checksum": "a2d1fd19a660ceadd4c98584ff0856a7"
+    },
+    "content-img/report-branded.png": {
+      "checksum": "60c99ce7a3f67c29c8540a0780a4d4ef"
+    },
+    "content-img/report-lightbox.png": {
+      "checksum": "54391d9b18e4a8d3a49c0bc181c59b2f"
+    },
+    "content-img/report-mermaid-diagrams.png": {
+      "checksum": "7859580db41cc32e4fd3a8256bb9d9d2"
+    },
+    "content-img/website.png": {
+      "checksum": "396d1588115b39bb953cc430e718d061"
+    },
     "help.qmd": {
-      "checksum": "00cfe41c82ae228946ea49f8f1f0f418"
+      "checksum": "c71f8d5089f48cd3c79ec0b3432b973f"
     },
     "img/concept_map.jpg": {
       "checksum": "70582aa5658d25ebe760ef60e70d0ab5"
@@ -3788,71 +3682,17 @@
     "img/logo-workbench-full-color.svg": {
       "checksum": "b2d94b954899aeba770d03b68e4324aa"
     },
+    "img/quarto-hex.png": {
+      "checksum": "686572345d94831896d370b2a3e572a0"
+    },
+    "img/quarto-hex.svg": {
+      "checksum": "76655f0554cebe2bf8a3ec5ec06c3b0b"
+    },
+    "img/quarto-logo.png": {
+      "checksum": "c0f6da84f41b7af2dd8de42cfc929cd4"
+    },
     "index.qmd": {
-      "checksum": "680148c6ef2713bb325329905f11702b"
-    },
-    "index_files/figure-html/unnamed-chunk-12-1.png": {
-      "checksum": "bd10895869ec1b2a1f41a4d6c8dc8391"
-    },
-    "index_files/figure-html/unnamed-chunk-12-2.png": {
-      "checksum": "5767e659210fa657ab0ab2ae42edfc57"
-    },
-    "index_files/figure-html/unnamed-chunk-12-3.png": {
-      "checksum": "baa3d3858d1c7594543abd47c65a7ff8"
-    },
-    "index_files/figure-html/unnamed-chunk-13-1.png": {
-      "checksum": "bd10895869ec1b2a1f41a4d6c8dc8391"
-    },
-    "index_files/figure-html/unnamed-chunk-13-2.png": {
-      "checksum": "5767e659210fa657ab0ab2ae42edfc57"
-    },
-    "index_files/figure-html/unnamed-chunk-13-3.png": {
-      "checksum": "baa3d3858d1c7594543abd47c65a7ff8"
-    },
-    "index_files/figure-html/unnamed-chunk-14-1.png": {
-      "checksum": "bd10895869ec1b2a1f41a4d6c8dc8391"
-    },
-    "index_files/figure-html/unnamed-chunk-14-2.png": {
-      "checksum": "5767e659210fa657ab0ab2ae42edfc57"
-    },
-    "index_files/figure-html/unnamed-chunk-14-3.png": {
-      "checksum": "baa3d3858d1c7594543abd47c65a7ff8"
-    },
-    "index_files/figure-html/unnamed-chunk-6-1.png": {
-      "checksum": "7350a449a73a6344bea38c0c616a0d73"
-    },
-    "index_files/figure-html/unnamed-chunk-6-2.png": {
-      "checksum": "af19dcec7f7009857d6ed4cef6934e7d"
-    },
-    "index_files/figure-html/unnamed-chunk-6-3.png": {
-      "checksum": "627808509124b0454e8edaac22e0733b"
-    },
-    "index_files/figure-html/unnamed-chunk-6-4.png": {
-      "checksum": "c57d88fb0e7643c37733817375ed1064"
-    },
-    "index_files/figure-html/unnamed-chunk-7-1.png": {
-      "checksum": "7350a449a73a6344bea38c0c616a0d73"
-    },
-    "index_files/figure-html/unnamed-chunk-7-2.png": {
-      "checksum": "af19dcec7f7009857d6ed4cef6934e7d"
-    },
-    "index_files/figure-html/unnamed-chunk-7-3.png": {
-      "checksum": "627808509124b0454e8edaac22e0733b"
-    },
-    "index_files/figure-html/unnamed-chunk-7-4.png": {
-      "checksum": "c57d88fb0e7643c37733817375ed1064"
-    },
-    "index_files/figure-html/unnamed-chunk-8-1.png": {
-      "checksum": "7350a449a73a6344bea38c0c616a0d73"
-    },
-    "index_files/figure-html/unnamed-chunk-8-2.png": {
-      "checksum": "af19dcec7f7009857d6ed4cef6934e7d"
-    },
-    "index_files/figure-html/unnamed-chunk-8-3.png": {
-      "checksum": "627808509124b0454e8edaac22e0733b"
-    },
-    "index_files/figure-html/unnamed-chunk-8-4.png": {
-      "checksum": "c57d88fb0e7643c37733817375ed1064"
+      "checksum": "1f5cae9f35dc4455556492aeecacfa1e"
     },
     "landing.qmd": {
       "checksum": "0fa712d37421982634a6844e61b3c8ce"
@@ -3861,7 +3701,7 @@
       "checksum": "a149d418c10b5d2bbf8c20007db8a78d"
     },
     "renv.lock": {
-      "checksum": "2c860a4dbf7a55b84d38d1fd09fca572"
+      "checksum": "cafb659d5eb7aa993a5858fdd77597dd"
     },
     "slides/quarto-for-reproducible-reporting-demo.html": {
       "checksum": "8a24c9ce65b725f39eaddb6fe63e6409"

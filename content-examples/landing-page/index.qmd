@@ -68,7 +68,7 @@ text <- c("hello")
 
 **`{r} all_content[all_content$name =="dashboard",]$title`**
 
-![](thumbnails/placeholder.png){fig-align="center" width=200}
+![](content-img/dashboard.png){fig-align="center" width=200}
 
 <a href="`r all_content[all_content$name =="dashboard",]$dashboard_url`" class="stretched-link"></a>
 
@@ -78,7 +78,7 @@ text <- c("hello")
 
 **`{r} all_content[all_content$name =="dashboard-spatial",]$title`**
 
-![](thumbnails/placeholder.png){fig-align="center" width=200}
+![](content-img/dashboard-spatial.png){fig-align="center" width=200}
 
 <a href="`r all_content[all_content$name =="dashboard-spatial",]$dashboard_url`" class="stretched-link"></a>
 
@@ -102,7 +102,7 @@ text <- c("hello")
 
 **`{r} all_content[all_content$name =="presentation",]$title`**
 
-![](thumbnails/placeholder.png){fig-align="center" width=200}
+![](content-img/presentation.png){fig-align="center" width=200}
 
 <a href="`r all_content[all_content$name =="presentation",]$dashboard_url`" class="stretched-link"></a>
 
@@ -126,7 +126,7 @@ text <- c("hello")
 
 **`{r} all_content[all_content$name =="report-basic",]$title`**
 
-![](thumbnails/placeholder.png){fig-align="center" width=200}
+![](content-img/report-basic.png){fig-align="center" width=200}
 
 <a href="`r all_content[all_content$name =="report-basic",]$dashboard_url`" class="stretched-link"></a>
 
@@ -136,7 +136,7 @@ text <- c("hello")
 
 **`{r} all_content[all_content$name =="report-branded",]$title`**
 
-![](thumbnails/placeholder.png){fig-align="center" width=200}
+![](content-img/report-branded.png){fig-align="center" width=200}
 
 <a href="`r all_content[all_content$name =="report-branded",]$dashboard_url`" class="stretched-link"></a>
 
@@ -156,7 +156,7 @@ text <- c("hello")
 
 **`{r} all_content[all_content$name =="report-lightbox",]$title`**
 
-![](thumbnails/placeholder.png){fig-align="center" width=200}
+![](content-img/report-lightbox.png){fig-align="center" width=200}
 
 <a href="`r all_content[all_content$name =="report-lightbox",]$dashboard_url`" class="stretched-link"></a>
 
@@ -166,7 +166,7 @@ text <- c("hello")
 
 **`{r} all_content[all_content$name =="report-mermaid-diagrams",]$title`**
 
-![](thumbnails/placeholder.png){fig-align="center" width=200}
+![](content-img/report-mermaid-diagrams.png){fig-align="center" width=200}
 
 <a href="`r all_content[all_content$name =="report-mermaid-diagrams",]$dashboard_url`" class="stretched-link"></a>
 
@@ -265,7 +265,7 @@ text <- c("hello")
 
 **`{r} all_content[all_content$name =="website",]$title`**
 
-![](thumbnails/placeholder.png){fig-align="center" width=200}
+![](content-img/website.png){fig-align="center" width=200}
 
 <a href="`r all_content[all_content$name =="website",]$dashboard_url`" class="stretched-link"></a>
 
