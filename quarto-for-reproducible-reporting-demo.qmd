@@ -15,9 +15,6 @@ format:
     height: "900"
     filters:
       - positslides
-knitr:
-  opts_chunk: 
-    collapse: true
 ---
 
 ## Let's talk about Quarto {.smaller}

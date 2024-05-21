@@ -16,7 +16,7 @@
   "packages": null,
   "files": {
     ".Rprofile": {
-      "checksum": "a52e906193e60dc6f26fcbbdda7086c1"
+      "checksum": "c5e0d98f3dc303f1a5f7e769c19d6b31"
     },
     "_extensions/ArthurData/confetti/_extension.yml": {
       "checksum": "7ec0030a5453120e3e095929f57e0469"
@@ -478,7 +478,7 @@
       "checksum": "2d70aff6c073728ee3b6cc6bebfeb30a"
     },
     "renv.lock": {
-      "checksum": "6d787428b37f528542a491f280d87d03"
+      "checksum": "7d8a51bb240ee9c898cb9af1938184b2"
     }
   },
   "users": null
