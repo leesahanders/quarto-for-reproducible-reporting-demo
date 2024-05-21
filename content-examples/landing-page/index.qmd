@@ -162,6 +162,8 @@ text <- c("hello")
 
 :::
 
+::: card-group
+
 ::: card
 
 **`{r} all_content[all_content$name =="report-mermaid-diagrams",]$title`**
@@ -190,6 +192,7 @@ text <- c("hello")
 
 <a href="`r all_content[all_content$name =="report-hybrid-jupyter",]$dashboard_url`" class="stretched-link"></a>
 
+:::
 :::
 :::
 
