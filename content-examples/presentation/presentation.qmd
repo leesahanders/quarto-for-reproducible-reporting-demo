@@ -1,5 +1,5 @@
 ---
-title: "Quarto for Reproduceable Reporting: Example presentation"
+title: "Quarto for Reproduceable Reporting: Example presentation (with Confetti!)"
 subtitle: ""
 author: "Lisa Anders"
 title-slide-attributes: 
@@ -13,6 +13,8 @@ format:
     height: "900"
     filters:
       - positslides
+revealjs-plugins:
+  - confetti
 ---
 
 ## Default Slide 
@@ -69,7 +71,7 @@ Bullet points
 <center>
 
 ::: {.citation style="font-size: 16px"}
-"Illustration from Hadley Wickham's talk"The Joy of Functional Programming (for Data Science)." by [Allison Horst](https://github.com/allisonhorst/stats-illustrations)
+This is a citation
 :::
 
 </center>
@@ -79,9 +81,25 @@ We can even add some notes
 :::
 
 
+## Extensions
 
+Click `c` to launch confetti! 
 
+Extensions are a good way to share theme's across an organization. There are a bunch of publicly available theme extensions [here](https://quarto.org/docs/extensions/listing-revealjs.html) 
 
+The extension needs to be installed: 
 
+```bash
+quarto add ArthurData/quarto-confetti
+```
 
+It's then referenced from the yaml:
+
+```
+title: "My presentation"
+format:
+  revealjs: default
+revealjs-plugins:
+  - confetti
+```
 

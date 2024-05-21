@@ -16,7 +16,43 @@
   "packages": null,
   "files": {
     ".Rprofile": {
-      "checksum": "a11693e9a9008ed3c6b432be9dba831a"
+      "checksum": "a52e906193e60dc6f26fcbbdda7086c1"
+    },
+    "_extensions/ArthurData/confetti/_extension.yml": {
+      "checksum": "7ec0030a5453120e3e095929f57e0469"
+    },
+    "_extensions/ArthurData/confetti/confetti.js": {
+      "checksum": "0c0d2171a52938629e42cb1b68f70a35"
+    },
+    "_extensions/mcanouil/coeos/_extension.yml": {
+      "checksum": "9db24e1fce30b1fc2132d5ecfb05d64d"
+    },
+    "_extensions/mcanouil/coeos/_extensions/mcanouil/iconify/_extension.yml": {
+      "checksum": "5dca11b302d4542672418b599e77f0e0"
+    },
+    "_extensions/mcanouil/coeos/_extensions/mcanouil/iconify/iconify-icon.min.js": {
+      "checksum": "d2a1b52bac6920b231cb75beae26c3bf"
+    },
+    "_extensions/mcanouil/coeos/_extensions/mcanouil/iconify/iconify.lua": {
+      "checksum": "ea2bbd6b27f8a43492e936472d4900e7"
+    },
+    "_extensions/mcanouil/coeos/_extensions/mcanouil/iconify/LICENSE": {
+      "checksum": "bc37ccb74b2864741b669d73bc769ef3"
+    },
+    "_extensions/mcanouil/coeos/about.qmd": {
+      "checksum": "99d4e1e106d3355ed63a35dbeb893be1"
+    },
+    "_extensions/mcanouil/coeos/coeos.scss": {
+      "checksum": "7d8c964ce9f2eb9b0b1ba453b9b71ff2"
+    },
+    "_extensions/mcanouil/coeos/coeos.svg": {
+      "checksum": "3ef57c6a745909daabf0962fb17e2a25"
+    },
+    "_extensions/mcanouil/coeos/LICENSE": {
+      "checksum": "3af21d8aa3082dd4445f6bb41f644322"
+    },
+    "_extensions/mcanouil/coeos/setup-ggplot2-coeos.R": {
+      "checksum": "4b5a822766580164116a972167249a81"
     },
     "_extensions/positslides/_extension.yml": {
       "checksum": "16d2179feb0d86054b7dc1891ae9d857"
@@ -76,10 +112,10 @@
       "checksum": "8f97483155532e33621d134b4dd2a761"
     },
     "presentation.html": {
-      "checksum": "b7c6b39f5d0a77054d5b4a686ceb7b5e"
+      "checksum": "b19ab0ba85a478367093c22dd1ca99c0"
     },
     "presentation.qmd": {
-      "checksum": "fb37fb923a0656f671cfa5e317afb058"
+      "checksum": "2a1a4bd02697a63e524ba76db260b186"
     },
     "presentation_files/libs/clipboard/clipboard.min.js": {
       "checksum": "15f52a1ee547f2bdd46e56747332ca2d"
@@ -95,6 +131,9 @@
     },
     "presentation_files/libs/quarto-html/quarto-html.min.css": {
       "checksum": "68b329da9893e34099c7d8ad5cb9c940"
+    },
+    "presentation_files/libs/quarto-html/quarto-syntax-highlighting-dark.css": {
+      "checksum": "5945b91004fe1a0eaf0d18c4d3e8b612"
     },
     "presentation_files/libs/quarto-html/quarto-syntax-highlighting.css": {
       "checksum": "49bff82b9355f257417faaaa77dd1607"
@@ -399,6 +438,9 @@
     "presentation_files/libs/revealjs/plugin/reveal-chalkboard/style.css": {
       "checksum": "6bdeacb96f8b18c0046039c8de10c51b"
     },
+    "presentation_files/libs/revealjs/plugin/reveal-confetti/confetti.js": {
+      "checksum": "0c0d2171a52938629e42cb1b68f70a35"
+    },
     "presentation_files/libs/revealjs/plugin/reveal-menu/menu.css": {
       "checksum": "1b9988f08dfe354c44e134304b3df8af"
     },
@@ -431,6 +473,9 @@
     },
     "presentation_files/libs/revealjs/plugin/zoom/zoom.js": {
       "checksum": "dbab999c1a2fe1f31046733759dd1e2b"
+    },
+    "README.md": {
+      "checksum": "2d70aff6c073728ee3b6cc6bebfeb30a"
     },
     "renv.lock": {
       "checksum": "6d787428b37f528542a491f280d87d03"

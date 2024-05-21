@@ -111,6 +111,10 @@ text <- c("hello")
 
 ### Community Examples
 
+[David Schoch - 2023-06-20 Let's make a presentation with Quarto](https://gesiscss.github.io/quarto-workshop/material/slides/05_presentations.html#/title-slide) 
+
+[Tom Mock - 2022-07-25 Posit Workshop - Making Slides with Code](https://rstudio-conf-2022.github.io/get-started-quarto/materials/05-presentations.html#/presentations) 
+
 ### Learn more
 
 :::
