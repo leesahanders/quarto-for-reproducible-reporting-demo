@@ -146,7 +146,7 @@ text <- c("hello")
 
 **`{r} all_content[all_content$name =="report-commentable",]$title`**
 
-![](thumbnails/placeholder.png){fig-align="center" width=200}
+![](content-img/report-commentable.png){fig-align="center" width=200}
 
 <a href="`r all_content[all_content$name =="report-commentable",]$dashboard_url`" class="stretched-link"></a>
 
@@ -174,25 +174,6 @@ text <- c("hello")
 
 :::
 
-::: card
-
-**`{r} all_content[all_content$name =="report-hybrid-knitr",]$title`**
-
-![](thumbnails/placeholder.png){fig-align="center" width=200}
-
-<a href="`r all_content[all_content$name =="report-hybrid-knitr",]$dashboard_url`" class="stretched-link"></a>
-
-:::
-
-::: card
-
-**`{r} all_content[all_content$name =="report-hybrid-jupyter",]$title`**
-
-![](thumbnails/placeholder.png){fig-align="center" width=200}
-
-<a href="`r all_content[all_content$name =="report-hybrid-jupyter",]$dashboard_url`" class="stretched-link"></a>
-
-:::
 :::
 :::
 

@@ -51,7 +51,7 @@ quarto create project
 
 Deploy it: 
 ```bash
-rsconnect deploy quarto . <- doesn't work because of the r chunks needing knitr (could be deployed from rstudio though with push button)
+rsconnect deploy quarto . # doesn't work because of the r chunks needing knitr (could be deployed from rstudio though with push button)
 
 quarto publish 
 ```

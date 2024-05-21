@@ -672,6 +672,9 @@
     "recipes/img/coffee cake 2.jpg": {
       "checksum": "9c75e62d88e1c3e69aba833b79c3484a"
     },
+    "recipes/img/donuts.jpg": {
+      "checksum": "0c9fa27da543a492877ee50c27bf8ff9"
+    },
     "recipes/img/flourless chocolate cayenne cake.jpg": {
       "checksum": "2748379c635771ef6bf5e4d60b6f3fbd"
     },
@@ -710,6 +713,9 @@
     },
     "recipes/Triple ginger cookies.qmd": {
       "checksum": "534c31d6d1059f2046b9e619aa75dbbd"
+    },
+    "renv.lock": {
+      "checksum": "67dfec04e0c93c40b38aab961f95feb1"
     },
     "site_map.qmd": {
       "checksum": "d237d4c2465e0a9a4b2e24218a591e23"

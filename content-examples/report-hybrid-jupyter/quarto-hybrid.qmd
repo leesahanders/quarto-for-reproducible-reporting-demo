@@ -7,29 +7,57 @@ format:
       light: flatly
       dark: darkly
 editor: source
-jupyter: python3
+jupyter: python
 ---
 
 ## Quarto
 
 Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
 
-## Running Code
+## Using Python
 
 When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
 
-```{r}
-1 + 1
+```{python}
+#| label: fig-polar
+#| fig-cap: "A line plot on a polar axis"
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(
+  subplot_kw = {'projection': 'polar'} 
+)
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
 ```
 
-You can add options to executable code like this
-
-```{r}
-#| echo: false
-2 * 2
-```
+Reference: <https://quarto.org/docs/computations/python.html>
 
 The `echo: false` option disables the printing of code (only output is displayed).
+
+```{python}
+#| label: fig-polar
+#| fig-cap: "A line plot on a polar axis"
+#| echo: false
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(
+  subplot_kw = {'projection': 'polar'} 
+)
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
 
 ## Opening data from excel
 
@@ -56,29 +84,6 @@ workbook = load_workbook(filename="hello_world.xlsx")
 
 Reference: <https://realpython.com/openpyxl-excel-spreadsheets-python/>
 
-## Using Python
-
-For a demonstration of a line plot on a polar axis, see @fig-polar.
-
-```{python}
-#| label: fig-polar
-#| fig-cap: "A line plot on a polar axis"
-
-import numpy as np
-import matplotlib.pyplot as plt
-
-r = np.arange(0, 2, 0.01)
-theta = 2 * np.pi * r
-fig, ax = plt.subplots(
-  subplot_kw = {'projection': 'polar'} 
-)
-ax.plot(theta, r)
-ax.set_rticks([0.5, 1, 1.5, 2])
-ax.grid(True)
-plt.show()
-```
-
-Reference: <https://quarto.org/docs/computations/python.html>
 
 ## Great tables!
 
@@ -109,35 +114,6 @@ sp500_mini = sp500[(sp500["date"] >= start_date) & (sp500["date"] <= end_date)]
 
 ```
 
-## base R plot! 
-
-```{r}
-x = sample(1:100, size = 1000, replace = TRUE)
-y = rnorm(1000, mean = 40, sd = 2)
-
-plot(x, y)
-```
-
-
-## ggplot2! 
-
-```{r}
-library(ggplot2)
-
-gg <- ggplot(mpg, aes(displ, hwy, colour = class)) + 
-  geom_point()
-
-gg
-```
-
-## plotly! 
-
-```{r}
-library(plotly)
-
-ggplotly(gg)
-```
-
 ## On Python and reticulate
 
 We can also prepare to run Python from R using knitr with `reticulate`: `library(reticulate)`
@@ -158,3 +134,32 @@ use_virtualenv("my-environment")
 ```
 
 > For example to resolve this error: ! 'CreateProcess' failed to run 'C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\python.exe -c "import sys; print(sys.platform)"'
+
+### base R plot! 
+
+```r
+x = sample(1:100, size = 1000, replace = TRUE)
+y = rnorm(1000, mean = 40, sd = 2)
+
+plot(x, y)
+```
+
+
+### ggplot2! 
+
+```r
+library(ggplot2)
+
+gg <- ggplot(mpg, aes(displ, hwy, colour = class)) + 
+  geom_point()
+
+gg
+```
+
+### plotly! 
+
+```r
+library(plotly)
+
+ggplotly(gg)
+```

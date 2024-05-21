@@ -1,0 +1,14 @@
+name: jupyter_notebook_deployment
+title: Jupyter notebook deployment
+username: lisa.anders
+account: lisa.anders
+server: pub.palm.ptd.posit.it
+hostUrl: https://pub.palm.ptd.posit.it/__api__
+appId: 107
+bundleId: 260
+url: https://pub.palm.ptd.posit.it/content/ab0f5a17-4e62-45c3-a583-a0ab00e6eaa4/
+version: 1
+quarto_version: 1.4.550
+quarto_engines: jupyter
+asMultiple: FALSE
+asStatic: FALSE
