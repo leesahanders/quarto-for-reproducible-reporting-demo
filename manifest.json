@@ -4,7 +4,7 @@
   "platform": "4.3.1",
   "metadata": {
     "appmode": "quarto-static",
-    "primary_rmd": "content-examples/dashboard/quarto-daily-dashboard-report.qmd",
+    "primary_rmd": "content-examples/dashboard/.Rprofile",
     "primary_html": null,
     "content_category": null,
     "has_parameters": false
@@ -42,30 +42,30 @@
       "description": {
         "Package": "DBI",
         "Title": "R Database Interface",
-        "Version": "1.1.3",
-        "Date": "2022-06-18",
-        "Authors@R": "c(\n    person(\"R Special Interest Group on Databases (R-SIG-DB)\", role = \"aut\"),\n    person(\"Hadley\", \"Wickham\", role = \"aut\"),\n    person(\"Kirill\", \"Müller\", , \"krlmlr+r@mailbox.org\", role = c(\"aut\", \"cre\"),\n           comment = c(ORCID = \"0000-0002-1416-3412\")),\n    person(\"R Consortium\", role = \"fnd\")\n  )",
+        "Version": "1.2.2",
+        "Date": "2024-02-09",
+        "Authors@R": "c(\n    person(\"R Special Interest Group on Databases (R-SIG-DB)\", role = \"aut\"),\n    person(\"Hadley\", \"Wickham\", role = \"aut\"),\n    person(\"Kirill\", \"Müller\", , \"kirill@cynkra.com\", role = c(\"aut\", \"cre\"),\n           comment = c(ORCID = \"0000-0002-1416-3412\")),\n    person(\"R Consortium\", role = \"fnd\")\n  )",
         "Description": "A database interface definition for communication between R\n    and relational database management systems.  All classes in this\n    package are virtual and need to be extended by the various R/DBMS\n    implementations.",
         "License": "LGPL (>= 2.1)",
         "URL": "https://dbi.r-dbi.org, https://github.com/r-dbi/DBI",
         "BugReports": "https://github.com/r-dbi/DBI/issues",
         "Depends": "methods, R (>= 3.0.0)",
-        "Suggests": "blob, covr, DBItest, dbplyr, downlit, dplyr, glue, hms,\nknitr, magrittr, RMariaDB, rmarkdown, rprojroot, RSQLite (>=\n1.1-2), testthat, xml2",
+        "Suggests": "arrow, blob, covr, DBItest, dbplyr, downlit, dplyr, glue,\nhms, knitr, magrittr, nanoarrow (>= 0.3.0.1), RMariaDB,\nrmarkdown, rprojroot, RSQLite (>= 1.1-2), testthat (>= 3.0.0),\nvctrs, xml2",
         "VignetteBuilder": "knitr",
         "Config/autostyle/scope": "line_breaks",
         "Config/autostyle/strict": "false",
         "Config/Needs/check": "r-dbi/DBItest",
         "Encoding": "UTF-8",
-        "RoxygenNote": "7.2.0",
-        "Config/Needs/website": "r-dbi/DBItest, AzureKusto, bigrquery,\nDatabaseConnector, dittodb, duckdb, implyr, lazysf, odbc, pool,\nRAthena, IMSMWU/RClickhouse, RH2, RJDBC, RMariaDB, RMySQL,\nRPostgres, RPostgreSQL, RPresto, RSQLite, sergeant, sparklyr,\nwithr",
-        "Collate": "'DBIObject.R' 'DBIDriver.R' 'Id.R' 'DBIConnection.R' 'ANSI.R'\n'DBI-package.R' 'DBIConnector.R' 'DBIResult.R' 'SQL.R'\n'SQLKeywords.R' 'SQLKeywords_DBIObject.R'\n'SQLKeywords_missing.R' 'data-types.R' 'data.R'\n'dbAppendTable.R' 'dbAppendTable_DBIConnection.R' 'dbBegin.R'\n'dbBind.R' 'dbCallProc.R' 'dbCanConnect.R'\n'dbCanConnect_DBIDriver.R' 'dbClearResult.R' 'dbColumnInfo.R'\n'dbCommit.R' 'dbConnect.R' 'dbConnect_DBIConnector.R'\n'dbCreateTable.R' 'dbCreateTable_DBIConnection.R'\n'dbDataType.R' 'dbDataType_DBIConnector.R'\n'dbDataType_DBIObject.R' 'dbDisconnect.R' 'dbDriver.R'\n'dbDriver_character.R' 'dbExecute.R'\n'dbExecute_DBIConnection_character.R' 'dbExistsTable.R'\n'dbExistsTable_DBIConnection_Id.R' 'dbFetch.R'\n'dbFetch_DBIResult.R' 'dbGetConnectArgs.R'\n'dbGetConnectArgs_DBIConnector.R' 'dbGetException.R'\n'dbGetInfo.R' 'dbGetInfo_DBIResult.R' 'dbGetQuery.R'\n'dbGetQuery_DBIConnection_character.R' 'dbGetRowCount.R'\n'dbGetRowsAffected.R' 'dbGetStatement.R' 'dbHasCompleted.R'\n'dbIsReadOnly.R' 'dbIsReadOnly_DBIConnector.R'\n'dbIsReadOnly_DBIObject.R' 'dbIsValid.R' 'dbListConnections.R'\n'dbListFields.R' 'dbListFields_DBIConnection_Id.R'\n'dbListFields_DBIConnection_character.R' 'dbListObjects.R'\n'dbListObjects_DBIConnection_ANY.R' 'dbListResults.R'\n'dbListTables.R' 'dbQuoteIdentifier.R'\n'dbQuoteIdentifier_DBIConnection.R' 'dbQuoteLiteral.R'\n'dbQuoteLiteral_DBIConnection.R' 'dbQuoteString.R'\n'dbQuoteString_DBIConnection.R' 'dbReadTable.R'\n'dbReadTable_DBIConnection_Id.R'\n'dbReadTable_DBIConnection_character.R' 'dbRemoveTable.R'\n'dbRemoveTable_DBIConnection_Id.R' 'dbRollback.R'\n'dbSendQuery.R' 'dbSendStatement.R'\n'dbSendStatement_DBIConnection_character.R'\n'dbSetDataMappings.R' 'dbUnloadDriver.R'\n'dbUnquoteIdentifier.R' 'dbUnquoteIdentifier_DBIConnection.R'\n'dbWithTransaction.R' 'dbWithTransaction_DBIConnection.R'\n'dbWriteTable.R' 'dbWriteTable_DBIConnection_Id_ANY.R'\n'dbiDataType.R' 'dbiDataType_AsIs.R' 'dbiDataType_Date.R'\n'dbiDataType_POSIXct.R' 'dbiDataType_character.R'\n'dbiDataType_data.frame.R' 'dbiDataType_difftime.R'\n'dbiDataType_integer.R' 'dbiDataType_list.R'\n'dbiDataType_logical.R' 'dbiDataType_numeric.R' 'deprecated.R'\n'fetch.R' 'hms.R' 'interpolate.R' 'isSQLKeyword.R'\n'isSQLKeyword_DBIObject_character.R' 'make.db.names.R'\n'make.db.names_DBIObject_character.R' 'methods_as_rd.R'\n'rownames.R' 'show_AnsiConnection.R' 'show_DBIConnection.R'\n'show_DBIConnector.R' 'show_DBIDriver.R' 'show_DBIResult.R'\n'show_Id.R' 'show_SQL.R' 'sqlAppendTable.R'\n'sqlAppendTableTemplate.R' 'sqlAppendTable_DBIConnection.R'\n'sqlCreateTable.R' 'sqlCreateTable_DBIConnection.R' 'sqlData.R'\n'sqlData_DBIConnection.R' 'sqlInterpolate.R'\n'sqlInterpolate_DBIConnection.R' 'sqlParseVariables.R'\n'sqlParseVariables_DBIConnection.R' 'summary.R'\n'summary_DBIObject.R' 'transactions.R'",
+        "RoxygenNote": "7.3.0.9000",
+        "Config/Needs/website": "r-dbi/DBItest, r-dbi/dbitemplate, adbi,\nAzureKusto, bigrquery, DatabaseConnector, dittodb, duckdb,\nimplyr, lazysf, odbc, pool, RAthena, IMSMWU/RClickhouse, RH2,\nRJDBC, RMariaDB, RMySQL, RPostgres, RPostgreSQL, RPresto,\nRSQLite, sergeant, sparklyr, withr",
+        "Config/testthat/edition": "3",
         "NeedsCompilation": "no",
-        "Packaged": "2022-06-18 01:24:38 UTC; kirill",
+        "Packaged": "2024-02-09 07:30:24 UTC; kirill",
         "Author": "R Special Interest Group on Databases (R-SIG-DB) [aut],\n  Hadley Wickham [aut],\n  Kirill Müller [aut, cre] (<https://orcid.org/0000-0002-1416-3412>),\n  R Consortium [fnd]",
-        "Maintainer": "Kirill Müller <krlmlr+r@mailbox.org>",
+        "Maintainer": "Kirill Müller <kirill@cynkra.com>",
         "Repository": "CRAN",
-        "Date/Publication": "2022-06-18 07:10:15 UTC",
-        "Built": "R 4.3.1; ; 2023-09-07 01:09:18 UTC; windows"
+        "Date/Publication": "2024-02-16 13:00:02 UTC",
+        "Built": "R 4.3.3; ; 2024-05-08 00:49:11 UTC; windows"
       }
     },
     "DT": {
@@ -92,7 +92,33 @@
         "Maintainer": "Joe Cheng <joe@posit.co>",
         "Repository": "CRAN",
         "Date/Publication": "2024-04-04 05:03:17 UTC",
-        "Built": "R 4.3.3; ; 2024-04-28 02:40:47 UTC; windows"
+        "Built": "R 4.3.3; ; 2024-05-15 02:42:12 UTC; windows"
+      }
+    },
+    "KernSmooth": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "KernSmooth",
+        "Priority": "recommended",
+        "Version": "2.23-21",
+        "Date": "2023-05-03",
+        "Title": "Functions for Kernel Smoothing Supporting Wand & Jones (1995)",
+        "Authors@R": "c(person(\"Matt\", \"Wand\", role = \"aut\",\n\t             email = \"Matt.Wand@uts.edu.au\"),\n\t     person(\"Cleve\", \"Moler\", role = \"ctb\",\n\t            comment = \"LINPACK routines in src/d*\"),\n             person(\"Brian\", \"Ripley\", role = c(\"trl\", \"cre\", \"ctb\"),\n                    email = \"ripley@stats.ox.ac.uk\",\n\t\t    comment = \"R port and updates\"))",
+        "Note": "Maintainers are not available to give advice on using a package\nthey did not author.",
+        "Depends": "R (>= 2.5.0), stats",
+        "Suggests": "MASS, carData",
+        "Description": "Functions for kernel smoothing (and density estimation)\n  corresponding to the book: \n  Wand, M.P. and Jones, M.C. (1995) \"Kernel Smoothing\".",
+        "License": "Unlimited",
+        "ByteCompile": "yes",
+        "NeedsCompilation": "yes",
+        "Packaged": "2023-05-03 13:26:48 UTC; ripley",
+        "Author": "Matt Wand [aut],\n  Cleve Moler [ctb] (LINPACK routines in src/d*),\n  Brian Ripley [trl, cre, ctb] (R port and updates)",
+        "Maintainer": "Brian Ripley <ripley@stats.ox.ac.uk>",
+        "Repository": "CRAN",
+        "Date/Publication": "2023-05-03 16:25:34 UTC",
+        "Built": "R 4.3.1; x86_64-w64-mingw32; 2023-06-16 07:54:43 UTC; windows",
+        "Archs": "x64"
       }
     },
     "MASS": {
@@ -156,6 +182,29 @@
         "Repository": "CRAN",
         "Date/Publication": "2023-05-18 08:02:19 UTC",
         "Built": "R 4.3.1; x86_64-w64-mingw32; 2023-06-16 07:47:43 UTC; windows",
+        "Archs": "x64"
+      }
+    },
+    "PKI": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "PKI",
+        "Version": "0.1-12",
+        "Title": "Public Key Infrastucture for R Based on the X.509 Standard",
+        "Author": "Simon Urbanek <Simon.Urbanek@r-project.org>",
+        "Maintainer": "Simon Urbanek <Simon.Urbanek@r-project.org>",
+        "Depends": "R (>= 2.9.0), base64enc",
+        "Enhances": "gmp",
+        "Description": "Public Key Infrastucture functions such as verifying certificates, RSA encription and signing which can be used to build PKI infrastructure and perform cryptographic tasks.",
+        "License": "GPL-2 | GPL-3 | file LICENSE",
+        "URL": "http://www.rforge.net/PKI",
+        "SystemRequirements": "OpenSSL library and headers (openssl-dev or\nsimilar)",
+        "NeedsCompilation": "yes",
+        "Packaged": "2022-11-27 21:31:15 UTC; rforge",
+        "Repository": "CRAN",
+        "Date/Publication": "2022-11-28 07:32:03 UTC",
+        "Built": "R 4.3.1; x86_64-w64-mingw32; 2023-10-20 01:07:19 UTC; windows",
         "Archs": "x64"
       }
     },
@@ -228,6 +277,38 @@
         "Repository": "CRAN",
         "Date/Publication": "2023-07-06 07:33:14 UTC",
         "Built": "R 4.3.1; x86_64-w64-mingw32; 2023-09-07 01:09:19 UTC; windows",
+        "Archs": "x64"
+      }
+    },
+    "V8": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "V8",
+        "Type": "Package",
+        "Title": "Embedded JavaScript and WebAssembly Engine for R",
+        "Version": "4.4.2",
+        "Authors@R": "c(\n    person(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroen@berkeley.edu\",\n      comment = c(ORCID = \"0000-0002-4035-0289\")),\n    person(\"Jan Marvin\", \"Garbuszus\", role = \"ctb\"))",
+        "Description": "An R interface to V8 <https://v8.dev>: Google's open source JavaScript\n    and WebAssembly engine. This package can be compiled either with V8 version 6 \n    and up or NodeJS when built as a shared library.",
+        "License": "MIT + file LICENSE",
+        "URL": "https://jeroen.r-universe.dev/V8",
+        "BugReports": "https://github.com/jeroen/v8/issues",
+        "SystemRequirements": "V8 engine version 6+ is needed for ES6 and WASM\nsupport. On Linux you can build against libv8-dev (Debian) or\nv8-devel (Fedora). We also provide static libv8 binaries for\nmost platforms, see the README for details.",
+        "NeedsCompilation": "yes",
+        "VignetteBuilder": "knitr",
+        "Imports": "Rcpp (>= 0.12.12), jsonlite (>= 1.0), curl (>= 1.0), utils",
+        "LinkingTo": "Rcpp",
+        "Suggests": "testthat, knitr, rmarkdown",
+        "RoxygenNote": "7.2.3",
+        "Language": "en-US",
+        "Encoding": "UTF-8",
+        "Biarch": "true",
+        "Packaged": "2024-02-15 11:17:46 UTC; jeroen",
+        "Author": "Jeroen Ooms [aut, cre] (<https://orcid.org/0000-0002-4035-0289>),\n  Jan Marvin Garbuszus [ctb]",
+        "Maintainer": "Jeroen Ooms <jeroen@berkeley.edu>",
+        "Repository": "CRAN",
+        "Date/Publication": "2024-02-15 15:00:02 UTC",
+        "Built": "R 4.3.3; x86_64-w64-mingw32; 2024-04-23 01:03:16 UTC; windows",
         "Archs": "x64"
       }
     },
@@ -337,6 +418,34 @@
         "Archs": "x64"
       }
     },
+    "bigD": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Type": "Package",
+        "Package": "bigD",
+        "Title": "Flexibly Format Dates and Times to a Given Locale",
+        "Version": "0.2.0",
+        "Authors@R": "person(\"Richard\", \"Iannone\", , \"riannone@me.com\", c(\"aut\", \"cre\"),\n                  comment = c(ORCID = \"0000-0003-3925-190X\"))",
+        "Description": "Format dates and times flexibly and to whichever locales\n    make sense. Parses dates, times, and date-times in various formats\n    (including string-based ISO 8601 constructions). The formatting syntax gives\n    the user many options for formatting the date and time output in a precise\n    manner. Time zones in the input can be expressed in multiple ways and there\n    are many options for formatting time zones in the output as well. Several of\n    the provided helper functions allow for automatic generation of locale-aware\n    formatting patterns based on date/time skeleton formats and standardized\n    date/time formats with varying specificity.",
+        "License": "MIT + file LICENSE",
+        "URL": "https://github.com/rich-iannone/bigD",
+        "BugReports": "https://github.com/rich-iannone/bigD/issues",
+        "Depends": "R (>= 3.2.0)",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "7.2.1",
+        "Suggests": "covr, testthat (>= 3.0.0)",
+        "Config/testthat/edition": "3",
+        "Config/testthat/parallel": "true",
+        "NeedsCompilation": "no",
+        "Packaged": "2022-09-02 20:05:54 UTC; rich",
+        "Author": "Richard Iannone [aut, cre] (<https://orcid.org/0000-0003-3925-190X>)",
+        "Maintainer": "Richard Iannone <riannone@me.com>",
+        "Repository": "CRAN",
+        "Date/Publication": "2022-09-05 08:30:08 UTC",
+        "Built": "R 4.3.3; ; 2024-04-23 00:28:23 UTC; windows"
+      }
+    },
     "bit": {
       "Source": "CRAN",
       "Repository": "https://cran.rstudio.com",
@@ -392,6 +501,28 @@
         "NeedsCompilation": "yes",
         "Packaged": "2020-08-29 10:56:45 UTC; jo",
         "Built": "R 4.3.1; x86_64-w64-mingw32; 2023-09-07 01:47:11 UTC; windows",
+        "Archs": "x64"
+      }
+    },
+    "bitops": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "bitops",
+        "Version": "1.0-7",
+        "Date": "2021-04-13",
+        "Author": "S original by Steve Dutky <sdutky@terpalum.umd.edu> initial R\n        port and extensions by Martin Maechler; revised and modified\n        by Steve Dutky",
+        "Maintainer": "Martin Maechler <maechler@stat.math.ethz.ch>",
+        "Title": "Bitwise Operations",
+        "Description": "Functions for bitwise operations on integer vectors.",
+        "License": "GPL (>= 2)",
+        "URL": "https://github.com/mmaechler/R-bitops",
+        "BugReports": "https://github.com/mmaechler/R-bitops/issues",
+        "NeedsCompilation": "yes",
+        "Packaged": "2021-04-13 20:50:22 UTC; maechler",
+        "Repository": "CRAN",
+        "Date/Publication": "2021-04-24 11:40:08 UTC",
+        "Built": "R 4.3.1; x86_64-w64-mingw32; 2023-10-20 00:52:07 UTC; windows",
         "Archs": "x64"
       }
     },
@@ -569,6 +700,61 @@
         "Built": "R 4.3.1; ; 2023-09-07 02:44:48 UTC; windows"
       }
     },
+    "class": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "class",
+        "Priority": "recommended",
+        "Version": "7.3-22",
+        "Date": "2023-05-02",
+        "Depends": "R (>= 3.0.0), stats, utils",
+        "Imports": "MASS",
+        "Authors@R": "c(person(\"Brian\", \"Ripley\", role = c(\"aut\", \"cre\", \"cph\"),\n                    email = \"ripley@stats.ox.ac.uk\"),\n             person(\"William\", \"Venables\", role = \"cph\"))",
+        "Description": "Various functions for classification, including k-nearest\n  neighbour, Learning Vector Quantization and Self-Organizing Maps.",
+        "Title": "Functions for Classification",
+        "ByteCompile": "yes",
+        "License": "GPL-2 | GPL-3",
+        "URL": "http://www.stats.ox.ac.uk/pub/MASS4/",
+        "NeedsCompilation": "yes",
+        "Packaged": "2023-05-02 16:15:43 UTC; ripley",
+        "Author": "Brian Ripley [aut, cre, cph],\n  William Venables [cph]",
+        "Maintainer": "Brian Ripley <ripley@stats.ox.ac.uk>",
+        "Repository": "CRAN",
+        "Date/Publication": "2023-05-03 11:01:28 UTC",
+        "Built": "R 4.3.1; x86_64-w64-mingw32; 2023-06-16 07:55:08 UTC; windows",
+        "Archs": "x64"
+      }
+    },
+    "classInt": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "classInt",
+        "Version": "0.4-10",
+        "Date": "2023-08-24",
+        "Title": "Choose Univariate Class Intervals",
+        "Authors@R": "c(\n  person(\"Roger\", \"Bivand\", role=c(\"aut\", \"cre\"), email=\"Roger.Bivand@nhh.no\", comment=c(ORCID=\"0000-0003-2392-6140\")),\n  person(\"Bill\", \"Denney\", role=\"ctb\", comment=c(ORCID=\"0000-0002-5759-428X\")),\n  person(\"Richard\", \"Dunlap\", role=\"ctb\"),\n  person(\"Diego\", \"Hernangómez\", role=\"ctb\", comment=c(ORCID=\"0000-0001-8457-4658\")),\n  person(\"Hisaji\", \"Ono\", role=\"ctb\"),\n  person(\"Josiah\", \"Parry\", role = \"ctb\", comment = c(ORCID = \"0000-0001-9910-865X\")),\n  person(\"Matthieu\", \"Stigler\", role=\"ctb\", comment =c(ORCID=\"0000-0002-6802-4290\")))",
+        "Depends": "R (>= 2.2)",
+        "Imports": "grDevices, stats, graphics, e1071, class, KernSmooth",
+        "Suggests": "spData (>= 0.2.6.2), units, knitr, rmarkdown, tinytest",
+        "NeedsCompilation": "yes",
+        "Description": "Selected commonly used methods for choosing univariate class intervals for mapping or other graphics purposes.",
+        "License": "GPL (>= 2)",
+        "URL": "https://r-spatial.github.io/classInt/,\nhttps://github.com/r-spatial/classInt/",
+        "BugReports": "https://github.com/r-spatial/classInt/issues/",
+        "RoxygenNote": "6.1.1",
+        "Encoding": "UTF-8",
+        "VignetteBuilder": "knitr",
+        "Packaged": "2023-09-05 08:36:55 UTC; rsb",
+        "Author": "Roger Bivand [aut, cre] (<https://orcid.org/0000-0003-2392-6140>),\n  Bill Denney [ctb] (<https://orcid.org/0000-0002-5759-428X>),\n  Richard Dunlap [ctb],\n  Diego Hernangómez [ctb] (<https://orcid.org/0000-0001-8457-4658>),\n  Hisaji Ono [ctb],\n  Josiah Parry [ctb] (<https://orcid.org/0000-0001-9910-865X>),\n  Matthieu Stigler [ctb] (<https://orcid.org/0000-0002-6802-4290>)",
+        "Maintainer": "Roger Bivand <Roger.Bivand@nhh.no>",
+        "Repository": "CRAN",
+        "Date/Publication": "2023-09-05 13:00:06 UTC",
+        "Built": "R 4.3.3; x86_64-w64-mingw32; 2024-05-08 01:57:49 UTC; windows",
+        "Archs": "x64"
+      }
+    },
     "cli": {
       "Source": "CRAN",
       "Repository": "https://cran.rstudio.com",
@@ -654,6 +840,33 @@
         "Repository": "CRAN",
         "Date/Publication": "2023-01-23 11:40:02 UTC",
         "Built": "R 4.3.1; x86_64-w64-mingw32; 2023-09-07 01:09:23 UTC; windows",
+        "Archs": "x64"
+      }
+    },
+    "commonmark": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "commonmark",
+        "Type": "Package",
+        "Title": "High Performance CommonMark and Github Markdown Rendering in R",
+        "Version": "1.9.0",
+        "Authors@R": "c(\n    person(\"Jeroen\", \"Ooms\", ,\"jeroen@berkeley.edu\", role = c(\"aut\", \"cre\"),\n        comment = c(ORCID = \"0000-0002-4035-0289\")),\n    person(\"John MacFarlane\", role = \"cph\", comment = \"Author of cmark\"))",
+        "URL": "https://docs.ropensci.org/commonmark/\nhttps://r-lib.r-universe.dev/commonmark\nhttps://github.github.com/gfm/ (spec)",
+        "BugReports": "https://github.com/r-lib/commonmark/issues",
+        "Description": "The CommonMark specification defines a rationalized version of markdown\n    syntax. This package uses the 'cmark' reference implementation for converting\n    markdown text into various formats including html, latex and groff man. In\n    addition it exposes the markdown parse tree in xml format. Also includes opt-in\n    support for GFM extensions including tables, autolinks, and strikethrough text.",
+        "License": "BSD_2_clause + file LICENSE",
+        "Suggests": "curl, testthat, xml2",
+        "RoxygenNote": "7.2.3",
+        "Language": "en-US",
+        "Encoding": "UTF-8",
+        "NeedsCompilation": "yes",
+        "Packaged": "2023-03-17 18:02:44 UTC; jeroen",
+        "Author": "Jeroen Ooms [aut, cre] (<https://orcid.org/0000-0002-4035-0289>),\n  John MacFarlane [cph] (Author of cmark)",
+        "Maintainer": "Jeroen Ooms <jeroen@berkeley.edu>",
+        "Repository": "CRAN",
+        "Date/Publication": "2023-03-17 18:40:02 UTC",
+        "Built": "R 4.3.1; x86_64-w64-mingw32; 2023-09-05 00:39:52 UTC; windows",
         "Archs": "x64"
       }
     },
@@ -756,40 +969,6 @@
         "RemoteReposName": "CRAN",
         "RemotePkgPlatform": "x86_64-w64-mingw32",
         "RemoteSha": "0.1.3.1"
-      }
-    },
-    "connectwidgets": {
-      "Source": "CRAN",
-      "Repository": "https://cran.rstudio.com",
-      "description": {
-        "Package": "connectwidgets",
-        "Title": "Organize and Curate Your Content Within 'Posit Connect'",
-        "Version": "0.2.1",
-        "Authors@R": "c(\n    person(\"Brian\", \"Smith\", email = \"brian@rstudio.com\", role = c(\"aut\", \"cre\")),\n    person(\"Marcos\", \"Navarro\", email = \"marcos@rstudio.com\", role = \"aut\"),\n    person(\"David\", \"Aja\", email = \"david@rstudio.com\", role = \"ctb\"),\n    person(\"Kelly\", \"O'Briant\", email = \"kelly.obriant@rstudio.com\", role = \"ctb\"),\n    person(\"Posit\", role = \"cph\"))",
-        "Description": "A collection of helper functions and 'htmlwidgets' to help publishers\n    curate content collections on 'Posit Connect'. The components,\n    Card, Grid, Table, Search, and Filter can be used to produce a\n    showcase page or gallery contained within a static or interactive\n    R Markdown page.",
-        "License": "MIT + file LICENSE",
-        "Encoding": "UTF-8",
-        "RoxygenNote": "7.2.3",
-        "Depends": "R (>= 3.6.0)",
-        "Suggests": "knitr, lintr, rmarkdown, testthat, webmockr, withr",
-        "Imports": "R6, httr, jsonlite, tibble, htmlwidgets, reactable, dplyr,\nmagrittr, htmltools, glue, rlang, digest, crosstalk, reactR,\npurrr, bslib, sass",
-        "URL": "https://rstudio.github.io/connectwidgets/,\nhttps://github.com/rstudio/connectwidgets",
-        "VignetteBuilder": "knitr",
-        "BugReports": "https://github.com/rstudio/connectwidgets/issues",
-        "NeedsCompilation": "no",
-        "Packaged": "2023-09-20 19:29:06 UTC; bsmith",
-        "Author": "Brian Smith [aut, cre],\n  Marcos Navarro [aut],\n  David Aja [ctb],\n  Kelly O'Briant [ctb],\n  Posit [cph]",
-        "Maintainer": "Brian Smith <brian@rstudio.com>",
-        "Repository": "CRAN",
-        "Date/Publication": "2023-09-20 20:30:02 UTC",
-        "Built": "R 4.3.3; ; 2024-05-06 02:47:39 UTC; windows",
-        "RemoteType": "standard",
-        "RemotePkgRef": "connectwidgets",
-        "RemoteRef": "connectwidgets",
-        "RemoteRepos": "https://cran.rstudio.com",
-        "RemoteReposName": "CRAN",
-        "RemotePkgPlatform": "x86_64-w64-mingw32",
-        "RemoteSha": "0.2.1"
       }
     },
     "cpp11": {
@@ -908,26 +1087,25 @@
       "Repository": "https://cran.rstudio.com",
       "description": {
         "Package": "data.table",
-        "Version": "1.14.8",
+        "Version": "1.15.4",
         "Title": "Extension of `data.frame`",
-        "Authors@R": "c(\n  person(\"Matt\",\"Dowle\",           role=c(\"aut\",\"cre\"), email=\"mattjdowle@gmail.com\"),\n  person(\"Arun\",\"Srinivasan\",      role=\"aut\",          email=\"asrini@pm.me\"),\n  person(\"Jan\",\"Gorecki\",          role=\"ctb\"),\n  person(\"Michael\",\"Chirico\",      role=\"ctb\"),\n  person(\"Pasha\",\"Stetsenko\",      role=\"ctb\"),\n  person(\"Tom\",\"Short\",            role=\"ctb\"),\n  person(\"Steve\",\"Lianoglou\",      role=\"ctb\"),\n  person(\"Eduard\",\"Antonyan\",      role=\"ctb\"),\n  person(\"Markus\",\"Bonsch\",        role=\"ctb\"),\n  person(\"Hugh\",\"Parsonage\",       role=\"ctb\"),\n  person(\"Scott\",\"Ritchie\",        role=\"ctb\"),\n  person(\"Kun\",\"Ren\",              role=\"ctb\"),\n  person(\"Xianying\",\"Tan\",         role=\"ctb\"),\n  person(\"Rick\",\"Saporta\",         role=\"ctb\"),\n  person(\"Otto\",\"Seiskari\",        role=\"ctb\"),\n  person(\"Xianghui\",\"Dong\",        role=\"ctb\"),\n  person(\"Michel\",\"Lang\",          role=\"ctb\"),\n  person(\"Watal\",\"Iwasaki\",        role=\"ctb\"),\n  person(\"Seth\",\"Wenchel\",         role=\"ctb\"),\n  person(\"Karl\",\"Broman\",          role=\"ctb\"),\n  person(\"Tobias\",\"Schmidt\",       role=\"ctb\"),\n  person(\"David\",\"Arenburg\",       role=\"ctb\"),\n  person(\"Ethan\",\"Smith\",          role=\"ctb\"),\n  person(\"Francois\",\"Cocquemas\",   role=\"ctb\"),\n  person(\"Matthieu\",\"Gomez\",       role=\"ctb\"),\n  person(\"Philippe\",\"Chataignon\",  role=\"ctb\"),\n  person(\"Nello\",\"Blaser\",         role=\"ctb\"),\n  person(\"Dmitry\",\"Selivanov\",     role=\"ctb\"),\n  person(\"Andrey\",\"Riabushenko\",   role=\"ctb\"),\n  person(\"Cheng\",\"Lee\",            role=\"ctb\"),\n  person(\"Declan\",\"Groves\",        role=\"ctb\"),\n  person(\"Daniel\",\"Possenriede\",   role=\"ctb\"),\n  person(\"Felipe\",\"Parages\",       role=\"ctb\"),\n  person(\"Denes\",\"Toth\",           role=\"ctb\"),\n  person(\"Mus\",\"Yaramaz-David\",    role=\"ctb\"),\n  person(\"Ayappan\",\"Perumal\",      role=\"ctb\"),\n  person(\"James\",\"Sams\",           role=\"ctb\"),\n  person(\"Martin\",\"Morgan\",        role=\"ctb\"),\n  person(\"Michael\",\"Quinn\",        role=\"ctb\"),\n  person(\"@javrucebo\",\"\",          role=\"ctb\"),\n  person(\"@marc-outins\",\"\",        role=\"ctb\"),\n  person(\"Roy\",\"Storey\",           role=\"ctb\"),\n  person(\"Manish\",\"Saraswat\",      role=\"ctb\"),\n  person(\"Morgan\",\"Jacob\",         role=\"ctb\"),\n  person(\"Michael\",\"Schubmehl\",    role=\"ctb\"),\n  person(\"Davis\",\"Vaughan\",        role=\"ctb\"),\n  person(\"Toby\",\"Hocking\",         role=\"ctb\"),\n  person(\"Leonardo\",\"Silvestri\",   role=\"ctb\"),\n  person(\"Tyson\",\"Barrett\",        role=\"ctb\"),\n  person(\"Jim\",\"Hester\",           role=\"ctb\"),\n  person(\"Anthony\",\"Damico\",       role=\"ctb\"),\n  person(\"Sebastian\",\"Freundt\",    role=\"ctb\"),\n  person(\"David\",\"Simons\",         role=\"ctb\"),\n  person(\"Elliott\",\"Sales de Andrade\", role=\"ctb\"),\n  person(\"Cole\",\"Miller\",          role=\"ctb\"),\n  person(\"Jens Peder\",\"Meldgaard\", role=\"ctb\"),\n  person(\"Vaclav\",\"Tlapak\",        role=\"ctb\"),\n  person(\"Kevin\",\"Ushey\",          role=\"ctb\"),\n  person(\"Dirk\",\"Eddelbuettel\",    role=\"ctb\"),\n  person(\"Ben\",\"Schwen\",           role=\"ctb\"))",
         "Depends": "R (>= 3.1.0)",
         "Imports": "methods",
-        "Suggests": "bit64 (>= 4.0.0), bit (>= 4.0.4), curl, R.utils, xts,\nnanotime, zoo (>= 1.8-1), yaml, knitr, rmarkdown",
-        "SystemRequirements": "zlib",
+        "Suggests": "bit64 (>= 4.0.0), bit (>= 4.0.4), R.utils, xts, zoo (>=\n1.8-1), yaml, knitr, markdown",
         "Description": "Fast aggregation of large data (e.g. 100GB in RAM), fast ordered joins, fast add/modify/delete of columns by group using no copies at all, list columns, friendly and fast character-separated-value read/write. Offers a natural and flexible syntax, for faster development.",
         "License": "MPL-2.0 | file LICENSE",
         "URL": "https://r-datatable.com, https://Rdatatable.gitlab.io/data.table,\nhttps://github.com/Rdatatable/data.table",
         "BugReports": "https://github.com/Rdatatable/data.table/issues",
         "VignetteBuilder": "knitr",
         "ByteCompile": "TRUE",
+        "Authors@R": "c(\n  person(\"Tyson\",\"Barrett\",        role=c(\"aut\",\"cre\"), email=\"t.barrett88@gmail.com\"),\n  person(\"Matt\",\"Dowle\",           role=\"aut\",          email=\"mattjdowle@gmail.com\"),\n  person(\"Arun\",\"Srinivasan\",      role=\"aut\",          email=\"asrini@pm.me\"),\n  person(\"Jan\",\"Gorecki\",          role=\"aut\"),\n  person(\"Michael\",\"Chirico\",      role=\"aut\"),\n  person(\"Toby\",\"Hocking\",         role=\"aut\", comment = c(ORCID=\"0000-0002-3146-0865\")),\n  person(\"Pasha\",\"Stetsenko\",      role=\"ctb\"),\n  person(\"Tom\",\"Short\",            role=\"ctb\"),\n  person(\"Steve\",\"Lianoglou\",      role=\"ctb\"),\n  person(\"Eduard\",\"Antonyan\",      role=\"ctb\"),\n  person(\"Markus\",\"Bonsch\",        role=\"ctb\"),\n  person(\"Hugh\",\"Parsonage\",       role=\"ctb\"),\n  person(\"Scott\",\"Ritchie\",        role=\"ctb\"),\n  person(\"Kun\",\"Ren\",              role=\"ctb\"),\n  person(\"Xianying\",\"Tan\",         role=\"ctb\"),\n  person(\"Rick\",\"Saporta\",         role=\"ctb\"),\n  person(\"Otto\",\"Seiskari\",        role=\"ctb\"),\n  person(\"Xianghui\",\"Dong\",        role=\"ctb\"),\n  person(\"Michel\",\"Lang\",          role=\"ctb\"),\n  person(\"Watal\",\"Iwasaki\",        role=\"ctb\"),\n  person(\"Seth\",\"Wenchel\",         role=\"ctb\"),\n  person(\"Karl\",\"Broman\",          role=\"ctb\"),\n  person(\"Tobias\",\"Schmidt\",       role=\"ctb\"),\n  person(\"David\",\"Arenburg\",       role=\"ctb\"),\n  person(\"Ethan\",\"Smith\",          role=\"ctb\"),\n  person(\"Francois\",\"Cocquemas\",   role=\"ctb\"),\n  person(\"Matthieu\",\"Gomez\",       role=\"ctb\"),\n  person(\"Philippe\",\"Chataignon\",  role=\"ctb\"),\n  person(\"Nello\",\"Blaser\",         role=\"ctb\"),\n  person(\"Dmitry\",\"Selivanov\",     role=\"ctb\"),\n  person(\"Andrey\",\"Riabushenko\",   role=\"ctb\"),\n  person(\"Cheng\",\"Lee\",            role=\"ctb\"),\n  person(\"Declan\",\"Groves\",        role=\"ctb\"),\n  person(\"Daniel\",\"Possenriede\",   role=\"ctb\"),\n  person(\"Felipe\",\"Parages\",       role=\"ctb\"),\n  person(\"Denes\",\"Toth\",           role=\"ctb\"),\n  person(\"Mus\",\"Yaramaz-David\",    role=\"ctb\"),\n  person(\"Ayappan\",\"Perumal\",      role=\"ctb\"),\n  person(\"James\",\"Sams\",           role=\"ctb\"),\n  person(\"Martin\",\"Morgan\",        role=\"ctb\"),\n  person(\"Michael\",\"Quinn\",        role=\"ctb\"),\n  person(\"@javrucebo\",\"\",          role=\"ctb\"),\n  person(\"@marc-outins\",\"\",        role=\"ctb\"),\n  person(\"Roy\",\"Storey\",           role=\"ctb\"),\n  person(\"Manish\",\"Saraswat\",      role=\"ctb\"),\n  person(\"Morgan\",\"Jacob\",         role=\"ctb\"),\n  person(\"Michael\",\"Schubmehl\",    role=\"ctb\"),\n  person(\"Davis\",\"Vaughan\",        role=\"ctb\"),\n  person(\"Leonardo\",\"Silvestri\",   role=\"ctb\"),\n  person(\"Jim\",\"Hester\",           role=\"ctb\"),\n  person(\"Anthony\",\"Damico\",       role=\"ctb\"),\n  person(\"Sebastian\",\"Freundt\",    role=\"ctb\"),\n  person(\"David\",\"Simons\",         role=\"ctb\"),\n  person(\"Elliott\",\"Sales de Andrade\", role=\"ctb\"),\n  person(\"Cole\",\"Miller\",          role=\"ctb\"),\n  person(\"Jens Peder\",\"Meldgaard\", role=\"ctb\"),\n  person(\"Vaclav\",\"Tlapak\",        role=\"ctb\"),\n  person(\"Kevin\",\"Ushey\",          role=\"ctb\"),\n  person(\"Dirk\",\"Eddelbuettel\",    role=\"ctb\"),\n  person(\"Benjamin\",\"Schwendinger\", role=\"ctb\"),\n  person(\"Tony\",\"Fischetti\",       role=\"ctb\"),\n  person(\"Ofek\",\"Shilon\",          role=\"ctb\"),\n  person(\"Vadim\",\"Khotilovich\",    role=\"ctb\"),\n  person(\"Hadley\",\"Wickham\",       role=\"ctb\"),\n  person(\"Bennet\",\"Becker\",        role=\"ctb\"),\n  person(\"Kyle\",\"Haynes\",          role=\"ctb\"),\n  person(\"Boniface Christian\",\"Kamgang\", role=\"ctb\"),\n  person(\"Olivier\",\"Delmarcell\",   role=\"ctb\"),\n  person(\"Josh\",\"O'Brien\",         role=\"ctb\"),\n  person(\"Dereck\",\"de Mezquita\",   role=\"ctb\"),\n  person(\"Michael\",\"Czekanski\",    role=\"ctb\")\n  )",
         "NeedsCompilation": "yes",
-        "Packaged": "2023-02-16 16:37:18 UTC; mdowle",
-        "Author": "Matt Dowle [aut, cre],\n  Arun Srinivasan [aut],\n  Jan Gorecki [ctb],\n  Michael Chirico [ctb],\n  Pasha Stetsenko [ctb],\n  Tom Short [ctb],\n  Steve Lianoglou [ctb],\n  Eduard Antonyan [ctb],\n  Markus Bonsch [ctb],\n  Hugh Parsonage [ctb],\n  Scott Ritchie [ctb],\n  Kun Ren [ctb],\n  Xianying Tan [ctb],\n  Rick Saporta [ctb],\n  Otto Seiskari [ctb],\n  Xianghui Dong [ctb],\n  Michel Lang [ctb],\n  Watal Iwasaki [ctb],\n  Seth Wenchel [ctb],\n  Karl Broman [ctb],\n  Tobias Schmidt [ctb],\n  David Arenburg [ctb],\n  Ethan Smith [ctb],\n  Francois Cocquemas [ctb],\n  Matthieu Gomez [ctb],\n  Philippe Chataignon [ctb],\n  Nello Blaser [ctb],\n  Dmitry Selivanov [ctb],\n  Andrey Riabushenko [ctb],\n  Cheng Lee [ctb],\n  Declan Groves [ctb],\n  Daniel Possenriede [ctb],\n  Felipe Parages [ctb],\n  Denes Toth [ctb],\n  Mus Yaramaz-David [ctb],\n  Ayappan Perumal [ctb],\n  James Sams [ctb],\n  Martin Morgan [ctb],\n  Michael Quinn [ctb],\n  @javrucebo [ctb],\n  @marc-outins [ctb],\n  Roy Storey [ctb],\n  Manish Saraswat [ctb],\n  Morgan Jacob [ctb],\n  Michael Schubmehl [ctb],\n  Davis Vaughan [ctb],\n  Toby Hocking [ctb],\n  Leonardo Silvestri [ctb],\n  Tyson Barrett [ctb],\n  Jim Hester [ctb],\n  Anthony Damico [ctb],\n  Sebastian Freundt [ctb],\n  David Simons [ctb],\n  Elliott Sales de Andrade [ctb],\n  Cole Miller [ctb],\n  Jens Peder Meldgaard [ctb],\n  Vaclav Tlapak [ctb],\n  Kevin Ushey [ctb],\n  Dirk Eddelbuettel [ctb],\n  Ben Schwen [ctb]",
-        "Maintainer": "Matt Dowle <mattjdowle@gmail.com>",
+        "Packaged": "2024-03-28 05:25:20 UTC; tysonbarrett",
+        "Author": "Tyson Barrett [aut, cre],\n  Matt Dowle [aut],\n  Arun Srinivasan [aut],\n  Jan Gorecki [aut],\n  Michael Chirico [aut],\n  Toby Hocking [aut] (<https://orcid.org/0000-0002-3146-0865>),\n  Pasha Stetsenko [ctb],\n  Tom Short [ctb],\n  Steve Lianoglou [ctb],\n  Eduard Antonyan [ctb],\n  Markus Bonsch [ctb],\n  Hugh Parsonage [ctb],\n  Scott Ritchie [ctb],\n  Kun Ren [ctb],\n  Xianying Tan [ctb],\n  Rick Saporta [ctb],\n  Otto Seiskari [ctb],\n  Xianghui Dong [ctb],\n  Michel Lang [ctb],\n  Watal Iwasaki [ctb],\n  Seth Wenchel [ctb],\n  Karl Broman [ctb],\n  Tobias Schmidt [ctb],\n  David Arenburg [ctb],\n  Ethan Smith [ctb],\n  Francois Cocquemas [ctb],\n  Matthieu Gomez [ctb],\n  Philippe Chataignon [ctb],\n  Nello Blaser [ctb],\n  Dmitry Selivanov [ctb],\n  Andrey Riabushenko [ctb],\n  Cheng Lee [ctb],\n  Declan Groves [ctb],\n  Daniel Possenriede [ctb],\n  Felipe Parages [ctb],\n  Denes Toth [ctb],\n  Mus Yaramaz-David [ctb],\n  Ayappan Perumal [ctb],\n  James Sams [ctb],\n  Martin Morgan [ctb],\n  Michael Quinn [ctb],\n  @javrucebo [ctb],\n  @marc-outins [ctb],\n  Roy Storey [ctb],\n  Manish Saraswat [ctb],\n  Morgan Jacob [ctb],\n  Michael Schubmehl [ctb],\n  Davis Vaughan [ctb],\n  Leonardo Silvestri [ctb],\n  Jim Hester [ctb],\n  Anthony Damico [ctb],\n  Sebastian Freundt [ctb],\n  David Simons [ctb],\n  Elliott Sales de Andrade [ctb],\n  Cole Miller [ctb],\n  Jens Peder Meldgaard [ctb],\n  Vaclav Tlapak [ctb],\n  Kevin Ushey [ctb],\n  Dirk Eddelbuettel [ctb],\n  Benjamin Schwendinger [ctb],\n  Tony Fischetti [ctb],\n  Ofek Shilon [ctb],\n  Vadim Khotilovich [ctb],\n  Hadley Wickham [ctb],\n  Bennet Becker [ctb],\n  Kyle Haynes [ctb],\n  Boniface Christian Kamgang [ctb],\n  Olivier Delmarcell [ctb],\n  Josh O'Brien [ctb],\n  Dereck de Mezquita [ctb],\n  Michael Czekanski [ctb]",
+        "Maintainer": "Tyson Barrett <t.barrett88@gmail.com>",
         "Repository": "CRAN",
-        "Date/Publication": "2023-02-17 12:20:12 UTC",
-        "Built": "R 4.3.1; x86_64-w64-mingw32; 2023-08-27 00:34:42 UTC; windows",
+        "Date/Publication": "2024-03-30 23:50:02 UTC",
+        "Built": "R 4.3.3; x86_64-w64-mingw32; 2024-05-10 00:34:46 UTC; windows",
         "Archs": "x64"
       }
     },
@@ -1048,6 +1226,29 @@
         "Repository": "CRAN",
         "Date/Publication": "2023-03-22 13:10:05 UTC",
         "Built": "R 4.3.1; ; 2023-09-07 03:03:58 UTC; windows"
+      }
+    },
+    "e1071": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "e1071",
+        "Version": "1.7-14",
+        "Title": "Misc Functions of the Department of Statistics, Probability\nTheory Group (Formerly: E1071), TU Wien",
+        "Imports": "graphics, grDevices, class, stats, methods, utils, proxy",
+        "Suggests": "cluster, mlbench, nnet, randomForest, rpart, SparseM, xtable,\nMatrix, MASS, slam",
+        "Authors@R": "c(person(given = \"David\", family = \"Meyer\", role = c(\"aut\", \"cre\"),\n                    email = \"David.Meyer@R-project.org\",\n\t\t    comment = c(ORCID = \"0000-0002-5196-3048\")),    \n             person(given = \"Evgenia\", family = \"Dimitriadou\", role = c(\"aut\",\"cph\")),\n             person(given = \"Kurt\", family = \"Hornik\", role = \"aut\",\n\t            email = \"Kurt.Hornik@R-project.org\",\n                    comment = c(ORCID = \"0000-0003-4198-9911\")),\n             person(given = \"Andreas\", family = \"Weingessel\", role = \"aut\"),\n             person(given = \"Friedrich\", family = \"Leisch\", role = \"aut\"),\n             person(given = \"Chih-Chung\", family = \"Chang\", role = c(\"ctb\",\"cph\"), comment = \"libsvm C++-code\"),\n             person(given = \"Chih-Chen\", family = \"Lin\", role = c(\"ctb\",\"cph\"), comment = \"libsvm C++-code\"))",
+        "Description": "Functions for latent class analysis, short time Fourier\n\t     transform, fuzzy clustering, support vector machines,\n\t     shortest path computation, bagged clustering, naive Bayes\n\t     classifier, generalized k-nearest neighbour ...",
+        "License": "GPL-2 | GPL-3",
+        "LazyLoad": "yes",
+        "NeedsCompilation": "yes",
+        "Packaged": "2023-12-05 17:29:44 UTC; meyer",
+        "Author": "David Meyer [aut, cre] (<https://orcid.org/0000-0002-5196-3048>),\n  Evgenia Dimitriadou [aut, cph],\n  Kurt Hornik [aut] (<https://orcid.org/0000-0003-4198-9911>),\n  Andreas Weingessel [aut],\n  Friedrich Leisch [aut],\n  Chih-Chung Chang [ctb, cph] (libsvm C++-code),\n  Chih-Chen Lin [ctb, cph] (libsvm C++-code)",
+        "Maintainer": "David Meyer <David.Meyer@R-project.org>",
+        "Repository": "CRAN",
+        "Date/Publication": "2023-12-06 09:22:29 UTC",
+        "Built": "R 4.3.3; x86_64-w64-mingw32; 2024-05-08 01:29:03 UTC; windows",
+        "Archs": "x64"
       }
     },
     "ellipsis": {
@@ -1399,6 +1600,41 @@
         "Archs": "x64"
       }
     },
+    "ggtext": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "ggtext",
+        "Type": "Package",
+        "Title": "Improved Text Rendering Support for 'ggplot2'",
+        "Version": "0.1.2",
+        "Authors@R": "\n    c(\n      person(\n        given = \"Claus O.\",\n        family = \"Wilke\",\n        role = c(\"aut\"),\n        email = \"wilke@austin.utexas.edu\",\n        comment = c(ORCID = \"0000-0002-7470-9261\")\n      ),\n      person(\n        given = \"Brenton M.\",\n        family = \"Wiernik\",\n        role = c(\"aut\", \"cre\"),\n        email = \"brenton@wiernik.org\",\n        comment = c(ORCID = \"0000-0001-9560-6336\", Twitter = \"@bmwiernik\")\n      )\n    )",
+        "Description": "A 'ggplot2' extension that enables the rendering of\n    complex formatted plot labels (titles, subtitles, facet labels,\n    axis labels, etc.). Text boxes with automatic word wrap are also\n    supported.",
+        "URL": "https://wilkelab.org/ggtext/",
+        "BugReports": "https://github.com/wilkelab/ggtext/issues",
+        "License": "GPL-2",
+        "Depends": "R (>= 3.5)",
+        "Imports": "ggplot2 (>= 3.3.0), grid, gridtext, rlang, scales",
+        "Suggests": "cowplot, dplyr, glue, knitr, rmarkdown, testthat, vdiffr",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "7.1.1",
+        "VignetteBuilder": "knitr",
+        "NeedsCompilation": "no",
+        "Packaged": "2022-09-15 13:50:50 UTC; brentonw",
+        "Author": "Claus O. Wilke [aut] (<https://orcid.org/0000-0002-7470-9261>),\n  Brenton M. Wiernik [aut, cre] (<https://orcid.org/0000-0001-9560-6336>,\n    @bmwiernik)",
+        "Maintainer": "Brenton M. Wiernik <brenton@wiernik.org>",
+        "Repository": "CRAN",
+        "Date/Publication": "2022-09-16 11:36:07 UTC",
+        "Built": "R 4.3.3; ; 2024-05-19 02:30:55 UTC; windows",
+        "RemoteType": "standard",
+        "RemotePkgRef": "ggtext",
+        "RemoteRef": "ggtext",
+        "RemoteRepos": "https://cran.rstudio.com",
+        "RemoteReposName": "CRAN",
+        "RemotePkgPlatform": "x86_64-w64-mingw32",
+        "RemoteSha": "0.1.2"
+      }
+    },
     "glue": {
       "Source": "CRAN",
       "Repository": "https://cran.rstudio.com",
@@ -1512,6 +1748,75 @@
         "Repository": "CRAN",
         "Date/Publication": "2017-09-09 14:12:08 UTC",
         "Built": "R 4.3.3; ; 2024-05-06 01:57:00 UTC; windows"
+      }
+    },
+    "gridtext": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "gridtext",
+        "Type": "Package",
+        "Title": "Improved Text Rendering Support for 'Grid' Graphics",
+        "Version": "0.1.5",
+        "Authors@R": "\n    c(\n      person(\n        given = \"Claus O.\",\n        family = \"Wilke\",\n        role = c(\"aut\"),\n        email = \"wilke@austin.utexas.edu\",\n        comment = c(ORCID = \"0000-0002-7470-9261\")\n      ),\n      person(\n        given = \"Brenton M.\",\n        family = \"Wiernik\",\n        role = c(\"aut\", \"cre\"),\n        email = \"brenton@wiernik.org\",\n        comment = c(ORCID = \"0000-0001-9560-6336\", Twitter = \"@bmwiernik\")\n      )\n    )",
+        "Description": "Provides support for rendering of formatted text using 'grid' graphics. Text can be\n    formatted via a minimal subset of 'Markdown', 'HTML', and inline 'CSS' directives, and it can be\n    rendered both with and without word wrap.",
+        "URL": "https://wilkelab.org/gridtext/",
+        "BugReports": "https://github.com/wilkelab/gridtext/issues",
+        "License": "MIT + file LICENSE",
+        "Depends": "R (>= 3.5)",
+        "Imports": "curl, grid, grDevices, markdown, rlang, Rcpp, png, jpeg,\nstringr, xml2",
+        "Suggests": "covr, knitr, rmarkdown, testthat, vdiffr",
+        "LinkingTo": "Rcpp",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "7.1.1",
+        "SystemRequirements": "C++11",
+        "NeedsCompilation": "yes",
+        "Packaged": "2022-09-15 13:49:42 UTC; brentonw",
+        "Author": "Claus O. Wilke [aut] (<https://orcid.org/0000-0002-7470-9261>),\n  Brenton M. Wiernik [aut, cre] (<https://orcid.org/0000-0001-9560-6336>,\n    @bmwiernik)",
+        "Maintainer": "Brenton M. Wiernik <brenton@wiernik.org>",
+        "Repository": "CRAN",
+        "Date/Publication": "2022-09-16 11:16:15 UTC",
+        "Built": "R 4.3.3; x86_64-w64-mingw32; 2024-05-19 01:28:36 UTC; windows",
+        "Archs": "x64",
+        "RemoteType": "standard",
+        "RemotePkgRef": "gridtext",
+        "RemoteRef": "gridtext",
+        "RemoteRepos": "https://cran.rstudio.com",
+        "RemoteReposName": "CRAN",
+        "RemotePkgPlatform": "x86_64-w64-mingw32",
+        "RemoteSha": "0.1.5"
+      }
+    },
+    "gt": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Type": "Package",
+        "Package": "gt",
+        "Version": "0.10.1",
+        "Title": "Easily Create Presentation-Ready Display Tables",
+        "Description": "Build display tables from tabular data with an easy-to-use set of\n    functions. With its progressive approach, we can construct display tables\n    with a cohesive set of table parts. Table values can be formatted using any\n    of the included formatting functions. Footnotes and cell styles can be \n    precisely added through a location targeting system. The way in which 'gt'\n    handles things for you means that you don't often have to worry about the\n    fine details.",
+        "Authors@R": "c(\n    person(\"Richard\", \"Iannone\", , \"rich@posit.co\", c(\"aut\", \"cre\"),\n           comment = c(ORCID = \"0000-0003-3925-190X\")),\n    person(\"Joe\", \"Cheng\", , \"joe@posit.co\", \"aut\"),\n    person(\"Barret\", \"Schloerke\", , \"barret@posit.co\", \"aut\",\n           comment = c(ORCID = \"0000-0001-9986-114X\")),\n    person(\"Ellis\", \"Hughes\", , \"ellis.h.hughes@gsk.com\", \"aut\",\n           comment = c(ORCID = \"0000-0003-0637-4436\")),   \n    person(\"Alexandra\", \"Lauer\", , \"alexandralauer1@gmail.com\", \"aut\",\n           comment = c(ORCID = \"0000-0002-4191-6301\")),    \n    person(\"JooYoung\", \"Seo\", , \"jseo1005@illinois.edu\", \"aut\",\n           comment = c(ORCID = \"0000-0002-4064-6012\")),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"))\n    )",
+        "License": "MIT + file LICENSE",
+        "URL": "https://gt.rstudio.com, https://github.com/rstudio/gt",
+        "BugReports": "https://github.com/rstudio/gt/issues",
+        "Encoding": "UTF-8",
+        "LazyData": "true",
+        "ByteCompile": "true",
+        "RoxygenNote": "7.2.3",
+        "Depends": "R (>= 3.2.0)",
+        "Imports": "base64enc (>= 0.1-3), bigD (>= 0.2), bitops (>= 1.0-7), cli\n(>= 3.6.0), commonmark (>= 1.8.1), dplyr (>= 1.1.0), fs (>=\n1.6.1), glue (>= 1.6.2), htmltools (>= 0.5.4), htmlwidgets (>=\n1.6.1), juicyjuice (>= 0.1.0), magrittr (>= 2.0.2), markdown\n(>= 1.5), reactable (>= 0.4.3), rlang (>= 1.0.2), sass (>=\n0.4.5), scales (>= 1.2.1), tidyselect (>= 1.2.0), vctrs, xml2\n(>= 1.3.3)",
+        "Suggests": "covr, digest (>= 0.6.31), fontawesome (>= 0.5.2), ggplot2,\nknitr, lubridate, magick, paletteer, RColorBrewer, rmarkdown\n(>= 2.20), rvest, shiny (>= 1.7.4), testthat (>= 3.1.9), tidyr,\nwebshot2 (>= 0.1.0)",
+        "Collate": "'as_data_frame.R' 'build_data.R' 'compile_scss.R'\n'data_color.R' 'datasets.R' 'dt__.R' 'dt_body.R' 'dt_boxhead.R'\n'dt_cols_merge.R' 'dt_data.R' 'dt_footnotes.R' 'dt_formats.R'\n'dt_groups_rows.R' 'dt_has_built.R' 'dt_heading.R'\n'dt_locale.R' 'dt_options.R' 'dt_row_groups.R'\n'dt_source_notes.R' 'dt_spanners.R' 'dt_stub_df.R'\n'dt_stubhead.R' 'dt_styles.R' 'dt_substitutions.R'\n'dt_summary.R' 'dt_transforms.R' 'export.R' 'format_data.R'\n'format_vec.R' 'gt-package.R' 'gt.R' 'gt_group.R'\n'gt_preview.R' 'gt_split.R' 'helpers.R' 'image.R'\n'info_tables.R' 'knitr-utils.R' 'location_methods.R'\n'modify_columns.R' 'modify_rows.R' 'tab_create_modify.R'\n'opts.R' 'print.R' 'reexports.R' 'render_as_html.R'\n'render_as_i_html.R' 'resolver.R' 'rows_add.R' 'shiny.R'\n'substitution.R' 'summary_rows.R' 'tab_info.R' 'tab_remove.R'\n'tab_style_body.R' 'text_transform.R' 'utils.R'\n'utils_color_contrast.R' 'utils_environments.R'\n'utils_examples.R' 'utils_formatters.R'\n'utils_general_str_formatting.R' 'utils_pipe.R' 'utils_plots.R'\n'utils_render_common.R' 'utils_render_html.R'\n'utils_render_latex.R' 'utils_render_rtf.R'\n'utils_render_xml.R' 'utils_units.R'\n'z_utils_render_footnotes.R' 'zzz.R'",
+        "Config/testthat/edition": "3",
+        "Config/testthat/parallel": "true",
+        "NeedsCompilation": "no",
+        "Packaged": "2024-01-17 22:09:40 UTC; rich",
+        "Author": "Richard Iannone [aut, cre] (<https://orcid.org/0000-0003-3925-190X>),\n  Joe Cheng [aut],\n  Barret Schloerke [aut] (<https://orcid.org/0000-0001-9986-114X>),\n  Ellis Hughes [aut] (<https://orcid.org/0000-0003-0637-4436>),\n  Alexandra Lauer [aut] (<https://orcid.org/0000-0002-4191-6301>),\n  JooYoung Seo [aut] (<https://orcid.org/0000-0002-4064-6012>),\n  Posit Software, PBC [cph, fnd]",
+        "Maintainer": "Richard Iannone <rich@posit.co>",
+        "Repository": "CRAN",
+        "Date/Publication": "2024-01-17 23:50:05 UTC",
+        "Built": "R 4.3.3; ; 2024-04-23 02:11:31 UTC; windows"
       }
     },
     "gtable": {
@@ -1835,6 +2140,29 @@
         "Archs": "x64"
       }
     },
+    "jpeg": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "jpeg",
+        "Version": "0.1-10",
+        "Title": "Read and write JPEG images",
+        "Author": "Simon Urbanek <Simon.Urbanek@r-project.org>",
+        "Maintainer": "Simon Urbanek <Simon.Urbanek@r-project.org>",
+        "Depends": "R (>= 2.9.0)",
+        "Description": "This package provides an easy and simple way to read, write and display bitmap images stored in the JPEG format. It can read and write both files and in-memory raw vectors.",
+        "License": "GPL-2 | GPL-3",
+        "SystemRequirements": "libjpeg",
+        "URL": "https://www.rforge.net/jpeg/",
+        "BugReports": "https://github.com/s-u/jpeg/issues",
+        "NeedsCompilation": "yes",
+        "Packaged": "2022-11-29 09:23:09 UTC; rforge",
+        "Repository": "CRAN",
+        "Date/Publication": "2022-11-29 11:12:52 UTC",
+        "Built": "R 4.3.1; x86_64-w64-mingw32; 2023-10-20 00:52:28 UTC; windows",
+        "Archs": "x64"
+      }
+    },
     "jquerylib": {
       "Source": "CRAN",
       "Repository": "https://cran.rstudio.com",
@@ -1884,6 +2212,32 @@
         "Date/Publication": "2023-06-29 22:10:02 UTC",
         "Built": "R 4.3.1; x86_64-w64-mingw32; 2023-09-05 00:39:52 UTC; windows",
         "Archs": "x64"
+      }
+    },
+    "juicyjuice": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "juicyjuice",
+        "Title": "Inline CSS Properties into HTML Tags Using 'juice'",
+        "Version": "0.1.0",
+        "Authors@R": "c(\n    person(\"Richard\", \"Iannone\", , \"riannone@me.com\", c(\"aut\", \"cre\", \"cph\"),\n           comment = c(ORCID = \"0000-0003-3925-190X\")),\n    person(\"Automattic\", role = c(\"cph\"), comment = \"juice library\"),\n    person(\"juice contributors\", role = c(\"ctb\"), comment = \"juice library\")\n    )",
+        "Description": "There are occasions where you need a piece of HTML with integrated\n    styles. A prime example of this is HTML email. This transformation\n    involves moving the CSS and associated formatting instructions from the\n    style block in the head of your document into the body of the HTML. Many\n    prominent email clients require integrated styles in HTML email; otherwise a\n    received HTML email will be displayed without any styling. This package will\n    quickly and precisely perform these CSS transformations when given HTML text\n    and it does so by using the JavaScript 'juice' library.",
+        "License": "MIT + file LICENSE",
+        "URL": "https://github.com/rich-iannone/juicyjuice",
+        "BugReports": "https://github.com/rich-iannone/juicyjuice/issues",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "7.2.1",
+        "Imports": "V8 (>= 4.2.0)",
+        "Suggests": "testthat (>= 3.0.0)",
+        "Config/testthat/edition": "3",
+        "NeedsCompilation": "no",
+        "Packaged": "2022-11-09 19:42:30 UTC; rich",
+        "Author": "Richard Iannone [aut, cre, cph]\n    (<https://orcid.org/0000-0003-3925-190X>),\n  Automattic [cph] (juice library),\n  juice contributors [ctb] (juice library)",
+        "Maintainer": "Richard Iannone <riannone@me.com>",
+        "Repository": "CRAN",
+        "Date/Publication": "2022-11-10 19:00:02 UTC",
+        "Built": "R 4.3.3; ; 2024-04-23 01:31:10 UTC; windows"
       }
     },
     "kableExtra": {
@@ -2052,6 +2406,67 @@
         "Archs": "x64"
       }
     },
+    "leaflet": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Type": "Package",
+        "Package": "leaflet",
+        "Title": "Create Interactive Web Maps with the JavaScript 'Leaflet'\nLibrary",
+        "Version": "2.2.2",
+        "Authors@R": "c(\n    person(\"Joe\", \"Cheng\", , \"joe@posit.co\", role = c(\"aut\", \"cre\")),\n    person(\"Barret\", \"Schloerke\", , \"barret@posit.co\", role = \"aut\",\n           comment = c(ORCID = \"0000-0001-9986-114X\")),\n    person(\"Bhaskar\", \"Karambelkar\", role = \"aut\"),\n    person(\"Yihui\", \"Xie\", role = \"aut\"),\n    person(\"Hadley\", \"Wickham\", role = \"ctb\"),\n    person(\"Kenton\", \"Russell\", role = \"ctb\"),\n    person(\"Kent\", \"Johnson\", role = \"ctb\"),\n    person(\"Vladimir\", \"Agafonkin\", role = c(\"ctb\", \"cph\"),\n           comment = \"Leaflet library\"),\n    person(\"CloudMade\", role = \"cph\",\n           comment = \"Leaflet library\"),\n    person(\"Leaflet contributors\", role = \"ctb\",\n           comment = \"Leaflet library\"),\n    person(\"Brandon Copeland\", role = c(\"ctb\", \"cph\"),\n           comment = \"leaflet-measure plugin\"),\n    person(\"Joerg Dietrich\", role = c(\"ctb\", \"cph\"),\n           comment = \"Leaflet.Terminator plugin\"),\n    person(\"Benjamin Becquet\", role = c(\"ctb\", \"cph\"),\n           comment = \"Leaflet.MagnifyingGlass plugin\"),\n    person(\"Norkart AS\", role = c(\"ctb\", \"cph\"),\n           comment = \"Leaflet.MiniMap plugin\"),\n    person(\"L. Voogdt\", role = c(\"ctb\", \"cph\"),\n           comment = \"Leaflet.awesome-markers plugin\"),\n    person(\"Daniel Montague\", role = c(\"ctb\", \"cph\"),\n           comment = \"Leaflet.EasyButton plugin\"),\n    person(\"Kartena AB\", role = c(\"ctb\", \"cph\"),\n           comment = \"Proj4Leaflet plugin\"),\n    person(\"Robert Kajic\", role = c(\"ctb\", \"cph\"),\n           comment = \"leaflet-locationfilter plugin\"),\n    person(\"Mapbox\", role = c(\"ctb\", \"cph\"),\n           comment = \"leaflet-omnivore plugin\"),\n    person(\"Michael Bostock\", role = c(\"ctb\", \"cph\"),\n           comment = \"topojson\"),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"))\n  )",
+        "Description": "Create and customize interactive maps using the 'Leaflet'\n    JavaScript library and the 'htmlwidgets' package. These maps can be\n    used directly from the R console, from 'RStudio', in Shiny\n    applications and R Markdown documents.",
+        "License": "GPL-3",
+        "URL": "https://rstudio.github.io/leaflet/,\nhttps://github.com/rstudio/leaflet",
+        "BugReports": "https://github.com/rstudio/leaflet/issues",
+        "Depends": "R (>= 3.1.0)",
+        "Imports": "crosstalk, htmltools, htmlwidgets (>= 1.5.4), jquerylib,\nleaflet.providers (>= 2.0.0), magrittr, methods, png, raster\n(>= 3.6.3), RColorBrewer, scales (>= 1.0.0), sp, stats,\nviridisLite, xfun",
+        "Suggests": "knitr, maps, purrr, R6, RJSONIO, rmarkdown, s2, sf (>=\n0.9-6), shiny, terra, testthat (>= 3.0.0)",
+        "Config/testthat/edition": "3",
+        "Config/Needs/website": "dplyr, geojsonio, ncdf4, tidyverse/tidytemplate",
+        "Encoding": "UTF-8",
+        "LazyData": "true",
+        "RoxygenNote": "7.3.1",
+        "NeedsCompilation": "no",
+        "Packaged": "2024-03-25 22:40:52 UTC; cpsievert",
+        "Author": "Joe Cheng [aut, cre],\n  Barret Schloerke [aut] (<https://orcid.org/0000-0001-9986-114X>),\n  Bhaskar Karambelkar [aut],\n  Yihui Xie [aut],\n  Hadley Wickham [ctb],\n  Kenton Russell [ctb],\n  Kent Johnson [ctb],\n  Vladimir Agafonkin [ctb, cph] (Leaflet library),\n  CloudMade [cph] (Leaflet library),\n  Leaflet contributors [ctb] (Leaflet library),\n  Brandon Copeland [ctb, cph] (leaflet-measure plugin),\n  Joerg Dietrich [ctb, cph] (Leaflet.Terminator plugin),\n  Benjamin Becquet [ctb, cph] (Leaflet.MagnifyingGlass plugin),\n  Norkart AS [ctb, cph] (Leaflet.MiniMap plugin),\n  L. Voogdt [ctb, cph] (Leaflet.awesome-markers plugin),\n  Daniel Montague [ctb, cph] (Leaflet.EasyButton plugin),\n  Kartena AB [ctb, cph] (Proj4Leaflet plugin),\n  Robert Kajic [ctb, cph] (leaflet-locationfilter plugin),\n  Mapbox [ctb, cph] (leaflet-omnivore plugin),\n  Michael Bostock [ctb, cph] (topojson),\n  Posit Software, PBC [cph, fnd]",
+        "Maintainer": "Joe Cheng <joe@posit.co>",
+        "Repository": "CRAN",
+        "Date/Publication": "2024-03-26 19:10:06 UTC",
+        "Built": "R 4.3.3; ; 2024-05-10 02:17:39 UTC; windows"
+      }
+    },
+    "leaflet.providers": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Type": "Package",
+        "Package": "leaflet.providers",
+        "Title": "Leaflet Providers",
+        "Version": "2.0.0",
+        "Authors@R": "c(\n    person(\"Leslie\", \"Huang\", , \"lesliehuang@nyu.edu\", role = \"aut\"),\n    person(\"Barret\", \"Schloerke\", , \"barret@posit.co\", role = c(\"ctb\", \"cre\"),\n           comment = c(ORCID = \"0000-0001-9986-114X\")),\n    person(\"Leaflet Providers contributors\", role = c(\"ctb\", \"cph\"),\n           comment = \"Leaflet Providers plugin\"),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"))\n  )",
+        "Description": "Contains third-party map tile provider information from\n    'Leaflet.js', <https://github.com/leaflet-extras/leaflet-providers>,\n    to be used with the 'leaflet' R package. Additionally,\n    'leaflet.providers' enables users to retrieve up-to-date provider\n    information between package updates.",
+        "License": "BSD_2_clause + file LICENSE",
+        "URL": "https://rstudio.github.io/leaflet.providers/,\nhttps://github.com/rstudio/leaflet.providers",
+        "BugReports": "https://github.com/rstudio/leaflet.providers/issues",
+        "Depends": "R (>= 2.10)",
+        "Imports": "htmltools",
+        "Suggests": "jsonlite, testthat (>= 3.0.0), V8",
+        "Config/Needs/website": "tidyverse/tidytemplate",
+        "Config/testthat/edition": "3",
+        "Encoding": "UTF-8",
+        "Language": "en-US",
+        "RoxygenNote": "7.2.3",
+        "Collate": "'providers_data.R' 'get_current_providers.R'\n'leaflet.providers-package.R' 'zzz.R'",
+        "NeedsCompilation": "no",
+        "Packaged": "2023-10-17 12:24:21 UTC; garrick",
+        "Author": "Leslie Huang [aut],\n  Barret Schloerke [ctb, cre] (<https://orcid.org/0000-0001-9986-114X>),\n  Leaflet Providers contributors [ctb, cph] (Leaflet Providers plugin),\n  Posit Software, PBC [cph, fnd]",
+        "Maintainer": "Barret Schloerke <barret@posit.co>",
+        "Repository": "CRAN",
+        "Date/Publication": "2023-10-17 17:10:02 UTC",
+        "Built": "R 4.3.3; ; 2024-05-08 01:29:37 UTC; windows"
+      }
+    },
     "lifecycle": {
       "Source": "CRAN",
       "Repository": "https://cran.rstudio.com",
@@ -2144,6 +2559,34 @@
         "Date/Publication": "2022-03-30 07:30:09 UTC",
         "Built": "R 4.3.1; x86_64-w64-mingw32; 2023-09-05 00:39:49 UTC; windows",
         "Archs": "x64"
+      }
+    },
+    "markdown": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "markdown",
+        "Type": "Package",
+        "Title": "Render Markdown with 'commonmark'",
+        "Version": "1.8",
+        "Authors@R": "c(\n   person(\"Yihui\", \"Xie\", role = c(\"aut\", \"cre\"), email = \"xie@yihui.name\", comment = c(ORCID = \"0000-0003-0645-5666\")),\n   person(\"JJ\", \"Allaire\", role = \"aut\"),\n   person(\"Jeffrey\", \"Horner\", role = \"aut\"),\n   person(\"Henrik\", \"Bengtsson\", role = \"ctb\"),\n   person(\"Jim\", \"Hester\", role = \"ctb\"),\n   person(\"Yixuan\", \"Qiu\", role = \"ctb\"),\n   person(\"Kohske\", \"Takahashi\", role = \"ctb\"),\n   person(\"Adam\", \"November\", role = \"ctb\"),\n   person(\"Nacho\", \"Caballero\", role = \"ctb\"),\n   person(\"Jeroen\", \"Ooms\", role = \"ctb\"),\n   person(\"Thomas\", \"Leeper\", role = \"ctb\"),\n   person(\"Joe\", \"Cheng\", role = \"ctb\"),\n   person(\"Andrzej\", \"Oles\", role = \"ctb\"),\n   person(given = \"Posit Software, PBC\", role = c(\"cph\", \"fnd\"))\n   )",
+        "Description": "Render Markdown to full and lightweight HTML/LaTeX documents with\n    the 'commonmark' package. It also supports features that are missing in\n    'commonmark', such as raw HTML/LaTeX blocks, LaTeX math, superscripts,\n    subscripts, footnotes, element attributes, appendices, and fenced 'Divs'.\n    With additional JavaScript and CSS, it can also create HTML slides and\n    articles.",
+        "Depends": "R (>= 2.11.1)",
+        "Imports": "utils, commonmark (>= 1.9.0), xfun (>= 0.38)",
+        "Suggests": "knitr, rmarkdown (>= 2.18), yaml, RCurl",
+        "License": "MIT + file LICENSE",
+        "URL": "https://github.com/rstudio/markdown",
+        "BugReports": "https://github.com/rstudio/markdown/issues",
+        "VignetteBuilder": "knitr",
+        "RoxygenNote": "7.2.3",
+        "Encoding": "UTF-8",
+        "NeedsCompilation": "no",
+        "Packaged": "2023-08-22 14:06:27 UTC; yihui",
+        "Author": "Yihui Xie [aut, cre] (<https://orcid.org/0000-0003-0645-5666>),\n  JJ Allaire [aut],\n  Jeffrey Horner [aut],\n  Henrik Bengtsson [ctb],\n  Jim Hester [ctb],\n  Yixuan Qiu [ctb],\n  Kohske Takahashi [ctb],\n  Adam November [ctb],\n  Nacho Caballero [ctb],\n  Jeroen Ooms [ctb],\n  Thomas Leeper [ctb],\n  Joe Cheng [ctb],\n  Andrzej Oles [ctb],\n  Posit Software, PBC [cph, fnd]",
+        "Maintainer": "Yihui Xie <xie@yihui.name>",
+        "Repository": "CRAN",
+        "Date/Publication": "2023-08-23 00:10:09 UTC",
+        "Built": "R 4.3.1; ; 2023-09-05 01:18:17 UTC; windows"
       }
     },
     "memoise": {
@@ -2332,6 +2775,67 @@
         "Date/Publication": "2023-07-15 19:50:02 UTC",
         "Built": "R 4.3.1; x86_64-w64-mingw32; 2023-09-07 02:05:32 UTC; windows",
         "Archs": "x64"
+      }
+    },
+    "packrat": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Type": "Package",
+        "Package": "packrat",
+        "Title": "A Dependency Management System for Projects and their R Package\nDependencies",
+        "Version": "0.9.2",
+        "Authors@R": "c(\n    person(\"Aron\", \"Atkins\", , \"aron@posit.co\", role = c(\"aut\", \"cre\")),\n    person(\"Toph\", \"Allen\", role = \"aut\"),\n    person(\"Kevin\", \"Ushey\", role = \"aut\"),\n    person(\"Jonathan\", \"McPherson\", role = \"aut\"),\n    person(\"Joe\", \"Cheng\", role = \"aut\"),\n    person(\"JJ\", \"Allaire\", role = \"aut\"),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"))\n  )",
+        "Description": "Manage the R packages your project depends on in an isolated,\n    portable, and reproducible way.",
+        "License": "GPL-2",
+        "URL": "https://github.com/rstudio/packrat",
+        "BugReports": "https://github.com/rstudio/packrat/issues",
+        "Depends": "R (>= 3.0.0)",
+        "Imports": "tools, utils",
+        "Suggests": "devtools, httr, knitr, mockery, rmarkdown, testthat (>=\n3.0.0)",
+        "Config/testthat/edition": "3",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "7.2.3",
+        "NeedsCompilation": "no",
+        "Packaged": "2023-09-05 11:45:33 UTC; aron",
+        "Author": "Aron Atkins [aut, cre],\n  Toph Allen [aut],\n  Kevin Ushey [aut],\n  Jonathan McPherson [aut],\n  Joe Cheng [aut],\n  JJ Allaire [aut],\n  Posit Software, PBC [cph, fnd]",
+        "Maintainer": "Aron Atkins <aron@posit.co>",
+        "Repository": "CRAN",
+        "Date/Publication": "2023-09-05 13:00:02 UTC",
+        "Built": "R 4.3.3; ; 2024-04-14 00:39:50 UTC; windows"
+      }
+    },
+    "pak": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "pak",
+        "Title": "Another Approach to Package Installation",
+        "Version": "0.7.2",
+        "Authors@R": "c(\n    person(\"Gábor\", \"Csárdi\", , \"csardi.gabor@gmail.com\", role = c(\"aut\", \"cre\")),\n    person(\"Jim\", \"Hester\", role = \"aut\"),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")),\n    person(\"Winston\", \"Chang\", role = \"ctb\", comment = \"R6, callr, processx\"),\n    person(\"Ascent Digital Services\", role = c(\"cph\", \"fnd\"), comment = \"callr, processx\"),\n    person(\"Hadley\", \"Wickham\", role = c(\"ctb\", \"cph\"), comment = \"cli, curl, pkgbuild\"),\n    person(\"Jeroen\", \"Ooms\", role = \"ctb\", comment = \"curl, jsonlite\"),\n    person(\"Maëlle\", \"Salmon\", role = \"ctb\", comment = \"desc, pkgsearch\"),\n    person(\"Duncan\", \"Temple Lang\", role = \"ctb\", comment = \"jsonlite\"),\n    person(\"Lloyd\", \"Hilaiel\", role = \"cph\", comment = \"jsonlite\"),\n    person(\"Michel Berkelaar and lpSolve authors\", role = \"ctb\", comment = \"lpSolve\"),\n    person(\"R Consortium\", role = \"fnd\", comment = \"pkgsearch\"),\n    person(\"Jay\", \"Loden\", role = \"ctb\", comment = \"ps\"),\n    person(\"Dave\", \"Daeschler\", role = \"ctb\", comment = \"ps\"),\n    person(\"Giampaolo\", \"Rodola\", role = \"ctb\", comment = \"ps\"),\n    person(\"Kuba\", \"Podgórski\", role = \"ctb\", comment = \"zip\"),\n    person(\"Rich\", \"Geldreich\", role = \"ctb\", comment = \"zip\")\n  )",
+        "Description": "The goal of 'pak' is to make package installation faster and\n    more reliable. In particular, it performs all HTTP operations in\n    parallel, so metadata resolution and package downloads are fast.\n    Metadata and package files are cached on the local disk as well. 'pak'\n    has a dependency solver, so it finds version conflicts before\n    performing the installation. This version of 'pak' supports CRAN,\n    'Bioconductor' and 'GitHub' packages as well.",
+        "License": "GPL-3",
+        "URL": "https://pak.r-lib.org/, https://github.com/r-lib/pak",
+        "BugReports": "https://github.com/r-lib/pak/issues",
+        "Depends": "R (>= 3.5)",
+        "Imports": "tools, utils",
+        "Suggests": "callr (>= 3.7.0), cli (>= 3.2.0), covr, curl (>= 4.3.2), desc\n(>= 1.4.1), filelock (>= 1.0.2), gitcreds, glue (>= 1.6.2),\njsonlite (>= 1.8.0), mockery, pingr, pkgbuild (>= 1.4.2),\npkgcache (>= 2.0.4), pkgdepends (>= 0.5.0.9001), pkgsearch (>=\n3.1.0), processx (>= 3.8.1), ps (>= 1.6.0), rstudioapi,\ntestthat (>= 3.2.0), withr",
+        "ByteCompile": "true",
+        "Config/build/extra-sources": "configure*",
+        "Config/needs/dependencies": "callr, desc, cli, curl, filelock, jsonlite,\npkgbuild, pkgcache, pkgdepends, pkgsearch, processx, ps,",
+        "Config/Needs/website": "r-lib/asciicast, rmarkdown, roxygen2,\ntidyverse/tidytemplate",
+        "Config/Needs/deploy": "cli@3.6.2, curl, desc, gitcreds, glue@1.6.2,\njsonlite, processx",
+        "Config/testthat/edition": "3",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "7.2.3.9000",
+        "Biarch": "true",
+        "NeedsCompilation": "yes",
+        "Packaged": "2024-03-17 17:55:35 UTC; gaborcsardi",
+        "Author": "Gábor Csárdi [aut, cre],\n  Jim Hester [aut],\n  Posit Software, PBC [cph, fnd],\n  Winston Chang [ctb] (R6, callr, processx),\n  Ascent Digital Services [cph, fnd] (callr, processx),\n  Hadley Wickham [ctb, cph] (cli, curl, pkgbuild),\n  Jeroen Ooms [ctb] (curl, jsonlite),\n  Maëlle Salmon [ctb] (desc, pkgsearch),\n  Duncan Temple Lang [ctb] (jsonlite),\n  Lloyd Hilaiel [cph] (jsonlite),\n  Michel Berkelaar and lpSolve authors [ctb] (lpSolve),\n  R Consortium [fnd] (pkgsearch),\n  Jay Loden [ctb] (ps),\n  Dave Daeschler [ctb] (ps),\n  Giampaolo Rodola [ctb] (ps),\n  Kuba Podgórski [ctb] (zip),\n  Rich Geldreich [ctb] (zip)",
+        "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
+        "Repository": "CRAN",
+        "Date/Publication": "2024-03-17 18:30:06 UTC",
+        "Built": "R 4.3.3; x86_64-w64-mingw32; 2024-05-15 00:46:40 UTC; windows"
       }
     },
     "paletteer": {
@@ -2633,6 +3137,31 @@
         "Archs": "x64"
       }
     },
+    "proxy": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "proxy",
+        "Type": "Package",
+        "Title": "Distance and Similarity Measures",
+        "Version": "0.4-27",
+        "Authors@R": "c(person(given = \"David\", family = \"Meyer\", role = c(\"aut\", \"cre\"), email = \"David.Meyer@R-project.org\"),\n             person(given = \"Christian\", family = \"Buchta\", role = \"aut\"))",
+        "Description": "Provides an extensible framework for the efficient calculation of auto- and cross-proximities, along with implementations of the most popular ones. ",
+        "Depends": "R (>= 3.4.0)",
+        "Imports": "stats, utils",
+        "Suggests": "cba",
+        "Collate": "registry.R database.R dist.R similarities.R dissimilarities.R\nutil.R seal.R",
+        "License": "GPL-2",
+        "NeedsCompilation": "yes",
+        "Packaged": "2022-06-08 21:36:02 UTC; meyer",
+        "Author": "David Meyer [aut, cre],\n  Christian Buchta [aut]",
+        "Maintainer": "David Meyer <David.Meyer@R-project.org>",
+        "Repository": "CRAN",
+        "Date/Publication": "2022-06-09 06:15:32 UTC",
+        "Built": "R 4.3.3; x86_64-w64-mingw32; 2024-05-08 00:49:10 UTC; windows",
+        "Archs": "x64"
+      }
+    },
     "ps": {
       "Source": "CRAN",
       "Repository": "https://cran.rstudio.com",
@@ -2751,6 +3280,34 @@
         "Repository": "CRAN",
         "Date/Publication": "2021-01-31 05:40:02 UTC",
         "Built": "R 4.3.1; x86_64-w64-mingw32; 2023-09-05 00:39:51 UTC; windows",
+        "Archs": "x64"
+      }
+    },
+    "raster": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "raster",
+        "Type": "Package",
+        "Title": "Geographic Data Analysis and Modeling",
+        "Version": "3.6-26",
+        "Date": "2023-10-12",
+        "Imports": "Rcpp, methods, terra (>= 1.7-29)",
+        "LinkingTo": "Rcpp",
+        "Depends": "sp (>= 1.4-5), R (>= 3.5.0)",
+        "Suggests": "ncdf4, igraph, tcltk, parallel, rasterVis, MASS, sf,\ntinytest, gstat, fields, exactextractr",
+        "Description": "Reading, writing, manipulating, analyzing and modeling of spatial data. This package has been superseded by the \"terra\" package <https://CRAN.R-project.org/package=terra>. ",
+        "License": "GPL (>= 3)",
+        "URL": "https://rspatial.org/raster",
+        "BugReports": "https://github.com/rspatial/raster/issues/",
+        "Authors@R": "c(\n\tperson(\"Robert J.\", \"Hijmans\", role = c(\"cre\", \"aut\"),  \n\t\t\temail = \"r.hijmans@gmail.com\", \n\t\t\tcomment = c(ORCID = \"0000-0001-5872-2872\")),\n\tperson(\"Jacob\", \"van Etten\", role = \"ctb\"),\n\tperson(\"Michael\", \"Sumner\", role = \"ctb\"),\n\tperson(\"Joe\", \"Cheng\", role = \"ctb\"),\n\tperson(\"Dan\", \"Baston\", role = \"ctb\"),\n\tperson(\"Andrew\", \"Bevan\", role = \"ctb\"),\n\tperson(\"Roger\", \"Bivand\", role = \"ctb\"),\n\tperson(\"Lorenzo\", \"Busetto\", role = \"ctb\"),\n\tperson(\"Mort\", \"Canty\", role = \"ctb\"),\n\tperson(\"Ben\", \"Fasoli\", role = \"ctb\"),\n\tperson(\"David\", \"Forrest\", role = \"ctb\"),\n\tperson(\"Aniruddha\", \"Ghosh\", role = \"ctb\"),\n\tperson(\"Duncan\", \"Golicher\", role = \"ctb\"),\n\tperson(\"Josh\", \"Gray\", role = \"ctb\"),\n\tperson(\"Jonathan A.\", \"Greenberg\", role = \"ctb\"),\n\tperson(\"Paul\", \"Hiemstra\", role = \"ctb\"),\n\tperson(\"Kassel\", \"Hingee\", role = \"ctb\"),\n\tperson(\"Alex\", \"Ilich\", role = \"ctb\"),\n\tperson(\"Institute for Mathematics Applied Geosciences\", role=\"cph\"),\n\tperson(\"Charles\", \"Karney\", role = \"ctb\"),\n\tperson(\"Matteo\", \"Mattiuzzi\", role = \"ctb\"),\n\tperson(\"Steven\", \"Mosher\", role = \"ctb\"),\n\tperson(\"Babak\", \"Naimi\", role = \"ctb\"),\t\n\tperson(\"Jakub\", \"Nowosad\", role = \"ctb\"),\n\tperson(\"Edzer\", \"Pebesma\", role = \"ctb\"),\n\tperson(\"Oscar\", \"Perpinan Lamigueiro\", role = \"ctb\"),\n\tperson(\"Etienne B.\", \"Racine\", role = \"ctb\"),\n\tperson(\"Barry\", \"Rowlingson\", role = \"ctb\"),\n\tperson(\"Ashton\", \"Shortridge\", role = \"ctb\"),\n\tperson(\"Bill\", \"Venables\", role = \"ctb\"),\n\tperson(\"Rafael\", \"Wueest\", role = \"ctb\")\n\t)",
+        "NeedsCompilation": "yes",
+        "Packaged": "2023-10-12 15:29:22 UTC; rhijm",
+        "Author": "Robert J. Hijmans [cre, aut] (<https://orcid.org/0000-0001-5872-2872>),\n  Jacob van Etten [ctb],\n  Michael Sumner [ctb],\n  Joe Cheng [ctb],\n  Dan Baston [ctb],\n  Andrew Bevan [ctb],\n  Roger Bivand [ctb],\n  Lorenzo Busetto [ctb],\n  Mort Canty [ctb],\n  Ben Fasoli [ctb],\n  David Forrest [ctb],\n  Aniruddha Ghosh [ctb],\n  Duncan Golicher [ctb],\n  Josh Gray [ctb],\n  Jonathan A. Greenberg [ctb],\n  Paul Hiemstra [ctb],\n  Kassel Hingee [ctb],\n  Alex Ilich [ctb],\n  Institute for Mathematics Applied Geosciences [cph],\n  Charles Karney [ctb],\n  Matteo Mattiuzzi [ctb],\n  Steven Mosher [ctb],\n  Babak Naimi [ctb],\n  Jakub Nowosad [ctb],\n  Edzer Pebesma [ctb],\n  Oscar Perpinan Lamigueiro [ctb],\n  Etienne B. Racine [ctb],\n  Barry Rowlingson [ctb],\n  Ashton Shortridge [ctb],\n  Bill Venables [ctb],\n  Rafael Wueest [ctb]",
+        "Maintainer": "Robert J. Hijmans <r.hijmans@gmail.com>",
+        "Repository": "CRAN",
+        "Date/Publication": "2023-10-14 13:40:12 UTC",
+        "Built": "R 4.3.3; x86_64-w64-mingw32; 2024-05-08 01:57:41 UTC; windows",
         "Archs": "x64"
       }
     },
@@ -3048,6 +3605,37 @@
         "Built": "R 4.3.1; ; 2023-09-06 15:14:25 UTC; windows"
       }
     },
+    "rsconnect": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Type": "Package",
+        "Package": "rsconnect",
+        "Title": "Deploy Docs, Apps, and APIs to 'Posit Connect', 'shinyapps.io',\nand 'RPubs'",
+        "Version": "1.2.2",
+        "Authors@R": "c(\n    person(\"Aron\", \"Atkins\", , \"aron@posit.co\", role = c(\"aut\", \"cre\")),\n    person(\"Toph\", \"Allen\", role = \"aut\"),\n    person(\"Hadley\", \"Wickham\", role = \"aut\"),\n    person(\"Jonathan\", \"McPherson\", role = \"aut\"),\n    person(\"JJ\", \"Allaire\", role = \"aut\"),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"))\n  )",
+        "Description": "Programmatic deployment interface for 'RPubs',\n    'shinyapps.io', and 'Posit Connect'. Supported content types include R\n    Markdown documents, Shiny applications, Plumber APIs, plots, and\n    static web content.",
+        "License": "GPL-2",
+        "URL": "https://rstudio.github.io/rsconnect/,\nhttps://github.com/rstudio/rsconnect",
+        "BugReports": "https://github.com/rstudio/rsconnect/issues",
+        "Depends": "R (>= 3.5.0)",
+        "Imports": "cli, curl, digest, jsonlite, lifecycle, openssl (>= 2.0.0),\nPKI, packrat (>= 0.6), renv (>= 1.0.0), rlang (>= 1.0.0),\nrstudioapi (>= 0.5), tools, yaml (>= 2.1.5)",
+        "Suggests": "Biobase, BiocManager, foreign, knitr, MASS, plumber (>=\n0.3.2), quarto, RCurl, reticulate, rmarkdown (>= 1.1), shiny,\ntestthat (>= 3.1.9), webfakes, withr",
+        "VignetteBuilder": "knitr",
+        "Config/Needs/website": "tidyverse/tidytemplate",
+        "Config/testthat/edition": "3",
+        "Config/testthat/parallel": "true",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "7.3.1",
+        "NeedsCompilation": "no",
+        "Packaged": "2024-04-04 12:48:52 UTC; aron",
+        "Author": "Aron Atkins [aut, cre],\n  Toph Allen [aut],\n  Hadley Wickham [aut],\n  Jonathan McPherson [aut],\n  JJ Allaire [aut],\n  Posit Software, PBC [cph, fnd]",
+        "Maintainer": "Aron Atkins <aron@posit.co>",
+        "Repository": "CRAN",
+        "Date/Publication": "2024-04-04 13:20:02 UTC",
+        "Built": "R 4.3.3; ; 2024-05-01 01:41:45 UTC; windows"
+      }
+    },
     "rstudioapi": {
       "Source": "CRAN",
       "Repository": "https://cran.rstudio.com",
@@ -3101,6 +3689,37 @@
         "Repository": "CRAN",
         "Date/Publication": "2022-08-19 22:30:08 UTC",
         "Built": "R 4.3.1; ; 2023-09-07 02:44:57 UTC; windows"
+      }
+    },
+    "s2": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "s2",
+        "Title": "Spherical Geometry Operators Using the S2 Geometry Library",
+        "Version": "1.1.6",
+        "Authors@R": "c(\n     person(given = \"Dewey\",\n           family = \"Dunnington\",\n           role = c(\"aut\"),\n           email = \"dewey@fishandwhistle.net\",\n           comment = c(ORCID = \"0000-0002-9415-4582\")),\n     person(given = \"Edzer\",\n             family = \"Pebesma\",\n             role = c(\"aut\", \"cre\"),\n             email = \"edzer.pebesma@uni-muenster.de\",\n             comment = c(ORCID = \"0000-0001-8049-7069\")),\n    person(\"Ege\", \"Rubak\", email=\"rubak@math.aau.dk\", role = c(\"aut\")),\n    person(\"Jeroen\", \"Ooms\", , \"jeroen.ooms@stat.ucla.edu\", role = \"ctb\", comment = \"configure script\"),\n    person(family = \"Google, Inc.\", role = \"cph\", comment = \"Original s2geometry.io source code\")\n  )",
+        "Description": "Provides R bindings for Google's s2 library for geometric calculations on\n    the sphere. High-performance constructors and exporters provide high compatibility\n    with existing spatial packages, transformers construct new geometries from existing\n    geometries, predicates provide a means to select geometries based on spatial \n    relationships, and accessors extract information about geometries.",
+        "License": "Apache License (== 2.0)",
+        "Encoding": "UTF-8",
+        "LazyData": "true",
+        "RoxygenNote": "7.2.3",
+        "SystemRequirements": "OpenSSL >= 1.0.1",
+        "LinkingTo": "Rcpp, wk",
+        "Imports": "Rcpp, wk (>= 0.6.0)",
+        "Suggests": "bit64, testthat (>= 3.0.0), vctrs",
+        "URL": "https://r-spatial.github.io/s2/, https://github.com/r-spatial/s2,\nhttp://s2geometry.io/",
+        "BugReports": "https://github.com/r-spatial/s2/issues",
+        "Depends": "R (>= 3.0.0)",
+        "Config/testthat/edition": "3",
+        "NeedsCompilation": "yes",
+        "Packaged": "2023-12-19 14:38:19 UTC; edzer",
+        "Author": "Dewey Dunnington [aut] (<https://orcid.org/0000-0002-9415-4582>),\n  Edzer Pebesma [aut, cre] (<https://orcid.org/0000-0001-8049-7069>),\n  Ege Rubak [aut],\n  Jeroen Ooms [ctb] (configure script),\n  Google, Inc. [cph] (Original s2geometry.io source code)",
+        "Maintainer": "Edzer Pebesma <edzer.pebesma@uni-muenster.de>",
+        "Repository": "CRAN",
+        "Date/Publication": "2023-12-19 17:20:05 UTC",
+        "Built": "R 4.3.3; x86_64-w64-mingw32; 2024-05-08 01:29:26 UTC; windows",
+        "Archs": "x64"
       }
     },
     "sass": {
@@ -3186,6 +3805,66 @@
         "Repository": "CRAN",
         "Date/Publication": "2019-11-20 07:30:03 UTC",
         "Built": "R 4.3.1; ; 2023-09-07 02:28:12 UTC; windows"
+      }
+    },
+    "sf": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "sf",
+        "Version": "1.0-16",
+        "Title": "Simple Features for R",
+        "Authors@R": "\n    c(person(given = \"Edzer\",\n             family = \"Pebesma\",\n             role = c(\"aut\", \"cre\"),\n             email = \"edzer.pebesma@uni-muenster.de\",\n             comment = c(ORCID = \"0000-0001-8049-7069\")),\n      person(given = \"Roger\",\n             family = \"Bivand\",\n             role = \"ctb\",\n             comment = c(ORCID = \"0000-0003-2392-6140\")),\n      person(given = \"Etienne\",\n             family = \"Racine\",\n             role = \"ctb\"),\n      person(given = \"Michael\",\n             family = \"Sumner\",\n             role = \"ctb\"),\n      person(given = \"Ian\",\n             family = \"Cook\",\n             role = \"ctb\"),\n      person(given = \"Tim\",\n             family = \"Keitt\",\n             role = \"ctb\"),\n      person(given = \"Robin\",\n             family = \"Lovelace\",\n             role = \"ctb\"),\n      person(given = \"Hadley\",\n             family = \"Wickham\",\n             role = \"ctb\"),\n      person(given = \"Jeroen\",\n             family = \"Ooms\",\n             role = \"ctb\",\n             comment = c(ORCID = \"0000-0002-4035-0289\")),\n      person(given = \"Kirill\",\n             family = \"M\\u00fcller\",\n             role = \"ctb\"),\n      person(given = \"Thomas Lin\",\n             family = \"Pedersen\",\n             role = \"ctb\"),\n      person(given = \"Dan\",\n             family = \"Baston\",\n             role = \"ctb\"),\n      person(given = \"Dewey\",\n             family = \"Dunnington\",\n             role = \"ctb\",\n             comment = c(ORCID = \"0000-0002-9415-4582\"))\n\t\t\t )",
+        "Description": "Support for simple features, a standardized way to\n    encode spatial vector data. Binds to 'GDAL' for reading and writing\n    data, to 'GEOS' for geometrical operations, and to 'PROJ' for\n    projection conversions and datum transformations. Uses by default the 's2'\n    package for spherical geometry operations on ellipsoidal (long/lat) coordinates.",
+        "License": "GPL-2 | MIT + file LICENSE",
+        "URL": "https://r-spatial.github.io/sf/, https://github.com/r-spatial/sf",
+        "BugReports": "https://github.com/r-spatial/sf/issues",
+        "Depends": "methods, R (>= 3.3.0)",
+        "Imports": "classInt (>= 0.4-1), DBI (>= 0.8), graphics, grDevices, grid,\nmagrittr, Rcpp (>= 0.12.18), s2 (>= 1.1.0), stats, tools, units\n(>= 0.7-0), utils",
+        "Suggests": "blob, nanoarrow, covr, dplyr (>= 1.0.0), ggplot2, knitr,\nlwgeom (>= 0.2-14), maps, mapview, Matrix, microbenchmark,\nodbc, pbapply, pillar, pool, raster, rlang, rmarkdown,\nRPostgres (>= 1.1.0), RPostgreSQL, RSQLite, sp (>= 1.2-4),\nspatstat (>= 2.0-1), spatstat.geom, spatstat.random,\nspatstat.linnet, spatstat.utils, stars (>= 0.2-0), terra,\ntestthat (>= 3.0.0), tibble (>= 1.4.1), tidyr (>= 1.2.0),\ntidyselect (>= 1.0.0), tmap (>= 2.0), vctrs, wk (>= 0.9.0)",
+        "LinkingTo": "Rcpp",
+        "VignetteBuilder": "knitr",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "7.3.1",
+        "Config/testthat/edition": "2",
+        "Config/needs/coverage": "XML",
+        "SystemRequirements": "GDAL (>= 2.0.1), GEOS (>= 3.4.0), PROJ (>= 4.8.0),\nsqlite3",
+        "Collate": "'RcppExports.R' 'init.R' 'import-standalone-s3-register.R'\n'crs.R' 'bbox.R' 'read.R' 'db.R' 'sfc.R' 'sfg.R' 'sf.R'\n'bind.R' 'wkb.R' 'wkt.R' 'plot.R' 'geom-measures.R'\n'geom-predicates.R' 'geom-transformers.R' 'transform.R'\n'proj.R' 'sp.R' 'grid.R' 'arith.R' 'tidyverse.R'\n'tidyverse-vctrs.R' 'cast_sfg.R' 'cast_sfc.R' 'graticule.R'\n'datasets.R' 'aggregate.R' 'agr.R' 'maps.R' 'join.R' 'sample.R'\n'valid.R' 'collection_extract.R' 'jitter.R' 'sgbp.R'\n'spatstat.R' 'stars.R' 'crop.R' 'gdal_utils.R' 'nearest.R'\n'normalize.R' 'sf-package.R' 'defunct.R' 'z_range.R'\n'm_range.R' 'shift_longitude.R' 'make_grid.R' 's2.R' 'terra.R'\n'geos-overlayng.R' 'break_antimeridian.R'",
+        "NeedsCompilation": "yes",
+        "Packaged": "2024-03-20 22:16:20 UTC; edzer",
+        "Author": "Edzer Pebesma [aut, cre] (<https://orcid.org/0000-0001-8049-7069>),\n  Roger Bivand [ctb] (<https://orcid.org/0000-0003-2392-6140>),\n  Etienne Racine [ctb],\n  Michael Sumner [ctb],\n  Ian Cook [ctb],\n  Tim Keitt [ctb],\n  Robin Lovelace [ctb],\n  Hadley Wickham [ctb],\n  Jeroen Ooms [ctb] (<https://orcid.org/0000-0002-4035-0289>),\n  Kirill Müller [ctb],\n  Thomas Lin Pedersen [ctb],\n  Dan Baston [ctb],\n  Dewey Dunnington [ctb] (<https://orcid.org/0000-0002-9415-4582>)",
+        "Maintainer": "Edzer Pebesma <edzer.pebesma@uni-muenster.de>",
+        "Repository": "CRAN",
+        "Date/Publication": "2024-03-24 23:50:02 UTC",
+        "Built": "R 4.3.3; x86_64-w64-mingw32; 2024-05-08 02:17:24 UTC; windows",
+        "Archs": "x64"
+      }
+    },
+    "sp": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "sp",
+        "Version": "2.1-4",
+        "Title": "Classes and Methods for Spatial Data",
+        "Authors@R": "c(person(\"Edzer\", \"Pebesma\", role = c(\"aut\", \"cre\"),\n\t\t\t\temail = \"edzer.pebesma@uni-muenster.de\"),\n\t\t\tperson(\"Roger\", \"Bivand\", role = \"aut\",\n            \temail = \"Roger.Bivand@nhh.no\"),\n\t\t\tperson(\"Barry\", \"Rowlingson\", role = \"ctb\"),\n\t\t\tperson(\"Virgilio\", \"Gomez-Rubio\", role = \"ctb\"),\n\t\t\tperson(\"Robert\", \"Hijmans\", role = \"ctb\"),\n\t\t\tperson(\"Michael\", \"Sumner\", role = \"ctb\"),\n\t\t\tperson(\"Don\", \"MacQueen\", role = \"ctb\"),\n\t\t\tperson(\"Jim\", \"Lemon\", role = \"ctb\"),\n                        person(\"Finn\", \"Lindgren\", role = \"ctb\"),\n\t\t\tperson(\"Josh\", \"O'Brien\", role = \"ctb\"),\n\t\t\tperson(\"Joseph\", \"O'Rourke\", role = \"ctb\"),\n                        person(\"Patrick\", \"Hausmann\", role = \"ctb\"))",
+        "Depends": "R (>= 3.5.0), methods",
+        "Imports": "utils, stats, graphics, grDevices, lattice, grid",
+        "Suggests": "RColorBrewer, gstat, deldir, knitr, rmarkdown, sf, terra,\nraster",
+        "Description": "Classes and methods for spatial\n  data; the classes document where the spatial location information\n  resides, for 2D or 3D data. Utility functions are provided, e.g. for\n  plotting data as maps, spatial selection, as well as methods for\n  retrieving coordinates, for subsetting, print, summary, etc. From this\n  version, 'rgdal', 'maptools', and 'rgeos' are no longer used at all,\n  see <https://r-spatial.org/r/2023/05/15/evolution4.html> for details.",
+        "License": "GPL (>= 2)",
+        "URL": "https://github.com/edzer/sp/ https://edzer.github.io/sp/",
+        "BugReports": "https://github.com/edzer/sp/issues",
+        "Collate": "bpy.colors.R AAA.R Class-CRS.R CRS-methods.R Class-Spatial.R\nSpatial-methods.R projected.R Class-SpatialPoints.R\nSpatialPoints-methods.R Class-SpatialPointsDataFrame.R\nSpatialPointsDataFrame-methods.R Class-SpatialMultiPoints.R\nSpatialMultiPoints-methods.R\nClass-SpatialMultiPointsDataFrame.R\nSpatialMultiPointsDataFrame-methods.R Class-GridTopology.R\nClass-SpatialGrid.R Class-SpatialGridDataFrame.R\nClass-SpatialLines.R SpatialLines-methods.R\nClass-SpatialLinesDataFrame.R SpatialLinesDataFrame-methods.R\nClass-SpatialPolygons.R Class-SpatialPolygonsDataFrame.R\nSpatialPolygons-methods.R SpatialPolygonsDataFrame-methods.R\nGridTopology-methods.R SpatialGrid-methods.R\nSpatialGridDataFrame-methods.R SpatialPolygons-internals.R\npoint.in.polygon.R SpatialPolygons-displayMethods.R zerodist.R\nimage.R stack.R bubble.R mapasp.R select.spatial.R gridded.R\nasciigrid.R spplot.R over.R spsample.R recenter.R dms.R\ngridlines.R spdists.R rbind.R flipSGDF.R chfids.R loadmeuse.R\ncompassRose.R surfaceArea.R spOptions.R subset.R disaggregate.R\nsp_spat1.R merge.R aggregate.R elide.R sp2Mondrian.R",
+        "VignetteBuilder": "knitr",
+        "NeedsCompilation": "yes",
+        "Packaged": "2024-04-30 10:25:06 UTC; edzer",
+        "Author": "Edzer Pebesma [aut, cre],\n  Roger Bivand [aut],\n  Barry Rowlingson [ctb],\n  Virgilio Gomez-Rubio [ctb],\n  Robert Hijmans [ctb],\n  Michael Sumner [ctb],\n  Don MacQueen [ctb],\n  Jim Lemon [ctb],\n  Finn Lindgren [ctb],\n  Josh O'Brien [ctb],\n  Joseph O'Rourke [ctb],\n  Patrick Hausmann [ctb]",
+        "Maintainer": "Edzer Pebesma <edzer.pebesma@uni-muenster.de>",
+        "Repository": "CRAN",
+        "Date/Publication": "2024-04-30 14:20:03 UTC",
+        "Built": "R 4.3.3; x86_64-w64-mingw32; 2024-05-10 01:19:30 UTC; windows",
+        "Archs": "x64"
       }
     },
     "stringi": {
@@ -3334,6 +4013,38 @@
         "Repository": "CRAN",
         "Date/Publication": "2022-02-11 12:50:02 UTC",
         "Built": "R 4.3.1; x86_64-w64-mingw32; 2023-09-07 01:10:04 UTC; windows",
+        "Archs": "x64"
+      }
+    },
+    "terra": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "terra",
+        "Type": "Package",
+        "Title": "Spatial Data Analysis",
+        "Version": "1.7-71",
+        "Date": "2024-01-31",
+        "Depends": "R (>= 3.5.0)",
+        "Suggests": "parallel, tinytest, ncdf4, sf (>= 0.9-8), deldir, XML,\nleaflet (>= 2.2.1), htmlwidgets",
+        "LinkingTo": "Rcpp",
+        "Imports": "methods, Rcpp (>= 1.0-10)",
+        "SystemRequirements": "C++17, GDAL (>= 2.2.3), GEOS (>= 3.4.0), PROJ (>=\n4.9.3), sqlite3",
+        "Encoding": "UTF-8",
+        "Language": "en-US",
+        "Maintainer": "Robert J. Hijmans <r.hijmans@gmail.com>",
+        "Description": "Methods for spatial data analysis with vector (points, lines, polygons) and raster (grid) data. Methods for vector data include geometric operations such as intersect and buffer. Raster methods include local, focal, global, zonal and geometric operations. The predict and interpolate methods facilitate the use of regression type (interpolation, machine learning) models for spatial prediction, including with satellite remote sensing data. Processing of very large files is supported. See the manual and tutorials on <https://rspatial.org/> to get started. 'terra' replaces the 'raster' package ('terra' can do more, and it is faster and easier to use).",
+        "License": "GPL (>= 3)",
+        "URL": "https://rspatial.org/, https://rspatial.github.io/terra/",
+        "BugReports": "https://github.com/rspatial/terra/issues/",
+        "LazyLoad": "yes",
+        "Authors@R": "c(\n\tperson(\"Robert J.\", \"Hijmans\", role = c(\"cre\", \"aut\"),  \n\t\t\temail = \"r.hijmans@gmail.com\", comment = c(ORCID = \"0000-0001-5872-2872\")),\n    person(\"Roger\", \"Bivand\",  role = \"ctb\", comment = c(ORCID = \"0000-0003-2392-6140\")),\n    person(\"Edzer\", \"Pebesma\", role = \"ctb\", comment = c(ORCID = \"0000-0001-8049-7069\")),\n    person(\"Michael D.\", \"Sumner\", role = \"ctb\"))",
+        "NeedsCompilation": "yes",
+        "Packaged": "2024-01-31 07:01:10 UTC; rhijm",
+        "Author": "Robert J. Hijmans [cre, aut] (<https://orcid.org/0000-0001-5872-2872>),\n  Roger Bivand [ctb] (<https://orcid.org/0000-0003-2392-6140>),\n  Edzer Pebesma [ctb] (<https://orcid.org/0000-0001-8049-7069>),\n  Michael D. Sumner [ctb]",
+        "Repository": "CRAN",
+        "Date/Publication": "2024-01-31 16:20:02 UTC",
+        "Built": "R 4.3.3; x86_64-w64-mingw32; 2024-05-08 01:29:03 UTC; windows",
         "Archs": "x64"
       }
     },
@@ -3605,6 +4316,37 @@
         "Archs": "x64"
       }
     },
+    "units": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "units",
+        "Version": "0.8-5",
+        "Title": "Measurement Units for R Vectors",
+        "Authors@R": "c(person(\"Edzer\", \"Pebesma\", role = c(\"aut\", \"cre\"), email = \"edzer.pebesma@uni-muenster.de\", comment = c(ORCID = \"0000-0001-8049-7069\")),\n    person(\"Thomas\", \"Mailund\", role = \"aut\", email = \"mailund@birc.au.dk\"),\n    person(\"Tomasz\", \"Kalinowski\", role = \"aut\"),\n    person(\"James\", \"Hiebert\", role = \"ctb\"),\n    person(\"Iñaki\", \"Ucar\", role = \"aut\", email = \"iucar@fedoraproject.org\", comment = c(ORCID = \"0000-0001-6403-5550\")),\n    person(\"Thomas Lin\", \"Pedersen\", role = \"ctb\")\n    )",
+        "Depends": "R (>= 3.0.2)",
+        "Imports": "Rcpp",
+        "LinkingTo": "Rcpp (>= 0.12.10)",
+        "Suggests": "NISTunits, measurements, xml2, magrittr, pillar (>= 1.3.0),\ndplyr (>= 1.0.0), vctrs (>= 0.3.1), ggplot2 (> 3.2.1), testthat\n(>= 3.0.0), vdiffr, knitr, rmarkdown",
+        "VignetteBuilder": "knitr",
+        "Description": "Support for measurement units in R vectors, matrices\n    and arrays: automatic propagation, conversion, derivation\n    and simplification of units; raising errors in case of unit\n    incompatibility. Compatible with the POSIXct, Date and difftime \n    classes. Uses the UNIDATA udunits library and unit database for \n    unit compatibility checking and conversion.\n    Documentation about 'units' is provided in the paper by Pebesma, Mailund &\n    Hiebert (2016, <doi:10.32614/RJ-2016-061>), included in this package as a\n    vignette; see 'citation(\"units\")' for details.",
+        "SystemRequirements": "udunits-2",
+        "License": "GPL-2",
+        "URL": "https://r-quantities.github.io/units/,\nhttps://github.com/r-quantities/units",
+        "BugReports": "https://github.com/r-quantities/units/issues",
+        "RoxygenNote": "7.2.3",
+        "Encoding": "UTF-8",
+        "Config/testthat/edition": "3",
+        "NeedsCompilation": "yes",
+        "Packaged": "2023-11-28 13:38:39 UTC; edzer",
+        "Author": "Edzer Pebesma [aut, cre] (<https://orcid.org/0000-0001-8049-7069>),\n  Thomas Mailund [aut],\n  Tomasz Kalinowski [aut],\n  James Hiebert [ctb],\n  Iñaki Ucar [aut] (<https://orcid.org/0000-0001-6403-5550>),\n  Thomas Lin Pedersen [ctb]",
+        "Maintainer": "Edzer Pebesma <edzer.pebesma@uni-muenster.de>",
+        "Repository": "CRAN",
+        "Date/Publication": "2023-11-28 16:10:02 UTC",
+        "Built": "R 4.3.3; x86_64-w64-mingw32; 2024-05-08 01:29:15 UTC; windows",
+        "Archs": "x64"
+      }
+    },
     "utf8": {
       "Source": "CRAN",
       "Repository": "https://cran.rstudio.com",
@@ -3777,6 +4519,34 @@
         "Built": "R 4.3.1; ; 2023-09-07 01:09:21 UTC; windows"
       }
     },
+    "wk": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "wk",
+        "Title": "Lightweight Well-Known Geometry Parsing",
+        "Version": "0.9.1",
+        "Authors@R": "\n    c(\n      person(given = \"Dewey\",\n             family = \"Dunnington\",\n             role = c(\"aut\", \"cre\"),\n             email = \"dewey@fishandwhistle.net\",\n             comment = c(ORCID = \"0000-0002-9415-4582\")),\n       person(given = \"Edzer\",\n              family = \"Pebesma\",\n              role = c(\"aut\"),\n              email = \"edzer.pebesma@uni-muenster.de\",\n              comment = c(ORCID = \"0000-0001-8049-7069\")),\n      person(given = \"Anthony\",\n             family = \"North\",\n             email = \"anthony.jl.north@gmail.com\",\n             role = c(\"ctb\"))\n    )",
+        "Maintainer": "Dewey Dunnington <dewey@fishandwhistle.net>",
+        "Description": "Provides a minimal R and C++ API for parsing\n  well-known binary and well-known text representation of\n  geometries to and from R-native formats.\n  Well-known binary is compact\n  and fast to parse; well-known text is human-readable\n  and is useful for writing tests. These formats are\n  useful in R only if the information they contain can be\n  accessed in R, for which high-performance functions\n  are provided here.",
+        "License": "MIT + file LICENSE",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "7.2.3",
+        "Suggests": "testthat (>= 3.0.0), vctrs (>= 0.3.0), sf, tibble, readr",
+        "URL": "https://paleolimbot.github.io/wk/,\nhttps://github.com/paleolimbot/wk",
+        "BugReports": "https://github.com/paleolimbot/wk/issues",
+        "Config/testthat/edition": "3",
+        "Depends": "R (>= 2.10)",
+        "LazyData": "true",
+        "NeedsCompilation": "yes",
+        "Packaged": "2023-11-29 02:12:31 UTC; deweydunnington",
+        "Author": "Dewey Dunnington [aut, cre] (<https://orcid.org/0000-0002-9415-4582>),\n  Edzer Pebesma [aut] (<https://orcid.org/0000-0001-8049-7069>),\n  Anthony North [ctb]",
+        "Repository": "CRAN",
+        "Date/Publication": "2023-11-29 05:30:02 UTC",
+        "Built": "R 4.3.3; x86_64-w64-mingw32; 2024-05-08 00:49:26 UTC; windows",
+        "Archs": "x64"
+      }
+    },
     "xfun": {
       "Source": "CRAN",
       "Repository": "https://cran.rstudio.com",
@@ -3863,10 +4633,13 @@
   },
   "files": {
     ".github/workflows/deploy.yaml": {
-      "checksum": "4041b07099be1374404858a59ab96e0f"
+      "checksum": "af2075523a53cd439fee579c19c9dd62"
     },
     ".github/workflows/scripts/deploy_examples.sh": {
       "checksum": "d38f7a34a043a8c082b4b418496ef8e2"
+    },
+    ".github/workflows/scripts/setting_connect_title_examples.sh": {
+      "checksum": "14a0ed955eb8a79f0fc1f66feecf026b"
     },
     "_extensions/positslides/_extension.yml": {
       "checksum": "16d2179feb0d86054b7dc1891ae9d857"
@@ -3922,8 +4695,392 @@
     "_quarto.yml": {
       "checksum": "b77bfdef52769732ca30d978a0deb51c"
     },
-    "content-examples.zip": {
-      "checksum": "1ac01c56737c2dd4a1ea504014fd33c5"
+    "content-examples/dashboard-spatial/.Rprofile": {
+      "checksum": "f202717c0af592bdb0e5e06add0915f7"
+    },
+    "content-examples/dashboard-spatial/_quarto.yml": {
+      "checksum": "7c1c4e7532456dde80d4710c64876eeb"
+    },
+    "content-examples/dashboard-spatial/custom.scss": {
+      "checksum": "c8681c1c75997de720c68b1496d5cdac"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial.html": {
+      "checksum": "84450a7843897bfe08393a0d3c827eda"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial.qmd": {
+      "checksum": "e758096a61d9fda76619e667c5c4a3d7"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/bootstrap/bootstrap-icons.css": {
+      "checksum": "2318f137d201fbf51601fa0faba6bef7"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/bootstrap/bootstrap-icons.woff": {
+      "checksum": "1a51dfbe5467607389d603c02a77cd10"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/bootstrap/bootstrap.min.css": {
+      "checksum": "8c779162dc0d3ef5b1a9a5b6581755a7"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/bootstrap/bootstrap.min.js": {
+      "checksum": "e2b09c06f0e714b6144a6788a28e3950"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/clipboard/clipboard.min.js": {
+      "checksum": "15f52a1ee547f2bdd46e56747332ca2d"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/crosstalk-1.2.0/css/crosstalk.min.css": {
+      "checksum": "3372343a6739e49faffeb858d451558e"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/crosstalk-1.2.0/js/crosstalk.js": {
+      "checksum": "0cedbe7e922170c10db55772f82139e3"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/crosstalk-1.2.0/js/crosstalk.js.map": {
+      "checksum": "6f4eb7fff5f7965637440ad7be0fb877"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/crosstalk-1.2.0/js/crosstalk.min.js": {
+      "checksum": "66b6e84d85256249d722c6e94143eb73"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/crosstalk-1.2.0/js/crosstalk.min.js.map": {
+      "checksum": "7a0a37270ea71dee56cebc627c58ca03"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/crosstalk-1.2.0/scss/crosstalk.scss": {
+      "checksum": "e5410240dcb4f51691eab5f9a62720d7"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/datatables-binding-0.33/datatables.js": {
+      "checksum": "94d927c2413ab0af4fbcf0fe83bf2950"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/datatables-css-0.0.0/datatables-crosstalk.css": {
+      "checksum": "d8b3c70e6451e656f1fa231e2bf97ced"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/dt-core-1.13.6/css/jquery.dataTables.extra.css": {
+      "checksum": "704b5e060968ac06041f9b2d9ee545b5"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/dt-core-1.13.6/css/jquery.dataTables.min.css": {
+      "checksum": "e3621690205662b3f96746d73a0fe4b2"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/dt-core-1.13.6/js/jquery.dataTables.min.js": {
+      "checksum": "44e877882207ee93b9d9d17dd0e11c87"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/dt-ext-buttons-1.13.6/css/buttons.dataTables.min.css": {
+      "checksum": "00cc73f64de3b80e59a72111531b998f"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/dt-ext-buttons-1.13.6/js/buttons.colVis.min.js": {
+      "checksum": "e002592b6dfe63a886370c38483b88fe"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/dt-ext-buttons-1.13.6/js/buttons.html5.min.js": {
+      "checksum": "60951d2599efa4b14068b9d627e4c292"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/dt-ext-buttons-1.13.6/js/buttons.print.min.js": {
+      "checksum": "c05c574c7f1b49021057c09c58d31fb3"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/dt-ext-buttons-1.13.6/js/dataTables.buttons.min.js": {
+      "checksum": "95a44513b62c3b59fab8bacd38b36383"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/htmlwidgets-1.6.2/htmlwidgets.js": {
+      "checksum": "237f59bc086ccf24f39be55311023b91"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/jquery-3.6.0/jquery-3.6.0.js": {
+      "checksum": "2849239b95f5a9a2aea3f6ed9420bb88"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/jquery-3.6.0/jquery-3.6.0.min.js": {
+      "checksum": "8fb8fee4fcc3cc86ff6c724154c49c42"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/jquery-3.6.0/jquery-3.6.0.min.map": {
+      "checksum": "6efc5d663aaacac2024153fa0d4bafcd"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/kePrint-0.0.1/kePrint.js": {
+      "checksum": "03b791fcaee0a40c261c3c14f3d85d27"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/leaflet-1.3.1/images/layers-2x.png": {
+      "checksum": "4f0283c6ce28e888000e978e537a6a56"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/leaflet-1.3.1/images/layers.png": {
+      "checksum": "a6137456ed160d7606981aa57c559898"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/leaflet-1.3.1/images/marker-icon-2x.png": {
+      "checksum": "401d815dc206b8dc1b17cd0e37695975"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/leaflet-1.3.1/images/marker-icon.png": {
+      "checksum": "2273e3d8ad9264b7daa5bdbf8e6b47f8"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/leaflet-1.3.1/images/marker-shadow.png": {
+      "checksum": "44a526eed258222515aa21eaffd14a96"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/leaflet-1.3.1/leaflet.css": {
+      "checksum": "58da535d4980b4c71b74a41bbee8a510"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/leaflet-1.3.1/leaflet.js": {
+      "checksum": "af438f3b0ec09c81bc8fb9959de88155"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/leaflet-binding-2.2.2/leaflet.js": {
+      "checksum": "7b0d68b050b79c5699a9f361b697b6ef"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/leaflet-measure-2.1.7/images/cancel.png": {
+      "checksum": "cfe6f6ffc5b2d6c482c36c68522f0282"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/leaflet-measure-2.1.7/images/cancel_@2X.png": {
+      "checksum": "6e8e462555c4b10dbfbc206e8276e6e2"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/leaflet-measure-2.1.7/images/check.png": {
+      "checksum": "056dcd0b0dea7c78019243311551d64b"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/leaflet-measure-2.1.7/images/check_@2X.png": {
+      "checksum": "0b50583aa1b8ff230b57b92263e47a3e"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/leaflet-measure-2.1.7/images/focus.png": {
+      "checksum": "f4b0c949877c5f94158208551a57e29d"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/leaflet-measure-2.1.7/images/focus_@2X.png": {
+      "checksum": "35ae4b5f1bf198c6d955618b85710d05"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/leaflet-measure-2.1.7/images/rulers.png": {
+      "checksum": "7910c667cb5ddcdcb4ee3278627c85e1"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/leaflet-measure-2.1.7/images/rulers_@2X.png": {
+      "checksum": "592b7360116d244f9dd932b0c0041982"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/leaflet-measure-2.1.7/images/start.png": {
+      "checksum": "07f16cd155661436fe27959eab15c820"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/leaflet-measure-2.1.7/images/start_@2X.png": {
+      "checksum": "e81afdf0b23bc88ea3e6ef3fc2fb65d6"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/leaflet-measure-2.1.7/images/trash.png": {
+      "checksum": "994ef255f2077b24b0d8975e90e37a33"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/leaflet-measure-2.1.7/images/trash_@2X.png": {
+      "checksum": "fd48ced8485c638cadcea3eaab6d0937"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/leaflet-measure-2.1.7/leaflet-measure.css": {
+      "checksum": "bb0f597dc985e3f34e73c26d3fcbb1dc"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/leaflet-measure-2.1.7/leaflet-measure.min.js": {
+      "checksum": "b7687bb234bb0c13ff888d45932819b0"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/leaflet-minimap-3.3.1/Control.MiniMap.css": {
+      "checksum": "8d5bb5c9f7c8b44323050d228cf958eb"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/leaflet-minimap-3.3.1/Control.MiniMap.js": {
+      "checksum": "7845ce4f15c0291792432038953e4f49"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/leaflet-minimap-3.3.1/Control.MiniMap.min.css": {
+      "checksum": "c52bf3e2627d2f3b4ddc281b5e4e8112"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/leaflet-minimap-3.3.1/Control.MiniMap.min.js": {
+      "checksum": "9e33f24c177c90f8f5afe39272ba23a0"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/leaflet-minimap-3.3.1/images/toggle.png": {
+      "checksum": "8e2c6bcec617fec67cb53607fde85cb1"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/leaflet-minimap-3.3.1/images/toggle.svg": {
+      "checksum": "c82cf08c6577c4bdd867f9da92a7c9b0"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/leaflet-minimap-3.3.1/Minimap-binding.js": {
+      "checksum": "1e6058ff0865fb58d854739bca3fd509"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/leaflet-providers-2.0.0/leaflet-providers_2.0.0.js": {
+      "checksum": "b65600ab8d380d9a3100e9d1c92cb4bb"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/leaflet-providers-plugin-2.2.2/leaflet-providers-plugin.js": {
+      "checksum": "8fb426b3cfaa7d730f3b56a104012882"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/leaflet-terminator-0.1.0/L.Terminator.js": {
+      "checksum": "0222e07b582d2d8563049eb09f976604"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/leaflet-terminator-0.1.0/Terminator-binding.js": {
+      "checksum": "43af834fc378d740e7aefa66aa85c099"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/leafletfix-1.0.0/leafletfix.css": {
+      "checksum": "6a38c873de948d8a1458ec0429aa0063"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/lightable-0.0.1/lightable.css": {
+      "checksum": "25547ce4d44910ea8f377212d34397fa"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/proj4-2.6.2/proj4.min.js": {
+      "checksum": "4c6ef5a940694e1acc5c9ef66572fa79"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/Proj4Leaflet-1.0.1/proj4leaflet.js": {
+      "checksum": "4c72a5a790e066510f9eb68541280646"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/quarto-contrib/glightbox/glightbox.min.css": {
+      "checksum": "9b438b29cef1c212d1c65a877ffc7232"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/quarto-contrib/glightbox/glightbox.min.js": {
+      "checksum": "2b4c8cbaade24ecb58bcb0d89694ccee"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/quarto-contrib/glightbox/lightbox.css": {
+      "checksum": "2857705abe7b271745f7d60903d2eedd"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/quarto-dashboard/components.js": {
+      "checksum": "ac49ebff39666f27f4631a3914841683"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/quarto-dashboard/datatables.min.css": {
+      "checksum": "7b2279175549cd49b758a7d5b4da6cd6"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/quarto-dashboard/datatables.min.js": {
+      "checksum": "80521430bee6a8d1a1ba48987ff870c1"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/quarto-dashboard/pdfmake.min.js": {
+      "checksum": "95caca411bcbd3095c0f8db152de05dd"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/quarto-dashboard/quarto-dashboard.js": {
+      "checksum": "bd2bba0a7c7d9aa8840eb5a9c73c2c28"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/quarto-dashboard/stickythead.js": {
+      "checksum": "5b27aeec9a60192899f23015fd741564"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/quarto-dashboard/vfs_fonts.js": {
+      "checksum": "8a026906153f3e29bc684f6b392e8654"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/quarto-dashboard/web-components.js": {
+      "checksum": "c91de9b5866fb45c694bbeafa119d6b9"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/quarto-html/anchor.min.js": {
+      "checksum": "91bcf6cd1fd88fec3f109811e5fc3546"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/quarto-html/popper.min.js": {
+      "checksum": "3a4a291ccf3f1ea0f82b641542fd3827"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/quarto-html/quarto-syntax-highlighting-dark.css": {
+      "checksum": "4dca331c0806f351d3f630ba7f039574"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/quarto-html/quarto-syntax-highlighting.css": {
+      "checksum": "49bff82b9355f257417faaaa77dd1607"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/quarto-html/quarto.js": {
+      "checksum": "2ca82ae8ee1e5762d249c6b6c0802e30"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/quarto-html/tippy.css": {
+      "checksum": "ebd6f8ce46a677e1a4f5f8a8317109a9"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/quarto-html/tippy.umd.min.js": {
+      "checksum": "d828775275749701b48bd9d958814111"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/rstudio_leaflet-1.3.1/images/1px.png": {
+      "checksum": "978c1bee49d7ad5fc1a4d81099b13e18"
+    },
+    "content-examples/dashboard-spatial/dashboard-spatial_files/libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css": {
+      "checksum": "49b23a276edf8677e7bb779525d2be7d"
+    },
+    "content-examples/dashboard-spatial/data/us_cities.csv": {
+      "checksum": "bba29d5c3ea15562383d676630924670"
+    },
+    "content-examples/dashboard-spatial/images/CartoDB.DarkMatter.png": {
+      "checksum": "03fd5c305b3fe9f806a8200d54560e52"
+    },
+    "content-examples/dashboard-spatial/images/CartoDB.Positron.png": {
+      "checksum": "7de11b6a7a0e25d6270161e437514e3b"
+    },
+    "content-examples/dashboard-spatial/images/default.png": {
+      "checksum": "c6ba9477fe0aad0d079e576346c107a6"
+    },
+    "content-examples/dashboard-spatial/images/Esri.NatGeoWorldMap.png": {
+      "checksum": "a0cd583751e8c42a115802b1bbc061d7"
+    },
+    "content-examples/dashboard-spatial/images/Esri.WorldGrayCanvas.png": {
+      "checksum": "78a2fd5ab2f6cff1c7334703d0cf5f22"
+    },
+    "content-examples/dashboard-spatial/images/Esri.WorldTerrain.png": {
+      "checksum": "40fc4866328db77ab77b4bf2eb23b34f"
+    },
+    "content-examples/dashboard-spatial/images/Esri.WorldTopoMap.png": {
+      "checksum": "1420e33de6a3d394608f3dd240428a5e"
+    },
+    "content-examples/dashboard-spatial/images/GeoportailFrance.orthos.png": {
+      "checksum": "c3f3feef46285d6067b9a6974eb43118"
+    },
+    "content-examples/dashboard-spatial/images/Leafey.PNG": {
+      "checksum": "8f97483155532e33621d134b4dd2a761"
+    },
+    "content-examples/dashboard-spatial/images/NASAGIBS.ViirsEarthAtNight2012.png": {
+      "checksum": "eb1cc79b884c817348dff015cc7edce3"
+    },
+    "content-examples/dashboard-spatial/images/OpenTopoMap.png": {
+      "checksum": "0b02f6613e31ff6e081315564bc78333"
+    },
+    "content-examples/dashboard-spatial/images/Stadia.AlidadeSmoothDark.png": {
+      "checksum": "999c9241e3738ec61fcbf79ef98f17eb"
+    },
+    "content-examples/dashboard-spatial/images/Stadia.StamenToner.png": {
+      "checksum": "3fed69beda8a30e5f53895dd28e3a361"
+    },
+    "content-examples/dashboard-spatial/images/Stadia.StamenTonerLabels.png": {
+      "checksum": "bcaed12fe9cd3a10e306e0f183bbb2d7"
+    },
+    "content-examples/dashboard-spatial/images/Stadia.StamenTonerLines.png": {
+      "checksum": "19e7bc4a44297c01b09bbeb1649f5e66"
+    },
+    "content-examples/dashboard-spatial/images/sun_nasa.png": {
+      "checksum": "e44ff69b0627f1d601eb8ac1b0f935c8"
+    },
+    "content-examples/dashboard-spatial/images/sun_nasa2.png": {
+      "checksum": "715fa9b14de2e7a33d8bba36941caa51"
+    },
+    "content-examples/dashboard-spatial/images/sun_nasa3.png": {
+      "checksum": "4e422b28708a55f673ffcbf5028af3c4"
+    },
+    "content-examples/dashboard-spatial/images/USGS.USTopo.png": {
+      "checksum": "f9ecdd77c3c08dbac371fb6b66feeea6"
+    },
+    "content-examples/dashboard-spatial/images/uv_index_scale_epa.png": {
+      "checksum": "768738fb741aa4081a3a5f65c10b2ca8"
+    },
+    "content-examples/dashboard-spatial/README.html": {
+      "checksum": "e698b40f122cff02af51cf12d5c2ac0b"
+    },
+    "content-examples/dashboard-spatial/README.md": {
+      "checksum": "281331c3ba42051733454f770c2a1a12"
+    },
+    "content-examples/dashboard-spatial/README_files/libs/bootstrap/bootstrap-icons.css": {
+      "checksum": "2318f137d201fbf51601fa0faba6bef7"
+    },
+    "content-examples/dashboard-spatial/README_files/libs/bootstrap/bootstrap-icons.woff": {
+      "checksum": "1a51dfbe5467607389d603c02a77cd10"
+    },
+    "content-examples/dashboard-spatial/README_files/libs/bootstrap/bootstrap.min.css": {
+      "checksum": "6af7fe331e124e9a3628ff5072715d11"
+    },
+    "content-examples/dashboard-spatial/README_files/libs/bootstrap/bootstrap.min.js": {
+      "checksum": "e2b09c06f0e714b6144a6788a28e3950"
+    },
+    "content-examples/dashboard-spatial/README_files/libs/clipboard/clipboard.min.js": {
+      "checksum": "15f52a1ee547f2bdd46e56747332ca2d"
+    },
+    "content-examples/dashboard-spatial/README_files/libs/quarto-html/anchor.min.js": {
+      "checksum": "91bcf6cd1fd88fec3f109811e5fc3546"
+    },
+    "content-examples/dashboard-spatial/README_files/libs/quarto-html/popper.min.js": {
+      "checksum": "3a4a291ccf3f1ea0f82b641542fd3827"
+    },
+    "content-examples/dashboard-spatial/README_files/libs/quarto-html/quarto-syntax-highlighting.css": {
+      "checksum": "49bff82b9355f257417faaaa77dd1607"
+    },
+    "content-examples/dashboard-spatial/README_files/libs/quarto-html/quarto.js": {
+      "checksum": "2ca82ae8ee1e5762d249c6b6c0802e30"
+    },
+    "content-examples/dashboard-spatial/README_files/libs/quarto-html/tippy.css": {
+      "checksum": "ebd6f8ce46a677e1a4f5f8a8317109a9"
+    },
+    "content-examples/dashboard-spatial/README_files/libs/quarto-html/tippy.umd.min.js": {
+      "checksum": "d828775275749701b48bd9d958814111"
+    },
+    "content-examples/dashboard-spatial/renv.lock": {
+      "checksum": "72c758cd76a07adba2e8f5fca604fe41"
+    },
+    "content-examples/dashboard-spatial/tmp/data.RData": {
+      "checksum": "097afb48ea233c32d9528b08b804eb06"
+    },
+    "content-examples/dashboard-spatial/tmp/data_101_points_2024-05-10.RData": {
+      "checksum": "caf7942c4f0ac6d83ea3aafc0c9615db"
+    },
+    "content-examples/dashboard-spatial/tmp/data_401_points_2024-05-10.RData": {
+      "checksum": "4104437d6cb12627f9a904fa10884b5e"
+    },
+    "content-examples/dashboard-spatial/tmp/data_401_points_2024-05-13.RData": {
+      "checksum": "d82d5b1a9acc0c4361b274cff67ea1c6"
+    },
+    "content-examples/dashboard-spatial/tmp/data_401_points_2024-05-13_old.RData": {
+      "checksum": "4104437d6cb12627f9a904fa10884b5e"
+    },
+    "content-examples/dashboard/.Rprofile": {
+      "checksum": "3d3b2fc7c212afd10d05a260075cb910"
     },
     "content-examples/dashboard/_quarto.yml": {
       "checksum": "b77bfdef52769732ca30d978a0deb51c"
@@ -4013,7 +5170,7 @@
       "checksum": "dc0a078a103268b2e919940f642e81ac"
     },
     "content-examples/dashboard/renv.lock": {
-      "checksum": "05766bb7e44b6aaf3e9a21c9f6b505b9"
+      "checksum": "dfd5b48e7fda47e97758416eca1667d4"
     },
     "content-examples/email-conditional/_quarto.yml": {
       "checksum": "b77bfdef52769732ca30d978a0deb51c"
@@ -4031,7 +5188,10 @@
       "checksum": "b77bfdef52769732ca30d978a0deb51c"
     },
     "content-examples/email-plots/emails-plots.qmd": {
-      "checksum": "49703c867456343caf119a574731dc07"
+      "checksum": "93dcd6453e46dd6403cc29babae49a2b"
+    },
+    "content-examples/email-plots/Quickstart Webmail __ [Posit Connect] Curated report of p3m metrics.mhtml": {
+      "checksum": "6a99267bfd1486672c8e36efe53241fe"
     },
     "content-examples/email-plots/README.md": {
       "checksum": "7be7b300b9e144bb8455cdab1a6ca119"
@@ -4052,10 +5212,37 @@
       "checksum": "643e2441305e3bbc3bca107926ca5a94"
     },
     "content-examples/landing-page/_quarto.yml": {
-      "checksum": "f85efad75d1e5bafeaf31a5605be3f59"
+      "checksum": "cf774faa7f2c098e32cc7989e656b094"
+    },
+    "content-examples/landing-page/_site/content-img/email-conditional.png": {
+      "checksum": "338c96c013d03eec050fc5bf16bedaf3"
+    },
+    "content-examples/landing-page/_site/content-img/email-plots.png": {
+      "checksum": "a14b4d492ae8b611720ae86b8618fccc"
+    },
+    "content-examples/landing-page/_site/content-img/email-programmatic.png": {
+      "checksum": "8d3429b28a07e4ba0a03826330e911a3"
+    },
+    "content-examples/landing-page/_site/content-img/presentation.png": {
+      "checksum": "31591db512ed250ab2429df0ae9fddd7"
+    },
+    "content-examples/landing-page/_site/content-img/report-basic.png": {
+      "checksum": "a2d1fd19a660ceadd4c98584ff0856a7"
+    },
+    "content-examples/landing-page/_site/content-img/report-branded.png": {
+      "checksum": "60c99ce7a3f67c29c8540a0780a4d4ef"
+    },
+    "content-examples/landing-page/_site/content-img/report-lightbox.png": {
+      "checksum": "54391d9b18e4a8d3a49c0bc181c59b2f"
+    },
+    "content-examples/landing-page/_site/content-img/report-mermaid-diagrams.png": {
+      "checksum": "7859580db41cc32e4fd3a8256bb9d9d2"
+    },
+    "content-examples/landing-page/_site/content-img/website.png": {
+      "checksum": "396d1588115b39bb953cc430e718d061"
     },
     "content-examples/landing-page/_site/help.html": {
-      "checksum": "ef5618ba10ef5e72ece2965b21ac9c07"
+      "checksum": "0c1e18cd4afdf0c2dab343362f9346a6"
     },
     "content-examples/landing-page/_site/img/concept_map.jpg": {
       "checksum": "70582aa5658d25ebe760ef60e70d0ab5"
@@ -4063,8 +5250,11 @@
     "content-examples/landing-page/_site/img/logo-team-full-color.svg": {
       "checksum": "9e38645012975ac149e20aac34f0a220"
     },
+    "content-examples/landing-page/_site/img/quarto-logo.png": {
+      "checksum": "c0f6da84f41b7af2dd8de42cfc929cd4"
+    },
     "content-examples/landing-page/_site/index.html": {
-      "checksum": "0d2e62c3b14b081fdb881cc6f5d5900c"
+      "checksum": "966d34a50cbd8bc4a3018191ac179415"
     },
     "content-examples/landing-page/_site/index_files/figure-html/unnamed-chunk-12-1.png": {
       "checksum": "bd10895869ec1b2a1f41a4d6c8dc8391"
@@ -4130,10 +5320,10 @@
       "checksum": "c57d88fb0e7643c37733817375ed1064"
     },
     "content-examples/landing-page/_site/landing.html": {
-      "checksum": "a3c89c38472a22a80010bc8d29545913"
+      "checksum": "ed9d957b5af38b13d97bc369a2fd15f2"
     },
     "content-examples/landing-page/_site/search.json": {
-      "checksum": "5498fa3e21c9292883a49bfe2379040b"
+      "checksum": "850296fd7c5e4f06e5b2c50e62cd6a5e"
     },
     "content-examples/landing-page/_site/site_libs/bootstrap/bootstrap-icons.css": {
       "checksum": "2318f137d201fbf51601fa0faba6bef7"
@@ -4142,7 +5332,7 @@
       "checksum": "1a51dfbe5467607389d603c02a77cd10"
     },
     "content-examples/landing-page/_site/site_libs/bootstrap/bootstrap.min.css": {
-      "checksum": "3ea674583037f418cbc50c804a3ad92a"
+      "checksum": "8dd7df277c8d0c33975cc7e244b61810"
     },
     "content-examples/landing-page/_site/site_libs/bootstrap/bootstrap.min.js": {
       "checksum": "e2b09c06f0e714b6144a6788a28e3950"
@@ -4456,8 +5646,47 @@
     "content-examples/landing-page/_site/thumbnails/placeholder.png": {
       "checksum": "efecd9d40367ec0d16517eccd2131f51"
     },
+    "content-examples/landing-page/content-img/dashboard-spatial.png": {
+      "checksum": "6f1d473d189a3ffe95d870e5a0e02f08"
+    },
+    "content-examples/landing-page/content-img/dashboard.png": {
+      "checksum": "d9acdcdb5804e293431dce4d9c167e11"
+    },
+    "content-examples/landing-page/content-img/email-conditional.png": {
+      "checksum": "338c96c013d03eec050fc5bf16bedaf3"
+    },
+    "content-examples/landing-page/content-img/email-plots.png": {
+      "checksum": "a14b4d492ae8b611720ae86b8618fccc"
+    },
+    "content-examples/landing-page/content-img/email-programmatic.png": {
+      "checksum": "8d3429b28a07e4ba0a03826330e911a3"
+    },
+    "content-examples/landing-page/content-img/landing-page.png": {
+      "checksum": "43ed5517ba82f1d357e5b8a62893cfc0"
+    },
+    "content-examples/landing-page/content-img/presentation.png": {
+      "checksum": "31591db512ed250ab2429df0ae9fddd7"
+    },
+    "content-examples/landing-page/content-img/report-basic.png": {
+      "checksum": "a2d1fd19a660ceadd4c98584ff0856a7"
+    },
+    "content-examples/landing-page/content-img/report-branded.png": {
+      "checksum": "60c99ce7a3f67c29c8540a0780a4d4ef"
+    },
+    "content-examples/landing-page/content-img/report-commentable.png": {
+      "checksum": "ebddfc7613464e50a87d358afc5c39d9"
+    },
+    "content-examples/landing-page/content-img/report-lightbox.png": {
+      "checksum": "54391d9b18e4a8d3a49c0bc181c59b2f"
+    },
+    "content-examples/landing-page/content-img/report-mermaid-diagrams.png": {
+      "checksum": "7859580db41cc32e4fd3a8256bb9d9d2"
+    },
+    "content-examples/landing-page/content-img/website.png": {
+      "checksum": "4197f6a58b853154027500c852137a9f"
+    },
     "content-examples/landing-page/help.qmd": {
-      "checksum": "00cfe41c82ae228946ea49f8f1f0f418"
+      "checksum": "c71f8d5089f48cd3c79ec0b3432b973f"
     },
     "content-examples/landing-page/img/concept_map.jpg": {
       "checksum": "70582aa5658d25ebe760ef60e70d0ab5"
@@ -4477,17 +5706,26 @@
     "content-examples/landing-page/img/logo-workbench-full-color.svg": {
       "checksum": "b2d94b954899aeba770d03b68e4324aa"
     },
+    "content-examples/landing-page/img/quarto-hex.png": {
+      "checksum": "686572345d94831896d370b2a3e572a0"
+    },
+    "content-examples/landing-page/img/quarto-hex.svg": {
+      "checksum": "76655f0554cebe2bf8a3ec5ec06c3b0b"
+    },
+    "content-examples/landing-page/img/quarto-logo.png": {
+      "checksum": "c0f6da84f41b7af2dd8de42cfc929cd4"
+    },
     "content-examples/landing-page/index.qmd": {
-      "checksum": "680148c6ef2713bb325329905f11702b"
+      "checksum": "e1de4e042c936800f7a14289835b07ff"
     },
     "content-examples/landing-page/landing.qmd": {
       "checksum": "0fa712d37421982634a6844e61b3c8ce"
     },
     "content-examples/landing-page/README.md": {
-      "checksum": "776cde86c00ef62103667b1e661f795d"
+      "checksum": "a149d418c10b5d2bbf8c20007db8a78d"
     },
     "content-examples/landing-page/renv.lock": {
-      "checksum": "39ca2d89802e60a8bf46d0dbcfbdd09d"
+      "checksum": "cafb659d5eb7aa993a5858fdd77597dd"
     },
     "content-examples/landing-page/slides/quarto-for-reproducible-reporting-demo.html": {
       "checksum": "8a24c9ce65b725f39eaddb6fe63e6409"
@@ -4499,7 +5737,43 @@
       "checksum": "efecd9d40367ec0d16517eccd2131f51"
     },
     "content-examples/presentation/.Rprofile": {
-      "checksum": "ba075d34a8133a6fc7e03829a67352e2"
+      "checksum": "7d887607a1f168f2a3ed61ff2146de20"
+    },
+    "content-examples/presentation/_extensions/ArthurData/confetti/_extension.yml": {
+      "checksum": "7ec0030a5453120e3e095929f57e0469"
+    },
+    "content-examples/presentation/_extensions/ArthurData/confetti/confetti.js": {
+      "checksum": "0c0d2171a52938629e42cb1b68f70a35"
+    },
+    "content-examples/presentation/_extensions/mcanouil/coeos/_extension.yml": {
+      "checksum": "9db24e1fce30b1fc2132d5ecfb05d64d"
+    },
+    "content-examples/presentation/_extensions/mcanouil/coeos/_extensions/mcanouil/iconify/_extension.yml": {
+      "checksum": "5dca11b302d4542672418b599e77f0e0"
+    },
+    "content-examples/presentation/_extensions/mcanouil/coeos/_extensions/mcanouil/iconify/iconify-icon.min.js": {
+      "checksum": "d2a1b52bac6920b231cb75beae26c3bf"
+    },
+    "content-examples/presentation/_extensions/mcanouil/coeos/_extensions/mcanouil/iconify/iconify.lua": {
+      "checksum": "ea2bbd6b27f8a43492e936472d4900e7"
+    },
+    "content-examples/presentation/_extensions/mcanouil/coeos/_extensions/mcanouil/iconify/LICENSE": {
+      "checksum": "bc37ccb74b2864741b669d73bc769ef3"
+    },
+    "content-examples/presentation/_extensions/mcanouil/coeos/about.qmd": {
+      "checksum": "99d4e1e106d3355ed63a35dbeb893be1"
+    },
+    "content-examples/presentation/_extensions/mcanouil/coeos/coeos.scss": {
+      "checksum": "7d8c964ce9f2eb9b0b1ba453b9b71ff2"
+    },
+    "content-examples/presentation/_extensions/mcanouil/coeos/coeos.svg": {
+      "checksum": "3ef57c6a745909daabf0962fb17e2a25"
+    },
+    "content-examples/presentation/_extensions/mcanouil/coeos/LICENSE": {
+      "checksum": "3af21d8aa3082dd4445f6bb41f644322"
+    },
+    "content-examples/presentation/_extensions/mcanouil/coeos/setup-ggplot2-coeos.R": {
+      "checksum": "4b5a822766580164116a972167249a81"
     },
     "content-examples/presentation/_extensions/positslides/_extension.yml": {
       "checksum": "16d2179feb0d86054b7dc1891ae9d857"
@@ -4559,10 +5833,10 @@
       "checksum": "8f97483155532e33621d134b4dd2a761"
     },
     "content-examples/presentation/presentation.html": {
-      "checksum": "b7c6b39f5d0a77054d5b4a686ceb7b5e"
+      "checksum": "b19ab0ba85a478367093c22dd1ca99c0"
     },
     "content-examples/presentation/presentation.qmd": {
-      "checksum": "fb37fb923a0656f671cfa5e317afb058"
+      "checksum": "2a1a4bd02697a63e524ba76db260b186"
     },
     "content-examples/presentation/presentation_files/libs/clipboard/clipboard.min.js": {
       "checksum": "15f52a1ee547f2bdd46e56747332ca2d"
@@ -4578,6 +5852,9 @@
     },
     "content-examples/presentation/presentation_files/libs/quarto-html/quarto-html.min.css": {
       "checksum": "68b329da9893e34099c7d8ad5cb9c940"
+    },
+    "content-examples/presentation/presentation_files/libs/quarto-html/quarto-syntax-highlighting-dark.css": {
+      "checksum": "5945b91004fe1a0eaf0d18c4d3e8b612"
     },
     "content-examples/presentation/presentation_files/libs/quarto-html/quarto-syntax-highlighting.css": {
       "checksum": "49bff82b9355f257417faaaa77dd1607"
@@ -4882,6 +6159,9 @@
     "content-examples/presentation/presentation_files/libs/revealjs/plugin/reveal-chalkboard/style.css": {
       "checksum": "6bdeacb96f8b18c0046039c8de10c51b"
     },
+    "content-examples/presentation/presentation_files/libs/revealjs/plugin/reveal-confetti/confetti.js": {
+      "checksum": "0c0d2171a52938629e42cb1b68f70a35"
+    },
     "content-examples/presentation/presentation_files/libs/revealjs/plugin/reveal-menu/menu.css": {
       "checksum": "1b9988f08dfe354c44e134304b3df8af"
     },
@@ -4915,8 +6195,23 @@
     "content-examples/presentation/presentation_files/libs/revealjs/plugin/zoom/zoom.js": {
       "checksum": "dbab999c1a2fe1f31046733759dd1e2b"
     },
+    "content-examples/presentation/README.md": {
+      "checksum": "2d70aff6c073728ee3b6cc6bebfeb30a"
+    },
     "content-examples/presentation/renv.lock": {
       "checksum": "6d787428b37f528542a491f280d87d03"
+    },
+    "content-examples/report-basic/.Rprofile": {
+      "checksum": "dfcb2e38922091c3448b07b3eb92a5c8"
+    },
+    "content-examples/report-basic/img/thomasp85.jpg": {
+      "checksum": "70da41acc64570412451488323106445"
+    },
+    "content-examples/report-basic/renv.lock": {
+      "checksum": "643e2441305e3bbc3bca107926ca5a94"
+    },
+    "content-examples/report-basic/writeup_debugging_renv.qmd": {
+      "checksum": "616dc3028b4e1ca04a74477dda74f9c2"
     },
     "content-examples/report-branded/_quarto.yml": {
       "checksum": "b77bfdef52769732ca30d978a0deb51c"
@@ -4943,25 +6238,31 @@
       "checksum": "b77bfdef52769732ca30d978a0deb51c"
     },
     "content-examples/report-commentable/comments.qmd": {
-      "checksum": "f2301398587b08b0e0cfcc8635c0ec65"
+      "checksum": "8f0819e5e2419bec3623ccf1b222963a"
     },
     "content-examples/report-commentable/README.md": {
       "checksum": "051283cf5e43e4673a850d98ef487946"
     },
     "content-examples/report-commentable/renv.lock": {
-      "checksum": "643e2441305e3bbc3bca107926ca5a94"
+      "checksum": "67dfec04e0c93c40b38aab961f95feb1"
+    },
+    "content-examples/report-dynamically-generated/report-dynamically-generated.qmd": {
+      "checksum": "20e1ca05e73641b298c3a0e1bb00ff18"
     },
     "content-examples/report-hybrid-jupyter/_quarto.yml": {
       "checksum": "b3f34c4bcdf7bfa50270f515faa69173"
     },
+    "content-examples/report-hybrid-jupyter/quarto-hybrid.ipynb": {
+      "checksum": "797d4cef8ec1d17d321ca70953a26ed8"
+    },
     "content-examples/report-hybrid-jupyter/quarto-hybrid.qmd": {
-      "checksum": "3279c831f4bb412ef02ea957563113f9"
+      "checksum": "d49a3e2aca641da6a25987b586cafec2"
     },
     "content-examples/report-hybrid-jupyter/README.md": {
-      "checksum": "e283f9a38c08a7cd6990b3b282693f91"
+      "checksum": "0b87dd1c6c2f30d61050a0e0a71e9cea"
     },
     "content-examples/report-hybrid-jupyter/requirements.txt": {
-      "checksum": "12df27c22296307f5583d1172f864daf"
+      "checksum": "d41d8cd98f00b204e9800998ecf8427e"
     },
     "content-examples/report-hybrid-knitr/_quarto.yml": {
       "checksum": "b77bfdef52769732ca30d978a0deb51c"
@@ -5017,11 +6318,29 @@
     "content-examples/report-lightbox/report-lightbox.png": {
       "checksum": "1105422772d95ab055a6c8a2f96c7061"
     },
+    "content-examples/report-mermaid-diagrams/.Rprofile": {
+      "checksum": "b841f08ed6a0a6f593479b461be55940"
+    },
     "content-examples/report-mermaid-diagrams/_quarto.yml": {
       "checksum": "b77bfdef52769732ca30d978a0deb51c"
     },
     "content-examples/report-mermaid-diagrams/config.json": {
       "checksum": "0b98c4a4ebe543b1dd8894e5b4717627"
+    },
+    "content-examples/report-mermaid-diagrams/img/dark.png": {
+      "checksum": "d022b66b3b210f04939bcad1fb27cdd6"
+    },
+    "content-examples/report-mermaid-diagrams/img/default.png": {
+      "checksum": "09a30027540e9118cf49178c8a00d331"
+    },
+    "content-examples/report-mermaid-diagrams/img/forest.png": {
+      "checksum": "64c1cef4e3ff3f20a603b1af37f1db35"
+    },
+    "content-examples/report-mermaid-diagrams/img/mermaid-logo.svg": {
+      "checksum": "8ec9b1d54080ed4977a45848f6e85616"
+    },
+    "content-examples/report-mermaid-diagrams/img/neutral.png": {
+      "checksum": "3ed3010365f0f10832ab759ff60ef433"
     },
     "content-examples/report-mermaid-diagrams/linux-kernel-diagram.dot": {
       "checksum": "e6232a24b297863812cf485fc7c7b804"
@@ -5030,10 +6349,13 @@
       "checksum": "219d36e53aabc9ffdc5c42a364ef8f68"
     },
     "content-examples/report-mermaid-diagrams/quarto-mermaid.html": {
-      "checksum": "28e9300684cf9c5e24dcfc8f206967f6"
+      "checksum": "c4a4e365629fe1e09ef496309d85f583"
     },
     "content-examples/report-mermaid-diagrams/quarto-mermaid.qmd": {
-      "checksum": "466e6458f78e7614a2fe0719c609c341"
+      "checksum": "a82a4727720deff52d55a3d275b3a9f2"
+    },
+    "content-examples/report-mermaid-diagrams/quarto-mermaid_files/libs/bootstrap/bootstrap-dark.min.css": {
+      "checksum": "938c5b18666ee943e1dae8a8cfb9afe1"
     },
     "content-examples/report-mermaid-diagrams/quarto-mermaid_files/libs/bootstrap/bootstrap-icons.css": {
       "checksum": "2318f137d201fbf51601fa0faba6bef7"
@@ -5042,7 +6364,7 @@
       "checksum": "1a51dfbe5467607389d603c02a77cd10"
     },
     "content-examples/report-mermaid-diagrams/quarto-mermaid_files/libs/bootstrap/bootstrap.min.css": {
-      "checksum": "6af7fe331e124e9a3628ff5072715d11"
+      "checksum": "fa4a46fba6bc276e7dfe0235f6e042ef"
     },
     "content-examples/report-mermaid-diagrams/quarto-mermaid_files/libs/bootstrap/bootstrap.min.js": {
       "checksum": "e2b09c06f0e714b6144a6788a28e3950"
@@ -5065,6 +6387,9 @@
     "content-examples/report-mermaid-diagrams/quarto-mermaid_files/libs/quarto-html/popper.min.js": {
       "checksum": "3a4a291ccf3f1ea0f82b641542fd3827"
     },
+    "content-examples/report-mermaid-diagrams/quarto-mermaid_files/libs/quarto-html/quarto-syntax-highlighting-dark.css": {
+      "checksum": "4dca331c0806f351d3f630ba7f039574"
+    },
     "content-examples/report-mermaid-diagrams/quarto-mermaid_files/libs/quarto-html/quarto-syntax-highlighting.css": {
       "checksum": "49bff82b9355f257417faaaa77dd1607"
     },
@@ -5078,7 +6403,10 @@
       "checksum": "d828775275749701b48bd9d958814111"
     },
     "content-examples/report-mermaid-diagrams/renv.lock": {
-      "checksum": "67dfec04e0c93c40b38aab961f95feb1"
+      "checksum": "ab43a1544e226191bf755497f7a58705"
+    },
+    "content-examples/report-parameterized/report-parameterized.qmd": {
+      "checksum": "d21ef01b521d4483fc930e40dd22faae"
     },
     "content-examples/website/_extensions/quarto-ext/lightbox/_extension.yml": {
       "checksum": "9d4227e9643702041f4905b21ab92edb"
@@ -5737,6 +7065,9 @@
     "content-examples/website/recipes/img/coffee cake 2.jpg": {
       "checksum": "9c75e62d88e1c3e69aba833b79c3484a"
     },
+    "content-examples/website/recipes/img/donuts.jpg": {
+      "checksum": "0c9fa27da543a492877ee50c27bf8ff9"
+    },
     "content-examples/website/recipes/img/flourless chocolate cayenne cake.jpg": {
       "checksum": "2748379c635771ef6bf5e4d60b6f3fbd"
     },
@@ -5828,13 +7159,16 @@
       "checksum": "04baa76e09dd7c959948ae8ecda36cd9"
     },
     "quarto-for-reproducible-reporting-demo.html": {
-      "checksum": "8a24c9ce65b725f39eaddb6fe63e6409"
+      "checksum": "97e75214b02bbdd1e8adf520b3c7063e"
     },
     "quarto-for-reproducible-reporting-demo.qmd": {
-      "checksum": "e0c4524b3586ec3cee08d30b2043990b"
+      "checksum": "0b777bc89680138362fd7757d7be2a03"
     },
     "README.md": {
-      "checksum": "b3d7eaa1bd251414da54aaaa7ac20d28"
+      "checksum": "ab46288f50c8e5be199132a7c0492d81"
+    },
+    "renv.lock": {
+      "checksum": "7844bb2896fba431a6050479afc8abd0"
     }
   },
   "users": null
