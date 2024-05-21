@@ -239,7 +239,7 @@ text <- c("hello")
 
 **`{r} all_content[all_content$name =="landing-page",]$title`**
 
-![](thumbnails/placeholder.png){fig-align="center" width=200}
+![](content-img/landing-page.png){fig-align="center" width=200}
 
 <a href="`r all_content[all_content$name =="landing-page",]$dashboard_url`" class="stretched-link"></a>
 
