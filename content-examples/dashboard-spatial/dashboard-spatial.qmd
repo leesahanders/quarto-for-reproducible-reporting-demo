@@ -209,6 +209,13 @@ uv_hourly <- uv_hourly %>%
 # Get all us cities: https://opendata.stackexchange.com/questions/18473/seeking-list-of-all-us-cities-and-their-latitude-and-longitude
 # https://stackoverflow.com/questions/8093914/use-trycatch-skip-to-next-value-of-loop-upon-error/
 # https://www.geeksforgeeks.org/convert-json-data-to-dataframe-in-r/
+
+## Parallelization
+# https://berkeley-scf.github.io/tutorial-parallelization/parallel-R.html
+# https://www.r-bloggers.com/2024/01/r-doparallel-a-brain-friendly-introduction-to-parallelism-in-r/
+# https://www.davidzeleny.net/wiki/doku.php/recol:parallel
+# https://dept.stat.lsa.umich.edu/~jerrick/courses/stat701/notes/parallel.html
+# https://rstudioide.zendesk.com/agent/tickets/104212
 ```
 
 ## Row {.tabset height=100%}

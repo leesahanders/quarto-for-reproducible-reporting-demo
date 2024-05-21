@@ -137,6 +137,8 @@ text <- c("hello")
 
 [Quarto Presentation on Sharing Data in Quarto dashboards by Mine](https://mine.quarto.pub/quarto-dashboards-pydata/#/title-slide)
 
+[Parameterized Reports with Quarto: R-Ladies DC Workshop](https://jadeyryan.com/talks/2024-01-18_rladies-dc_quarto-params/)
+
 ### Learn more
 
 [Quarto Documentation on Presentations](https://quarto.org/docs/presentations/)
