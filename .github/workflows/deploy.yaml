@@ -34,7 +34,7 @@ jobs:
           dir: ./content-examples/report-mermaid-diagrams/:report-mermaid-diagrams 
       - name: Use Connect API to set content title
         run: |
-          export DATA='{"title": "Quarto Report with Mermaid Diagrams"}'
+          export DATA='{"title": "Building diagrams using in reports"}'
           export CONTENT_NAME='report-mermaid-diagrams'
           export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
           echo contentguid
@@ -113,7 +113,7 @@ jobs:
           dir: ./content-examples/report-lightbox/:report-lightbox 
       - name: Use Connect API to set content title
         run: |
-          export DATA='{"title": "Interactive Visualizations in Quarto"}'
+          export DATA='{"title": "Interactive Visualizations with Lightbox"}'
           export CONTENT_NAME='report-lightbox'
           export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
           echo contentguid
@@ -185,7 +185,7 @@ jobs:
           dir: ./content-examples/report-commentable/:report-commentable
       - name: Use Connect API to set content title
         run: |
-          export DATA='{"title": "Quarto Report with Commenting"}'
+          export DATA='{"title": "Report with Utterances Commenting"}'
           export CONTENT_NAME='report-commentable'
           export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
           echo contentguid
@@ -266,7 +266,7 @@ jobs:
           dir: ./content-examples/email-programmatic/:email-programmatic
       - name: Use Connect API to set content title
         run: |
-          export DATA='{"title": "Email with contents programmatically generated"}'
+          export DATA='{"title": "Email with Dinner Shopping List Programmatically Generated"}'
           export CONTENT_NAME='email-programmatic'
           export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
           echo contentguid
@@ -294,7 +294,7 @@ jobs:
           dir: ./content-examples/email-plots/:email-plots
       - name: Use Connect API to set content title
         run: |
-          export DATA='{"title": "Public Package Manager Email Metrics and Monitoring"}'
+          export DATA='{"title": "Email of Public Package Manager Metrics and Monitoring"}'
           export CONTENT_NAME='email-plots'
           export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
           echo contentguid
@@ -322,7 +322,7 @@ jobs:
           dir: ./content-examples/email-conditional/:email-conditional
       - name: Use Connect API to set content title
         run: |
-          export DATA='{"title": "Using an RSS feed to send conditional emails when a blog has new posts"}'
+          export DATA='{"title": "Conditional emails when a RSS feed indicates new blog posts"}'
           export CONTENT_NAME='email-conditional'
           export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
           echo contentguid
@@ -349,7 +349,7 @@ jobs:
           dir: ./content-examples/dashboard/:dashboard
       - name: Use Connect API to set content title
         run: |
-          export DATA='{"title": "Custom Quarto Dashboard"}'
+          export DATA='{"title": "Custom Quarto Dashboard For Daily Reports"}'
           export CONTENT_NAME='dashboard'
           export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
           echo contentguid
@@ -376,7 +376,7 @@ jobs:
           dir: ./content-examples/dashboard-spatial/:dashboard-spatial
       - name: Use Connect API to set content title
         run: |
-          export DATA='{"title": "Quarto Dashboard with Spatial Map"}'
+          export DATA='{"title": "Quarto Dashboard with UV Spatial Map"}'
           export CONTENT_NAME='dashboard-spatial'
           export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
           echo contentguid

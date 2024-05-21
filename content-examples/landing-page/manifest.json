@@ -3643,6 +3643,9 @@
     "content-img/email-programmatic.png": {
       "checksum": "8d3429b28a07e4ba0a03826330e911a3"
     },
+    "content-img/landing-page.png": {
+      "checksum": "43ed5517ba82f1d357e5b8a62893cfc0"
+    },
     "content-img/presentation.png": {
       "checksum": "31591db512ed250ab2429df0ae9fddd7"
     },
@@ -3652,6 +3655,9 @@
     "content-img/report-branded.png": {
       "checksum": "60c99ce7a3f67c29c8540a0780a4d4ef"
     },
+    "content-img/report-commentable.png": {
+      "checksum": "ebddfc7613464e50a87d358afc5c39d9"
+    },
     "content-img/report-lightbox.png": {
       "checksum": "54391d9b18e4a8d3a49c0bc181c59b2f"
     },
@@ -3659,7 +3665,7 @@
       "checksum": "7859580db41cc32e4fd3a8256bb9d9d2"
     },
     "content-img/website.png": {
-      "checksum": "396d1588115b39bb953cc430e718d061"
+      "checksum": "4197f6a58b853154027500c852137a9f"
     },
     "help.qmd": {
       "checksum": "c71f8d5089f48cd3c79ec0b3432b973f"
@@ -3692,7 +3698,7 @@
       "checksum": "c0f6da84f41b7af2dd8de42cfc929cd4"
     },
     "index.qmd": {
-      "checksum": "1f5cae9f35dc4455556492aeecacfa1e"
+      "checksum": "083b215f6bf428aa91170675e2023f98"
     },
     "landing.qmd": {
       "checksum": "0fa712d37421982634a6844e61b3c8ce"
