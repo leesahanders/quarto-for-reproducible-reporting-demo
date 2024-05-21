@@ -88,11 +88,6 @@ Chat: share your name, where you’re calling from, and one thing you’ve made 
 
 ::::
 
-
-
-
-
-
 ## What is Quarto? {.smaller}
 
 [Quarto](https://quarto.org) is an **open source** scientific and technical publishing framework. Use your favorite languages to create versatile, beautiful, and reproducible outputs. 
@@ -183,12 +178,6 @@ Image a meme of [The Sound of Music](https://www.imdb.com/title/tt0059742/)
 Chat: who here has heard of quarto? is anyone currently building things in quarto? 
 :::
 
-## Getting started 
-
-::: {.notes}
-Chat: 
-:::
-
 ## What makes this reproduceable? 
 
 Code first model where source code is included in all outputs: 
@@ -205,15 +194,107 @@ Chat:
 - Computational languages: Python, R, Julia, Observable JS
 - Outputs: Documents, presentations, websites, books, blogs
 
-Basic Docs
+Report
 - HTML doc
 - PDF doc
 - Word doc
-Basic Presentation
-Basic Website (as own project)
-Basic Blog (as own project)
+Presentation
+Website 
+Blog 
 - The home page is a listing page for all of the documents in the posts directory
-Basic Book (as own project)
+Book 
+
+::: {.notes}
+Chat: 
+:::
+
+## Getting started 
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+Programmatically create a project: 
+
+```r
+quarto create project
+quarto create project <type> <name>
+```
+
+:::
+::: {.column width="50%"}
+
+![Create a project using the RStudio editor](https://quarto.org/docs/tools/images/new-quarto-doc.png)
+
+:::
+:::
+
+::: {.notes}
+Chat: 
+:::
+
+## Anatomy of a Quarto project 
+
+
+
+::: {.notes}
+Chat: 
+Reference this page: https://quarto.org/docs/projects/quarto-projects.html
+:::
+
+## Coming from R? RMarkdown Workflow
+
+Rendering (execute and write to disk):
+
+:::: {.columns}
+
+::: {.column width="50%"}
+Programmatically
+
+```r
+quarto render script.qmd
+```
+
+:::
+::: {.column width="50%"}
+
+![The RStudio editor comes with rendering built-in](https://quarto.org/docs/tools/images/rstudio-render.png)
+
+:::
+:::
+
+Live preview:
+
+```bash
+quarto preview script.qmd
+```
+
+## Coming from Python? Notebooks Workflow
+
+Rendering (execute and write to disk):
+
+```bash
+# plain text qmd
+quarto render python.qmd
+quarto render python.qmd --to pdf
+
+# ipynb notebook
+quarto render python.ipynb
+quarto render python.ipynb --execute
+```
+
+Live preview:
+
+```bash
+# plain text qmd
+quarto preview python.qmd
+quarto preview python.qmd --to pdf
+
+# ipynb notebook
+quarto preview python.ipynb
+quarto preview python.ipynb --execute
+```
+
 
 ::: {.notes}
 Chat: 

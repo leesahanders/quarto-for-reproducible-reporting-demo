@@ -87,7 +87,23 @@ text <- c("hello")
 
 ### Community Examples
 
+[Jeremy Allen's Gray Whales Dashboard](https://colorado.posit.co/rsc/gray-whales/)
+
+[Quarto Dashboards Gallery](https://quarto.org/docs/dashboards/examples/) 
+
+- [Clickable Weather Map](https://cscheid.github.io/quarto-dashboard-ojs-examples/weather.html) 
+
+- [New Zealand Earthquakes](https://colorado.posit.co/rsc/nz-quakes/quakes.html) 
+
+- [Retirement Simulation](https://wch.github.io/retirement-simulation-dashboard/) 
+
 ### Learn more
+
+[Quarto Documentation on Dashboards](https://quarto.org/docs/dashboards/)
+
+[Sharing data in Quarto dashboards by Mine](https://mine.quarto.pub/quarto-dashboards-pydata/#/title-slide)
+
+[Quarto Dashboards recording by Charles Teague](https://www.youtube.com/watch?v=_VGJIPRGTy4)
 
 :::
 
@@ -115,7 +131,23 @@ text <- c("hello")
 
 [Tom Mock - 2022-07-25 Posit Workshop - Making Slides with Code](https://rstudio-conf-2022.github.io/get-started-quarto/materials/05-presentations.html#/presentations) 
 
+[Reproduceable presentations in quarto](https://info5940.infosci.cornell.edu/slides/publishing-reproducible-documents/#/title-slide)
+
+[Some Quarto Tips for Academic Presentation](https://kazuyanagimoto.com/blog/2022/12/27/quarto_tips/)
+
+[Quarto Presentation on Sharing Data in Quarto dashboards by Mine](https://mine.quarto.pub/quarto-dashboards-pydata/#/title-slide)
+
 ### Learn more
+
+[Quarto Documentation on Presentations](https://quarto.org/docs/presentations/)
+
+[David Schoch - 2023-06-20 Let's make a presentation with Quarto](https://gesiscss.github.io/quarto-workshop/material/slides/05_presentations.html#/title-slide) 
+
+[Tom Mock - 2022-07-25 Posit Workshop - Making Slides with Code](https://rstudio-conf-2022.github.io/get-started-quarto/materials/05-presentations.html#/presentations) 
+
+[Reproduceable presentations in quarto](https://info5940.infosci.cornell.edu/slides/publishing-reproducible-documents/#/title-slide)
+
+[Some Quarto Tips for Academic Presentation](https://kazuyanagimoto.com/blog/2022/12/27/quarto_tips/)
 
 :::
 
@@ -177,10 +209,31 @@ text <- c("hello")
 :::
 :::
 
-
 ### Community Examples
 
+[R without statistics, reproduceable reporting with quarto](https://book.rwithoutstatistics.com/quarto-chapter)
+
+[Writeup on Singularity/Apptainer support in Posit Workbench by Michael Mayer](https://colorado.posit.co/rsc/singularity/Singularity.html) 
+
+[Quarto Gallery for Articles and Reports](https://quarto.org/docs/gallery/#articles-reports) 
+
 ### Learn more
+
+[Quarto Documentation on Documents/Reports](https://quarto.org/docs/output-formats/all-formats.html)
+
+[R without statistics, reproduceable reporting with quarto](https://book.rwithoutstatistics.com/quarto-chapter)
+
+[Quarto job scheduling](https://github.com/ryjohnson09/quarto-job-scheduling?tab=readme-ov-file)
+
+[Posit blog, building a reporting infrastructure with quarto](https://posit.co/blog/building-a-reporting-infrastructure-with-quarto/)
+
+[Making pretty pdf's with quarto](https://nrennie.rbind.io/blog/making-pretty-pdf-quarto/) 
+
+[Thomas Mock's presentation on Quarto for Notebooks to Austin Python meetup in 2024](https://thomasmock.quarto.pub/python-austin/#/)
+
+[Parameterized Reports with Quarto: R-Ladies DC Workshop](https://jadeyryan.com/talks/2024-01-18_rladies-dc_quarto-params/)
+
+[2022 talk by Daniel Chen at pydata 2022]( https://github.com/chendaniely/pydata-nyc-2022-python_quarto) and [the recording](https://www.youtube.com/watch?v=AnrGW8zoLx8)
 
 :::
 
@@ -224,10 +277,13 @@ text <- c("hello")
 
 ### Community Examples
 
+[Examples from the Connect User Guide](https://docs.posit.co/connect/user/quarto/#complete-examples) 
+
 ### Learn more
 
-:::
+[Official Documentation on Email Customization with Connect and Quarto](https://docs.posit.co/connect/user/quarto/#email-customization)
 
+:::
 
 ## Websites
 
@@ -260,7 +316,27 @@ text <- c("hello")
 
 ### Community Examples
 
+[Solutions Engineering at Posit Home Page](https://solutions.posit.co/) 
+
+[Quarto Tip a Day - for the month leading up to 2022 Posit Conf](https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/)
+
+[Notes from a Data Witch website by Danielle Navarro](https://djnavarro.net/)
+
+[The MockUp by Tom Mock](https://themockup.blog/)
+
+[Elle Kaye Personal Website](https://ellakaye.co.uk/) 
+
+[rmflight quarto blog](https://rmflight.github.io/)
+
 ### Learn more
+
+[Quarto Documentation on Creating a Website](https://quarto.org/docs/websites/)
+
+[2022 topic building websites with quarto](https://rstudio-conf-2022.github.io/get-started-quarto/materials/06-websites.html#/websites) 
+
+[2022 talk by Daniel Chen at pydata 2022]( https://github.com/chendaniely/pydata-nyc-2022-python_quarto) and [the recording](https://www.youtube.com/watch?v=AnrGW8zoLx8)
+
+[How to add some personality to your Quarto Blog by Daniel Tan](https://www.ddanieltan.com/posts/blogtips/)
 
 :::
 
