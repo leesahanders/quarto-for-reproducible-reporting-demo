@@ -67,6 +67,8 @@ format:
     embed-resources: true
 ```
 
+Note that the chalkboard feature can't be included when self-contained. 
+
 # For the developer
 
 ## Resources

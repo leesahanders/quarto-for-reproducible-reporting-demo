@@ -6,9 +6,29 @@ execute:
   echo: false
 page-layout: full
 css: styles.css
+comments:
+  utterances:
+    repo: leesahanders/quarto_with_comments
 ---
 
 <h1>Slides</h1>
+
+```{r}
+#| echo: false
+#| include: false
+
+library(connectapi)
+library(tidyverse)
+
+client <- connectapi::connect()
+
+# get all content
+all_content <- connectapi::get_content(client, limit = Inf) %>% 
+  filter(app_mode %in% "quarto-static") %>% 
+  mutate(row_key = row_number())
+
+# Columns that matter: app_mode, r_version, py_version, r_environment_management, py_environment_management, content_url, dashboard_url
+```
 
 <!-- <p align="center"> -->
 <!-- <iframe src="../../quarto-for-reproducible-reporting-demo.html" width="80%" height = "400px"></iframe> -->
@@ -17,6 +37,10 @@ css: styles.css
 <p align="center">
 <iframe src="/slides/quarto-for-reproducible-reporting-demo.html" width="80%" height = "520px"></iframe>
 </p>
+
+<!-- <p align="center"> -->
+<!-- <iframe src="`r all_content[all_content$name =="presentation-webinar",]$dashboard_url`" width="80%" height = "520px"></iframe> -->
+<!-- </p> -->
 
 ::: increased-font-size
 
@@ -71,10 +95,6 @@ css: styles.css
 </center>
 
 <br>
-
-
-
-
 
 
 

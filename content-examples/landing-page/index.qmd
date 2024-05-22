@@ -123,6 +123,16 @@ text <- c("hello")
 <a href="`r all_content[all_content$name =="presentation",]$dashboard_url`" class="stretched-link"></a>
 
 :::
+
+::: card
+
+**`{r} all_content[all_content$name =="presentation-webinar",]$title`**
+
+![](content-img/presentation-webinar.png){fig-align="center" width=200}
+
+<a href="`r all_content[all_content$name =="presentation-webinar",]$dashboard_url`" class="stretched-link"></a>
+
+:::
 :::
 
 ### Community Examples

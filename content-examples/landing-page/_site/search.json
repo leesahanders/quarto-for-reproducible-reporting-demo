@@ -53,7 +53,7 @@
     "href": "landing.html",
     "title": "\nSlides\n",
     "section": "",
-    "text": "Slides\n\n\n\n\n\n\n\n\n\n\n\n\nResources\n\n\n\nQuarto\n\nDocumentation\nCheat sheet\nReproduceable presentations in quarto\nQuarto awesome list\nQuarto the definitive guide\nR without statistics, reproduceable reporting with quarto\nQuarto tip a day\nQuarto callouts\nThomas Mock’s presentation to Austin Python meetup in 2024\nParameterized Reports with Quarto: R-Ladies DC Workshop\nExtending quarto\n\n\nWorkshops and talks from posit:::conf(2023):\n\nIntroduction to Quarto with R & RStudio\nAdvanced Quarto with R & RStudio\nEnhancing Communication and Collaboration with Jupyter Notebooks & Quarto\n“Reproducible Manuscripts with Quarto” talk at posit::conf(2023)\n\nUpcoming Workshops for posit:::conf(2024)\n\nIntroduction to Quarto\nBuild-a-Dashboard (with Quarto, R and/or Python)\nQuarto Websites\n\n\n\n\nInterested in Posit Enterprise Products? Click here"
+    "text": "Slides\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResources\n\n\n\nQuarto\n\nDocumentation\nCheat sheet\nReproduceable presentations in quarto\nQuarto awesome list\nQuarto the definitive guide\nR without statistics, reproduceable reporting with quarto\nQuarto tip a day\nQuarto callouts\nThomas Mock’s presentation to Austin Python meetup in 2024\nParameterized Reports with Quarto: R-Ladies DC Workshop\nExtending quarto\n\n\nWorkshops and talks from posit:::conf(2023):\n\nIntroduction to Quarto with R & RStudio\nAdvanced Quarto with R & RStudio\nEnhancing Communication and Collaboration with Jupyter Notebooks & Quarto\n“Reproducible Manuscripts with Quarto” talk at posit::conf(2023)\n\nUpcoming Workshops for posit:::conf(2024)\n\nIntroduction to Quarto\nBuild-a-Dashboard (with Quarto, R and/or Python)\nQuarto Websites\n\n\n\n\nInterested in Posit Enterprise Products? Click here"
   },
   {
     "objectID": "help.html",
@@ -67,35 +67,35 @@
     "href": "index.html#dashboards",
     "title": "\nContent Examples\n",
     "section": "Dashboards",
-    "text": "Dashboards\n\nWebinar ExamplesCommunity ExamplesLearn more\n\n\n\n\nCustom Quarto Dashboard\n\n\n\n\n\n\n\n\nQuarto Dashboard with Spatial Map"
+    "text": "Dashboards\n\nWebinar ExamplesCommunity ExamplesLearn more\n\n\n\n\nCustom Quarto Dashboard For Daily Reports\n\n\n\n\n\n\n\n\nQuarto Dashboard with UV Spatial Map\n\n\n\n\n\n\n\n\n\n\nJeremy Allen’s Gray Whales Dashboard\nQuarto Dashboards Gallery\n\nClickable Weather Map\nNew Zealand Earthquakes\nRetirement Simulation\n\n\n\nQuarto Documentation on Dashboards\nSharing data in Quarto dashboards by Mine\nQuarto Dashboards recording by Charles Teague"
   },
   {
     "objectID": "index.html#reports",
     "href": "index.html#reports",
     "title": "\nContent Examples\n",
     "section": "Reports",
-    "text": "Reports\n\nWebinar ExamplesCommunity ExamplesLearn more\n\n\n\n\nDebugging R Environments Writeup\n\n\n\n\n\n\n\n\nPosit Installation Branded Report\n\n\n\n\n\n\n\n\nQuarto Report with Commenting\n\n\n\n\n\n\n\n\nInteractive Visualizations in Quarto\n\n\n\n\n\n\n\n\nQuarto Report with Mermaid Diagrams\n\n\n\n\n\n\n\n\nQuarto Report using the Knitr Engine\n\n\n\n\n\n\n\n\nQuarto Report using the Jupyter Engine"
+    "text": "Reports\n\nWebinar ExamplesCommunity ExamplesLearn more\n\n\n\n\nDebugging R Environments Writeup\n\n\n\n\n\n\n\n\nPosit Installation Branded Report\n\n\n\n\n\n\n\n\nReport with Utterances Commenting\n\n\n\n\n\n\n\n\nInteractive Visualizations with Lightbox\n\n\n\n\n\n\n\n\nBuilding diagrams using in reports\n\n\n\n\n\n\n\n\n\n\nR without statistics, reproduceable reporting with quarto\nWriteup on Singularity/Apptainer support in Posit Workbench by Michael Mayer\nQuarto Gallery for Articles and Reports\n\n\nQuarto Documentation on Documents/Reports\nR without statistics, reproduceable reporting with quarto\nQuarto job scheduling\nPosit blog, building a reporting infrastructure with quarto\nMaking pretty pdf’s with quarto\nThomas Mock’s presentation on Quarto for Notebooks to Austin Python meetup in 2024\nParameterized Reports with Quarto: R-Ladies DC Workshop\n2022 talk by Daniel Chen at pydata 2022 and the recording"
   },
   {
     "objectID": "index.html#emails",
     "href": "index.html#emails",
     "title": "\nContent Examples\n",
     "section": "Emails",
-    "text": "Emails\n\nWebinar ExamplesCommunity ExamplesLearn more\n\n\n\n\nPublic Package Manager Email Metrics and Monitoring\n\n\n\n\n\n\n\n\nEmail with contents programmatically generated\n\n\n\n\n\n\n\n\nUsing an RSS feed to send conditional emails when a blog has new posts"
+    "text": "Emails\n\nWebinar ExamplesCommunity ExamplesLearn more\n\n\n\n\nEmail of Public Package Manager Metrics and Monitoring\n\n\n\n\n\n\n\n\nEmail with Dinner Shopping List Programmatically Generated\n\n\n\n\n\n\n\n\nConditional emails when a RSS feed indicates new blog posts\n\n\n\n\n\n\n\n\n\n\nExamples from the Connect User Guide\n\n\nOfficial Documentation on Email Customization with Connect and Quarto"
   },
   {
     "objectID": "index.html#presentations",
     "href": "index.html#presentations",
     "title": "\nContent Examples\n",
     "section": "Presentations",
-    "text": "Presentations\n\nWebinar ExamplesCommunity ExamplesLearn more\n\n\n\n\nSample Branded Presentation"
+    "text": "Presentations\n\nWebinar ExamplesCommunity ExamplesLearn more\n\n\n\n\nSample Branded Presentation\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDavid Schoch - 2023-06-20 Let’s make a presentation with Quarto\nTom Mock - 2022-07-25 Posit Workshop - Making Slides with Code\nReproduceable presentations in quarto\nSome Quarto Tips for Academic Presentation\nQuarto Presentation on Sharing Data in Quarto dashboards by Mine\nParameterized Reports with Quarto: R-Ladies DC Workshop\n\n\nQuarto Documentation on Presentations\nDavid Schoch - 2023-06-20 Let’s make a presentation with Quarto\nTom Mock - 2022-07-25 Posit Workshop - Making Slides with Code\nReproduceable presentations in quarto\nSome Quarto Tips for Academic Presentation"
   },
   {
     "objectID": "index.html#websites",
     "href": "index.html#websites",
     "title": "\nContent Examples\n",
     "section": "Websites",
-    "text": "Websites\n\nWebinar ExamplesCommunity ExamplesLearn more\n\n\n\n\nReproduceable Reporting with Quarto Landing Page\n\n\n\n\n\n\n\n\nRecipe Website"
+    "text": "Websites\n\nWebinar ExamplesCommunity ExamplesLearn more\n\n\n\n\nReproduceable Reporting with Quarto Landing Page\n\n\n\n\n\n\n\n\nRecipe Website\n\n\n\n\n\n\n\n\n\n\nSolutions Engineering at Posit Home Page\nQuarto Tip a Day - for the month leading up to 2022 Posit Conf\nNotes from a Data Witch website by Danielle Navarro\nThe MockUp by Tom Mock\nElle Kaye Personal Website\nrmflight quarto blog\n\n\nQuarto Documentation on Creating a Website\n2022 topic building websites with quarto\n2022 talk by Daniel Chen at pydata 2022 and the recording\nHow to add some personality to your Quarto Blog by Daniel Tan"
   },
   {
     "objectID": "index.html#dashboards-1",

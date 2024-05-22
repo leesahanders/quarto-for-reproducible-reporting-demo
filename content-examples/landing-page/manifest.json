@@ -43,7 +43,7 @@
         "Maintainer": "Kirill Müller <kirill@cynkra.com>",
         "Repository": "CRAN",
         "Date/Publication": "2024-02-16 13:00:02 UTC",
-        "Built": "R 4.3.3; ; 2024-05-08 00:49:11 UTC; windows"
+        "Built": "R 4.3.3; ; 2024-04-23 00:26:27 UTC; windows"
       }
     },
     "MASS": {
@@ -152,7 +152,7 @@
         "NeedsCompilation": "no",
         "Repository": "CRAN",
         "Date/Publication": "2022-04-03 19:20:13 UTC",
-        "Built": "R 4.3.1; ; 2023-10-20 00:51:12 UTC; windows"
+        "Built": "R 4.3.0; ; 2023-04-15 00:42:01 UTC; windows"
       }
     },
     "askpass": {
@@ -578,7 +578,7 @@
         "Maintainer": "Andrie de Vries <apdevries@gmail.com>",
         "Repository": "CRAN",
         "Date/Publication": "2023-08-30 16:50:36 UTC",
-        "Built": "R 4.3.1; ; 2023-10-08 00:48:48 UTC; windows"
+        "Built": "R 4.3.3; ; 2024-04-23 00:26:24 UTC; windows"
       }
     },
     "conflicted": {
@@ -594,28 +594,27 @@
         "URL": "https://conflicted.r-lib.org/, https://github.com/r-lib/conflicted",
         "BugReports": "https://github.com/r-lib/conflicted/issues",
         "Depends": "R (>= 3.6)",
-        "Imports": "cli (>= 3.4.0), memoise, rlang (>= 1.0.0)",
-        "Suggests": "callr, covr, dplyr, Matrix, methods, pkgload, testthat (>=\n3.0.0), withr",
+        "Imports": "cli (>= 3.4.0),\nmemoise,\nrlang (>= 1.0.0)",
+        "Suggests": "callr,\ncovr,\ndplyr,\nMatrix,\nmethods,\npkgload,\ntestthat (>= 3.0.0),\nwithr",
         "Config/Needs/website": "tidyverse/tidytemplate",
         "Config/testthat/edition": "3",
         "Encoding": "UTF-8",
         "Roxygen": "list(markdown = TRUE)",
         "RoxygenNote": "7.2.3",
+        "Author": "Hadley Wickham [aut, cre],\n  Posit Software, PBC [cph, fnd]",
+        "Maintainer": "Hadley Wickham <hadley@posit.co>",
+        "Built": "R 4.3.1; ; 2024-05-17 15:42:00 UTC; windows",
         "RemoteType": "github",
         "RemoteHost": "api.github.com",
         "RemoteRepo": "conflicted",
         "RemoteUsername": "r-lib",
         "RemoteRef": "HEAD",
         "RemoteSha": "321d77ce3e6180468d20eec611970a40eea96e88",
+        "GithubHost": "api.github.com",
         "GithubRepo": "conflicted",
         "GithubUsername": "r-lib",
         "GithubRef": "HEAD",
-        "GithubSHA1": "321d77ce3e6180468d20eec611970a40eea96e88",
-        "NeedsCompilation": "no",
-        "Packaged": "2024-01-10 16:57:33 UTC; LisaAnders",
-        "Author": "Hadley Wickham [aut, cre],\n  Posit Software, PBC [cph, fnd]",
-        "Maintainer": "Hadley Wickham <hadley@posit.co>",
-        "Built": "R 4.3.1; ; 2024-01-10 16:57:33 UTC; windows"
+        "GithubSHA1": "321d77ce3e6180468d20eec611970a40eea96e88"
       }
     },
     "connectapi": {
@@ -761,8 +760,15 @@
         "Maintainer": "Tyson Barrett <t.barrett88@gmail.com>",
         "Repository": "CRAN",
         "Date/Publication": "2024-03-30 23:50:02 UTC",
-        "Built": "R 4.3.3; x86_64-w64-mingw32; 2024-05-10 00:34:46 UTC; windows",
-        "Archs": "x64"
+        "Built": "R 4.3.3; x86_64-w64-mingw32; 2024-05-15 00:36:07 UTC; windows",
+        "Archs": "x64",
+        "RemoteType": "standard",
+        "RemotePkgRef": "data.table",
+        "RemoteRef": "data.table",
+        "RemoteRepos": "https://cran.rstudio.com",
+        "RemoteReposName": "CRAN",
+        "RemotePkgPlatform": "x86_64-w64-mingw32",
+        "RemoteSha": "1.15.4"
       }
     },
     "dbplyr": {
@@ -1201,7 +1207,14 @@
         "Maintainer": "Thomas Lin Pedersen <thomas.pedersen@posit.co>",
         "Repository": "CRAN",
         "Date/Publication": "2024-04-23 08:00:08 UTC",
-        "Built": "R 4.3.3; ; 2024-04-28 02:13:25 UTC; windows"
+        "Built": "R 4.3.3; ; 2024-05-15 02:20:44 UTC; windows",
+        "RemoteType": "standard",
+        "RemotePkgRef": "ggplot2",
+        "RemoteRef": "ggplot2",
+        "RemoteRepos": "https://cran.rstudio.com",
+        "RemoteReposName": "CRAN",
+        "RemotePkgPlatform": "x86_64-w64-mingw32",
+        "RemoteSha": "3.5.1"
       }
     },
     "glue": {
@@ -2321,7 +2334,7 @@
         "Package": "renv",
         "Type": "Package",
         "Title": "Project Environments",
-        "Version": "1.0.5",
+        "Version": "1.0.7",
         "Authors@R": "c(\n    person(\"Kevin\", \"Ushey\", role = c(\"aut\", \"cre\"), email = \"kevin@rstudio.com\",\n           comment = c(ORCID = \"0000-0003-2880-7407\")),\n    person(\"Hadley\", \"Wickham\", role = c(\"aut\"), email = \"hadley@rstudio.com\",\n           comment = c(ORCID = \"0000-0003-4757-117X\")),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"))\n    )",
         "Description": "A dependency management toolkit for R. Using 'renv', you can create\n    and manage project-local R libraries, save the state of these libraries to\n    a 'lockfile', and later restore your library as required. Together, these\n    tools can help make your projects more isolated, portable, and reproducible.",
         "License": "MIT + file LICENSE",
@@ -2337,12 +2350,12 @@
         "Config/testthat/parallel": "true",
         "Config/testthat/start-first": "bioconductor,python,install,restore,snapshot,retrieve,remotes",
         "NeedsCompilation": "no",
-        "Packaged": "2024-02-28 20:37:46 UTC; kevin",
+        "Packaged": "2024-04-11 16:26:24 UTC; kevin",
         "Author": "Kevin Ushey [aut, cre] (<https://orcid.org/0000-0003-2880-7407>),\n  Hadley Wickham [aut] (<https://orcid.org/0000-0003-4757-117X>),\n  Posit Software, PBC [cph, fnd]",
         "Maintainer": "Kevin Ushey <kevin@rstudio.com>",
         "Repository": "CRAN",
-        "Date/Publication": "2024-02-29 01:10:07 UTC",
-        "Built": "R 4.3.1; ; 2024-03-01 18:17:41 UTC; windows"
+        "Date/Publication": "2024-04-11 22:20:02 UTC",
+        "Built": "R 4.3.3; ; 2024-05-19 00:24:16 UTC; windows"
       }
     },
     "reprex": {
@@ -2547,9 +2560,16 @@
         "Packaged": "2023-11-27 20:27:59 UTC; thomas",
         "Author": "Hadley Wickham [aut],\n  Thomas Lin Pedersen [cre, aut]\n    (<https://orcid.org/0000-0002-5147-4711>),\n  Dana Seidel [aut],\n  Posit, PBC [cph, fnd]",
         "Maintainer": "Thomas Lin Pedersen <thomas.pedersen@posit.co>",
-        "Repository": "CRAN",
+        "Repository": "RSPM",
         "Date/Publication": "2023-11-28 09:10:06 UTC",
-        "Built": "R 4.3.3; ; 2024-04-28 01:34:49 UTC; windows"
+        "Built": "R 4.3.0; ; 2024-01-23 03:41:03 UTC; windows",
+        "RemoteType": "standard",
+        "RemotePkgRef": "scales",
+        "RemoteRef": "scales",
+        "RemoteRepos": "https://packagemanager.posit.co/cran/latest",
+        "RemoteReposName": "CRAN",
+        "RemotePkgPlatform": "x86_64-w64-mingw32",
+        "RemoteSha": "1.3.0"
       }
     },
     "selectr": {
@@ -3193,6 +3213,9 @@
     }
   },
   "files": {
+    ".Rprofile": {
+      "checksum": "501139882ffba2a86074e2337bdbd1f2"
+    },
     "_quarto.yml": {
       "checksum": "cf774faa7f2c098e32cc7989e656b094"
     },
@@ -3646,6 +3669,9 @@
     "content-img/landing-page.png": {
       "checksum": "43ed5517ba82f1d357e5b8a62893cfc0"
     },
+    "content-img/presentation-webinar.png": {
+      "checksum": "994ea5082f4d9ab3f08419fe3ef9fc21"
+    },
     "content-img/presentation.png": {
       "checksum": "31591db512ed250ab2429df0ae9fddd7"
     },
@@ -3698,16 +3724,16 @@
       "checksum": "c0f6da84f41b7af2dd8de42cfc929cd4"
     },
     "index.qmd": {
-      "checksum": "083b215f6bf428aa91170675e2023f98"
+      "checksum": "a5b0f0ec2a31039984d36cb1e434ad54"
     },
     "landing.qmd": {
-      "checksum": "0fa712d37421982634a6844e61b3c8ce"
+      "checksum": "6eafff2e80706cb6c4c8661ab7f0a7de"
     },
     "README.md": {
-      "checksum": "a149d418c10b5d2bbf8c20007db8a78d"
+      "checksum": "089507f32830bd1f6ccd276345594a25"
     },
     "renv.lock": {
-      "checksum": "cafb659d5eb7aa993a5858fdd77597dd"
+      "checksum": "b1bc7b045d3ec5d5a1cf628c69e6f1c1"
     },
     "slides/quarto-for-reproducible-reporting-demo.html": {
       "checksum": "8a24c9ce65b725f39eaddb6fe63e6409"
