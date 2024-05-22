@@ -12,6 +12,10 @@ format:
     other-links:
       - text: Need help?
         href: https://docs.posit.co/support/
+    code-links:
+      - text: Source Code
+        icon: github
+        href: https://github.com/leesahanders/quarto-for-reproducible-reporting-demo/tree/main/content-examples/report-branded
     theme:
       light: [cosmo, theme-light.scss]
       dark: [darkly, theme-dark.scss]

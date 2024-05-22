@@ -13,6 +13,10 @@ format:
     other-links:
       - text: Check out the documentation
         href: https://quarto.org/docs/authoring/diagrams.html
+    code-links:
+      - text: Source Code
+        icon: github
+        href: https://github.com/leesahanders/quarto-for-reproducible-reporting-demo/tree/main/content-examples/report-dynamically-generated
     theme: 
       light: morph
       dark: cyborg

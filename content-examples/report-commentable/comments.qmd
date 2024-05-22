@@ -4,6 +4,10 @@ author: "Lisa Anders"
 format:
   html:
     theme: sketchy
+    code-links:
+      - text: Source Code
+        icon: github
+        href: https://github.com/leesahanders/quarto-for-reproducible-reporting-demo/tree/main/content-examples/report-commentable
 editor: source
 comments:
   utterances:

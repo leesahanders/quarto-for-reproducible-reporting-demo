@@ -1,5 +1,24 @@
 ---
 title: "report-parameterized"
+author: Lisa Anders
+date: today
+lightbox: true
+format:
+  html:
+    theme: sandstone
+    toc: true
+    toc-location: right
+    anchor-sections: true
+    smooth-scroll: true
+    link-external-icon: true
+    link-external-newwindow: true
+    mermaid:
+      theme: neutral
+    code-links:
+      - text: Source Code
+        icon: github
+        href: https://github.com/leesahanders/quarto-for-reproducible-reporting-demo/tree/main/content-examples/report-parameterized
+editor: source
 ---
 
 

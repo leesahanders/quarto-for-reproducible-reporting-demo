@@ -17,6 +17,10 @@ format:
       light: quartz
     mermaid:
       theme: dark
+    code-links:
+      - text: Source Code
+        icon: github
+        href: https://github.com/leesahanders/quarto-for-reproducible-reporting-demo/tree/main/content-examples/report-mermaid-diagrams
 execute:
   echo: true
 editor: source

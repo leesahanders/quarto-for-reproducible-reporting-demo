@@ -1,7 +1,12 @@
 ---
 title: "Quarto Document with pop out images"
 author: "Lisa Anders" 
-format: html
+format: 
+  html: 
+    code-links:
+      - text: Source Code
+        icon: github
+        href: https://github.com/leesahanders/quarto-for-reproducible-reporting-demo/tree/main/content-examples/report-lightbox
 editor: source
 filters:
    - lightbox
