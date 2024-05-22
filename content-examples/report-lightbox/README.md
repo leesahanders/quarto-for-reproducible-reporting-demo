@@ -22,13 +22,25 @@ We can lay out images a couple different ways, but one of the easiest is:
 :::
 ```
 
+Alternatively, we can render plots from code into organized columns as well: 
+
+````
+```{python}
+#| layout-ncol:2
+
+# Create both plots here
+```
+````
+
 ## Interactive images (lightbox)
 
-Quarto Lightbox extension added with: 
+The Quarto Lightbox extension can be added with: 
 
 ```bash
 quarto add quarto-ext/lightbox
 ```
+
+It comes bundled with Quarto now though, woohoo!
 
 One can also copy the extension from an existing project and link to the necessary files: 
 
