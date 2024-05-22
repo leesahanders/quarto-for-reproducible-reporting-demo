@@ -226,7 +226,11 @@ text <- c("hello")
 <!-- <a href="`r all_content[all_content$name =="report-lightbox",]$dashboard_url`" class="stretched-link"></a> -->
 
 :::
+:::
 
+<br>
+
+::: card-group
 ::: card
 
 **`{r} all_content[all_content$name =="report-mermaid-diagrams",]$title`**
@@ -238,6 +242,31 @@ text <- c("hello")
 <!-- <a href="`r all_content[all_content$name =="report-mermaid-diagrams",]$dashboard_url`" class="stretched-link"></a> -->
 
 :::
+
+::: card
+
+**`{r} all_content[all_content$name =="report-dynamically-generated",]$title`**
+
+![](content-img/report-dynamically-generated.png){fig-align="center" width=200}
+
+<a href="`r all_content[all_content$name =="report-dynamically-generated",]$content_url`" class="stretched-link"></a>
+
+<!-- <a href="`r all_content[all_content$name =="report-dynamically-generated",]$dashboard_url`" class="stretched-link"></a> -->
+
+:::
+
+::: card
+
+**`{r} all_content[all_content$name =="report-parameterized",]$title`**
+
+![](content-img/report-parameterized.png){fig-align="center" width=200}
+
+<a href="`r all_content[all_content$name =="report-parameterized",]$content_url`" class="stretched-link"></a>
+
+<!-- <a href="`r all_content[all_content$name =="report-parameterized",]$dashboard_url`" class="stretched-link"></a> -->
+
+:::
+
 :::
 
 ### Community Examples

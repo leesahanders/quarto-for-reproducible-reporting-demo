@@ -16,7 +16,7 @@ editor: source
 expandable: true
 resource_files:
 - custom.scss
-- images/Leafey.PNG
+- images/sun_nasa3.png
 ---
 
 <!-- Other good themes: morph, pulse, sandstone, spacelab, solar, slate, vapor, lux  -->
@@ -31,8 +31,8 @@ resource_files:
 
 # Pull data for UV 
 
-library(httr)
-library(httr2)
+#library(httr) # Commenting out until curl dependency is added to palm
+#library(httr2) # Commenting out until curl dependency is added to palm
 library(png)
 library(xml2)
 library(rvest)

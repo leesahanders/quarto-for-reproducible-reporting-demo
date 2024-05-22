@@ -1829,35 +1829,6 @@
         "Built": "R 4.3.1; ; 2023-09-07 02:28:01 UTC; windows"
       }
     },
-    "httr2": {
-      "Source": "CRAN",
-      "Repository": "https://cran.rstudio.com",
-      "description": {
-        "Package": "httr2",
-        "Title": "Perform HTTP Requests and Process the Responses",
-        "Version": "0.2.3",
-        "Authors@R": "c(\n    person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", role = c(\"aut\", \"cre\")),\n    person(\"RStudio\", role = c(\"cph\", \"fnd\"))\n  )",
-        "Description": "Tools for creating and modifying HTTP requests, then\n    performing them and processing the results. 'httr2' is a modern\n    re-imagining of 'httr' that uses a pipe-based interface and solves\n    more of the problems that API wrapping packages face.",
-        "License": "MIT + file LICENSE",
-        "URL": "https://httr2.r-lib.org, https://github.com/r-lib/httr2",
-        "BugReports": "https://github.com/r-lib/httr2/issues",
-        "Depends": "R (>= 3.4)",
-        "Imports": "cli (>= 3.0.0), curl, glue, magrittr, openssl, R6, rappdirs,\nrlang (>= 1.0.0), withr",
-        "Suggests": "askpass, bench, clipr, covr, docopt, httpuv, jose, jsonlite,\nknitr, purrr, rmarkdown, testthat (>= 3.0.0), tibble, webfakes,\nxml2",
-        "VignetteBuilder": "knitr",
-        "Config/Needs/website": "tidyverse/tidytemplate",
-        "Config/testthat/edition": "3",
-        "Encoding": "UTF-8",
-        "RoxygenNote": "7.2.3",
-        "NeedsCompilation": "no",
-        "Packaged": "2023-05-08 18:56:52 UTC; hadleywickham",
-        "Author": "Hadley Wickham [aut, cre],\n  RStudio [cph, fnd]",
-        "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
-        "Repository": "RSPM",
-        "Date/Publication": "2023-05-08 19:30:02 UTC",
-        "Built": "R 4.3.0; ; 2023-05-29 16:08:25 UTC; windows"
-      }
-    },
     "ids": {
       "Source": "CRAN",
       "Repository": "https://cran.rstudio.com",
@@ -4280,10 +4251,10 @@
   },
   "files": {
     ".Rprofile": {
-      "checksum": "8dc1ab86ced4eb1bca9e423ba483cbc3"
+      "checksum": "08d131e227d01ea85134d0372d064342"
     },
     "_quarto.yml": {
-      "checksum": "b77bfdef52769732ca30d978a0deb51c"
+      "checksum": "7c1c4e7532456dde80d4710c64876eeb"
     },
     "custom.scss": {
       "checksum": "c8681c1c75997de720c68b1496d5cdac"
@@ -4292,7 +4263,7 @@
       "checksum": "84450a7843897bfe08393a0d3c827eda"
     },
     "dashboard-spatial.qmd": {
-      "checksum": "6300d735c5f8328f1cefbcbbe1eee386"
+      "checksum": "1ab4bd6a4d54fbd504fd6ebcee8285b3"
     },
     "dashboard-spatial_files/libs/bootstrap/bootstrap-icons.css": {
       "checksum": "2318f137d201fbf51601fa0faba6bef7"
@@ -4606,47 +4577,11 @@
     "images/uv_index_scale_epa.png": {
       "checksum": "768738fb741aa4081a3a5f65c10b2ca8"
     },
-    "README.html": {
-      "checksum": "e698b40f122cff02af51cf12d5c2ac0b"
-    },
     "README.md": {
-      "checksum": "281331c3ba42051733454f770c2a1a12"
-    },
-    "README_files/libs/bootstrap/bootstrap-icons.css": {
-      "checksum": "2318f137d201fbf51601fa0faba6bef7"
-    },
-    "README_files/libs/bootstrap/bootstrap-icons.woff": {
-      "checksum": "1a51dfbe5467607389d603c02a77cd10"
-    },
-    "README_files/libs/bootstrap/bootstrap.min.css": {
-      "checksum": "6af7fe331e124e9a3628ff5072715d11"
-    },
-    "README_files/libs/bootstrap/bootstrap.min.js": {
-      "checksum": "e2b09c06f0e714b6144a6788a28e3950"
-    },
-    "README_files/libs/clipboard/clipboard.min.js": {
-      "checksum": "15f52a1ee547f2bdd46e56747332ca2d"
-    },
-    "README_files/libs/quarto-html/anchor.min.js": {
-      "checksum": "91bcf6cd1fd88fec3f109811e5fc3546"
-    },
-    "README_files/libs/quarto-html/popper.min.js": {
-      "checksum": "3a4a291ccf3f1ea0f82b641542fd3827"
-    },
-    "README_files/libs/quarto-html/quarto-syntax-highlighting.css": {
-      "checksum": "49bff82b9355f257417faaaa77dd1607"
-    },
-    "README_files/libs/quarto-html/quarto.js": {
-      "checksum": "2ca82ae8ee1e5762d249c6b6c0802e30"
-    },
-    "README_files/libs/quarto-html/tippy.css": {
-      "checksum": "ebd6f8ce46a677e1a4f5f8a8317109a9"
-    },
-    "README_files/libs/quarto-html/tippy.umd.min.js": {
-      "checksum": "d828775275749701b48bd9d958814111"
+      "checksum": "6cb19779fb1fcb65a3c3d8066c029bdb"
     },
     "renv.lock": {
-      "checksum": "72c758cd76a07adba2e8f5fca604fe41"
+      "checksum": "2cdf8f1ea60317b9476a9198336db763"
     },
     "tmp/data.RData": {
       "checksum": "097afb48ea233c32d9528b08b804eb06"
