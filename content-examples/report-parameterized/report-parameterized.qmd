@@ -28,11 +28,24 @@ labs(title = paste(params$color, "population"))
 
 We can render this through quarto with: 
 
-```
+```bash
 quarto render report-parameterized.qmd -P color:copper
+
+# Example with multiple params
+quarto render report-parameterized.qmd -P pet_type:'cats' -P fave_breed:'Snowshoe'
 
 # Or we could use a yaml file
 quarto render report-parameterized.qmd --execute-params params.yml
+```
+
+We could also render in R using the quarto package: 
+
+```r
+quarto::quarto_render(
+  input = here::here("ex-2-quarto-render.qmd"), # Input Quarto file
+  execute_params = list(                        # Named list of params
+    pet_type = "cats",
+    fave_breed = "Snowshoe"))
 ```
 
 

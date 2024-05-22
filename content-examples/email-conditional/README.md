@@ -1,16 +1,12 @@
 # Quarto Conditional Emails (with Connect)
 
-## Send an email only when certain conditions are met
+# Bells and whistles 
+
+## Sending emails
 
 Make the magic happen: <https://docs.posit.co/connect/user/quarto/#email-customization> 
 
 > Email customization requires Quarto 1.4.
-
-Also useful: 
-
-- <https://docs.posit.co/connect/user/quarto/index.html#email-customization> 
-- <https://quarto.org/docs/authoring/conditional.html> 
-- <https://github.com/rich-iannone/quarto-email/issues/9> 
 
 Modify the yaml to change the output format (note that a specific quarto version or most recent is required): 
 
@@ -19,6 +15,38 @@ format: email
 ```
 
 Add a section to define the email content. Files can be attached, calculation outputs can be included, and this can even be wrapped in a conditional statement to only send on certain conditions. 
+## Conditional content 
+
+```
+::: {.content-visible when-format="html"}
+
+Will only appear in HTML.
+
+:::
+```
+
+````
+```{.python .content-visible when-format="html"}
+# code shown only in HTML
+2 + 2
+```
+````
+
+```
+Some text
+[in HTML.]{.content-visible when-format="html"}
+[in PDF.]{.content-visible when-format="pdf"}
+```
+
+# For the developer 
+
+## Send an email only when certain conditions are met
+
+Also useful: 
+
+- <https://docs.posit.co/connect/user/quarto/index.html#email-customization> 
+- <https://quarto.org/docs/authoring/conditional.html> 
+- <https://github.com/rich-iannone/quarto-email/issues/9> 
 
 ## Implementation notes
 
