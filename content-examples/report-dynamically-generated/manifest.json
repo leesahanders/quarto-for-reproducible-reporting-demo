@@ -4,7 +4,7 @@
   "platform": "4.3.1",
   "metadata": {
     "appmode": "quarto-static",
-    "primary_rmd": "report-dynamically-generated.qmd",
+    "primary_rmd": "child-dir/_child.qmd",
     "primary_html": null,
     "content_category": null,
     "has_parameters": false
@@ -3435,6 +3435,9 @@
     }
   },
   "files": {
+    "child-dir/_child.qmd": {
+      "checksum": "ab058f0452a62d1b7662d3e5e5931465"
+    },
     "renv.lock": {
       "checksum": "9b51cab5d1b007c8757f5cee5d66c6da"
     },
@@ -3442,7 +3445,7 @@
       "checksum": "1cb37952467051e97a86f1b6e3120fd2"
     },
     "report-dynamically-generated.qmd": {
-      "checksum": "386da260681230e777cea00f03e73cdb"
+      "checksum": "873459703ac1c2102ee58282d6501f82"
     },
     "report-dynamically-generated_files/libs/bootstrap/bootstrap-dark.min.css": {
       "checksum": "14a4648bc4fb6476a37683e98aad2823"

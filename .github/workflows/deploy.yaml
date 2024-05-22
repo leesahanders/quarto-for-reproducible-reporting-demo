@@ -62,7 +62,7 @@ jobs:
           dir: ./content-examples/report-parameterized/:report-parameterized
       - name: Use Connect API to set content title
         run: |
-          export DATA='{"title": "Parameterized Reports"}'
+          export DATA='{"title": "Quarto reports with parameters"}'
           export CONTENT_NAME='report-parameterized'
           export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
           echo contentguid
