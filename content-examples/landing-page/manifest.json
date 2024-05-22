@@ -3214,10 +3214,16 @@
   },
   "files": {
     ".Rprofile": {
-      "checksum": "501139882ffba2a86074e2337bdbd1f2"
+      "checksum": "08874e9310603db4a41d69b1a40d181f"
     },
     "_quarto.yml": {
       "checksum": "cf774faa7f2c098e32cc7989e656b094"
+    },
+    "_site/content-img/dashboard-spatial.png": {
+      "checksum": "6f1d473d189a3ffe95d870e5a0e02f08"
+    },
+    "_site/content-img/dashboard.png": {
+      "checksum": "d9acdcdb5804e293431dce4d9c167e11"
     },
     "_site/content-img/email-conditional.png": {
       "checksum": "338c96c013d03eec050fc5bf16bedaf3"
@@ -3228,6 +3234,12 @@
     "_site/content-img/email-programmatic.png": {
       "checksum": "8d3429b28a07e4ba0a03826330e911a3"
     },
+    "_site/content-img/landing-page.png": {
+      "checksum": "43ed5517ba82f1d357e5b8a62893cfc0"
+    },
+    "_site/content-img/presentation-webinar.png": {
+      "checksum": "994ea5082f4d9ab3f08419fe3ef9fc21"
+    },
     "_site/content-img/presentation.png": {
       "checksum": "31591db512ed250ab2429df0ae9fddd7"
     },
@@ -3237,6 +3249,9 @@
     "_site/content-img/report-branded.png": {
       "checksum": "60c99ce7a3f67c29c8540a0780a4d4ef"
     },
+    "_site/content-img/report-commentable.png": {
+      "checksum": "ebddfc7613464e50a87d358afc5c39d9"
+    },
     "_site/content-img/report-lightbox.png": {
       "checksum": "54391d9b18e4a8d3a49c0bc181c59b2f"
     },
@@ -3244,7 +3259,7 @@
       "checksum": "7859580db41cc32e4fd3a8256bb9d9d2"
     },
     "_site/content-img/website.png": {
-      "checksum": "396d1588115b39bb953cc430e718d061"
+      "checksum": "4197f6a58b853154027500c852137a9f"
     },
     "_site/help.html": {
       "checksum": "0c1e18cd4afdf0c2dab343362f9346a6"
@@ -3259,7 +3274,7 @@
       "checksum": "c0f6da84f41b7af2dd8de42cfc929cd4"
     },
     "_site/index.html": {
-      "checksum": "966d34a50cbd8bc4a3018191ac179415"
+      "checksum": "52c64c7c975376d5d569dfafba124a86"
     },
     "_site/index_files/figure-html/unnamed-chunk-12-1.png": {
       "checksum": "bd10895869ec1b2a1f41a4d6c8dc8391"
@@ -3325,10 +3340,10 @@
       "checksum": "c57d88fb0e7643c37733817375ed1064"
     },
     "_site/landing.html": {
-      "checksum": "ed9d957b5af38b13d97bc369a2fd15f2"
+      "checksum": "c75d800af2b83f5ea13b66f52fdeb17e"
     },
     "_site/search.json": {
-      "checksum": "850296fd7c5e4f06e5b2c50e62cd6a5e"
+      "checksum": "01708b5871742ac3dd5aea83b844a045"
     },
     "_site/site_libs/bootstrap/bootstrap-icons.css": {
       "checksum": "2318f137d201fbf51601fa0faba6bef7"
@@ -3727,13 +3742,16 @@
       "checksum": "a5b0f0ec2a31039984d36cb1e434ad54"
     },
     "landing.qmd": {
-      "checksum": "6eafff2e80706cb6c4c8661ab7f0a7de"
+      "checksum": "300a0880f0936496dfa4845eac69062f"
     },
     "README.md": {
-      "checksum": "089507f32830bd1f6ccd276345594a25"
+      "checksum": "427cd1bcc828c7e2ea4f4b882d053e4f"
     },
     "renv.lock": {
       "checksum": "b1bc7b045d3ec5d5a1cf628c69e6f1c1"
+    },
+    "slides/presentation.html": {
+      "checksum": "6aea7513a6b620799cf823d8b2e277ac"
     },
     "slides/quarto-for-reproducible-reporting-demo.html": {
       "checksum": "8a24c9ce65b725f39eaddb6fe63e6409"
