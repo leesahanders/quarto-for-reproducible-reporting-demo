@@ -2,6 +2,73 @@
 
 Preview with: `quarto preview index.qmd --to default --no-watch-inputs --no-browse`
 
+# Bells and Whistles
+
+## Programmatically generating widget content
+
+The data for each of the content widgets is being pulled from the Connect server using the Connect API. We can then use the details to generate the different titles, links, and references. For example, filtering down to the `dashboard` item: 
+
+````markdown
+**`{r} all_content[all_content$name =="dashboard",]$title`**
+
+![](content-img/dashboard.png){fig-align="center" width=200}
+
+<a href="`r all_content[all_content$name =="dashboard",]$dashboard_url`" class="stretched-link"></a>
+````
+
+### More complex example 
+
+All sorts of layout content can be programmatically generated. For example like this, in order to programmatically create tabs and contents: 
+
+````markdown
+
+## Programmatic generation
+
+### Minimal example
+
+```{r}
+library(tidyverse)
+
+languages <- c("R", "Python")
+sections <- c("Static Documents", "Interactive Applications", "API's", "Pins")
+text <- c("hello")
+```
+
+#### tabs
+
+:::: {.column-body}
+::: {.panel-tabset}
+```{r}
+#| results: asis
+#| fig-width: 14
+#| fig-height: 6
+
+iwalk(languages, ~ {
+  cat('#### ', .y, '\n\n')
+
+  print(paste0(text, collapse = ""))
+
+  cat('\n\n')
+
+})
+```
+
+:::
+::::
+````
+
+## Embedding a presentation
+
+In order to successfully embed the presentation, the presentation html needs to be self-contained and also located within the directory of the home landing page: 
+
+```
+format:
+  positslides-revealjs: 
+    embed-resources: true
+```
+
+# For the developer
+
 ## Resources
 
 - Custom dashboard with connectwidgets: <https://docs.posit.co/connect/how-to/connectwidgets/index.html#a-custom-dashboard>
@@ -13,12 +80,12 @@ Preview with: `quarto preview index.qmd --to default --no-watch-inputs --no-brow
 
 ## Examples:
 
+- Ryan's Posit Training Home Page: <https://github.com/ryjohnson09/Posit-Training-Home-Page>
 - Posit Connect Display Case: <https://colorado.posit.co/rsc/connect/#/apps/87182afc-6ac0-4b6b-abf4-eba9cd2eea3e/access/6120>
 - Bike share python landing page: <https://colorado.posit.co/rsc/connect/#/apps/70a3d7b5-bdc3-4970-b991-fc1059b3998f/access/5509>
 - Lisa's developer landing page: <https://colorado.posit.co/rsc/connect/#/apps/6f9e3bb7-d345-4932-b943-896586659f66/access/5496>
 - And another one: <https://colorado.posit.co/rsc/connect/#/apps/23a7e1a3-fcbe-4efe-aea9-585198de6064/access>
-- Somehow Cole deployed the colorado landing page: <https://colorado.posit.co/rsc/connect/#/apps/b9f39220-daf8-4a3c-b698-389991f98724/access>
-- Ryan's Posit Training Home Page: <https://github.com/ryjohnson09/Posit-Training-Home-Page>
+- The Colorado landing page: <https://colorado.posit.co/rsc/connect/#/apps/b9f39220-daf8-4a3c-b698-389991f98724/access>
 
 ## Preview
 
@@ -79,22 +146,9 @@ Needs work:
           api-key: ${{ secrets.CONNECT_API_KEY }}
 ```
 
-## Presentation embedding 
-
-In order to successfully embed the presentation, the presentation html needs to be self-contained and also located within the directory of the home landing page: 
-
-```
-format:
-  positslides-revealjs: 
-    embed-resources: true
-```
-
 ## TODO
 
 Programmatically generate tabsets: <https://stackoverflow.com/questions/73367433/how-to-programmatically-generate-tabset-panel-in-quarto>
 Add whitespace to justify strings: <https://unix.stackexchange.com/questions/354092/bash-add-trailing-spaces-to-justify-string>
-
-
-
 
 
