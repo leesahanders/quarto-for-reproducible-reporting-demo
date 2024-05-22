@@ -23,7 +23,7 @@ revealjs-plugins:
 
 <center>
 
-![](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/c7e0e26c-5ca7-49f1-ba8d-093b1f8e541d.png?h=a790567e29efb477a6b7fd4197c514d7){width="50%"}
+![](https://raw.githubusercontent.com/rstudio/hex-stickers/ce526bb5880f348c6970f44f9d8001eb504c4cf6/SVG/quarto.svg){width="30%"}
 
 </center>
 
@@ -34,14 +34,6 @@ revealjs-plugins:
 <br>
 **Lisa Anders** - Posit Solutions Engineer and self-professed R nerd learning to love Python. Excited to share lessons learned the hard way to make things easier for others. Awkward at writing intros in the third person!
 :::
-
-<center>
-
-::: {.citation style="font-size: 16px"}
-"Artwork from "Hello, Quarto" keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by [Allison Horst](https://allisonhorst.com/cetinkaya-rundel-lowndes-quarto-keynote)
-:::
-
-</center>
 
 ## Logistics {.smaller}
 
@@ -70,7 +62,12 @@ Chat: share your name, where you’re calling from, and one thing you’ve made 
 
 ::: {.column width="30%"}
 
-![](https://raw.githubusercontent.com/rstudio/hex-stickers/ce526bb5880f348c6970f44f9d8001eb504c4cf6/SVG/quarto.svg){width="80%"}
+<br>
+
+<br>
+
+
+![](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/c7e0e26c-5ca7-49f1-ba8d-093b1f8e541d.png?h=a790567e29efb477a6b7fd4197c514d7){width="80%"}
 
 :::
 
@@ -95,6 +92,14 @@ Chat: share your name, where you’re calling from, and one thing you’ve made 
 :::
 
 ::::
+
+<center>
+
+::: {.citation style="font-size: 16px"}
+"Artwork from "Hello, Quarto" keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by [Allison Horst](https://allisonhorst.com/cetinkaya-rundel-lowndes-quarto-keynote)
+:::
+
+</center>
 
 ## What is Quarto? {.smaller}
 
@@ -146,25 +151,177 @@ Code first model where source code is included in all outputs:
 How to check your rstudio version: https://book.rwithoutstatistics.com/quarto-chapter#creating-a-quarto-document
 :::
 
+## Getting started 
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+Programmatically create a project: 
+
+```bash
+quarto create project
+quarto create project <type> <name>
+```
+
+:::
+::: {.column width="50%"}
+
+Create a project using the RStudio editor: 
+
+![](https://quarto.org/docs/tools/images/new-quarto-doc.png){width="90%"}
+
+:::
+:::
+
+::: {.notes}
+Chat: 
+:::
+
+## Anatomy of a Quarto project 
+
+:::{.smaller}
+
+:::: {.columns}
+
+::: {.column width="80%"}
+
+
+````markdown
+---
+title: "Untitled"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable 
+code into a finished document. To learn more about Quarto 
+see <https://quarto.org>.
+
+````
+
+````markdown
+When you click the **Render** button a document will be 
+generated that includes both content and the output of 
+embedded code. You can embed code like this:
+
+```{{r}}
+
+#| echo: false
+
+1 + 1
+
+```
+````
+
+:::
+
+::: {.column width="20%"}
+
+***YAML*** - define the format, theme
+
+***Markdown*** - language between sections will be processed as Quarto markdown syntax. 
+
+***Code block*** - include live computations. Execution options are added to the top of the block with `#|`, for example `#| echo: true` to include code in the rendered article. 
+
+:::
+:::
+:::
+
+::: {.notes}
+Chat: 
+Reference this page: https://quarto.org/docs/projects/quarto-projects.html
+
+Markdown - Same as what "README.md" in various version control systems use! 
+Code blocks - Many different languages support including R, Python, and Julia. 
+:::
+
+## Rendering
+
+Knitr engine: 
+
+![](https://quarto.org/docs/get-started/hello/images/rstudio-qmd-how-it-works.png){width="90%"}
+
+Jupyter engine: 
+
+![](https://quarto.org/docs/get-started/hello/images/qmd-how-it-works.png){width="90%"}
+
+## Coming from R? RMarkdown Workflow
+
+Rendering (execute and write to disk):
+
+:::: {.columns}
+
+::: {.column width="50%"}
+Programmatically
+
+```bash
+quarto render script.qmd
+```
+
+:::
+::: {.column width="50%"}
+
+The RStudio editor comes with rendering built-in: 
+
+![](https://quarto.org/docs/tools/images/rstudio-render.png){width="90%"}
+
+:::
+:::
+
+Live preview:
+
+```bash
+quarto preview script.qmd
+```
+
+## Coming from Python? Notebooks Workflow
+
+Rendering (execute and write to disk):
+
+```bash
+# plain text qmd
+quarto render python.qmd
+quarto render python.qmd --to pdf
+
+# ipynb notebook
+quarto render python.ipynb
+quarto render python.ipynb --execute
+```
+
+Live preview:
+
+```bash
+# plain text qmd
+quarto preview python.qmd
+quarto preview python.qmd --to pdf
+
+# ipynb notebook
+quarto preview python.ipynb
+quarto preview python.ipynb --execute
+```
+
+::: {.notes}
+Chat: 
+:::
+
 ## The different content types 
 
 :::{.smaller}
 
-- Report
+- Report / Document / Book
 
   - HTML doc
   - PDF doc
   - Word doc
 
-- Book 
-
 - Presentation
 
-- Website 
+- Website / Blog
 
-- Blog 
-
- - The home page is a listing page for all of the documents in the posts directory
+  - The home page is a listing page for all of the documents in the posts directory
 
 - Dashboard 🆕
 
@@ -173,6 +330,379 @@ How to check your rstudio version: https://book.rwithoutstatistics.com/quarto-ch
 *Make ALL the content types!* 
 
 :::
+
+::: {.notes}
+Chat: who here has heard of quarto? is anyone currently building things in quarto?
+:::
+
+## Creating a Quarto Document 
+
+:::{.smaller}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+````markdown
+---
+title: "Temperature and ozone level"
+author: "Norah Jones"
+date: "5/22/2021"
+format: 
+  html:
+    fig-width: 8
+    fig-height: 4
+    code-fold: true
+---
+````
+
+````markdown
+## Air Quality
+
+```{{r}}
+#| label: fig-airquality
+#| warning: false
+
+library(ggplot2)
+ggplot(airquality, aes(Temp, Ozone)) + 
+  geom_point() + 
+  geom_smooth(method = "loess")
+```
+````
+
+:::
+::: {.column width="50%"}
+
+Learn more about all the html options [here](https://quarto.org/docs/output-formats/html-basics.html)
+
+<br>
+
+Publish it with the [Quarto CLI](https://quarto.org/docs/publishing/): 
+
+```bash
+quarto publish connect
+ ? Server URL: › https://connect.example.com/
+ ? API Key: › 
+```
+
+<br>
+
+Publish it [through RStudio](https://docs.posit.co/connect/user/publishing-rstudio/#publishing-general): ![](https://docs.posit.co/connect/user/images/publishIcon_2x.png){width="10%"}
+
+:::
+:::
+:::
+
+::: {.notes}
+Chat: 
+:::
+
+## Creating a Quarto Presentation 
+
+:::{.smaller}
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+Example code: 
+
+````markdown
+---
+title: "Habits"
+author: "John Doe"
+format: revealjs
+---
+````
+
+````markdown
+## Getting up
+
+- Turn off alarm
+- Get out of bed
+
+## Going to sleep
+
+- Get in bed
+- Count sheep
+````
+
+:::
+::: {.column width="60%"}
+
+Learn more [here](https://quarto.org/docs/presentations/)
+
+<br>
+
+Publish it with the [Quarto CLI](https://quarto.org/docs/publishing/): 
+
+```bash
+quarto publish connect
+ ? Server URL: › https://connect.example.com/
+ ? API Key: › 
+```
+
+<br>
+
+Publish it [through RStudio](https://docs.posit.co/connect/user/publishing-rstudio/#publishing-general): ![](https://docs.posit.co/connect/user/images/publishIcon_2x.png){width="10%"}
+
+:::
+:::
+:::
+
+::: {.notes}
+Chat: 
+:::
+
+## Creating a Quarto Website 
+
+:::{.smaller}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+Create the website: 
+
+```bash
+quarto create project website mysite
+```
+
+Website layout is defined through a seperate `_quarto.yml` file: 
+
+```
+project:
+  type: website
+
+website:
+  title: "today"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+```
+
+:::
+::: {.column width="50%"}
+
+Learn more [here](https://quarto.org/docs/websites/)
+
+<br>
+
+Publish it with the [Quarto CLI](https://quarto.org/docs/publishing/): 
+
+```bash
+quarto publish connect
+ ? Server URL: › https://connect.example.com/
+ ? API Key: › 
+```
+
+<br>
+
+Publish it [through RStudio](https://docs.posit.co/connect/user/publishing-rstudio/#publishing-general): ![](https://docs.posit.co/connect/user/images/publishIcon_2x.png){width="10%"}
+
+:::
+:::
+:::
+
+::: {.notes}
+Chat: 
+:::
+
+## Creating a Quarto Email 🆕
+
+:::{.smaller}
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+Example code: 
+
+````markdown
+---
+title: Something wonderful
+format: email
+---
+````
+
+````markdown
+::: {.email}
+
+::: {.subject}
+Alert
+:::
+
+Water the plants
+:::
+````
+
+:::
+::: {.column width="60%"}
+
+Learn more [here](https://quarto.org/docs/prerelease/1.4/email.html)
+
+<br>
+
+Publish it with the [Quarto CLI](https://quarto.org/docs/publishing/): 
+
+```bash
+quarto publish connect
+ ? Server URL: › https://connect.example.com/
+ ? API Key: › 
+```
+
+<br>
+
+Publish it [through RStudio](https://docs.posit.co/connect/user/publishing-rstudio/#publishing-general): ![](https://docs.posit.co/connect/user/images/publishIcon_2x.png){width="10%"}
+
+:::
+:::
+:::
+
+::: {.notes}
+Chat: 
+:::
+
+## Creating a Quarto Dashboard 🆕
+
+:::{.smaller}
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+Example code: 
+
+````markdown
+---
+title: "Diamonds Explorer"
+author: "Hello Quarto"
+format: dashboard
+---
+````
+
+````markdown
+## Row {height=60%}
+
+Here's a widget block, and 
+can include live code!
+
+## Row {height=40%}
+
+Here's a widget block, and 
+can include live code!
+````
+
+:::
+::: {.column width="60%"}
+
+Learn more [here](https://quarto.org/docs/dashboards/)
+
+<br>
+
+Publish it with the [Quarto CLI](https://quarto.org/docs/publishing/): 
+
+```bash
+quarto publish connect
+ ? Server URL: › https://connect.example.com/
+ ? API Key: › 
+```
+
+<br>
+
+Publish it [through RStudio](https://docs.posit.co/connect/user/publishing-rstudio/#publishing-general): ![](https://docs.posit.co/connect/user/images/publishIcon_2x.png){width="10%"}
+
+:::
+:::
+:::
+
+::: {.notes}
+Chat: 
+:::
+
+## Things have gone wrong, help! {.smaller}
+
+::: {.fragment .fade-in}
+
+Capture the current system to see if anything looks off / submit a git issue or stackoverflow that will give folks enough info to be able to meaningfully help you: 
+
+```r
+sessionInfo()
+Sys.getenv()
+.libPaths()
+
+# If the sessioninfo package is available, 
+# it provides output that is easier to read,
+# and can write its results to a file
+sessioninfo:::session_info(to_file = "quarto-session-info-output.txt")
+```
+
+Get more diagnostics while running a command: 
+
+```r
+quarto render hello.qmd --to html --execute-debug
+```
+
+:::
+
+
+## Misc best practices {.smaller}
+
+![](img/dangerous-to-go-alone.jpg){fig-align="center" width="30%"}
+
+<center>
+
+:::: {.columns}
+
+::: {.column width="33%"}
+
+**Version control your code**
+
+<!-- ![](img/kerin-gedge-JDzoTGfoogA-unsplash.jpg) -->
+
+:::
+
+::: {.column width="33%"}
+
+**Reproduceable environments** 
+
+<!-- ![](img/karina-vorozheeva-rW-I87aPY5Y-unsplash.jpg) -->
+
+:::
+
+::: {.column width="33%"}
+
+**Keep secrets secret**
+
+<!-- ![](img/richard-brutyo-Sg3XwuEpybU-unsplash.jpg) -->
+
+:::
+
+::::
+
+*Imagine a world where code doesn't disappear and is backed up in version control, environments are explicit and easily reproduced, and secrets are responsibly managed.*
+
+<br> 
+
+::: {.citation style="font-size: 16px"}
+["It’s Dangerous to go Alone! Take This" is a memorable quote from the 1986 action-adventure Nintendo game The Legend of Zelda. Online, the expression is typically used as a stock caption for image macros in which an animal or an object is offered to the viewer as a kind gesture.](https://knowyourmeme.com/photos/686176-its-dangerous-to-go-alone-take-this)
+:::
+
+</center>
+
+::: {.notes}
+Important tools that take the pain out of data science
+:::
+
+## On to the bells and whistles!
 
 ::: {.notes}
 Chat: 
@@ -229,264 +759,8 @@ Image a meme of [The Sound of Music](https://www.imdb.com/title/tt0059742/)
 Chat: who here has heard of quarto? is anyone currently building things in quarto? 
 :::
 
-## Getting started 
 
-:::: {.columns}
-
-::: {.column width="50%"}
-
-Programmatically create a project: 
-
-```r
-quarto create project
-quarto create project <type> <name>
-```
-
-:::
-::: {.column width="50%"}
-
-![Create a project using the RStudio editor](https://quarto.org/docs/tools/images/new-quarto-doc.png)
-
-:::
-:::
-
-::: {.notes}
-Chat: 
-:::
-
-## Anatomy of a Quarto project 
-
-:::{.smaller}
-
-```
----
-title: "Untitled"
-format: html
-editor: visual
----
-
-## Quarto
-
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
-
-
-```
-
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
-
-```` `````{r}
-
-#| echo: false
-
-1 + 1
-
-```` `````
-
-:::
-
-::: {.notes}
-Chat: 
-Reference this page: https://quarto.org/docs/projects/quarto-projects.html
-:::
-
-## Coming from R? RMarkdown Workflow
-
-Rendering (execute and write to disk):
-
-:::: {.columns}
-
-::: {.column width="50%"}
-Programmatically
-
-```r
-quarto render script.qmd
-```
-
-:::
-::: {.column width="50%"}
-
-![The RStudio editor comes with rendering built-in](https://quarto.org/docs/tools/images/rstudio-render.png)
-
-:::
-:::
-
-Live preview:
-
-```bash
-quarto preview script.qmd
-```
-
-## Coming from Python? Notebooks Workflow
-
-Rendering (execute and write to disk):
-
-```bash
-# plain text qmd
-quarto render python.qmd
-quarto render python.qmd --to pdf
-
-# ipynb notebook
-quarto render python.ipynb
-quarto render python.ipynb --execute
-```
-
-Live preview:
-
-```bash
-# plain text qmd
-quarto preview python.qmd
-quarto preview python.qmd --to pdf
-
-# ipynb notebook
-quarto preview python.ipynb
-quarto preview python.ipynb --execute
-```
-
-::: {.notes}
-Chat: 
-:::
-
-## Creating a Quarto Document 
-
-::: {.notes}
-Chat: 
-:::
-
-## Creating a Quarto Presentation 
-
-::: {.notes}
-Chat: 
-:::
-
-## Creating a Quarto Website 
-
-::: {.notes}
-Chat: 
-:::
-
-## Creating a Quarto Email 🆕
-
-::: {.notes}
-Chat: 
-:::
-
-## Creating a Quarto Dashboard 🆕
-
-::: {.notes}
-Chat: 
-:::
-
-## Things have gone wrong, help! {.smaller}
-
-
-Capture the current system to see if anything looks off / submit a git issue or stackoverflow that will give folks enough info to be able to meaningfully help you: 
-
-```r
-sessionInfo()
-Sys.getenv()
-.libPaths()
-
-# If the sessioninfo package is available, 
-# it provides output that is easier to read,
-# and can write its results to a file
-#sessioninfo:::session_info(to_file = "quarto-session-info-output.txt")
-```
-
-Get more diagnostics while running a command: 
-
-```r
-quarto render hello.qmd --to html --execute-debug
-```
-
-## On to the bells and whistles!
-
-::: {.notes}
-Chat: 
-:::
-
-## So you've got a finished product, now what? Publish to Connect {.smaller}
-
-
-
-::: {.notes}
-Chat: 
-:::
-
-## So you've got a finished product, now what? Job scheduling  {.smaller}
-
-
-
-<center>
-
-![](https://github.com/ryjohnson09/quarto-job-scheduling/blob/main/images/workflow.jpg?raw=true){fig-align="center" width="50%"}
-
-::: {.citation style="font-size: 16px"}
-Image from Ryan Johnson's [companion GitHub repository for the June 2023 Posit Team Community demo](https://github.com/ryjohnson09/quarto-job-scheduling?tab=readme-ov-file)
-:::
-
-</center>
-
-::: {.notes}
-Chat: 
-:::
-
-
-
-## Misc best practices {.smaller}
-
-![](img/dangerous-to-go-alone.jpg){fig-align="center" width="30%"}
-
-<center>
-
-:::: {.columns}
-
-::: {.column width="33%"}
-
-**Version control your code**
-
-<!-- ![](img/kerin-gedge-JDzoTGfoogA-unsplash.jpg) -->
-
-:::
-
-::: {.column width="33%"}
-
-**Reproduceable environments** 
-
-<!-- ![](img/karina-vorozheeva-rW-I87aPY5Y-unsplash.jpg) -->
-
-:::
-
-::: {.column width="33%"}
-
-**Keep secrets secret**
-
-<!-- ![](img/richard-brutyo-Sg3XwuEpybU-unsplash.jpg) -->
-
-:::
-
-::::
-
-*Imagine a world where code doesn't disappear and is backed up in version control, environments are explicit and easily reproduced, and secrets are responsibly managed.*
-
-<br> 
-
-::: {.citation style="font-size: 16px"}
-["It’s Dangerous to go Alone! Take This" is a memorable quote from the 1986 action-adventure Nintendo game The Legend of Zelda. Online, the expression is typically used as a stock caption for image macros in which an animal or an object is offered to the viewer as a kind gesture.](https://knowyourmeme.com/photos/686176-its-dangerous-to-go-alone-take-this)
-:::
-
-
-
-</center>
-
-::: {.notes}
-Important tools that take the pain out of data science
-:::
-
-::: {.notes}
-Chat: 
-:::
-
-## All the resources on Quarto once could hope for {.smaller}
+## Quarto Resources {.smaller}
 
 :::: {.columns}
 
@@ -533,7 +807,7 @@ Chat:
 
 </center>
 
-## All the resources on best practices once could hope for {.smaller}
+## Best Practices Resources {.smaller}
 
 **Version control**: 
 
@@ -560,8 +834,6 @@ Chat:
 **Interested in our Enterprise Products? Click [here](https://www.rstudio.com/products/team/)**
 
 </center>
-
-
 
 ## Thanks! Questions? 
 
@@ -622,3 +894,28 @@ Bullet points
 ::: {.notes}
 We can even add some notes 
 :::
+
+## So you've got a finished product, now what? Publish to Connect {.smaller}
+
+::: {.notes}
+Chat: 
+:::
+
+## So you've got a finished product, now what? Job scheduling  {.smaller}
+
+
+
+<center>
+
+![](https://github.com/ryjohnson09/quarto-job-scheduling/blob/main/images/workflow.jpg?raw=true){fig-align="center" width="50%"}
+
+::: {.citation style="font-size: 16px"}
+Image from Ryan Johnson's [companion GitHub repository for the June 2023 Posit Team Community demo](https://github.com/ryjohnson09/quarto-job-scheduling?tab=readme-ov-file)
+:::
+
+</center>
+
+::: {.notes}
+Chat: 
+:::
+
