@@ -1,16 +1,28 @@
-# quarto_with_comments
+# Report with Interactive Images (Using Lightbox)
 
-Example published to: <https://colorado.posit.co/rsc/quarto-utterances/>
+# Bells and Whistles 
 
-References: 
+## Displaying images 
 
-- <https://quarto.org/docs/output-formats/html-basics.html#commenting> 
-- <https://github.com/quarto-ext/lightbox> 
-- <https://quarto.org/docs/projects/quarto-projects.html> 
-- Tips on dealing with displaying images in a rendered quarto document: <https://quarto.org/docs/authoring/figures.html#figure-panels>
-- Install the lightbox extension: <https://github.com/quarto-ext/lightbox>
+Tips on dealing with displaying images in a rendered quarto document: <https://quarto.org/docs/authoring/figures.html#figure-panels>
 
-Example also used in: <https://github.com/rstudio/posit-demo-assets/blob/main/Python/quarto-lightbox/quarto-python-lightbox.qmd> 
+We can lay out images a couple different ways, but one of the easiest is: 
+
+```
+::: {layout-ncol="2"}
+
+![Lions](img/Lion_waiting_in_Namibia.jpg){group="my-gallery"}
+
+![and tigers](img/Panthera_tigris_corbetti_%28Tierpark_Berlin%29_832-714-%28118%29.jpg){group="my-gallery"}
+
+![and bears](img/Chengdu-pandas-d10.jpg){group="my-gallery"}
+
+![oh my!](img/The_Wizard_of_Oz_1955_Lobby_Card.jpg){group="my-gallery"}
+
+:::
+```
+
+## Interactive images (lightbox)
 
 Quarto Lightbox extension added with: 
 
@@ -37,11 +49,16 @@ resource_files:
 - "_extensions/quarto-ext/lightbox/resources/js/glightbox.min.js"
 ```
 
-The utterances app needs to be installed for the target github repo: <https://github.com/apps/utterances/installations/new>  
 
-You can double checked it was installed through your account git options under applications: <https://github.com/settings/installations/> 
+# For the developer
 
+References: 
 
+- <https://github.com/quarto-ext/lightbox> 
+- <https://quarto.org/docs/projects/quarto-projects.html> 
+- Tips on dealing with displaying images in a rendered quarto document: <https://quarto.org/docs/authoring/figures.html#figure-panels>
+- Install the lightbox extension: <https://github.com/quarto-ext/lightbox>
 
+Example also used in: <https://github.com/rstudio/posit-demo-assets/blob/main/Python/quarto-lightbox/quarto-python-lightbox.qmd> 
 
 

@@ -1,4 +1,4 @@
-# Basic Report : Installation Checklist 
+# Basic Report : Debugging R Environments
 
 # Bells and Whistles 
 
