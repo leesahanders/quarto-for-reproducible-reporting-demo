@@ -3,9 +3,7 @@
 > **Warning**
 > This is part of a repository that is prone to  Changes and overhauls will happen without notice, but feel free to reach out with any questions/corrections/or help needs at lisamaeanders@gmail.com
 
-**Access the presentation slides at: <>**
-
-**Access the deployed content at: <>**
+**Access the deployed content at: <https://loyal-jaybird.staging.eval.posit.co/pub/landing-page/>**
 
 ## Resources 
 
@@ -64,12 +62,6 @@ Websites:
 - including code 
 
 workshop outline: https://github.com/jeremy-allen/quarto-workshop/blob/main/workshop-guide
-
-# TODO 
-
--[] Publishing to confluence 
--[] A spatial model (UV index) 
--[] Parameterization
 
 # Publishing
 
