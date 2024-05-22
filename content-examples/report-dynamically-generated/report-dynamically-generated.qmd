@@ -199,6 +199,8 @@ cat(res, sep = '\n')
 From: <https://stackoverflow.com/questions/73367433/how-to-programmatically-generate-tabset-panel-in-quarto>
 
 ```{r}
+#| echo: false
+
 library(tidyverse)
 
 data <- iris %>% as_tibble()
