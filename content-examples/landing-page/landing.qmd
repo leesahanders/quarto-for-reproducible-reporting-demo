@@ -34,8 +34,12 @@ all_content <- connectapi::get_content(client, limit = Inf) %>%
 <!-- <iframe src="../../quarto-for-reproducible-reporting-demo.html" width="80%" height = "400px"></iframe> -->
 <!-- </p> -->
 
+<!-- <p align="center"> -->
+<!-- <iframe src="/slides/quarto-for-reproducible-reporting-demo.html" width="80%" height = "520px"></iframe> -->
+<!-- </p> -->
+
 <p align="center">
-<iframe src="/slides/quarto-for-reproducible-reporting-demo.html" width="80%" height = "520px"></iframe>
+<iframe src="/slides/presentation.html" width="80%" height = "520px"></iframe>
 </p>
 
 <!-- <p align="center"> -->
