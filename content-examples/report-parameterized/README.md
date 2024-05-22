@@ -1,20 +1,18 @@
----
-title: "Parameterized Quarto (with Color)"
-author: Adapted by Lisa Anders
-date: today
-lightbox: true
-format:
-  html:
-    theme: sandstone
-    code-links:
-      - text: Source Code
-        icon: github
-        href: https://github.com/leesahanders/quarto-for-reproducible-reporting-demo/tree/main/content-examples/report-parameterized
+# Adding diagrams to report using mermaid
+
+# Bells and Whistles 
+
+## Paramaters
+
+Declare params in the yaml: 
+
+```
 params:
   color: 
     value: "copper"
-editor: source
----
+```
+
+We can read back the parameter selected 
 
 Use inline R code for markdown: `r params$color`
 
@@ -23,8 +21,7 @@ Use paste() for plot and table titles and labels:
 ```r
 # ggplot code +
 labs(title = paste(params$color, "population"))
-```
-
+``
 
 We can render this through quarto with: 
 
@@ -34,7 +31,6 @@ quarto render report-parameterized.qmd -P color:copper
 # Or we could use a yaml file
 quarto render report-parameterized.qmd --execute-params params.yml
 ```
-
 
 We could also iterate over a list of parameters to generate a set of reports: 
 
@@ -60,4 +56,3 @@ Reference:
 - <https://www.jhelvy.com/blog/2023-02-28-parameterized-pdfs-with-quarto/index.html> 
 - <https://jadeyryan.quarto.pub/rladies-dc-quarto-params/slides/#/title-slide>
 - Example originally from: <https://rmarkdown.rstudio.com/lesson-6.html> 
-

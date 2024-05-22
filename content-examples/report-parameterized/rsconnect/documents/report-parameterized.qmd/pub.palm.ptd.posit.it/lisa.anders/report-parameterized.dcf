@@ -1,0 +1,14 @@
+name: report-parameterized
+title: report-parameterized
+username: lisa.anders
+account: lisa.anders
+server: pub.palm.ptd.posit.it
+hostUrl: https://pub.palm.ptd.posit.it/__api__
+appId: 109
+bundleId: 265
+url: https://pub.palm.ptd.posit.it/content/70a38327-28ea-4df7-9def-fefd8d87ee88/
+version: 1
+quarto_version: 1.4.550
+quarto_engines: markdown
+asMultiple: FALSE
+asStatic: FALSE
