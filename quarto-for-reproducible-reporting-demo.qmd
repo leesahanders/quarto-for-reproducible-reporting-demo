@@ -333,6 +333,28 @@ Image from Ryan Johnson's [companion GitHub repository for the June 2023 Posit T
 Chat: 
 :::
 
+## Things have gone wrong, help! {.smaller}
+
+
+Capture the current system to see if anything looks off / submit a git issue or stackoverflow that will give folks enough info to be able to meaningfully help you: 
+
+```r
+sessionInfo()
+Sys.getenv()
+.libPaths()
+
+# If the sessioninfo package is available, 
+# it provides output that is easier to read,
+# and can write its results to a file
+#sessioninfo:::session_info(to_file = "quarto-session-info-output.txt")
+```
+
+Get more diagnostics while running a command: 
+
+```r
+quarto render hello.qmd --to html --execute-debug
+```
+
 ## Misc best practices {.smaller}
 
 ![](img/dangerous-to-go-alone.jpg){fig-align="center" width="30%"}
