@@ -19,7 +19,7 @@ revealjs-plugins:
 ---
 
 
-## Let's talk about Quarto {.smaller}
+## Quarto: My favorite thing {.smaller}
 
 <center>
 
@@ -32,7 +32,7 @@ revealjs-plugins:
 
 
 <br>
-**Lisa Anders** - Posit Solutions Engineer and self-professed R nerd learning to love Python. Engineer turned data scientist turned Posit admin and excited to share lessons learned the hard way to make things easier for others. Also awkward at writing intros in the third person!
+**Lisa Anders** - Posit Solutions Engineer and self-professed R nerd learning to love Python. Excited to share lessons learned the hard way to make things easier for others. Awkward at writing intros in the third person!
 :::
 
 <center>
@@ -47,14 +47,14 @@ revealjs-plugins:
 
 <br> 
 
-Ask questions live, in the zoom chat, or raise your hand✋
+Ask questions live, in the chat, or raise your hand✋
 
 <br> 
 
 Objectives: 
 
 - Understand what quarto is
-- Learn how to create a new project 
+- Learn how to create new projects for ALL the content types 
 - Explore the bells and whistles to take it to the next level 
 - (Not-so-hidden agenda: Plant the seeds for other best practices for reproduceable reporting)
 
@@ -86,6 +86,7 @@ Chat: share your name, where you’re calling from, and one thing you’ve made 
 
 </center> 
 
+- [Official Quarto Documentation](https://quarto.org/)
 - [Mine Cetinkaya-Rundel's "Reproducible Manuscripts with Quarto" talk at posit::conf(2023)](https://github.com/mine-cetinkaya-rundel/quarto-manuscripts)
 - [Thomas Mock's presentation to Austin Python meetup in 2024](https://thomasmock.quarto.pub/python-austin/#/)
 - [Jadey Ryan's "Parameterized Reports with Quarto: R-Ladies DC" Workshop](https://jadeyryan.com/talks/2024-01-18_rladies-dc_quarto-params/)
@@ -255,6 +256,8 @@ Chat:
 
 ## Anatomy of a Quarto project 
 
+:::{.smaller}
+
 ```
 ---
 title: "Untitled"
@@ -266,16 +269,20 @@ editor: visual
 
 Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
 
-## Running Code
+
+```
 
 When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
 
-```` ```{r}
-#| echo: false
-1 + 1
-```` ```
+```` `````{r}
 
-```
+#| echo: false
+
+1 + 1
+
+```` `````
+
+:::
 
 ::: {.notes}
 Chat: 
@@ -335,10 +342,61 @@ quarto preview python.ipynb
 quarto preview python.ipynb --execute
 ```
 
+::: {.notes}
+Chat: 
+:::
+
+## Creating a Quarto Document 
 
 ::: {.notes}
 Chat: 
 :::
+
+## Creating a Quarto Presentation 
+
+::: {.notes}
+Chat: 
+:::
+
+## Creating a Quarto Website 
+
+::: {.notes}
+Chat: 
+:::
+
+## Creating a Quarto Email 🆕
+
+::: {.notes}
+Chat: 
+:::
+
+## Creating a Quarto Dashboard 🆕
+
+::: {.notes}
+Chat: 
+:::
+
+## Things have gone wrong, help! {.smaller}
+
+
+Capture the current system to see if anything looks off / submit a git issue or stackoverflow that will give folks enough info to be able to meaningfully help you: 
+
+```r
+sessionInfo()
+Sys.getenv()
+.libPaths()
+
+# If the sessioninfo package is available, 
+# it provides output that is easier to read,
+# and can write its results to a file
+#sessioninfo:::session_info(to_file = "quarto-session-info-output.txt")
+```
+
+Get more diagnostics while running a command: 
+
+```r
+quarto render hello.qmd --to html --execute-debug
+```
 
 ## On to the bells and whistles!
 
@@ -372,27 +430,7 @@ Image from Ryan Johnson's [companion GitHub repository for the June 2023 Posit T
 Chat: 
 :::
 
-## Things have gone wrong, help! {.smaller}
 
-
-Capture the current system to see if anything looks off / submit a git issue or stackoverflow that will give folks enough info to be able to meaningfully help you: 
-
-```r
-sessionInfo()
-Sys.getenv()
-.libPaths()
-
-# If the sessioninfo package is available, 
-# it provides output that is easier to read,
-# and can write its results to a file
-#sessioninfo:::session_info(to_file = "quarto-session-info-output.txt")
-```
-
-Get more diagnostics while running a command: 
-
-```r
-quarto render hello.qmd --to html --execute-debug
-```
 
 ## Misc best practices {.smaller}
 
@@ -448,7 +486,7 @@ Important tools that take the pain out of data science
 Chat: 
 :::
 
-## TLDR on Quarto {.smaller}
+## All the resources on Quarto once could hope for {.smaller}
 
 :::: {.columns}
 
@@ -495,7 +533,7 @@ Chat:
 
 </center>
 
-## TLDR on best practices {.smaller}
+## All the resources on best practices once could hope for {.smaller}
 
 **Version control**: 
 

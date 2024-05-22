@@ -408,7 +408,7 @@ Lisa Anders, Posit Solutions Engineer
   <p class="date">2024-05-22</p>
 </section>
 <section class="slide level2 smaller">
-<h2>Let’s talk about Quarto</h2>
+<h2>Quarto: My favorite thing</h2>
 <center>
 <p><img data-src="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/c7e0e26c-5ca7-49f1-ba8d-093b1f8e541d.png?h=a790567e29efb477a6b7fd4197c514d7" style="width:50.0%"></p>
 </center>
@@ -418,7 +418,7 @@ Lisa Anders, Posit Solutions Engineer
 <p><img data-src="img/lisa-profile-2.png"></p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 83.3%;justify-content: flex-start;">
-<p><br> <strong>Lisa Anders</strong> - Posit Solutions Engineer and self-professed R nerd learning to love Python. Engineer turned data scientist turned Posit admin and excited to share lessons learned the hard way to make things easier for others. Also awkward at writing intros in the third person!</p>
+<p><br> <strong>Lisa Anders</strong> - Posit Solutions Engineer and self-professed R nerd learning to love Python. Excited to share lessons learned the hard way to make things easier for others. Awkward at writing intros in the third person!</p>
 </div>
 </div>
 </div>
@@ -431,12 +431,12 @@ Lisa Anders, Posit Solutions Engineer
 <section class="slide level2 smaller">
 <h2>Logistics</h2>
 <p><br></p>
-<p>Ask questions live, in the zoom chat, or raise your hand✋</p>
+<p>Ask questions live, in the chat, or raise your hand✋</p>
 <p><br></p>
 <p>Objectives:</p>
 <ul>
 <li>Understand what quarto is</li>
-<li>Learn how to create a new project</li>
+<li>Learn how to create new projects for ALL the content types</li>
 <li>Explore the bells and whistles to take it to the next level</li>
 <li>(Not-so-hidden agenda: Plant the seeds for other best practices for reproduceable reporting)</li>
 </ul>
@@ -466,6 +466,7 @@ Lisa Anders, Posit Solutions Engineer
 <p>🫶</p>
 </center>
 <ul>
+<li><a href="https://quarto.org/">Official Quarto Documentation</a></li>
 <li><a href="https://github.com/mine-cetinkaya-rundel/quarto-manuscripts">Mine Cetinkaya-Rundel’s “Reproducible Manuscripts with Quarto” talk at posit::conf(2023)</a></li>
 <li><a href="https://thomasmock.quarto.pub/python-austin/#/">Thomas Mock’s presentation to Austin Python meetup in 2024</a></li>
 <li><a href="https://jadeyryan.com/talks/2024-01-18_rladies-dc_quarto-params/">Jadey Ryan’s “Parameterized Reports with Quarto: R-Ladies DC” Workshop</a></li>
@@ -658,6 +659,7 @@ Lisa Anders, Posit Solutions Engineer
 </section>
 <section class="slide level2">
 <h2>Anatomy of a Quarto project</h2>
+<div class="smaller">
 <pre><code>---
 title: "Untitled"
 format: html
@@ -668,15 +670,13 @@ editor: visual
 
 Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see &lt;https://quarto.org&gt;.
 
-## Running Code
-
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
-
-```` ```{r}
-#| echo: false
-1 + 1
-```` ```
 </code></pre>
+<p>When you click the <strong>Render</strong> button a document will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
+<p>```` `````{r}</p>
+<p>#| echo: false</p>
+<p>1 + 1</p>
+<p>```` `````</p>
+</div>
 <aside class="notes">
 <p>Chat: Reference this page: https://quarto.org/docs/projects/quarto-projects.html</p>
 <style type="text/css">
@@ -743,6 +743,100 @@ When you click the **Render** button a document will be generated that includes 
       }</style></aside>
 </section>
 <section class="slide level2">
+<h2>Creating a Quarto Document</h2>
+<aside class="notes">
+<p>Chat:</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Creating a Quarto Presentation</h2>
+<aside class="notes">
+<p>Chat:</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Creating a Quarto Website</h2>
+<aside class="notes">
+<p>Chat:</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Creating a Quarto Email 🆕</h2>
+<aside class="notes">
+<p>Chat:</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Creating a Quarto Dashboard 🆕</h2>
+<aside class="notes">
+<p>Chat:</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 smaller">
+<h2>Things have gone wrong, help!</h2>
+<p>Capture the current system to see if anything looks off / submit a git issue or stackoverflow that will give folks enough info to be able to meaningfully help you:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a><span class="fu">sessionInfo</span>()</span>
+<span id="cb7-2"><a href=""></a><span class="fu">Sys.getenv</span>()</span>
+<span id="cb7-3"><a href=""></a><span class="fu">.libPaths</span>()</span>
+<span id="cb7-4"><a href=""></a></span>
+<span id="cb7-5"><a href=""></a><span class="co"># If the sessioninfo package is available, </span></span>
+<span id="cb7-6"><a href=""></a><span class="co"># it provides output that is easier to read,</span></span>
+<span id="cb7-7"><a href=""></a><span class="co"># and can write its results to a file</span></span>
+<span id="cb7-8"><a href=""></a><span class="co">#sessioninfo:::session_info(to_file = "quarto-session-info-output.txt")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Get more diagnostics while running a command:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href=""></a>quarto render hello.qmd <span class="sc">--</span>to html <span class="sc">--</span>execute<span class="sc">-</span>debug</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
 <h2>On to the bells and whistles!</h2>
 <aside class="notes">
 <p>Chat:</p>
@@ -801,20 +895,6 @@ When you click the **Render** button a document will be generated that includes 
       }</style></aside>
 </section>
 <section class="slide level2 smaller">
-<h2>Things have gone wrong, help!</h2>
-<p>Capture the current system to see if anything looks off / submit a git issue or stackoverflow that will give folks enough info to be able to meaningfully help you:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a><span class="fu">sessionInfo</span>()</span>
-<span id="cb7-2"><a href=""></a><span class="fu">Sys.getenv</span>()</span>
-<span id="cb7-3"><a href=""></a><span class="fu">.libPaths</span>()</span>
-<span id="cb7-4"><a href=""></a></span>
-<span id="cb7-5"><a href=""></a><span class="co"># If the sessioninfo package is available, </span></span>
-<span id="cb7-6"><a href=""></a><span class="co"># it provides output that is easier to read,</span></span>
-<span id="cb7-7"><a href=""></a><span class="co"># and can write its results to a file</span></span>
-<span id="cb7-8"><a href=""></a><span class="co">#sessioninfo:::session_info(to_file = "quarto-session-info-output.txt")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Get more diagnostics while running a command:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href=""></a>quarto render hello.qmd <span class="sc">--</span>to html <span class="sc">--</span>execute<span class="sc">-</span>debug</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section class="slide level2 smaller">
 <h2>Misc best practices</h2>
 
 <img data-src="img/dangerous-to-go-alone.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:30.0%"><center>
@@ -864,7 +944,7 @@ When you click the **Render** button a document will be generated that includes 
       }</style></aside>
 </section>
 <section class="slide level2 smaller">
-<h2>TLDR on Quarto</h2>
+<h2>All the resources on Quarto once could hope for</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><strong>Quarto</strong></p>
@@ -902,7 +982,7 @@ When you click the **Render** button a document will be generated that includes 
 </center>
 </section>
 <section class="slide level2 smaller">
-<h2>TLDR on best practices</h2>
+<h2>All the resources on best practices once could hope for</h2>
 <p><strong>Version control</strong>:</p>
 <ul>
 <li><strong>Cheat sheet for git (contributed)</strong>: <a href="https://rstudio.github.io/cheatsheets/contributed-cheatsheets.html" class="uri">https://rstudio.github.io/cheatsheets/contributed-cheatsheets.html</a></li>
