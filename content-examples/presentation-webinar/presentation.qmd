@@ -1,7 +1,8 @@
 ---
-title: "Quarto for Reproduceable Reporting: Example presentation (with Confetti!)"
+title: "Quarto for Reproduceable Reporting (with Confetti!)"
 subtitle: ""
-author: "Lisa Anders"
+author: "Lisa Anders, Posit Solutions Engineer"
+date: "2024-05-22"
 title-slide-attributes: 
   data-background-color: white
   data-background-image: _extensions/positslides/assets/backgrounds/title-slide-option-1.png
@@ -17,96 +18,366 @@ revealjs-plugins:
   - confetti
 ---
 
-## Default Slide 
 
-This text size is `normal`. 
+## Let's talk about Quarto {.smaller}
 
-:::{.smaller}
+<center>
 
-This text size is `smaller`. 
+![](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/c7e0e26c-5ca7-49f1-ba8d-093b1f8e541d.png?h=a790567e29efb477a6b7fd4197c514d7){width="50%"}
 
-:::: {.columns}
-
-::: {.column width="33%"}
-**Column 1**
-
-Bullet points
-
-1. Point 1
-2. Point 2
-
-:::
-
-::: {.column width="33%"}
-**Column 2**
-
-- Link to [external resource](url)
-
-> Blocking comment
-
-:::
-
-::: {.column width="33%"}
-**Column 3**
-
-![But what about an image?](https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/data_cowboy.png){#fig-image fig-align="center" width="30%"}
-:::
-
-::::
-
-
+</center>
 
 ::: {layout="[2, 10]"}
-![](img/Leafey.PNG)
+![](img/lisa-profile-2.png)
 
 
 <br>
-**Leafey the plant** - Write some intro text about yourself
-:::
-
-:::
-
+**Lisa Anders** - Posit Solutions Engineer and self-professed R nerd learning to love Python. Engineer turned data scientist turned Posit admin and excited to share lessons learned the hard way to make things easier for others. Also awkward at writing intros in the third person!
 :::
 
 <center>
 
 ::: {.citation style="font-size: 16px"}
-This is a citation
+"Artwork from "Hello, Quarto" keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by [Allison Horst](https://allisonhorst.com/cetinkaya-rundel-lowndes-quarto-keynote)
+:::
+
+</center>
+
+## Logistics {.smaller}
+
+<br> 
+
+Ask questions live, in the zoom chat, or raise your hand✋
+
+<br> 
+
+Objectives: 
+
+- Understand what quarto is
+- Learn how to create a new project 
+- Explore the bells and whistles to take it to the next level 
+- (Not-so-hidden agenda: Plant the seeds for other best practices for reproduceable reporting)
+
+::: {.notes}
+Chat: share your name, where you’re calling from, and one thing you’ve made that you’re proud of.
+:::
+
+## Acknowledgements {.smaller}
+
+<br> 
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+![](https://raw.githubusercontent.com/rstudio/hex-stickers/ce526bb5880f348c6970f44f9d8001eb504c4cf6/SVG/quarto.svg){width="80%"}
+
+:::
+
+::: {.column width="70%"}
+
+
+<br> 
+
+
+<center> 
+
+🫶
+
+</center> 
+
+- [Mine Cetinkaya-Rundel's "Reproducible Manuscripts with Quarto" talk at posit::conf(2023)](https://github.com/mine-cetinkaya-rundel/quarto-manuscripts)
+- [Thomas Mock's presentation to Austin Python meetup in 2024](https://thomasmock.quarto.pub/python-austin/#/)
+- [Jadey Ryan's "Parameterized Reports with Quarto: R-Ladies DC" Workshop](https://jadeyryan.com/talks/2024-01-18_rladies-dc_quarto-params/)
+- [Quarto awesome list](https://github.com/mcanouil/awesome-quarto)
+
+:::
+
+::::
+
+## What is Quarto? {.smaller}
+
+[Quarto](https://quarto.org) is an **open source** scientific and technical publishing framework. Use your favorite languages to create versatile, beautiful, and reproducible outputs. 
+
+- Open source project sponsored by Posit, based on 10+ years of experience with RMarkdown 
+- Re-imagining of rmarkdown to be completely language agnostic (with inspiration from jupyter notebooks)
+
+<center>
+
+![](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/c2ef45f1-4a68-4c7a-a43f-bdcf0f90e104.png?h=57404b88e9bf43eea2d2b57c71b13303){fig-align="center" width="60%"}
+
+::: {.citation style="font-size: 16px"}
+"Artwork from "Hello, Quarto" keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by [Allison Horst](https://allisonhorst.com/cetinkaya-rundel-lowndes-quarto-keynote)
 :::
 
 </center>
 
 ::: {.notes}
-We can even add some notes 
+Chat: who here has heard of quarto? is anyone currently building things in quarto? 
+
+Code first model where source code is included in all outputs: 
+
+- version control
+- programmatic automation (testing)
 :::
 
+## How it works  {.smaller}
 
-## Extensions
+[Quarto](https://quarto.org) gives you options for the actual tool being used to render your project into a plethora of output types. 
 
-Click `c` to launch confetti! 
+- Choice of rendering engines: jupyter, knitr
+- Computational languages: Python, R, Julia, Observable JS
+- Outputs: Documents, presentations, websites, books, blogs
 
-Extensions are a good way to share theme's across an organization. There are a bunch of publicly available theme extensions [here](https://quarto.org/docs/extensions/listing-revealjs.html) 
+*Bundled into RStudio starting with 2022.07.1*
 
-The extension needs to be installed: 
+<center>
+
+![](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/b5217f2a-f129-4bf9-90dc-c5b9783d0ea8.png?h=f8d3ed40353f4ae6eb77dae39072510c){fig-align="center" width="70%"}
+
+::: {.citation style="font-size: 16px"}
+"Artwork from "Hello, Quarto" keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by [Allison Horst](https://allisonhorst.com/cetinkaya-rundel-lowndes-quarto-keynote)
+:::
+
+</center>
+
+::: {.notes}
+How to check your rstudio version: https://book.rwithoutstatistics.com/quarto-chapter#creating-a-quarto-document
+:::
+
+## The different content types 
+
+:::{.smaller}
+
+- Report
+
+  - HTML doc
+  - PDF doc
+  - Word doc
+
+- Book 
+
+- Presentation
+
+- Website 
+
+- Blog 
+
+ - The home page is a listing page for all of the documents in the posts directory
+
+- Dashboard 🆕
+
+- Email 🆕
+
+*Make ALL the content types!* 
+
+:::
+
+::: {.notes}
+Chat: 
+:::
+
+## There's a lot to love 💙 {.smaller}
+
+<center>
+
+:::: {.columns}
+
+::: {.column width="20%"}
+
+- Dashboards
+- Emails
+- Interactive reports
+- Code chunks
+- Custom formatting
+- Hybrid code projects 
+- Extensions
+- Comments 
+- Scheduling 
+- Publishing
+
+:::
+
+::: {.column width="60%"}
+
+![](img/these-are-a-few-of-my-favorite-things.jpeg){width="70%"}
+
+:::
+
+::: {.column width="20%"}
+
+- Programmatic formatting
+- Parameterization 
+- Conditionals
+- Including code / nested qmd's 
+- Environment management 
+- Version control
+- Storing secrets in env variables 
+
+:::
+
+::::
+
+::: {.citation style="font-size: 16px"}
+Image a meme of [The Sound of Music](https://www.imdb.com/title/tt0059742/)
+:::
+
+</center>
+
+::: {.notes}
+Chat: who here has heard of quarto? is anyone currently building things in quarto? 
+:::
+
+## Getting started 
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+Programmatically create a project: 
+
+```r
+quarto create project
+quarto create project <type> <name>
+```
+
+:::
+::: {.column width="50%"}
+
+![Create a project using the RStudio editor](https://quarto.org/docs/tools/images/new-quarto-doc.png)
+
+:::
+:::
+
+::: {.notes}
+Chat: 
+:::
+
+## Anatomy of a Quarto project 
+
+```
+---
+title: "Untitled"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```` ```{r}
+#| echo: false
+1 + 1
+```` ```
+
+```
+
+::: {.notes}
+Chat: 
+Reference this page: https://quarto.org/docs/projects/quarto-projects.html
+:::
+
+## Coming from R? RMarkdown Workflow
+
+Rendering (execute and write to disk):
+
+:::: {.columns}
+
+::: {.column width="50%"}
+Programmatically
+
+```r
+quarto render script.qmd
+```
+
+:::
+::: {.column width="50%"}
+
+![The RStudio editor comes with rendering built-in](https://quarto.org/docs/tools/images/rstudio-render.png)
+
+:::
+:::
+
+Live preview:
 
 ```bash
-quarto add ArthurData/quarto-confetti
+quarto preview script.qmd
 ```
 
-It's then referenced from the yaml:
+## Coming from Python? Notebooks Workflow
 
+Rendering (execute and write to disk):
+
+```bash
+# plain text qmd
+quarto render python.qmd
+quarto render python.qmd --to pdf
+
+# ipynb notebook
+quarto render python.ipynb
+quarto render python.ipynb --execute
 ```
-title: "My presentation"
-format:
-  revealjs: default
-revealjs-plugins:
-  - confetti
+
+Live preview:
+
+```bash
+# plain text qmd
+quarto preview python.qmd
+quarto preview python.qmd --to pdf
+
+# ipynb notebook
+quarto preview python.ipynb
+quarto preview python.ipynb --execute
 ```
 
 
-## Environment
+::: {.notes}
+Chat: 
+:::
 
-```{r}
+## On to the bells and whistles!
+
+::: {.notes}
+Chat: 
+:::
+
+## So you've got a finished product, now what? Publish to Connect {.smaller}
+
+
+
+::: {.notes}
+Chat: 
+:::
+
+## So you've got a finished product, now what? Job scheduling  {.smaller}
+
+
+
+<center>
+
+![](https://github.com/ryjohnson09/quarto-job-scheduling/blob/main/images/workflow.jpg?raw=true){fig-align="center" width="50%"}
+
+::: {.citation style="font-size: 16px"}
+Image from Ryan Johnson's [companion GitHub repository for the June 2023 Posit Team Community demo](https://github.com/ryjohnson09/quarto-job-scheduling?tab=readme-ov-file)
+:::
+
+</center>
+
+::: {.notes}
+Chat: 
+:::
+
+## Things have gone wrong, help! {.smaller}
+
+
+Capture the current system to see if anything looks off / submit a git issue or stackoverflow that will give folks enough info to be able to meaningfully help you: 
+
+```r
 sessionInfo()
 Sys.getenv()
 .libPaths()
@@ -116,3 +387,200 @@ Sys.getenv()
 # and can write its results to a file
 #sessioninfo:::session_info(to_file = "quarto-session-info-output.txt")
 ```
+
+Get more diagnostics while running a command: 
+
+```r
+quarto render hello.qmd --to html --execute-debug
+```
+
+## Misc best practices {.smaller}
+
+![](img/dangerous-to-go-alone.jpg){fig-align="center" width="30%"}
+
+<center>
+
+:::: {.columns}
+
+::: {.column width="33%"}
+
+**Version control your code**
+
+<!-- ![](img/kerin-gedge-JDzoTGfoogA-unsplash.jpg) -->
+
+:::
+
+::: {.column width="33%"}
+
+**Reproduceable environments** 
+
+<!-- ![](img/karina-vorozheeva-rW-I87aPY5Y-unsplash.jpg) -->
+
+:::
+
+::: {.column width="33%"}
+
+**Keep secrets secret**
+
+<!-- ![](img/richard-brutyo-Sg3XwuEpybU-unsplash.jpg) -->
+
+:::
+
+::::
+
+*Imagine a world where code doesn't disappear and is backed up in version control, environments are explicit and easily reproduced, and secrets are responsibly managed.*
+
+<br> 
+
+::: {.citation style="font-size: 16px"}
+["It’s Dangerous to go Alone! Take This" is a memorable quote from the 1986 action-adventure Nintendo game The Legend of Zelda. Online, the expression is typically used as a stock caption for image macros in which an animal or an object is offered to the viewer as a kind gesture.](https://knowyourmeme.com/photos/686176-its-dangerous-to-go-alone-take-this)
+:::
+
+
+
+</center>
+
+::: {.notes}
+Important tools that take the pain out of data science
+:::
+
+::: {.notes}
+Chat: 
+:::
+
+## TLDR on Quarto {.smaller}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+**Quarto** 
+
+- **[Documentation](https://quarto.org/)**
+- **[Cheat sheet](https://rstudio.github.io/cheatsheets/quarto.pdf)**
+- **[Reproduceable presentations in quarto](https://info5940.infosci.cornell.edu/slides/publishing-reproducible-documents/#/title-slide)**
+- **[Quarto awesome list](https://github.com/mcanouil/awesome-quarto)**
+- **[Quarto the definitive guide](https://quarto-tdg.org/presentations)**
+- **[R without statistics, reproduceable reporting with quarto](https://book.rwithoutstatistics.com/quarto-chapter)**
+- **[Quarto tip a day](https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/posts/17-dark-mode/)**
+- **[Quarto callouts](https://www.andreashandel.com/posts/2023-06-13-custom-callouts-quarto/)**
+- **[Thomas Mock's presentation to Austin Python meetup in 2024](https://thomasmock.quarto.pub/python-austin/#/)**
+- **[Parameterized Reports with Quarto: R-Ladies DC Workshop](https://jadeyryan.com/talks/2024-01-18_rladies-dc_quarto-params/)**
+- **[Extending quarto](https://www.youtube.com/watch?v=EihuM4oyOvs)**
+
+:::
+
+::: {.column width="50%"}
+
+**Workshops and talks from posit:::conf(2023):**
+
+- [Introduction to Quarto with R & RStudio](https://posit-conf-2023.github.io/quarto-r/)
+- [Advanced Quarto with R & RStudio](https://posit-conf-2023.github.io/quarto-r/)
+- [Enhancing Communication and Collaboration with Jupyter Notebooks & Quarto](https://github.com/posit-conf-2023/quarto-python/) 
+- ["Reproducible Manuscripts with Quarto" talk at posit::conf(2023)](https://github.com/mine-cetinkaya-rundel/quarto-manuscripts)
+
+**Upcoming Workshops for posit:::conf(2024)**
+
+- Build-a-Dashboard Workshop (with Quarto, R and/or Python)
+- Introduction to Quarto
+- Quarto Websites
+
+:::
+
+::::
+
+<center>
+
+**Interested in our Enterprise Products? Click [here](https://www.rstudio.com/products/team/)**
+
+</center>
+
+## TLDR on best practices {.smaller}
+
+**Version control**: 
+
+- **Cheat sheet for git (contributed)**: <https://rstudio.github.io/cheatsheets/contributed-cheatsheets.html>
+- **What They Forgot to Teach You About R** : <https://rstats.wtf/>
+- **Happy Git with R** : <https://happygitwithr.com/>
+- **Oh sh-t git**: <https://ohshitgit.com/> 
+- **Cheat sheet for git (contributed)**: <https://rstudio.github.io/cheatsheets/contributed-cheatsheets.html>
+- **Missing semester of your CS education on version control**: <https://missing.csail.mit.edu/2020/version-control/> 
+- **Learn git branching**: <https://learngitbranching.js.org/> 
+
+**Environment management**: 
+
+- **Get started with renv in the RStudio IDE**: <https://docs.posit.co/ide/user/ide/guide/environments/r/renv.html>
+- **You should be using renv**: <https://www.youtube.com/watch?v=GwVx_pf2uz4> 
+- **Using Public Package Manager** : <https://support.rstudio.com/hc/en-us/articles/360046703913-FAQ-for-RStudio-Public-Package-Manager>
+
+**Secrets**: 
+
+- **Environment variables on Connect**: <https://docs.posit.co/connect/user/content-settings/#content-vars> 
+
+<center>
+
+**Interested in our Enterprise Products? Click [here](https://www.rstudio.com/products/team/)**
+
+</center>
+
+
+
+## Thanks! Questions? 
+
+
+## Backup
+
+## Default Slide 
+
+This text size is `normal`. 
+
+:::{.smaller}
+
+This text size is `smaller`. 
+
+Bullet points
+
+1. Point 1
+2. Point 2
+
+:::
+
+> Blocking comment
+
+:::{.smaller}
+
+:::: {.columns}
+
+::: {.column width="33%"}
+**Column 1**
+
+- Link to [external resource](url)
+:::
+
+::: {.column width="50%"}
+**Column 2**
+
+![But what about an image?](https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/data_cowboy.png){#fig-image fig-align="center" width="50%"}
+:::
+
+::::
+
+:::
+
+::: {layout="[2, 10]"}
+![](img/lisa-profile-2.png)
+
+**Lisa Anders** - Posit Solutions Engineer and self-professed R nerd learning to love Python. Engineer turned data scientist turned Posit admin and excited to share lessons learned the hard way to make things easier for others. Also awkward at writing intros in the third person!
+:::
+
+<center>
+
+::: {.citation style="font-size: 16px"}
+"Illustration from Hadley Wickham's talk"The Joy of Functional Programming (for Data Science)." by [Allison Horst](https://github.com/allisonhorst/stats-illustrations)
+:::
+
+</center>
+
+::: {.notes}
+We can even add some notes 
+:::

@@ -11,8 +11,9 @@
 <script src="presentation_files/libs/quarto-contrib/posit_slides/posit-slides.js"></script><meta charset="utf-8">
   <meta name="generator" content="quarto-1.4.550">
 
-  <meta name="author" content="Lisa Anders">
-  <title>Quarto for Reproduceable Reporting: Example presentation (with Confetti!)</title>
+  <meta name="author" content="Lisa Anders, Posit Solutions Engineer">
+  <meta name="dcterms.date" content="2024-05-22">
+  <title>Quarto for Reproduceable Reporting (with Confetti!)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -394,44 +395,571 @@
     <div class="slides">
 
 <section id="title-slide" data-background-color="white" data-background-image="_extensions/positslides/assets/backgrounds/title-slide-option-1.png" data-background-size="contain" class="quarto-title-block center">
-  <h1 class="title">Quarto for Reproduceable Reporting: Example presentation (with Confetti!)</h1>
+  <h1 class="title">Quarto for Reproduceable Reporting (with Confetti!)</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Lisa Anders 
+Lisa Anders, Posit Solutions Engineer 
 </div>
 </div>
 </div>
 
+  <p class="date">2024-05-22</p>
+</section>
+<section class="slide level2 smaller">
+<h2>Let’s talk about Quarto</h2>
+<center>
+<p><img data-src="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/c7e0e26c-5ca7-49f1-ba8d-093b1f8e541d.png?h=a790567e29efb477a6b7fd4197c514d7" style="width:50.0%"></p>
+</center>
+<div class="quarto-layout-panel" data-layout="[2, 10]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 16.7%;justify-content: center;">
+<p><img data-src="img/lisa-profile-2.png"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 83.3%;justify-content: flex-start;">
+<p><br> <strong>Lisa Anders</strong> - Posit Solutions Engineer and self-professed R nerd learning to love Python. Engineer turned data scientist turned Posit admin and excited to share lessons learned the hard way to make things easier for others. Also awkward at writing intros in the third person!</p>
+</div>
+</div>
+</div>
+<center>
+<div class="citation" style="font-size: 16px">
+<p>“Artwork from”Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by <a href="https://allisonhorst.com/cetinkaya-rundel-lowndes-quarto-keynote">Allison Horst</a></p>
+</div>
+</center>
+</section>
+<section class="slide level2 smaller">
+<h2>Logistics</h2>
+<p><br></p>
+<p>Ask questions live, in the zoom chat, or raise your hand✋</p>
+<p><br></p>
+<p>Objectives:</p>
+<ul>
+<li>Understand what quarto is</li>
+<li>Learn how to create a new project</li>
+<li>Explore the bells and whistles to take it to the next level</li>
+<li>(Not-so-hidden agenda: Plant the seeds for other best practices for reproduceable reporting)</li>
+</ul>
+<aside class="notes">
+<p>Chat: share your name, where you’re calling from, and one thing you’ve made that you’re proud of.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 smaller">
+<h2>Acknowledgements</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><img data-src="https://raw.githubusercontent.com/rstudio/hex-stickers/ce526bb5880f348c6970f44f9d8001eb504c4cf6/SVG/quarto.svg" style="width:80.0%"></p>
+</div><div class="column" style="width:70%;">
+<p><br></p>
+<center>
+<p>🫶</p>
+</center>
+<ul>
+<li><a href="https://github.com/mine-cetinkaya-rundel/quarto-manuscripts">Mine Cetinkaya-Rundel’s “Reproducible Manuscripts with Quarto” talk at posit::conf(2023)</a></li>
+<li><a href="https://thomasmock.quarto.pub/python-austin/#/">Thomas Mock’s presentation to Austin Python meetup in 2024</a></li>
+<li><a href="https://jadeyryan.com/talks/2024-01-18_rladies-dc_quarto-params/">Jadey Ryan’s “Parameterized Reports with Quarto: R-Ladies DC” Workshop</a></li>
+<li><a href="https://github.com/mcanouil/awesome-quarto">Quarto awesome list</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section class="slide level2 smaller">
+<h2>What is Quarto?</h2>
+<p><a href="https://quarto.org">Quarto</a> is an <strong>open source</strong> scientific and technical publishing framework. Use your favorite languages to create versatile, beautiful, and reproducible outputs.</p>
+<ul>
+<li>Open source project sponsored by Posit, based on 10+ years of experience with RMarkdown</li>
+<li>Re-imagining of rmarkdown to be completely language agnostic (with inspiration from jupyter notebooks)</li>
+</ul>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/c2ef45f1-4a68-4c7a-a43f-bdcf0f90e104.png?h=57404b88e9bf43eea2d2b57c71b13303" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+</figure>
+</div>
+<div class="citation" style="font-size: 16px">
+<p>“Artwork from”Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by <a href="https://allisonhorst.com/cetinkaya-rundel-lowndes-quarto-keynote">Allison Horst</a></p>
+</div>
+</center>
+<aside class="notes">
+<p>Chat: who here has heard of quarto? is anyone currently building things in quarto?</p>
+<p>Code first model where source code is included in all outputs:</p>
+<ul>
+<li>version control</li>
+<li>programmatic automation (testing)</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 smaller">
+<h2>How it works</h2>
+<p><a href="https://quarto.org">Quarto</a> gives you options for the actual tool being used to render your project into a plethora of output types.</p>
+<ul>
+<li>Choice of rendering engines: jupyter, knitr</li>
+<li>Computational languages: Python, R, Julia, Observable JS</li>
+<li>Outputs: Documents, presentations, websites, books, blogs</li>
+</ul>
+<p><em>Bundled into RStudio starting with 2022.07.1</em></p>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/b5217f2a-f129-4bf9-90dc-c5b9783d0ea8.png?h=f8d3ed40353f4ae6eb77dae39072510c" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+</figure>
+</div>
+<div class="citation" style="font-size: 16px">
+<p>“Artwork from”Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by <a href="https://allisonhorst.com/cetinkaya-rundel-lowndes-quarto-keynote">Allison Horst</a></p>
+</div>
+</center>
+<aside class="notes">
+<p>How to check your rstudio version: https://book.rwithoutstatistics.com/quarto-chapter#creating-a-quarto-document</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>The different content types</h2>
+<div class="smaller">
+<ul>
+<li><p>Report</p>
+<ul>
+<li>HTML doc</li>
+<li>PDF doc</li>
+<li>Word doc</li>
+</ul></li>
+<li><p>Book</p></li>
+<li><p>Presentation</p></li>
+<li><p>Website</p></li>
+<li><p>Blog</p></li>
+<li><p>The home page is a listing page for all of the documents in the posts directory</p></li>
+<li><p>Dashboard 🆕</p></li>
+<li><p>Email 🆕</p></li>
+</ul>
+<p><em>Make ALL the content types!</em></p>
+</div>
+<aside class="notes">
+<p>Chat:</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 smaller">
+<h2>There’s a lot to love 💙</h2>
+<center>
+<div class="columns">
+<div class="column" style="width:20%;">
+<ul>
+<li>Dashboards</li>
+<li>Emails</li>
+<li>Interactive reports</li>
+<li>Code chunks</li>
+<li>Custom formatting</li>
+<li>Hybrid code projects</li>
+<li>Extensions</li>
+<li>Comments</li>
+<li>Scheduling</li>
+<li>Publishing</li>
+</ul>
+</div><div class="column" style="width:60%;">
+<p><img data-src="img/these-are-a-few-of-my-favorite-things.jpeg" style="width:70.0%"></p>
+</div><div class="column" style="width:20%;">
+<ul>
+<li>Programmatic formatting</li>
+<li>Parameterization</li>
+<li>Conditionals</li>
+<li>Including code / nested qmd’s</li>
+<li>Environment management</li>
+<li>Version control</li>
+<li>Storing secrets in env variables</li>
+</ul>
+</div>
+</div>
+<div class="citation" style="font-size: 16px">
+<p>Image a meme of <a href="https://www.imdb.com/title/tt0059742/">The Sound of Music</a></p>
+</div>
+</center>
+<aside class="notes">
+<p>Chat: who here has heard of quarto? is anyone currently building things in quarto?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Getting started</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Programmatically create a project:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a>quarto create project</span>
+<span id="cb1-2"><a href=""></a>quarto create project <span class="sc">&lt;</span>type<span class="sc">&gt;</span> <span class="er">&lt;</span>name<span class="sc">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://quarto.org/docs/tools/images/new-quarto-doc.png"></p>
+<figcaption>Create a project using the RStudio editor</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Chat:</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Anatomy of a Quarto project</h2>
+<pre><code>---
+title: "Untitled"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see &lt;https://quarto.org&gt;.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```` ```{r}
+#| echo: false
+1 + 1
+```` ```
+</code></pre>
+<aside class="notes">
+<p>Chat: Reference this page: https://quarto.org/docs/projects/quarto-projects.html</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Coming from R? RMarkdown Workflow</h2>
+<p>Rendering (execute and write to disk):</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Programmatically</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a>quarto render script.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://quarto.org/docs/tools/images/rstudio-render.png"></p>
+<figcaption>The RStudio editor comes with rendering built-in</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Live preview:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href=""></a><span class="ex">quarto</span> preview script.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+<h2>Coming from Python? Notebooks Workflow</h2>
+<p>Rendering (execute and write to disk):</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href=""></a><span class="co"># plain text qmd</span></span>
+<span id="cb5-2"><a href=""></a><span class="ex">quarto</span> render python.qmd</span>
+<span id="cb5-3"><a href=""></a><span class="ex">quarto</span> render python.qmd <span class="at">--to</span> pdf</span>
+<span id="cb5-4"><a href=""></a></span>
+<span id="cb5-5"><a href=""></a><span class="co"># ipynb notebook</span></span>
+<span id="cb5-6"><a href=""></a><span class="ex">quarto</span> render python.ipynb</span>
+<span id="cb5-7"><a href=""></a><span class="ex">quarto</span> render python.ipynb <span class="at">--execute</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Live preview:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href=""></a><span class="co"># plain text qmd</span></span>
+<span id="cb6-2"><a href=""></a><span class="ex">quarto</span> preview python.qmd</span>
+<span id="cb6-3"><a href=""></a><span class="ex">quarto</span> preview python.qmd <span class="at">--to</span> pdf</span>
+<span id="cb6-4"><a href=""></a></span>
+<span id="cb6-5"><a href=""></a><span class="co"># ipynb notebook</span></span>
+<span id="cb6-6"><a href=""></a><span class="ex">quarto</span> preview python.ipynb</span>
+<span id="cb6-7"><a href=""></a><span class="ex">quarto</span> preview python.ipynb <span class="at">--execute</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<aside class="notes">
+<p>Chat:</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>On to the bells and whistles!</h2>
+<aside class="notes">
+<p>Chat:</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 smaller">
+<h2>So you’ve got a finished product, now what? Publish to Connect</h2>
+<aside class="notes">
+<p>Chat:</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 smaller">
+<h2>So you’ve got a finished product, now what? Job scheduling</h2>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://github.com/ryjohnson09/quarto-job-scheduling/blob/main/images/workflow.jpg?raw=true" class="quarto-figure quarto-figure-center" style="width:50.0%"></p>
+</figure>
+</div>
+<div class="citation" style="font-size: 16px">
+<p>Image from Ryan Johnson’s <a href="https://github.com/ryjohnson09/quarto-job-scheduling?tab=readme-ov-file">companion GitHub repository for the June 2023 Posit Team Community demo</a></p>
+</div>
+</center>
+<aside class="notes">
+<p>Chat:</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 smaller">
+<h2>Things have gone wrong, help!</h2>
+<p>Capture the current system to see if anything looks off / submit a git issue or stackoverflow that will give folks enough info to be able to meaningfully help you:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a><span class="fu">sessionInfo</span>()</span>
+<span id="cb7-2"><a href=""></a><span class="fu">Sys.getenv</span>()</span>
+<span id="cb7-3"><a href=""></a><span class="fu">.libPaths</span>()</span>
+<span id="cb7-4"><a href=""></a></span>
+<span id="cb7-5"><a href=""></a><span class="co"># If the sessioninfo package is available, </span></span>
+<span id="cb7-6"><a href=""></a><span class="co"># it provides output that is easier to read,</span></span>
+<span id="cb7-7"><a href=""></a><span class="co"># and can write its results to a file</span></span>
+<span id="cb7-8"><a href=""></a><span class="co">#sessioninfo:::session_info(to_file = "quarto-session-info-output.txt")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Get more diagnostics while running a command:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href=""></a>quarto render hello.qmd <span class="sc">--</span>to html <span class="sc">--</span>execute<span class="sc">-</span>debug</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2 smaller">
+<h2>Misc best practices</h2>
+
+<img data-src="img/dangerous-to-go-alone.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:30.0%"><center>
+<div class="columns">
+<div class="column" style="width:33%;">
+<p><strong>Version control your code</strong></p>
+<!-- ![](img/kerin-gedge-JDzoTGfoogA-unsplash.jpg) -->
+</div><div class="column" style="width:33%;">
+<p><strong>Reproduceable environments</strong></p>
+<!-- ![](img/karina-vorozheeva-rW-I87aPY5Y-unsplash.jpg) -->
+</div><div class="column" style="width:33%;">
+<p><strong>Keep secrets secret</strong></p>
+<!-- ![](img/richard-brutyo-Sg3XwuEpybU-unsplash.jpg) -->
+</div>
+</div>
+<p><em>Imagine a world where code doesn’t disappear and is backed up in version control, environments are explicit and easily reproduced, and secrets are responsibly managed.</em></p>
+<p><br></p>
+<div class="citation" style="font-size: 16px">
+<p><a href="https://knowyourmeme.com/photos/686176-its-dangerous-to-go-alone-take-this">“It’s Dangerous to go Alone! Take This” is a memorable quote from the 1986 action-adventure Nintendo game The Legend of Zelda. Online, the expression is typically used as a stock caption for image macros in which an animal or an object is offered to the viewer as a kind gesture.</a></p>
+</div>
+</center>
+<aside class="notes">
+<p>Important tools that take the pain out of data science</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside class="notes">
+<p>Chat:</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 smaller">
+<h2>TLDR on Quarto</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Quarto</strong></p>
+<ul>
+<li><strong><a href="https://quarto.org/">Documentation</a></strong></li>
+<li><strong><a href="https://rstudio.github.io/cheatsheets/quarto.pdf">Cheat sheet</a></strong></li>
+<li><strong><a href="https://info5940.infosci.cornell.edu/slides/publishing-reproducible-documents/#/title-slide">Reproduceable presentations in quarto</a></strong></li>
+<li><strong><a href="https://github.com/mcanouil/awesome-quarto">Quarto awesome list</a></strong></li>
+<li><strong><a href="https://quarto-tdg.org/presentations">Quarto the definitive guide</a></strong></li>
+<li><strong><a href="https://book.rwithoutstatistics.com/quarto-chapter">R without statistics, reproduceable reporting with quarto</a></strong></li>
+<li><strong><a href="https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/posts/17-dark-mode/">Quarto tip a day</a></strong></li>
+<li><strong><a href="https://www.andreashandel.com/posts/2023-06-13-custom-callouts-quarto/">Quarto callouts</a></strong></li>
+<li><strong><a href="https://thomasmock.quarto.pub/python-austin/#/">Thomas Mock’s presentation to Austin Python meetup in 2024</a></strong></li>
+<li><strong><a href="https://jadeyryan.com/talks/2024-01-18_rladies-dc_quarto-params/">Parameterized Reports with Quarto: R-Ladies DC Workshop</a></strong></li>
+<li><strong><a href="https://www.youtube.com/watch?v=EihuM4oyOvs">Extending quarto</a></strong></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Workshops and talks from posit:::conf(2023):</strong></p>
+<ul>
+<li><a href="https://posit-conf-2023.github.io/quarto-r/">Introduction to Quarto with R &amp; RStudio</a></li>
+<li><a href="https://posit-conf-2023.github.io/quarto-r/">Advanced Quarto with R &amp; RStudio</a></li>
+<li><a href="https://github.com/posit-conf-2023/quarto-python/">Enhancing Communication and Collaboration with Jupyter Notebooks &amp; Quarto</a></li>
+<li><a href="https://github.com/mine-cetinkaya-rundel/quarto-manuscripts">“Reproducible Manuscripts with Quarto” talk at posit::conf(2023)</a></li>
+</ul>
+<p><strong>Upcoming Workshops for posit:::conf(2024)</strong></p>
+<ul>
+<li>Build-a-Dashboard Workshop (with Quarto, R and/or Python)</li>
+<li>Introduction to Quarto</li>
+<li>Quarto Websites</li>
+</ul>
+</div>
+</div>
+<center>
+<p><strong>Interested in our Enterprise Products? Click <a href="https://www.rstudio.com/products/team/">here</a></strong></p>
+</center>
+</section>
+<section class="slide level2 smaller">
+<h2>TLDR on best practices</h2>
+<p><strong>Version control</strong>:</p>
+<ul>
+<li><strong>Cheat sheet for git (contributed)</strong>: <a href="https://rstudio.github.io/cheatsheets/contributed-cheatsheets.html" class="uri">https://rstudio.github.io/cheatsheets/contributed-cheatsheets.html</a></li>
+<li><strong>What They Forgot to Teach You About R</strong> : <a href="https://rstats.wtf/" class="uri">https://rstats.wtf/</a></li>
+<li><strong>Happy Git with R</strong> : <a href="https://happygitwithr.com/" class="uri">https://happygitwithr.com/</a></li>
+<li><strong>Oh sh-t git</strong>: <a href="https://ohshitgit.com/" class="uri">https://ohshitgit.com/</a></li>
+<li><strong>Cheat sheet for git (contributed)</strong>: <a href="https://rstudio.github.io/cheatsheets/contributed-cheatsheets.html" class="uri">https://rstudio.github.io/cheatsheets/contributed-cheatsheets.html</a></li>
+<li><strong>Missing semester of your CS education on version control</strong>: <a href="https://missing.csail.mit.edu/2020/version-control/" class="uri">https://missing.csail.mit.edu/2020/version-control/</a></li>
+<li><strong>Learn git branching</strong>: <a href="https://learngitbranching.js.org/" class="uri">https://learngitbranching.js.org/</a></li>
+</ul>
+<p><strong>Environment management</strong>:</p>
+<ul>
+<li><strong>Get started with renv in the RStudio IDE</strong>: <a href="https://docs.posit.co/ide/user/ide/guide/environments/r/renv.html" class="uri">https://docs.posit.co/ide/user/ide/guide/environments/r/renv.html</a></li>
+<li><strong>You should be using renv</strong>: <a href="https://www.youtube.com/watch?v=GwVx_pf2uz4" class="uri">https://www.youtube.com/watch?v=GwVx_pf2uz4</a></li>
+<li><strong>Using Public Package Manager</strong> : <a href="https://support.rstudio.com/hc/en-us/articles/360046703913-FAQ-for-RStudio-Public-Package-Manager" class="uri">https://support.rstudio.com/hc/en-us/articles/360046703913-FAQ-for-RStudio-Public-Package-Manager</a></li>
+</ul>
+<p><strong>Secrets</strong>:</p>
+<ul>
+<li><strong>Environment variables on Connect</strong>: <a href="https://docs.posit.co/connect/user/content-settings/#content-vars" class="uri">https://docs.posit.co/connect/user/content-settings/#content-vars</a></li>
+</ul>
+<center>
+<p><strong>Interested in our Enterprise Products? Click <a href="https://www.rstudio.com/products/team/">here</a></strong></p>
+</center>
+</section>
+<section class="slide level2">
+<h2>Thanks! Questions?</h2>
+</section>
+<section class="slide level2">
+<h2>Backup</h2>
 </section>
 <section class="slide level2">
 <h2>Default Slide</h2>
 <p>This text size is <code>normal</code>.</p>
 <div class="smaller">
 <p>This text size is <code>smaller</code>.</p>
-<div class="columns">
-<div class="column" style="width:33%;">
-<p><strong>Column 1</strong></p>
 <p>Bullet points</p>
 <ol type="1">
 <li>Point 1</li>
 <li>Point 2</li>
 </ol>
-</div><div class="column" style="width:33%;">
-<p><strong>Column 2</strong></p>
-<ul>
-<li>Link to <a href="url">external resource</a></li>
-</ul>
+</div>
 <blockquote>
 <p>Blocking comment</p>
 </blockquote>
-</div><div class="column" style="width:33%;">
-<p><strong>Column 3</strong></p>
+<div class="smaller">
+<div class="columns">
+<div class="column" style="width:33%;">
+<p><strong>Column 1</strong></p>
+<ul>
+<li>Link to <a href="url">external resource</a></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Column 2</strong></p>
 <div id="fig-image" class="quarto-figure quarto-figure-center quarto-float" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-image-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img data-src="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/data_cowboy.png" class="quarto-figure quarto-figure-center" style="width:30.0%">
+<img data-src="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/data_cowboy.png" class="quarto-figure quarto-figure-center" style="width:50.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-image-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: But what about an image?
@@ -440,21 +968,20 @@ Figure&nbsp;1: But what about an image?
 </div>
 </div>
 </div>
+</div>
 <div class="quarto-layout-panel" data-layout="[2, 10]">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 16.7%;justify-content: center;">
-<p><img data-src="img/Leafey.PNG"></p>
+<p><img data-src="img/lisa-profile-2.png"></p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 83.3%;justify-content: flex-start;">
-<p><br> <strong>Leafey the plant</strong> - Write some intro text about yourself</p>
+<p><strong>Lisa Anders</strong> - Posit Solutions Engineer and self-professed R nerd learning to love Python. Engineer turned data scientist turned Posit admin and excited to share lessons learned the hard way to make things easier for others. Also awkward at writing intros in the third person!</p>
 </div>
 </div>
 </div>
-</div>
-<p>:::</p>
 <center>
 <div class="citation" style="font-size: 16px">
-<p>This is a citation</p>
+<p>“Illustration from Hadley Wickham’s talk”The Joy of Functional Programming (for Data Science).” by <a href="https://github.com/allisonhorst/stats-illustrations">Allison Horst</a></p>
 </div>
 </center>
 <aside class="notes">
@@ -470,221 +997,6 @@ Figure&nbsp;1: But what about an image?
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section>
-<section class="slide level2">
-<h2>Extensions</h2>
-<p>Click <code>c</code> to launch confetti!</p>
-<p>Extensions are a good way to share theme’s across an organization. There are a bunch of publicly available theme extensions <a href="https://quarto.org/docs/extensions/listing-revealjs.html">here</a></p>
-<p>The extension needs to be installed:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href=""></a><span class="ex">quarto</span> add ArthurData/quarto-confetti</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>It’s then referenced from the yaml:</p>
-<pre><code>title: "My presentation"
-format:
-  revealjs: default
-revealjs-plugins:
-  - confetti</code></pre>
-</section>
-<section class="slide level2">
-<h2>Environment</h2>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>R version 4.3.1 (2023-06-16 ucrt)
-Platform: x86_64-w64-mingw32/x64 (64-bit)
-Running under: Windows 11 x64 (build 22621)
-
-Matrix products: default
-
-
-locale:
-[1] LC_COLLATE=English_United States.utf8 
-[2] LC_CTYPE=English_United States.utf8   
-[3] LC_MONETARY=English_United States.utf8
-[4] LC_NUMERIC=C                          
-[5] LC_TIME=English_United States.utf8    
-
-time zone: America/Denver
-tzcode source: internal
-
-attached base packages:
-[1] stats     graphics  grDevices datasets  utils     methods   base     
-
-loaded via a namespace (and not attached):
- [1] compiler_4.3.1    fastmap_1.2.0     cli_3.6.2         htmltools_0.5.8.1
- [5] tools_4.3.1       yaml_2.3.8        rmarkdown_2.27    knitr_1.46       
- [9] jsonlite_1.8.8    xfun_0.44         digest_0.6.35     rlang_1.1.3      
-[13] renv_1.0.7        evaluate_0.23    </code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>ALLUSERSPROFILE         C:\ProgramData
-APPDATA                 C:\Users\LisaAnders\AppData\Roaming
-AQS_API_EMAIL           lisamaeanders@gmail.com
-AQS_API_KEY             sandbird17
-BIGQUERY_api_key        AIzaSyBBm-ug3FU80ZWn92uRWhtxZi7G3NmSPXQ
-BIGQUERY_TEST_PROJECT   laproject-364200
-ChocolateyInstall       C:\ProgramData\chocolatey
-CLICOLOR_FORCE          1
-CommonProgramFiles      C:\Program Files\Common Files
-CommonProgramFiles(x86)
-                        C:\Program Files (x86)\Common Files
-CommonProgramW6432      C:\Program Files\Common Files
-COMPUTERNAME            DESKTOP-0VHOS2I
-ComSpec                 C:\Windows\system32\cmd.exe
-CONNECT_API_KEY         hTAsyChp0YrwywS18FPjUTe0Pt0ryZh5
-CONNECT_SERVER          https://stalwart-tarsier.staging.eval.posit.co/pub/
-CONNECT_URL             https://stalwart-tarsier.staging.eval.posit.co/pub/
-CURL_CA_BUNDLE          C:/PROGRA~1/R/R-43~1.1/etc/curl-ca-bundle.crt
-DENO_DOM_PLUGIN         C:\Users\LisaAnders\scoop\apps\quarto\current\bin\tools\x86_64\deno_dom\plugin.dll
-DENO_NO_UPDATE_CHECK    1
-DENO_TLS_CA_STORE       system,mozilla
-DISPLAY                 :0
-DriverData              C:\Windows\System32\Drivers\DriverData
-EFC_12996               0
-ENV_VAR                 hello!
-GFORTRAN_STDERR_UNIT    -1
-GFORTRAN_STDOUT_UNIT    -1
-GIT_ASKPASS             rpostback-askpass
-GIT_INSTALL_ROOT        C:\Users\LisaAnders\scoop\apps\git\current
-HELLO                   WORLD
-HOME                    C:\Users\LisaAnders\Documents
-HOMEDRIVE               C:
-HOMEPATH                \Users\LisaAnders
-IGCCSVC_DB              AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAyMgBBIXmy0yk2ULpRVmI6QQAAAACAAAAAAAQZgAAAAEAACAAAADAMZq6p1KGlYHaHDdN1wWY6RAQl6UilhGXk+MmPj2PFgAAAAAOgAAAAAIAACAAAAArV6LyjVXbhdfF82iN5vmgw2H59gvLyv3LutYhTiUU7GAAAAAKv6aHddG/uoJVqvX4i6XMYBmrZBY1sImml2pFXa+WeMyaRp53QlWgy1bTsYcM02Wwz6IejiI/s6keheTD23QqYQ+WMPJcBxHERiphj5Jc8TYGEkySJumDdOI0HC1iA2ZAAAAAD3JL5PTAct3MyQj+pewGmrBXIUo/kH3sqJQd1+Dla8BEWCXUYmzW3YmlA/Um6OQ7YAvLx5QUjKnbTvYyo+SeGQ==
-LOCALAPPDATA            C:\Users\LisaAnders\AppData\Local
-LOGONSERVER             \\DESKTOP-0VHOS2I
-MPLENGINE               tkAgg
-MSYS2_ENV_CONV_EXCL     R_ARCH
-NO_COLOR                TRUE
-NUMBER_OF_PROCESSORS    16
-OneDrive                C:\Users\LisaAnders\OneDrive
-ORIGINAL_XDG_CURRENT_DESKTOP
-                        undefined
-OS                      Windows_NT
-OWNER_GUID              sam.edwardes
-PATH                    C:\rtools43/x86_64-w64-mingw32.static.posix/bin;C:\rtools43/usr/bin;C:\rtools43\x86_64-w64-mingw32.static.posix\bin;C:\rtools43\usr\bin;C:\Program
-                        Files\R\R-4.3.1\bin\x64;C:\Program Files\Common
-                        Files\Oracle\Java\javapath;C:\Program Files
-                        (x86)\NVIDIA
-                        Corporation\PhysX\Common;C:\Program Files
-                        (x86)\Common
-                        Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program
-                        Files\Git\cmd;C:\Program
-                        Files\Calibre2\;C:\Program Files\NVIDIA
-                        Corporation\NVIDIA
-                        NvDLISR;C:\minikube;C:\Program
-                        Files\Positron\bin;C:\Program
-                        Files\dotnet\;C:\Program
-                        Files\Docker\Docker\resources\bin;C:\Users\LisaAnders\scoop\shims;C:\Users\LisaAnders\AppData\Local\Microsoft\WindowsApps;C:\Users\LisaAnders\AppData\Local\Programs\Microsoft
-                        VS Code\bin;C:\Program
-                        Files\R\bin;C:\Users\LisaAnders\scoop\shims;C:\Program
-                        Files\RStudio\resources\app\bin\postback;C:/Users/LisaAnders/AppData/Roaming/TinyTeX/bin/windows
-PATHEXT                 .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
-PG_PASSWD               TEST
-PG_USER                 TEST
-POSTGRES_PASSWORD       testpasswordforrstudioadminuserhi
-POSTGRES_USER           rstudioadmin
-PROCESSOR_ARCHITECTURE
-                        AMD64
-PROCESSOR_IDENTIFIER    Intel64 Family 6 Model 141 Stepping 1,
-                        GenuineIntel
-PROCESSOR_LEVEL         6
-PROCESSOR_REVISION      8d01
-ProgramData             C:\ProgramData
-ProgramFiles            C:\Program Files
-ProgramFiles(x86)       C:\Program Files (x86)
-ProgramW6432            C:\Program Files
-PSModulePath            C:\Program
-                        Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
-PUBLIC                  C:\Users\Public
-PYTHONIOENCODING        utf-8
-QUARTO_BIN_PATH         C:\Users\LisaAnders\scoop\apps\quarto\current\bin
-QUARTO_DENO             C:\Users\LisaAnders\scoop\apps\quarto\current\bin\tools\x86_64\deno
-QUARTO_PROFILE          
-QUARTO_PROJECT_DIR      C:\Users\LisaAnders\Documents\git\quarto-for-reproducible-reporting-demo\content-examples\presentation-webinar
-QUARTO_RENDER_TOKEN     4f991bd6-0ad0-45c0-9ae6-0ef64785ff7a
-QUARTO_SHARE_PATH       C:\Users\LisaAnders\scoop\apps\quarto\current\share
-R_ARCH                  /x64
-R_CLI_HAS_HYPERLINK_IDE_HELP
-                        true
-R_CLI_HAS_HYPERLINK_IDE_RUN
-                        true
-R_CLI_HAS_HYPERLINK_IDE_VIGNETTE
-                        true
-R_COMPILED_BY           gcc 12.2.0
-R_DOC_DIR               C:/PROGRA~1/R/R-43~1.1/doc
-R_HOME                  C:/PROGRA~1/R/R-43~1.1
-R_INCLUDE_DIR           C:/PROGRA~1/R/R-43~1.1/include
-R_LIBS_SITE             C:/PROGRA~1/R/R-43~1.1/site-library
-R_LIBS_USER             C:/Users/LisaAnders/Documents/git/quarto-for-reproducible-reporting-demo/content-examples/presentation-webinar/renv/library/R-4.3/x86_64-w64-mingw32
-R_RTOOLS43_PATH         C:\rtools43/x86_64-w64-mingw32.static.posix/bin;C:\rtools43/usr/bin
-R_RUNTIME               ucrt
-R_SHARE_DIR             C:/PROGRA~1/R/R-43~1.1/share
-R_USER                  C:/Users/LisaAnders/Documents
-RENV_DEFAULT_R_ENVIRON
-                        &lt;NA&gt;
-RENV_DEFAULT_R_ENVIRON_USER
-                        &lt;NA&gt;
-RENV_DEFAULT_R_LIBS     &lt;NA&gt;
-RENV_DEFAULT_R_LIBS_SITE
-                        C:/PROGRA~1/R/R-43~1.1/site-library
-RENV_DEFAULT_R_LIBS_USER
-                        C:\Users\LisaAnders\AppData\Local/R/win-library/4.3
-RENV_DEFAULT_R_PROFILE
-                        &lt;NA&gt;
-RENV_DEFAULT_R_PROFILE_USER
-                        &lt;NA&gt;
-RENV_PROJECT            C:/Users/LisaAnders/Documents/git/quarto-for-reproducible-reporting-demo/content-examples/presentation-webinar
-RETICULATE_MINICONDA_PYTHON_ENVPATH
-                        C:/Users/LisaAnders/Documents/git/quarto-for-reproducible-reporting-demo/content-examples/presentation-webinar/renv/python/r-reticulate
-RMARKDOWN_MATHJAX_PATH
-                        C:/Program
-                        Files/RStudio/resources/app/resources/mathjax-27
-RS_LOCAL_PEER           \\.\pipe\8757-rsession
-RS_LOG_LEVEL            WARN
-RS_RPOSTBACK_PATH       C:/Program
-                        Files/RStudio/resources/app/bin/rpostback.exe
-RS_SHARED_SECRET        d265dcd2-c74a-4f90-ab28-51f9cbc34606
-RSTUDIO                 1
-RSTUDIO_CHILD_PROCESS_PANE
-                        job
-RSTUDIO_CLI_HYPERLINKS
-                        true
-RSTUDIO_CONSOLE_COLOR   256
-RSTUDIO_CONSOLE_WIDTH   106
-RSTUDIO_DESKTOP_EXE     C:\Program Files\RStudio\rstudio.exe
-RSTUDIO_MSYS_SSH        C:/Program
-                        Files/RStudio/resources/app/bin/msys-ssh-1000-18
-RSTUDIO_PANDOC          C:/Program
-                        Files/RStudio/resources/app/bin/quarto/bin/tools
-RSTUDIO_PROGRAM_MODE    desktop
-RSTUDIO_SESSION_PID     35328
-RSTUDIO_SESSION_PORT    8757
-RSTUDIO_USER_IDENTITY   LisaAnders
-RSTUDIO_WINUTILS        C:/Program
-                        Files/RStudio/resources/app/bin/winutils
-RTOOLS43_HOME           C:\rtools43
-SESSIONNAME             Console
-SPOTIFY_CLIENT_ID       a41f9a0aea274995a97901daeef8fea5
-SPOTIFY_CLIENT_SECRET   1b9b37c00c814902a7b22980ab2da1c7
-SSH_ASKPASS             rpostback-askpass
-SystemDrive             C:
-SystemRoot              C:\Windows
-TAR                     internal
-TEMP                    C:\Users\LISAAN~1\AppData\Local\Temp
-TERM                    xterm-256color
-TMP                     C:\Users\LISAAN~1\AppData\Local\Temp
-USERDOMAIN              AzureAD
-USERDOMAIN_ROAMINGPROFILE
-                        AzureAD
-USERNAME                LisaAnders
-USERPROFILE             C:\Users\LisaAnders
-windir                  C:\Windows
-ZES_ENABLE_SYSMAN       1</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "C:/Users/LisaAnders/Documents/git/quarto-for-reproducible-reporting-demo/content-examples/presentation-webinar/renv/library/R-4.3/x86_64-w64-mingw32"
-[2] "C:/Users/LisaAnders/AppData/Local/R/cache/R/renv/sandbox/R-4.3/x86_64-w64-mingw32/bd3f13aa"                                                          </code></pre>
-</div>
-</div>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
@@ -905,44 +1217,6 @@ ZES_ENABLE_SYSMAN       1</code></pre>
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
