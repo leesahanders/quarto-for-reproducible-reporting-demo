@@ -14,33 +14,27 @@ format:
     height: "900"
     filters:
       - positslides
-    footer: <a href="https://github.com/leesahanders/quarto-for-reproducible-reporting-demo/tree/main/content-examples/presentation-webinar">quarto-for-reproducible-reporting-demo/tree/main/content-examples/presentation-webinar</a>
+    footer: <a href="https://github.com/leesahanders/quarto-for-reproducible-reporting-demo/tree/main/content-examples/presentation">source code</a>, type `c` to launch confetti
 revealjs-plugins:
   - confetti
 ---
 
-
-## Quarto: My favorite thing {.smaller}
-
-<center>
-
-![](https://raw.githubusercontent.com/rstudio/hex-stickers/ce526bb5880f348c6970f44f9d8001eb504c4cf6/SVG/quarto.svg){width="30%"}
-
-</center>
-
-::: {layout="[2, 10]"}
-![](img/lisa-profile-2.png)
-
+## Quarto - My favorite thing
 
 <br>
-**Lisa Anders** - Posit Solutions Engineer and self-professed R nerd learning to love Python. Excited to share lessons learned the hard way to make things easier for others. Awkward at writing intros in the third person!
-:::
-
-## Logistics {.smaller}
 
 <br> 
 
-Ask questions live, in the chat, or raise your hand✋
+![](img/lisa-profile-2.png){width="10%"} **Lisa Anders** - Posit Solutions Engineer and R nerd learning to also love Python. Excited to share lessons learned the hard way to make things easier for others. Awkward at writing intros in the third person!
+
+
+## Logistics {.smaller}
+
+![](https://raw.githubusercontent.com/rstudio/hex-stickers/ce526bb5880f348c6970f44f9d8001eb504c4cf6/SVG/quarto.svg){width="25%"}
+
+<br> 
+
+Ask questions as they come up, this is meant to be interactive! ✋
 
 <br> 
 
