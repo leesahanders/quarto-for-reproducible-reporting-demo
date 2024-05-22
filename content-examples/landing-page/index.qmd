@@ -70,7 +70,10 @@ text <- c("hello")
 
 ![](content-img/dashboard.png){fig-align="center" width=200}
 
-<a href="`r all_content[all_content$name =="dashboard",]$dashboard_url`" class="stretched-link"></a>
+<a href="`r all_content[all_content$name =="dashboard",]$content_url`" class="stretched-link"></a>
+
+<!-- <a href="`r all_content[all_content$name =="dashboard",]$dashboard_url`" class="stretched-link"></a> -->
+
 
 :::
 
@@ -80,7 +83,9 @@ text <- c("hello")
 
 ![](content-img/dashboard-spatial.png){fig-align="center" width=200}
 
-<a href="`r all_content[all_content$name =="dashboard-spatial",]$dashboard_url`" class="stretched-link"></a>
+<a href="`r all_content[all_content$name =="dashboard-spatial",]$content_url`" class="stretched-link"></a>
+
+<!-- <a href="`r all_content[all_content$name =="dashboard-spatial",]$dashboard_url`" class="stretched-link"></a> -->
 
 :::
 :::
@@ -120,7 +125,9 @@ text <- c("hello")
 
 ![](content-img/presentation.png){fig-align="center" width=200}
 
-<a href="`r all_content[all_content$name =="presentation",]$dashboard_url`" class="stretched-link"></a>
+<a href="`r all_content[all_content$name =="presentation",]$content_url`" class="stretched-link"></a>
+
+<!-- <a href="`r all_content[all_content$name =="presentation",]$dashboard_url`" class="stretched-link"></a> -->
 
 :::
 
@@ -130,7 +137,9 @@ text <- c("hello")
 
 ![](content-img/presentation-webinar.png){fig-align="center" width=200}
 
-<a href="`r all_content[all_content$name =="presentation-webinar",]$dashboard_url`" class="stretched-link"></a>
+<a href="`r all_content[all_content$name =="presentation-webinar",]$content_url`" class="stretched-link"></a>
+
+<!-- <a href="`r all_content[all_content$name =="presentation-webinar",]$dashboard_url`" class="stretched-link"></a> -->
 
 :::
 :::
@@ -176,7 +185,9 @@ text <- c("hello")
 
 ![](content-img/report-basic.png){fig-align="center" width=200}
 
-<a href="`r all_content[all_content$name =="report-basic",]$dashboard_url`" class="stretched-link"></a>
+<a href="`r all_content[all_content$name =="report-basic",]$content_url`" class="stretched-link"></a>
+
+<!-- <a href="`r all_content[all_content$name =="report-basic",]$dashboard_url`" class="stretched-link"></a> -->
 
 :::
 
@@ -186,7 +197,9 @@ text <- c("hello")
 
 ![](content-img/report-branded.png){fig-align="center" width=200}
 
-<a href="`r all_content[all_content$name =="report-branded",]$dashboard_url`" class="stretched-link"></a>
+<a href="`r all_content[all_content$name =="report-branded",]$content_url`" class="stretched-link"></a>
+
+<!-- <a href="`r all_content[all_content$name =="report-branded",]$dashboard_url`" class="stretched-link"></a> -->
 
 :::
 
@@ -196,7 +209,9 @@ text <- c("hello")
 
 ![](content-img/report-commentable.png){fig-align="center" width=200}
 
-<a href="`r all_content[all_content$name =="report-commentable",]$dashboard_url`" class="stretched-link"></a>
+<a href="`r all_content[all_content$name =="report-commentable",]$content_url`" class="stretched-link"></a>
+
+<!-- <a href="`r all_content[all_content$name =="report-commentable",]$dashboard_url`" class="stretched-link"></a> -->
 
 :::
 
@@ -206,7 +221,9 @@ text <- c("hello")
 
 ![](content-img/report-lightbox.png){fig-align="center" width=200}
 
-<a href="`r all_content[all_content$name =="report-lightbox",]$dashboard_url`" class="stretched-link"></a>
+<a href="`r all_content[all_content$name =="report-lightbox",]$content_url`" class="stretched-link"></a>
+
+<!-- <a href="`r all_content[all_content$name =="report-lightbox",]$dashboard_url`" class="stretched-link"></a> -->
 
 :::
 
@@ -216,7 +233,9 @@ text <- c("hello")
 
 ![](content-img/report-mermaid-diagrams.png){fig-align="center" width=200}
 
-<a href="`r all_content[all_content$name =="report-mermaid-diagrams",]$dashboard_url`" class="stretched-link"></a>
+<a href="`r all_content[all_content$name =="report-mermaid-diagrams",]$content_url`" class="stretched-link"></a>
+
+<!-- <a href="`r all_content[all_content$name =="report-mermaid-diagrams",]$dashboard_url`" class="stretched-link"></a> -->
 
 :::
 :::
@@ -262,7 +281,9 @@ text <- c("hello")
 
 ![](content-img/email-plots.png){fig-align="center" width=200}
 
-<a href="`r all_content[all_content$name =="email-plots",]$dashboard_url`" class="stretched-link"></a>
+<a href="`r all_content[all_content$name =="email-plots",]$content_url`" class="stretched-link"></a>
+
+<!-- <a href="`r all_content[all_content$name =="email-plots",]$dashboard_url`" class="stretched-link"></a> -->
 
 :::
 
@@ -272,7 +293,9 @@ text <- c("hello")
 
 ![](content-img/email-programmatic.png){fig-align="center" width=200}
 
-<a href="`r all_content[all_content$name =="email-programmatic",]$dashboard_url`" class="stretched-link"></a>
+<a href="`r all_content[all_content$name =="email-programmatic",]$content_url`" class="stretched-link"></a>
+
+<!-- <a href="`r all_content[all_content$name =="email-programmatic",]$dashboard_url`" class="stretched-link"></a> -->
 
 :::
 
@@ -282,7 +305,9 @@ text <- c("hello")
 
 ![](content-img/email-conditional.png){fig-align="center" width=200}
 
-<a href="`r all_content[all_content$name =="email-conditional",]$dashboard_url`" class="stretched-link"></a>
+<a href="`r all_content[all_content$name =="email-conditional",]$content_url`" class="stretched-link"></a>
+
+<!-- <a href="`r all_content[all_content$name =="email-conditional",]$dashboard_url`" class="stretched-link"></a> -->
 
 :::
 :::
@@ -310,7 +335,9 @@ text <- c("hello")
 
 ![](content-img/landing-page.png){fig-align="center" width=200}
 
-<a href="`r all_content[all_content$name =="landing-page",]$dashboard_url`" class="stretched-link"></a>
+<a href="`r all_content[all_content$name =="landing-page",]$content_url`" class="stretched-link"></a>
+
+<!-- <a href="`r all_content[all_content$name =="landing-page",]$dashboard_url`" class="stretched-link"></a> -->
 
 :::
 
@@ -320,7 +347,9 @@ text <- c("hello")
 
 ![](content-img/website.png){fig-align="center" width=200}
 
-<a href="`r all_content[all_content$name =="website",]$dashboard_url`" class="stretched-link"></a>
+<a href="`r all_content[all_content$name =="website",]$content_url`" class="stretched-link"></a>
+
+<!-- <a href="`r all_content[all_content$name =="website",]$dashboard_url`" class="stretched-link"></a> -->
 
 :::
 
