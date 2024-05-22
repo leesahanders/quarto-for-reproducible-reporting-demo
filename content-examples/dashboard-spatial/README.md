@@ -1,6 +1,29 @@
 # UV Spatial Map 
 
-**Access the dashboard at: <>**
+# Bells and whistles 
+
+## Custom scss
+
+For fixing strange tables in vapor theme: 
+
+```
+$pink:     #ea39b8 !default;
+$teal:     #03aa95 !default;
+
+.datatables {
+    font-size: .9rem !important;
+    font-color: $white !important;
+    color: $white !important;
+}
+
+.datatables .dt-buttons {
+    font-color: $white !important;
+    color: #03aa95 !important;
+}
+```
+
+
+# For the developer
 
 ## TODO
 
