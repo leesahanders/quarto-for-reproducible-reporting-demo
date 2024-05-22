@@ -1,12 +1,12 @@
-name: quarto-daily-dashboard-report
-title: quarto-daily-dashboard-report
+name: quarto_email_-_ppm_metrics
+title: Quarto Email - PPM Metrics
 username: lisa.anders
 account: lisa.anders
 server: colorado.posit.co
 hostUrl: https://colorado.posit.co/rsc/__api__
-appId: 19071
-bundleId: 114430
-url: https://colorado.posit.co/rsc/lisas-quarto-dashboard/
+appId: 19281
+bundleId: 114433
+url: https://colorado.posit.co/rsc/content/222aa805-3ad9-4ee6-ae72-90de0f11251f/
 version: 1
 quarto_version: 1.4.550
 quarto_engines: knitr

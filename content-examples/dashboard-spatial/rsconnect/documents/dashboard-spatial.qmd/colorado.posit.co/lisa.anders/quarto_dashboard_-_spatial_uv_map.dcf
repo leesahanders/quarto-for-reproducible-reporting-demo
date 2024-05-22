@@ -1,12 +1,12 @@
-name: quarto-daily-dashboard-report
-title: quarto-daily-dashboard-report
+name: quarto_dashboard_-_spatial_uv_map
+title: Quarto Dashboard - Spatial UV Map
 username: lisa.anders
 account: lisa.anders
 server: colorado.posit.co
 hostUrl: https://colorado.posit.co/rsc/__api__
-appId: 19071
-bundleId: 114430
-url: https://colorado.posit.co/rsc/lisas-quarto-dashboard/
+appId: 19282
+bundleId: 114438
+url: https://colorado.posit.co/rsc/content/9b3029bd-9bdf-4367-8364-39a7f129836a/
 version: 1
 quarto_version: 1.4.550
 quarto_engines: knitr

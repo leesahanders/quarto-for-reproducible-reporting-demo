@@ -4251,7 +4251,7 @@
   },
   "files": {
     ".Rprofile": {
-      "checksum": "08d131e227d01ea85134d0372d064342"
+      "checksum": "d6b8ada76ab17ec1b3a71e2fb88828c0"
     },
     "_quarto.yml": {
       "checksum": "7c1c4e7532456dde80d4710c64876eeb"
@@ -4261,6 +4261,9 @@
     },
     "dashboard-spatial.html": {
       "checksum": "84450a7843897bfe08393a0d3c827eda"
+    },
+    "dashboard-spatial.png": {
+      "checksum": "6f1d473d189a3ffe95d870e5a0e02f08"
     },
     "dashboard-spatial.qmd": {
       "checksum": "1ab4bd6a4d54fbd504fd6ebcee8285b3"
