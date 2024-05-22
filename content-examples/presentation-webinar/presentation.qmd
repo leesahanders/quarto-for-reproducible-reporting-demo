@@ -14,6 +14,7 @@ format:
     height: "900"
     filters:
       - positslides
+    footer: <a href="https://github.com/leesahanders/quarto-for-reproducible-reporting-demo/tree/main/content-examples/presentation-webinar">quarto-for-reproducible-reporting-demo/tree/main/content-examples/presentation-webinar</a>
 revealjs-plugins:
   - confetti
 ---

@@ -9,7 +9,7 @@ format:
       - custom.scss
     nav-buttons:
     - icon: github
-      href: "https://github.com/leesahanders/quarto-for-reproducible-reporting-demo"
+      href: "https://github.com/leesahanders/quarto-for-reproducible-reporting-demo/tree/main/content-examples/dashboard-spatial"
     logo: images/sun_nasa3.png
 lightbox: true
 editor: source
