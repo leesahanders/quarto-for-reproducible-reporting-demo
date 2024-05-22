@@ -11,7 +11,7 @@ format:
         icon: github
         href: https://github.com/leesahanders/quarto-for-reproducible-reporting-demo/tree/main/content-examples/report-hybrid-jupyter
 editor: source
-jupyter: python
+jupyter: python3
 ---
 
 ## Quarto

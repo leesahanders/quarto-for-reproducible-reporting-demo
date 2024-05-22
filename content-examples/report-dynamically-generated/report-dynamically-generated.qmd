@@ -163,7 +163,7 @@ for(i in languages){
 :::
 ::::
 
-### Another tabset from chunks example from Stackoverflow
+### Another tabset from chunks example from Quarto team
 
 From: <https://github.com/quarto-dev/quarto-examples/blob/main/tabsets/tabsets-from-r-chunks/index.qmd>
 
