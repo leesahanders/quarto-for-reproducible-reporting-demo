@@ -4,7 +4,6 @@ author: "Lisa Anders"
 format: email
 ---
 
-
 ## Email notifications: Alert when a new blog post has been released
 
 ```{r}

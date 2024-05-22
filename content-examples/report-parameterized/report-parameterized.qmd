@@ -1,27 +1,60 @@
 ---
-title: "report-parameterized"
-author: Lisa Anders
+title: "Visualizing the ocean floor"
+author: Adapted by Lisa Anders
 date: today
 lightbox: true
 format:
   html:
     theme: sandstone
-    toc: true
-    toc-location: right
-    anchor-sections: true
-    smooth-scroll: true
-    link-external-icon: true
-    link-external-newwindow: true
-    mermaid:
-      theme: neutral
     code-links:
       - text: Source Code
         icon: github
         href: https://github.com/leesahanders/quarto-for-reproducible-reporting-demo/tree/main/content-examples/report-parameterized
+params:
+  data: 
+    label: "Choose Data:"
+    value: "hawaii"
+    input: select
+    choices: ["hawaii","florida","celt","aleutians"]
 editor: source
 ---
 
+```{r include = FALSE}
+library(marmap)
+library(ggplot2)
+library(mapproj)
+
+```
+
+The [marmap](https://cran.r-project.org/web/packages/marmap/index.html) package provides tools and data for visualizing the ocean floor. Here is an example contour plot of marmap's ``r params$data`` dataset.
+
+```{r echo = FALSE}
+data_name = params$data
+
+data(list = data_name)
+autoplot(get(data_name))
+```
 
 
+```{r}
 
+#data_name <- c("hawaii","florida","celt","aleutians")[2] # for dev
+
+# data must be of specific format, refer to: https://rdrr.io/cran/marmap/man/hawaii.html 
+
+```
+
+
+We can render this through quarto with: 
+
+```
+quarto render report-parameterized.qmd -P data:hawaii
+
+# Or we could use a yaml file
+quarto render elevators.qmd --execute-params params.yml
+```
+
+Reference: 
+
+- <https://www.mm218.dev/posts/2022-08-04-how-to-use-quarto-for-parameterized-reporting/>
 
