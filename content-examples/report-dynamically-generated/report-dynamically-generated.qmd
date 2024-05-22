@@ -229,11 +229,8 @@ plots <- data %>%
 
 iwalk(plots, ~ {
   cat('## ', .y, '\n\n')
-
   print(.x)
-
   cat('\n\n')
-
 })
 
 ```
