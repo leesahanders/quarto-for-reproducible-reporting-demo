@@ -226,7 +226,7 @@ uv_hourly <- uv_hourly %>%
 #| echo: false
 #| warning: false
 #| message: false
-#| label: plot-map-providers$Stadia.AlidadeSmoothDark
+#| label: plot-map-providers
 #| tbl-cap: "UV Map"
 #| padding: 0px
 
@@ -235,7 +235,8 @@ uv_hourly <- uv_hourly %>%
 
 leaflet(data = uv_df_daily) %>%
   addTiles() %>%
-  addProviderTiles("CartoDB.DarkMatter") %>% 
+  addProviderTiles("OpenTopoMap") %>% 
+  # addProviderTiles("CartoDB.DarkMatter") %>% 
   #addProviderTiles(providers$Stadia.AlidadeSmoothDark) %>% 
   # addTiles(providers$Stadia.StamenToner, group = "Toner") %>%
   #addProviderTiles(providers$Thunderforest_TransportDark) %>%
