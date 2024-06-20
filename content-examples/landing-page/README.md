@@ -88,6 +88,7 @@ Note that the chalkboard feature can't be included when self-contained.
 - Lisa's developer landing page: <https://colorado.posit.co/rsc/connect/#/apps/6f9e3bb7-d345-4932-b943-896586659f66/access/5496>
 - And another one: <https://colorado.posit.co/rsc/connect/#/apps/23a7e1a3-fcbe-4efe-aea9-585198de6064/access>
 - The Colorado landing page: <https://colorado.posit.co/rsc/connect/#/apps/b9f39220-daf8-4a3c-b698-389991f98724/access>
+- Healthcare Shiny Showcase landing page: <https://github.com/posit-dev/healthcare-shiny-showcase/tree/main> 
 
 ## Preview
 
