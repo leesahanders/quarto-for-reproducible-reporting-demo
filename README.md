@@ -212,6 +212,23 @@ curl --silent --show-error -L --max-redirs 0 --fail -X GET \
 # => ]
 ```
 
+For example in a github workflow this might look like: 
+```
+      - name: Use Connect API to set content title and assign tag
+        run: |
+          export DATA='{"title": "Using connectwidgets with Posit Connect"}'
+          export CONTENT_NAME='connectwidgets-penguins'
+          export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_URL }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
+          echo contentguid
+          curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_URL }}__api__/v1/content/${contentguid}"
+          export DATA2='{"tag_name": "posit-demo-assets"}'
+          curl --silent --show-error -L --max-redirs 0 --fail -X POST -H "Authorization: Key ${CONNECT_API_KEY}" "${CONNECT_URL}__api__/v1/tags" --data "${DATA2}" "${CONNECT_URL}__api__/v1/tags"
+          export tag_id=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_URL }}/__api__/v1/tags/${contentguid} | jq -r '.[].id')
+          echo tag_id
+          curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${tag_id}" "${{ secrets.CONNECT_URL }}__api__/v1/content/${contentguid}/tags"
+          
+```
+
 ### Adding a step to update the manifest.json 
 
 This was omitted in order to speed up publishing, but here is an example that could be followed to add it back in (particularly useful if also wanting to implement any testing): 
