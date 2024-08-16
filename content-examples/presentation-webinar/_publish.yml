@@ -1,0 +1,4 @@
+- source: presentation.qmd
+  quarto-pub:
+    - id: 0226727a-a1a8-4cfd-a52f-c61e6004a0e9
+      url: 'https://questionable.quarto.pub/quarto-for-reproducible-reporting-demo'

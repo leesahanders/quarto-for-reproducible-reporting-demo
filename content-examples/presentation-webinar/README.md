@@ -71,3 +71,11 @@ revealjs-plugins:
 
 There are a bunch of publicly available theme extensions [here](https://quarto.org/docs/extensions/listing-revealjs.html) 
 
+## Publishing 
+
+Publish slides to Quarto pub with: 
+
+```
+quarto publish presentation.qmd
+```
+
