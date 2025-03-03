@@ -459,7 +459,7 @@ jobs:
           curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
 
   notify:
-    needs: [pub-dashboard,pub-dashboard-spatial,pub-report-parameterized,pub-email-conditional,pub-report-dynamically-generated,pub-email-plots,pub-email-programmatic,pub-presentation,pub-presentation-webinar,pub-report-basic,pub-report-branded,pub-report-commentable,pub-report-hybrid-jupyter,pub-report-hybrid-knitr,pub-report-lightbox,pub-website,pub-report-mermaid-diagrams]
+    needs: [pub-dashboard,pub-dashboard-spatial,pub-report-parameterized,pub-email-conditional,pub-report-dynamically-generated,pub-email-plots,pub-email-programmatic,pub-presentation,pub-presentation-webinar,pub-report-basic,pub-report-branded,pub-report-commentable,pub-report-hybrid-knitr,pub-report-lightbox,pub-website,pub-report-mermaid-diagrams]
     name: pub-landing-page
     runs-on: ubuntu-latest
     steps:
