@@ -36,6 +36,12 @@ The `echo: false` option disables the printing of code (only output is displayed
 
 ## Opening data from excel
 
+First, load the `reticulate` package
+
+```{r}
+library(reticulate)
+```
+
 Create a workbook
 
 ```{python}

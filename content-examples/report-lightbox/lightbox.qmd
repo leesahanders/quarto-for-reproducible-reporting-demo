@@ -42,24 +42,22 @@ These images are interactive, try clicking on one!
 Images are from Wikipedia and in the public domain
 
 ```{r}
-# library(tidyverse)
-#library(DT)
-#library(gt) 
+library(tidyverse)
+library(DT)
+library(gt)
 
-# img_ref <- data.frame("image" = c("Lions", "Tigers", "Bears", "Wizard of Oz"), url = c('<a href="https://en.wikipedia.org/wiki/File:Lion_waiting_in_Namibia.jpg">Lions Wikipedia URL</a>',
-#                                                                                        '<a href="https://commons.wikimedia.org/wiki/File:Panthera_tigris_corbetti_(Tierpark_Berlin)_832-714-(118).jpg">Tigers Wikipedia URL</a>',
-#                                                                                        '<a href="https://en.wikipedia.org/wiki/Bear#/media/File:Chengdu-pandas-d10.jpg">Bears Wikipedia URL</a>',
-#                                                                                        '<a href="https://commons.wikimedia.org/wiki/File:The_Wizard_of_Oz_1955_Lobby_Card.jpg">Wizard of Oz Wikipedia URL</a>'))
-                      
-
-# img_ref %>%
-#   datatable(extensions = 'Buttons', escape = FALSE,
-#             options = list(dom = 'Blfrtip',
-#                            buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
-#                            lengthMenu = list(c(10,25,50,-1),
-#                                              c(10,25,50,"All"))))
+img_ref <- data.frame("image" = c("Lions", "Tigers", "Bears", "Wizard of Oz"), url = c('<a href="https://en.wikipedia.org/wiki/File:Lion_waiting_in_Namibia.jpg">Lions Wikipedia URL</a>',
+                                                                                       '<a href="https://commons.wikimedia.org/wiki/File:Panthera_tigris_corbetti_(Tierpark_Berlin)_832-714-(118).jpg">Tigers Wikipedia URL</a>',
+                                                                                       '<a href="https://en.wikipedia.org/wiki/Bear#/media/File:Chengdu-pandas-d10.jpg">Bears Wikipedia URL</a>',
+                                                                                       '<a href="https://commons.wikimedia.org/wiki/File:The_Wizard_of_Oz_1955_Lobby_Card.jpg">Wizard of Oz Wikipedia URL</a>'))
 
 
+img_ref %>%
+  datatable(extensions = 'Buttons', escape = FALSE,
+            options = list(dom = 'Blfrtip',
+                           buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
+                           lengthMenu = list(c(10,25,50,-1),
+                                             c(10,25,50,"All"))))
 
 ```
 

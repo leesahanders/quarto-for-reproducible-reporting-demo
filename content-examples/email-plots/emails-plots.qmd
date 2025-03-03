@@ -35,7 +35,8 @@ library(reactable)
 library(DT)
 library(stringr)
 
-var_url = "https://packagemanager.posit.co/"
+var_url = "https://pkg.current.posit.team/"
+#var_url = "https://packagemanager.posit.co/" # Usage statistics are now disabled
 var_sources_internal_packages = c(161,9,5) # source id's for transaction information c(8,9,15,161,177)
 var_repos_internal_packages = 8 # source id's for transaction information c(8,9,15,161,177)
 var_repos_bioconductor = 4 # repository id for bioconductor #13
