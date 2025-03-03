@@ -32,14 +32,14 @@ jobs:
           show-logs: TRUE
           force: FALSE
           dir: ./content-examples/report-mermaid-diagrams/:report-mermaid-diagrams 
-      - name: Use Connect API to set content title
-        run: |
-          export DATA='{"title": "Building diagrams using in reports"}'
-          export CONTENT_NAME='report-mermaid-diagrams'
-          export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
-          echo contentguid
-          curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
-          export DATA2='{"tag_id": "Quarto Report with Mermaid Diagrams"}'
+      # - name: Use Connect API to set content title
+      #   run: |
+      #     export DATA='{"title": "Building diagrams using in reports"}'
+      #     export CONTENT_NAME='report-mermaid-diagrams'
+      #     export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
+      #     echo contentguid
+      #     curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
+      #     export DATA2='{"tag_id": "Quarto Report with Mermaid Diagrams"}'
           
   pub-report-parameterized:
     name: pub-report-parameterized
@@ -60,14 +60,14 @@ jobs:
           show-logs: TRUE
           force: FALSE
           dir: ./content-examples/report-parameterized/:report-parameterized
-      - name: Use Connect API to set content title
-        run: |
-          export DATA='{"title": "Quarto reports with parameters"}'
-          export CONTENT_NAME='report-parameterized'
-          export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
-          echo contentguid
-          curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
-          export DATA2='{"tag_id": "Paramaterized Reports"}'
+      # - name: Use Connect API to set content title
+      #   run: |
+      #     export DATA='{"title": "Quarto reports with parameters"}'
+      #     export CONTENT_NAME='report-parameterized'
+      #     export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
+      #     echo contentguid
+      #     curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
+      #     export DATA2='{"tag_id": "Paramaterized Reports"}'
           
   pub-website:
     name: pub-website
@@ -88,13 +88,13 @@ jobs:
           show-logs: TRUE
           force: FALSE
           dir: ./content-examples/website/:website 
-      - name: Use Connect API to set content title
-        run: |
-          export DATA='{"title": "Recipe Website"}'
-          export CONTENT_NAME='website'
-          export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
-          echo contentguid
-          curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
+      # - name: Use Connect API to set content title
+      #   run: |
+      #     export DATA='{"title": "Recipe Website"}'
+      #     export CONTENT_NAME='website'
+      #     export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
+      #     echo contentguid
+      #     curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
   pub-report-basic:
     name: pub-report-basic
     runs-on: ubuntu-latest
@@ -114,13 +114,13 @@ jobs:
           show-logs: TRUE
           force: FALSE
           dir: ./content-examples/report-basic/:report-basic
-      - name: Use Connect API to set content title
-        run: |
-          export DATA='{"title": "Debugging R Environments Writeup"}'
-          export CONTENT_NAME='report-basic'
-          export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
-          echo contentguid
-          curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
+      # - name: Use Connect API to set content title
+      #   run: |
+      #     export DATA='{"title": "Debugging R Environments Writeup"}'
+      #     export CONTENT_NAME='report-basic'
+      #     export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
+      #     echo contentguid
+      #     curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
   pub-report-lightbox:
     name: pub-report-lightbox
     runs-on: ubuntu-latest
@@ -140,13 +140,13 @@ jobs:
           show-logs: TRUE
           force: FALSE
           dir: ./content-examples/report-lightbox/:report-lightbox 
-      - name: Use Connect API to set content title
-        run: |
-          export DATA='{"title": "Interactive Visualizations with Lightbox"}'
-          export CONTENT_NAME='report-lightbox'
-          export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
-          echo contentguid
-          curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
+      # - name: Use Connect API to set content title
+      #   run: |
+      #     export DATA='{"title": "Interactive Visualizations with Lightbox"}'
+      #     export CONTENT_NAME='report-lightbox'
+      #     export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
+      #     echo contentguid
+      #     curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
   pub-report-hybrid-knitr:
     name: pub-report-hybrid-knitr
     runs-on: ubuntu-latest
@@ -166,13 +166,13 @@ jobs:
           show-logs: TRUE
           force: FALSE
           dir: ./content-examples/report-hybrid-knitr/:report-hybrid-knitr
-      - name: Use Connect API to set content title
-        run: |
-          export DATA='{"title": "Quarto Report using the Knitr Engine"}'
-          export CONTENT_NAME='report-hybrid-knitr'
-          export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
-          echo contentguid
-          curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
+      # - name: Use Connect API to set content title
+      #   run: |
+      #     export DATA='{"title": "Quarto Report using the Knitr Engine"}'
+      #     export CONTENT_NAME='report-hybrid-knitr'
+      #     export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
+      #     echo contentguid
+      #     curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
 
   # pub-report-hybrid-jupyter:
   #   name: pub-report-hybrid-jupyter
@@ -206,13 +206,13 @@ jobs:
           api-key: ${{ secrets.CONNECT_API_KEY }}
           access-type: all
           dir: ./content-examples/report-dynamically-generated/:report-dynamically-generated
-      - name: Use Connect API to set content title
-        run: |
-          export DATA='{"title": "Dynamically generating the structure of a Quarto report"}'
-          export CONTENT_NAME='report-dynamically-generated'
-          export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
-          echo contentguid
-          curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
+      # - name: Use Connect API to set content title
+      #   run: |
+      #     export DATA='{"title": "Dynamically generating the structure of a Quarto report"}'
+      #     export CONTENT_NAME='report-dynamically-generated'
+      #     export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
+      #     echo contentguid
+      #     curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
 
   pub-report-commentable:
     name: pub-report-commentable
@@ -233,13 +233,13 @@ jobs:
           show-logs: TRUE
           force: FALSE
           dir: ./content-examples/report-commentable/:report-commentable
-      - name: Use Connect API to set content title
-        run: |
-          export DATA='{"title": "Report with Utterances Commenting"}'
-          export CONTENT_NAME='report-commentable'
-          export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
-          echo contentguid
-          curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
+      # - name: Use Connect API to set content title
+      #   run: |
+      #     export DATA='{"title": "Report with Utterances Commenting"}'
+      #     export CONTENT_NAME='report-commentable'
+      #     export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
+      #     echo contentguid
+      #     curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
 
   pub-report-branded:
     name: pub-report-branded
@@ -260,13 +260,13 @@ jobs:
           show-logs: TRUE
           force: FALSE
           dir: ./content-examples/report-branded/:report-branded
-      - name: Use Connect API to set content title
-        run: |
-          export DATA='{"title": "Posit Installation Branded Report"}'
-          export CONTENT_NAME='report-branded'
-          export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
-          echo contentguid
-          curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
+      # - name: Use Connect API to set content title
+      #   run: |
+      #     export DATA='{"title": "Posit Installation Branded Report"}'
+      #     export CONTENT_NAME='report-branded'
+      #     export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
+      #     echo contentguid
+      #     curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
 
   pub-presentation:
     name: pub-presentation
@@ -287,13 +287,13 @@ jobs:
           show-logs: TRUE
           force: FALSE
           dir: ./content-examples/presentation/:presentation
-      - name: Use Connect API to set content title
-        run: |
-          export DATA='{"title": "Sample Branded Presentation"}'
-          export CONTENT_NAME='presentation'
-          export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
-          echo contentguid
-          curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
+      # - name: Use Connect API to set content title
+      #   run: |
+      #     export DATA='{"title": "Sample Branded Presentation"}'
+      #     export CONTENT_NAME='presentation'
+      #     export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
+      #     echo contentguid
+      #     curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
 
   pub-presentation-webinar:
     name: pub-presentation-webinar
@@ -314,13 +314,13 @@ jobs:
           show-logs: TRUE
           force: FALSE
           dir: ./content-examples/presentation-webinar/:presentation-webinar
-      - name: Use Connect API to set content title
-        run: |
-          export DATA='{"title": "Reproduceable Reporting with Quarto"}'
-          export CONTENT_NAME='presentation-webinar'
-          export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
-          echo contentguid
-          curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
+      # - name: Use Connect API to set content title
+      #   run: |
+      #     export DATA='{"title": "Reproduceable Reporting with Quarto"}'
+      #     export CONTENT_NAME='presentation-webinar'
+      #     export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
+      #     echo contentguid
+      #     curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
 
   pub-email-programmatic:
     name: pub-email-programmatic
@@ -341,13 +341,13 @@ jobs:
           show-logs: TRUE
           force: FALSE
           dir: ./content-examples/email-programmatic/:email-programmatic
-      - name: Use Connect API to set content title
-        run: |
-          export DATA='{"title": "Email with Dinner Shopping List Programmatically Generated"}'
-          export CONTENT_NAME='email-programmatic'
-          export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
-          echo contentguid
-          curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
+      # - name: Use Connect API to set content title
+      #   run: |
+      #     export DATA='{"title": "Email with Dinner Shopping List Programmatically Generated"}'
+      #     export CONTENT_NAME='email-programmatic'
+      #     export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
+      #     echo contentguid
+      #     curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
           
   pub-email-plots:
     name: pub-email-plots
@@ -368,13 +368,13 @@ jobs:
           show-logs: TRUE
           force: FALSE
           dir: ./content-examples/email-plots/:email-plots
-      - name: Use Connect API to set content title
-        run: |
-          export DATA='{"title": "Email of Public Package Manager Metrics and Monitoring"}'
-          export CONTENT_NAME='email-plots'
-          export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
-          echo contentguid
-          curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
+      # - name: Use Connect API to set content title
+      #   run: |
+      #     export DATA='{"title": "Email of Public Package Manager Metrics and Monitoring"}'
+      #     export CONTENT_NAME='email-plots'
+      #     export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
+      #     echo contentguid
+      #     curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
 
 
   pub-email-conditional:
@@ -396,13 +396,13 @@ jobs:
           show-logs: TRUE
           force: FALSE
           dir: ./content-examples/email-conditional/:email-conditional
-      - name: Use Connect API to set content title
-        run: |
-          export DATA='{"title": "Conditional emails when a RSS feed indicates new blog posts"}'
-          export CONTENT_NAME='email-conditional'
-          export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
-          echo contentguid
-          curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
+      # - name: Use Connect API to set content title
+      #   run: |
+      #     export DATA='{"title": "Conditional emails when a RSS feed indicates new blog posts"}'
+      #     export CONTENT_NAME='email-conditional'
+      #     export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
+      #     echo contentguid
+      #     curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
 
   pub-dashboard:
     name: pub-dashboard
@@ -423,13 +423,13 @@ jobs:
           show-logs: TRUE
           force: FALSE
           dir: ./content-examples/dashboard/:dashboard
-      - name: Use Connect API to set content title
-        run: |
-          export DATA='{"title": "Custom Quarto Dashboard For Daily Reports"}'
-          export CONTENT_NAME='dashboard'
-          export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
-          echo contentguid
-          curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
+      # - name: Use Connect API to set content title
+      #   run: |
+      #     export DATA='{"title": "Custom Quarto Dashboard For Daily Reports"}'
+      #     export CONTENT_NAME='dashboard'
+      #     export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
+      #     echo contentguid
+      #     curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
 
   pub-dashboard-spatial:
     name: pub-dashboard-spatial
@@ -450,13 +450,13 @@ jobs:
           show-logs: TRUE
           force: FALSE
           dir: ./content-examples/dashboard-spatial/:dashboard-spatial
-      - name: Use Connect API to set content title
-        run: |
-          export DATA='{"title": "Quarto Dashboard with UV Spatial Map"}'
-          export CONTENT_NAME='dashboard-spatial'
-          export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
-          echo contentguid
-          curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
+      # - name: Use Connect API to set content title
+      #   run: |
+      #     export DATA='{"title": "Quarto Dashboard with UV Spatial Map"}'
+      #     export CONTENT_NAME='dashboard-spatial'
+      #     export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
+      #     echo contentguid
+      #     curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
 
   notify:
     needs: [pub-dashboard,pub-dashboard-spatial,pub-report-parameterized,pub-email-conditional,pub-report-dynamically-generated,pub-email-plots,pub-email-programmatic,pub-presentation,pub-presentation-webinar,pub-report-basic,pub-report-branded,pub-report-commentable,pub-report-hybrid-knitr,pub-report-lightbox,pub-website,pub-report-mermaid-diagrams]
@@ -484,11 +484,11 @@ jobs:
           show-logs: TRUE
           force: TRUE
           dir: ./content-examples/landing-page/:landing-page
-      - name: Use Connect API to set content title
-        run: |
-          export DATA='{"title": "Reproduceable Reporting with Quarto Landing Page"}'
-          export CONTENT_NAME='landing-page'
-          export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
-          echo contentguid
-          curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
+      # - name: Use Connect API to set content title
+      #   run: |
+      #     export DATA='{"title": "Reproduceable Reporting with Quarto Landing Page"}'
+      #     export CONTENT_NAME='landing-page'
+      #     export contentguid=$(curl -H "Authorization: KEY ${{ secrets.CONNECT_API_KEY }}" ${{ secrets.CONNECT_SERVER }}/__api__/v1/content?name=${CONTENT_NAME} | jq -r '.[].guid')
+      #     echo contentguid
+      #     curl --silent --show-error -L --max-redirs 0 --fail -X PATCH -H "Authorization: Key ${{ secrets.CONNECT_API_KEY }}" --data "${DATA}" "${{ secrets.CONNECT_SERVER }}__api__/v1/content/${contentguid}"
 
